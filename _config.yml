@@ -9,7 +9,7 @@
 title: Stack I.T.
 email: youremailaddress@gmail.com
 description: Enterprise Software Development.
-baseurl: "/web" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://stackit-website.herokuapp.com" # the base hostname & protocol for your site
 
 # Logo settings
