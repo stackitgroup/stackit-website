@@ -13,10 +13,15 @@
 <body class="landing">
 
     {% include header.html %}
-    
+
+    {% if page.featured-image %}
+    <span class="image featured">
+      <img src="{{ page.featured-image }}" alt="">
+    </span>
+    {% endif %}
+
     {{ content }}
-    
-    {% include cta.html %}
+
     {% include footer.html %}
 
 
