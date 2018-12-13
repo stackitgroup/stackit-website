@@ -19,8 +19,8 @@
         <text id="STACK-I.T." font-family="MicrosoftSansSerif, Microsoft Sans Serif" font-size="58" font-weight="normal" fill="#3B3838">
             <tspan x="248" y="101">STACK I.T.</tspan>
         </text>
-        <text id="Enterprise-Software" font-family="MicrosoftSansSerif, Microsoft Sans Serif" font-size="26" font-weight="normal" fill="#666666">
-            <tspan x="248" y="138">Enterprise Software Development</tspan>
+        <text id="Enterprise-Software" font-family="MicrosoftSansSerif, Microsoft Sans Serif" font-size="22" font-weight="normal" fill="#666666">
+            <tspan x="248" y="138">Enterprise Software Development Solutions</tspan>
         </text>
     </g>
 </svg>
