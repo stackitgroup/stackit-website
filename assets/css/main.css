@@ -1694,7 +1694,6 @@ input[type="radio"] + label:before {
 .box {
   background: #fff;
   border-radius: 6px;
-  box-shadow: 0 2px 0 0 #e5e5e5;
   margin: 0 0 2em 0;
   padding: 3em; }
   .box > :last-child {
@@ -1705,6 +1704,21 @@ input[type="radio"] + label:before {
     box-shadow: none !important;
     margin: 0 0 2em 0;
     padding: 0 !important; }
+  .box.clients .clients-row {
+    position: relative; }
+    .box.clients .clients-row:after {
+      clear: both;
+      content: '';
+      display: block; }
+    .box.clients .clients-row section {
+      float: left;
+      padding: 0;
+      margin: 0;
+      width: 208px;
+      height: 140px;
+      padding-bottom: 0; }
+      .box.clients .clients-row section :last-child {
+        margin-bottom: 0; }
   .box.features .features-row {
     border-top: solid 2px #e5e5e5;
     position: relative; }
@@ -2424,6 +2438,10 @@ body.landing #main {
   .dropotron.level-0 {
     font-size: 1em; }
 
+  .box.clients .clients-row section {
+    padding: 0;
+    width: 176px; }
+
   /* Banner */
   #banner {
     background-attachment: scroll; }
@@ -2433,7 +2451,11 @@ body.landing #main {
 @media screen and (max-width: 980px) {
   /* Basic */
   body, input, select, textarea {
-    font-size: 11pt; } }
+    font-size: 11pt; }
+
+  .box.clients .clients-row section {
+    padding: 0;
+    width: 176px; } }
 /* Narrower */
 #navPanel, #navButton {
   display: none; }
@@ -2458,6 +2480,9 @@ body.landing #main {
   /* Box */
   .box {
     padding: 3em 2em; }
+    .box.clients .clients-row section {
+      padding: 0;
+      width: 156px; }
     .box.features > section {
       padding: 3em 2em; }
     .box .image.featured {
@@ -2633,6 +2658,9 @@ body.landing #main {
     margin: 1em;
     overflow-x: hidden;
     padding: 2em 2em !important; }
+    .box.clients .clients-row section {
+      padding: 0;
+      width: 156px; }
     .box.features .features-row {
       border-top: 0;
       padding: 0; }
@@ -2728,6 +2756,9 @@ body.landing #main {
     box-shadow: none;
     margin: 1em 0 0 0;
     padding: 3em 1em !important; }
+    .box.clients .clients-row section {
+      padding: 0;
+      width: 156px; }
     .box.features .features-row section {
       margin: 3em 0 0 0 !important;
       padding: 3em 0 0 0 !important; }

@@ -423,7 +423,6 @@
 	.box {
 		background: #fff;
 		border-radius: _size(border-radius);
-		box-shadow: 0 2px 0 0 _palette(border);
 		margin: 0 0 _size(element-margin) 0;
 		padding: $box-padding;
 
@@ -437,6 +436,31 @@
 			box-shadow: none !important;
 			margin: 0 0 _size(element-margin) 0;
 			padding: 0 !important;
+		}
+
+		&.clients {
+			.clients-row {
+				position: relative;
+
+				&:after {
+					clear: both;
+					content: '';
+					display: block;
+				}
+
+				section {
+					float: left;
+					padding: 0;
+					margin: 0;
+					width: 208px;
+					height: 140px;
+					padding-bottom: 0;
+
+					:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
 		}
 
 		&.features {
@@ -1414,6 +1438,17 @@
 				}
 			}
 
+			.box {
+				&.clients {
+					.clients-row {
+						section {
+							padding: 0;
+							width: 176px;
+						}
+					}
+				}
+			}
+
 		/* Banner */
 
 			#banner {
@@ -1434,6 +1469,17 @@
 
 			body, input, select, textarea {
 				font-size: 11pt;
+			}
+
+			.box {
+				&.clients {
+					.clients-row {
+						section {
+							padding: 0;
+							width: 176px;
+						}
+					}
+				}
 			}
 
 	}
@@ -1481,6 +1527,15 @@
 
 			.box {
 				padding: $box-padding-vertical $box-padding-horizontal;
+
+				&.clients {
+					.clients-row {
+						section {
+							padding: 0;
+							width: 156px;
+						}
+					}
+				}
 
 				&.features {
 					> section {
@@ -1675,6 +1730,15 @@
 				overflow-x: hidden;
 				padding: $box-padding-vertical $box-padding-horizontal !important;
 
+				&.clients {
+					.clients-row {
+						section {
+							padding: 0;
+							width: 156px;
+						}
+					}
+				}
+
 				&.features {
 					.features-row {
 						border-top: 0;
@@ -1849,6 +1913,15 @@
 				box-shadow: none;
 				margin: (_size(element-margin) * 0.5) 0 0 0;
 				padding: $box-padding-vertical $box-padding-horizontal !important;
+
+				&.clients {
+					.clients-row {
+						section {
+							padding: 0;
+							width: 156px;
+						}
+					}
+				}
 
 				&.features {
 					.features-row {

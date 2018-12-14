@@ -1,9 +1,38 @@
 ---
 layout: page
 title: Clients
+clients:
+    - images/clients/pic01.png
+    - images/clients/pic02.png
+    - images/clients/pic03.png
+    - images/clients/pic04.png
+    - images/clients/pic05.png
+    - images/clients/pic06.png
+    - images/clients/pic07.png
+    - images/clients/pic08.png
+    - images/clients/pic09.png
+    - images/clients/pic10.png
+    - images/clients/pic11.png
+    - images/clients/pic12.png
+    - images/clients/pic13.png
+    - images/clients/pic14.png
+    - images/clients/pic15.png
+    - images/clients/pic16.png
 ---
 
 <header>
     <h2>{{ page.title }}</h2>
     <p>{{ site.description }}</p>
 </header>
+
+<section class="box special clients">
+	<div class="clients-row">
+
+        {% for logo in page.clients %}
+        <section>
+			<img src="{{ logo }}" alt="">
+		</section>
+        {% endfor %}
+
+	</div>
+</section>
