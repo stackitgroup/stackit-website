@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Portfolio
 description: Change we to stackit
 
@@ -137,7 +137,7 @@ eCommerce, SaaS, UI/UX Design, Responsive Web, Internal Tools |  Social Networks
 ---
 
 | **iOS** | **Android** |
-| {%- for project in page.ios_projects %} [ {{- project.name }} ]( {{project.link}} )<br /> {%- endfor %} | {%- for project in page.android_projects %} [ {{- project.name }} ]( {{project.link}} )<br /> {%- endfor %} |
+| {%- for project in page.ios_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} | {%- for project in page.android_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} |
 
 ## Companies We’ve Worked With
 

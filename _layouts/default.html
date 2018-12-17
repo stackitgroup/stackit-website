@@ -10,20 +10,18 @@
 
     {% include head.html %}
 
-<body class="landing">
+    <body class="landing" data-gr-c-s-loaded="true">
+
+    <section id="banner">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.description }}</p>
+    </section>
 
     {% include header.html %}
-
-    {% if page.featured-image %}
-    <span class="image featured">
-      <img src="{{ page.featured-image }}" alt="">
-    </span>
-    {% endif %}
 
     {{ content }}
 
     {% include footer.html %}
-
 
 </body>
 
