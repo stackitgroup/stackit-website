@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Portfolio
-description: Change we to stackit
+description: What we did recently
 
 android_projects:
     -
