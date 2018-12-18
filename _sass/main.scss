@@ -59,7 +59,7 @@
 	a {
 		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-bottom-color #{_duration(transition)} ease-in-out'));
 		border-bottom: dotted 1px;
-		color: _palette(accent2, bg);
+		color: _palette(fg-bold);
 		text-decoration: none;
 
 		&:hover {
@@ -93,6 +93,7 @@
 	}
 
 	h2 {
+		color: _palette(accent2, bg);
 		font-size: 2.25em;
 		line-height: 1.5em;
 		letter-spacing: -0.035em;
@@ -262,6 +263,7 @@
 
 	input[type="text"],
 	input[type="password"],
+	input[type="tel"],
 	input[type="email"],
 	select,
 	textarea {
@@ -312,6 +314,7 @@
 
 	input[type="text"],
 	input[type="password"],
+	input[type="tel"],
 	input[type="email"],
 	select {
 		height: _size(element-height);
@@ -435,14 +438,16 @@
 		}
 
 		.capabilities {
-
+			h3 {
+				color: _palette(accent2, bg);
+			}
 			section {
 				border-bottom: solid 2px _palette(border);
 				padding-bottom: 2em;
 			}
 
 			a {
-				color: _palette(accent2, bg);
+				color: _palette(fg-bold);
 			}
 
 			p {
@@ -476,8 +481,11 @@
 		}
 
 		&.clients {
+			padding: 0 3em 3em 3em;
+			box-shadow: none;
+			border-bottom: 0;
+
 			.clients-row {
-				position: relative;
 
 				&:after {
 					clear: both;
@@ -501,6 +509,7 @@
 		}
 
 		&.features {
+
 			.features-row {
 				border-top: solid 2px _palette(border);
 				position: relative;
@@ -1184,65 +1193,6 @@
 		}
 	}
 
-	.dropotron {
-		background: #fff;
-		border-radius: _size(border-radius);
-		box-shadow: 0 2px 0 0 rgba(0,0,0,0.065), inset 0 -1px 0 0 #fff, inset 0 0 0 1px transparentize(_palette(border), 0.5);
-		list-style: none;
-		margin: calc(-0.5em + 1px) 0 0 1px;
-		padding: 0.5em 0;
-		width: 11em;
-
-		li {
-			padding: 0;
-
-			a, span {
-				@include vendor('transition', 'none');
-				border: 0;
-				border-top: solid 1px #f2f2f2;
-				color: inherit;
-				display: block;
-				padding: 0.15em 1em;
-			}
-
-			&:first-child {
-				> a, > span {
-					border-top: 0;
-				}
-			}
-
-			&.active,
-			&:hover {
-				> a, > span {
-					background: _palette(accent2, bg);
-					color: _palette(accent2, fg-bold);
-				}
-			}
-		}
-
-		&.level-0 {
-			font-size: 0.9em;
-			margin: 1em 0 0 0;
-
-			&:before {
-				@include vendor('transform', 'rotate(45deg)');
-				background: #fff;
-				border: solid 1px transparentize(_palette(border), 0.5);
-				border-bottom: 0;
-				border-right: 0;
-				box-shadow: -0.25em -0.125em 0.125em 0 rgba(0,0,0,0.015);
-				content: '';
-				display: block;
-				height: 0.75em;
-				position: absolute;
-				right: 1.25em;
-				top: -0.375em;
-				width: 0.75em;
-				z-index: 0;
-			}
-		}
-	}
-
 /* Banner */
 
 	#banner {
@@ -1468,12 +1418,6 @@
 			}
 
 		/* Header */
-
-			.dropotron {
-				&.level-0 {
-					font-size: 1em;
-				}
-			}
 
 			.box {
 				&.clients {

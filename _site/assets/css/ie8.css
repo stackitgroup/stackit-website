@@ -108,18 +108,6 @@
 			background-color: rgba(255, 255, 255, 0.2);
 		}
 
-	.dropotron {
-		border: solid 1px #e5e5e5;
-	}
-
-		.dropotron.level-0 {
-			margin-top: 0;
-		}
-
-			.dropotron.level-0:before {
-				display: none;
-			}
-
 /* Banner */
 
 	#banner {

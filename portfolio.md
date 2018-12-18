@@ -72,69 +72,34 @@ clients:
 
 ---
 
-<header>
-    <h2>{{ page.title }}</h2>
-    <p>{{ page.description }}</p>
-</header>
-
-We are a dedicated team of engineers who are passionate about the work we do. Our expertise encompases modern web application and mobile development for both customer facing and internal business applications.
-We have the expertise to deliver B2B solutions for custom inner office needs.
-
-We have done B2C public facing e-commerce applications.
-
-We’ve been very involved with the startup communities and in helping them turn their ideas into reality.
-
-We’ve worked with corporate IT departments to help them solve unique problems, automate and streamline business processes.
-
+Stack I.T. is a dedicated team of engineers driven by our love of coding and in helping to turn great ideas into a reality. Our expertise encompases modern web application and mobile application development for both customer facing and back office business needs. We take pride in working closely with the startup community and in helping in any way we can. The journeys we’ve taken along with our partners has provided us the invaluable insights into Product Development. Above delivering our best engineering work, we’re committed to making available to you all those insights and lessons learned.
 
 ## What we do
 
-
-| **Web Application Development** | **Native & Hybrid Mobile Development** | **Back Office** |
-eCommerce, SaaS, UI/UX Design, Responsive Web, Internal Tools |  Social Networks, |  Systems Integration, Databases, Data Processing, Maintenance, IT Supplement
-
+| **Mobile Application Development** | Our mobile application developers have the expertise to help entrepreneurs create applications ranging from Social Network to Online Marketplace Applications. |
+| **Web Application Development** | Leveraging the latest in web technologies, our agile team brings startup and enterprise ideas to life. |
+| **Back Office Software Development** | Let our team help you streamline your work by automating your back office. |
+| **IT Support** | Rely of Stack I.T. to provide fast, thorough and professional support for all your application and office needs. |
 
 ## Past Project Highlights
----
 
 ### Supply Chain Alert System
-**SaaS, API integration, Data Mining**
 
 | **Description** | **Deliverables** |
-| Scanned multiple sources to gain insight into to supply chain companies for used for alerting of potential issues. | SaaS product, database, <br /><img width="160" /> |
+| Supply chain management plays a vital role in ensuring companies are able to sustain continuous and quality services. When a supplier several levels up the supply chain is not able to provide their services this could have severe consequences for the customer. A platform was designed with this challenge in mind. In a nutshell data is mined via hundreds of publicly available sources, analysed and using custom designed algorithms we are able to forecast  potential problems and alert our customers. | SaaS product, API integration, Web Data Extraction, Data Mining Algorithms, Data Collection. |
 
 
 ### Social Network mobile application
 
 | **Description** | **Deliverables** |
-| Stack I.T. was approached by the UPIN team to help them build an exciting new mobile application platform for getting users together with near and spontaneous events happening at the moment.<br /><br />The key challenge for this project was to create a minimum viable product with the added complexity of a constantly changing set of requirements. | UI/UX Design, Native iOS Mobile App, Backend REST API Server <br /><img width="160" /> |
+| Stack I.T. was approached by the UPIN team to help them build an exciting new mobile application platform for getting users together with near and spontaneous events happening at the moment. The key challenge for this project was to create a minimum viable product with the added complexity of a constantly changing set of requirements. | UI/UX Design, Native iOS Mobile App, Backend REST API Server. |
 
-
-### Supply Chain Management Platform
-**SaaS, UI / UX Design, Responsive Web, Data Science, Data Management**
+### Cloud based Continuous Deployment
 
 | **Description** | **Deliverables** |
-| Source Intelligence. Used for various features which includes tracking of components source. Discovery bla bla. Supply Chain Alert Systems - SourceIntelligence | PHP, Symfony, Angular, Javascript, MySql, Neo4J, Java, Hibernate <br /><img width="160" /> |
-
-### Cloud bases Continuous Deployment
-**Cloud Continuous Deployment, Support**
-
-| **Description** | **Deliverables** |
-| To support one of Siemens keystone applications bla bla bla. Work in partnership with the development team to create a seamless and streamlined deployment process. Along with a mechanism to manage the scaling of the main server. We took care of everything including the server setup, security, working closely with Microsoft’s Azure cloud platform. Bla bla bla. The applied solution allowed us to maintain the consistency of the structure and to make website navigation easier. | Internal Web Application |
-
-### Conversion through Landing Page
-
-| **Description** | **Deliverables** |
-| For the leading Polish consulting and project company - Greenhat - we have prepared the so-called Landing Page, the first page that visitors get to as a result of marketing activities. The project prepared by us aimed to acquire contacts for users interested in the service and subsidy. Our task was to prepare a simple, readable contact form, which allows obtaining contact details from various users. The part of the project was also the Call Page service, which enables a quick and direct connection between a potential customer and people leading the campaign. The Landing Page project prepared by our Digital Agency was embedded in a subdomain specified by the client. |
-
-### Bla Bla
-
-| **Description** | **Deliverables** |
-| Warbird Consulting Partners is a company comprised of 3 business areas: tech advisory, healthcare, and government. Bop Design created a new B2B website that immediately channels visitors to the appropriate business area on the homepage. The end result is a cohesive B2B brand platform that highlights the firm’s expertise in developing financial, operational, and technological solutions for their clients. |
-
+| To support one of Siemens new keystone cloud platforms and in partnership with their development team a seamless and streamlined automated deployment process was developed. Along with a mechanism to manage application and database server scaling, our Continuous Deployment system handled all of the complicated steps from a well designed and simple web-interface. | Back Office Web Application, Integration of software development tools. |
 
 ## List of projects
----
 
 | **iOS** | **Android** |
 | {%- for project in page.ios_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} | {%- for project in page.android_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} |
