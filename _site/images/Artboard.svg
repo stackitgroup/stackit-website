@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="200px" viewBox="0 0 1000 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F5F5F5" x="0" y="0" width="1000" height="200"></rect>
+        <g id="Group" transform="translate(60.000000, 58.000000)">
+            <g fill="#44DB5E" id="Rectangle">
+                <rect x="0.27132" y="0.248181818" width="118.20984" height="18.921"></rect>
+            </g>
+            <g transform="translate(31.000000, 31.000000)" fill="#FF2851" id="Rectangle">
+                <rect x="0.27132" y="0.248181818" width="118.20984" height="18.921"></rect>
+            </g>
+            <g transform="translate(0.000000, 62.000000)" fill="#54C7FC" id="Rectangle">
+                <rect x="0.27132" y="0.248181818" width="118.20984" height="18.921"></rect>
+            </g>
+        </g>
+        <text id="STACK-I.T." font-family="MicrosoftSansSerif, Microsoft Sans Serif" font-size="58" font-weight="normal" fill="#3B3838">
+            <tspan x="248" y="101">STACK I.T.</tspan>
+        </text>
+        <text id="Enterprise-Software" font-family="MicrosoftSansSerif, Microsoft Sans Serif" font-size="22" font-weight="normal" fill="#666666">
+            <tspan x="248" y="138">Enterprise Software Development Solutions</tspan>
+        </text>
+    </g>
+</svg>
