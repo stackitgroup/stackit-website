@@ -422,9 +422,30 @@
 
 	.box {
 		background: #fff;
+		box-shadow: 0 2px 0 0 #e5e5e5;
 		border-radius: _size(border-radius);
 		margin: 0 0 _size(element-margin) 0;
 		padding: $box-padding;
+
+		a {
+			color: _palette(header, fg-light);
+			border-bottom: none;
+		}
+
+		.capabilities {
+
+			section {
+				border-bottom: solid 2px _palette(border)
+			}
+
+			> :nth-child(1n) {
+				padding-top: 2em;
+			}
+
+			> :first-child {
+				padding-top: 0;
+			}
+		}
 
 		> :last-child {
 			margin-bottom: 0;
@@ -1211,7 +1232,7 @@
 	#banner {
 		background-attachment:	scroll,							fixed;
 		background-color:		#999;
-		background-image:		url('images/overlay.png'),		url('../../images/header.png');
+		background-image:		url('images/overlay.png'),		url('../../images/header.jpg');
 		background-position:	top left,						center center;
 		background-repeat:		repeat,							no-repeat;
 		background-size:		auto,							cover;
@@ -1488,6 +1509,10 @@
 
 	#navPanel, #navButton {
 		display: none;
+	}
+
+	html {
+	  scroll-behavior: smooth;
 	}
 
 	@include breakpoint(narrower) {
