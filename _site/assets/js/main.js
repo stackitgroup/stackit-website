@@ -34,9 +34,6 @@
 			});
 
 		// Dropdowns.
-			$('#nav > ul').dropotron({
-				alignment: 'right'
-			});
 
 		// Off-Canvas Navigation.
 
