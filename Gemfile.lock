@@ -96,7 +96,7 @@ DEPENDENCIES
   bundler (~> 1.12)
   guard
   guard-livereload
-  jekyll (~> 3.3)
+  jekyll
   rake
 
 RUBY VERSION
