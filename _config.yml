@@ -12,6 +12,7 @@ description: Software Development And IT Solutions
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://www.stackitgroup.com" # the base hostname & protocol for your site
 # url: "http://localhost:4000" # the base hostname & protocol for your site
+force_ssl: false
 
 # Logo settings
 logo-image-url:
