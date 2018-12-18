@@ -19,8 +19,3 @@ font-awesome-icon-logo:
 
 # Build settings
 markdown: kramdown
-exclude:
-    - README.md
-    - LICENSE.txt
-    - CHANGELOG
-    - CONTRIBUTING.md
