@@ -19,4 +19,16 @@ font-awesome-icon-logo:
 
 # Build settings
 markdown: kramdown
-exclude: [config.ru, static.json, Procfile, Gemfile, Gemfile.lock, alpha_jekyll_theme.gemspec, Rakefile, Guardfile, README.md, LICENSE.txt, CHANGELOG,CONTRIBUTING.md]
+exclude:
+    - config.ru
+    - static.json
+    - Procfile
+    - Gemfile
+    - Gemfile.lock
+    - alpha_jekyll_theme.gemspec
+    - Rakefile
+    - Guardfile
+    - README.md
+    - LICENSE.txt
+    - CHANGELOG
+    - CONTRIBUTING.md
