@@ -1701,11 +1701,20 @@ input[type="radio"] + label:before {
     color: #999;
     border-bottom: none; }
   .box .capabilities section {
-    border-bottom: solid 2px #e5e5e5; }
+    border-bottom: solid 2px #e5e5e5;
+    padding-bottom: 2em; }
+  .box .capabilities a {
+    color: #eb4256;
+    text-decoration: underline; }
+  .box .capabilities p {
+    margin-bottom: 1em; }
   .box .capabilities > :nth-child(1n) {
     padding-top: 2em; }
   .box .capabilities > :first-child {
     padding-top: 0; }
+  .box .capabilities > :last-child {
+    border-bottom: none;
+    padding-bottom: 2em; }
   .box > :last-child {
     margin-bottom: 0; }
   .box.alt {

@@ -435,7 +435,17 @@
 		.capabilities {
 
 			section {
-				border-bottom: solid 2px _palette(border)
+				border-bottom: solid 2px _palette(border);
+				padding-bottom: 2em;
+			}
+
+			a {
+				color: _palette(accent2, bg);
+				text-decoration: underline;
+			}
+
+			p {
+				margin-bottom: 1em;
 			}
 
 			> :nth-child(1n) {
@@ -444,6 +454,11 @@
 
 			> :first-child {
 				padding-top: 0;
+			}
+
+			> :last-child {
+				border-bottom: none;
+				padding-bottom: 2em;
 			}
 		}
 
