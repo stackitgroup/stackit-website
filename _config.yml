@@ -7,7 +7,7 @@
 
 # Site settings
 title: Stack I.T.
-email: youremailaddress@gmail.com
+email: madson@stackitgroup.com
 description: Software Development And IT Solutions
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://stackit-website.herokuapp.com" # the base hostname & protocol for your site
