@@ -1697,15 +1697,14 @@ input[type="radio"] + label:before {
   border-radius: 6px;
   margin: 0 0 2em 0;
   padding: 3em; }
-  .box a {
+  .box .special a {
     color: #999;
     border-bottom: none; }
   .box .capabilities section {
     border-bottom: solid 2px #e5e5e5;
     padding-bottom: 2em; }
   .box .capabilities a {
-    color: #eb4256;
-    text-decoration: underline; }
+    color: #eb4256; }
   .box .capabilities p {
     margin-bottom: 1em; }
   .box .capabilities > :nth-child(1n) {

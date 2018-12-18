@@ -427,9 +427,11 @@
 		margin: 0 0 _size(element-margin) 0;
 		padding: $box-padding;
 
-		a {
-			color: _palette(header, fg-light);
-			border-bottom: none;
+		.special {
+			a {
+				color: _palette(header, fg-light);
+				border-bottom: none;
+			}
 		}
 
 		.capabilities {
@@ -441,7 +443,6 @@
 
 			a {
 				color: _palette(accent2, bg);
-				text-decoration: underline;
 			}
 
 			p {
