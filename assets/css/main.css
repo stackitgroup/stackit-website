@@ -2301,7 +2301,7 @@ body.landing #page-wrapper {
   background-repeat: repeat,							no-repeat;
   background-size: auto,							cover;
   color: #fff;
-  padding: 12em 0 20em 0;
+  padding: 12em 1em 20em 1em;
   text-align: center; }
   #banner :last-child {
     margin-bottom: 0; }
@@ -2445,7 +2445,7 @@ body.landing #main {
 
   /* Banner */
   #banner {
-    padding: 10em 0 18em 0; } }
+    padding: 10em 1em 18em 1em; } }
 /* Normal */
 @media screen and (max-width: 1280px) {
   /* Basic */
@@ -2708,7 +2708,7 @@ html {
 
   /* Banner */
   #banner {
-    padding: 4em 0; }
+    padding: 4em 1em; }
     #banner h2 {
       font-size: 2.25em; }
     #banner p {
