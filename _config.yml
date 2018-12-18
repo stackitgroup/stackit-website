@@ -22,13 +22,9 @@ markdown: kramdown
 exclude:
     - config.ru
     - static.json
-    - README.md
     - Procfile
-    - LICENSE.txt
     - Gemfile
     - Gemfile.lock
     - alpha_jekyll_theme.gemspec
     - Rakefile
     - Guardfile
-    - CHANGELOG
-    - CONTRIBUTING.md
