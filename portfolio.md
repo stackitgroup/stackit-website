@@ -18,23 +18,10 @@ android_projects:
     -
         name: Weepec Cuidadogs
         link: https://play.google.com/store/apps/details?id=com.weepec.appCuidadogs
+    -
+
 
 ios_projects:
-    -
-        name: It’s Borrowed
-        link: ""
-    -
-        name: UPIN
-        link: ""
-    -
-        name: Fuelzee
-        link: https://itunes.apple.com/us/app/fuelzee-pay-less-for-gas/id660938854?mt=8
-    -
-        name: Youse
-        link: https://itunes.apple.com/us/app/youse-seguro-tipo-vc/id1371689994?mt=8
-    -
-        name: Dr.Luke
-        link: https://itunes.apple.com/us/app/dr-luke-saúde-do-bebê/id1375557280?mt=8
     -
         name: Buscape
         link: https://itunes.apple.com/us/app/buscapé-ofertas-e-descontos/id296987450?mt=8
@@ -75,20 +62,20 @@ Stack I.T. is a dedicated team of engineers driven by our love of coding and in 
 
 ## What we do
 
-| **Mobile Application Development** | Our mobile application developers have the expertise to help entrepreneurs create applications ranging from Social Network to Online Marketplace Applications. |
+| **Mobile Application Development** | Our mobile application developers have the expertise to help entrepreneurs create applications ranging from Social Networks to Online Marketplace Applications. |
 | **Web Application Development** | Leveraging the latest in web technologies, our agile team brings startup and enterprise ideas to life. |
 | **Back Office Software Development** | Let our team help you streamline your work by automating your back office. |
-| **IT Support** | Rely of Stack I.T. to provide fast, thorough and professional support for all your application and office needs. |
+| **IT Support** | Rely on Stack I.T. to provide fast, thorough and professional support for all your application and office needs. |
 
-## Past Project Highlights
+## Project Highlights
 
 ### Supply Chain Alert System
 
 | **Description** | **Deliverables** |
-| Supply chain management plays a vital role in ensuring companies are able to sustain continuous and quality services. When a supplier several levels up the supply chain is not able to provide their services this could have severe consequences for the customer. A platform was designed with this challenge in mind. In a nutshell data is mined via hundreds of publicly available sources, analysed and using custom designed algorithms we are able to forecast  potential problems and alert our customers. | SaaS product, API integration, Web Data Extraction, Data Mining Algorithms, Data Collection. |
+| Supply chain management plays a vital role in ensuring companies are able to sustain continuous and quality services. When a supplier several levels up the supply chain is not able to provide their services this could have severe consequences for the customer. A platform was designed with this challenge in mind. In a nutshell, data is mined via hundreds of publicly available sources, analysed and using custom designed algorithms we are able to forecast  potential problems and alert our customers. | SaaS product, API integration, Web Data Extraction, Data Mining Algorithms, Data Collection. |
 
 
-### Social Network mobile application
+### Social Network Mobile Application
 
 | **Description** | **Deliverables** |
 | Stack I.T. was approached by the UPIN team to help them build an exciting new mobile application platform for getting users together with near and spontaneous events happening at the moment. The key challenge for this project was to create a minimum viable product with the added complexity of a constantly changing set of requirements. | UI/UX Design, Native iOS Mobile App, Backend REST API Server. |
@@ -98,7 +85,7 @@ Stack I.T. is a dedicated team of engineers driven by our love of coding and in 
 | **Description** | **Deliverables** |
 | To support one of Siemens new keystone cloud platforms and in partnership with their development team a seamless and streamlined automated deployment process was developed. Along with a mechanism to manage application and database server scaling, our Continuous Deployment system handled all of the complicated steps from a well designed and simple web-interface. | Back Office Web Application, Integration of software development tools. |
 
-## List of projects
+## Latest Apps
 
 | **iOS** | **Android** |
 | {%- for project in page.ios_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} | {%- for project in page.android_projects %} <a href="{{ project.link }}" target="_blank">{{ project.name }}</a><br /> {%- endfor %} |
