@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Portfolio
-description: Change we to Stack I.T.
 
 android_projects:
     -
@@ -72,7 +71,7 @@ clients:
 
 ---
 
-Stack I.T. is a dedicated team of engineers driven by our love of coding and in helping to turn great ideas into a reality. Our expertise encompases modern web application and mobile application development for both customer facing and back office business needs. We take pride in working closely with the startup community and in helping in any way we can. The journeys we’ve taken along with our partners has provided us the invaluable insights into Product Development. Above delivering our best engineering work, we’re committed to making available to you all those insights and lessons learned.
+Stack I.T. is a dedicated team of engineers driven by our love of coding and in helping to turn great ideas into a reality. Our expertise encompases modern web application and mobile application development for both customer facing and back office business needs. We take pride in working closely with the startup community and in helping in any way we can. The journeys we’ve taken along with our partners has provided us invaluable insights into Product Development. Above delivering our best engineering work, we’re committed to making available to you all those insights and lessons learned.
 
 ## What we do
 
