@@ -1,4 +1,11 @@
+require "rack"
 require "rack/jekyll"
 
-run Rack::Jekyll.new
+use Rack::Static,
+  :urls => ["/assets", "/images"],
+  :root => "_site"
 
+use Rack::Deflater
+
+
+run Rack::Jekyll.new
