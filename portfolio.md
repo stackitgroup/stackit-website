@@ -58,14 +58,14 @@ clients:
 
 ---
 
-Stack I.T. is a dedicated team of engineers driven by our love of coding and in helping to turn great ideas into a reality. Our expertise encompases modern web application and mobile application development for both customer facing and back office business needs. We take pride in working closely with the startup community and in helping in any way we can. The journeys we’ve taken along with our partners has provided us invaluable insights into Product Development. Above delivering our best engineering work, we’re committed to making available to you all those insights and lessons learned.
+Stackit is a dedicated team of engineers driven by our love of coding and in helping to turn great ideas into a reality. Our expertise encompases modern web application and mobile application development for both customer facing and back office business needs. We take pride in working closely with the startup community and in helping in any way we can. The journeys we’ve taken along with our partners has provided us invaluable insights into Product Development. Above delivering our best engineering work, we’re committed to making available to you all those insights and lessons learned.
 
 ## What we do
 
 | **Mobile Application Development** | Our mobile application developers have the expertise to help entrepreneurs create applications ranging from Social Networks to Online Marketplace Applications. |
 | **Web Application Development** | Leveraging the latest in web technologies, our agile team brings startup and enterprise ideas to life. |
 | **Back Office Software Development** | Let our team help you streamline your work by automating your back office. |
-| **IT Support** | Rely on Stack I.T. to provide fast, thorough and professional support for all your application and office needs. |
+| **IT Support** | Rely on Stackit to provide fast, thorough and professional support for all your application and office needs. |
 
 ## Project Highlights
 
@@ -78,7 +78,7 @@ Stack I.T. is a dedicated team of engineers driven by our love of coding and in 
 ### Social Network Mobile Application
 
 | **Description** | **Deliverables** |
-| Stack I.T. was approached by the UPIN team to help them build an exciting new mobile application platform for getting users together with near and spontaneous events happening at the moment. The key challenge for this project was to create a minimum viable product with the added complexity of a constantly changing set of requirements. | UI/UX Design, Native iOS Mobile App, Backend REST API Server. |
+| Stackit was approached by the UPIN team to help them build an exciting new mobile application platform for getting users together with near and spontaneous events happening at the moment. The key challenge for this project was to create a minimum viable product with the added complexity of a constantly changing set of requirements. | UI/UX Design, Native iOS Mobile App, Backend REST API Server. |
 
 ### Cloud based Continuous Deployment
 

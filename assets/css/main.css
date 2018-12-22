@@ -2161,6 +2161,15 @@ body.landing #page-wrapper {
       color: #fff;
       font-weight: 400;
       border: 0; }
+      #header h1 a .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+      #header h1 a img {
+        background: #3A6F9A;
+        vertical-align: middle;
+        max-height: 24px;
+        max-width: 24px; }
   #header nav {
     height: inherit;
     line-height: inherit;

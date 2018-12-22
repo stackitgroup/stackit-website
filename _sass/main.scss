@@ -1050,6 +1050,17 @@
 			top: 0;
 
 			a {
+				.helper {
+					display: inline-block;
+				    height: 100%;
+				    vertical-align: middle;
+				}
+				img {
+					background: #3A6F9A;
+				    vertical-align: middle;
+				    max-height: 24px;
+				    max-width: 24px;
+				}
 				color: _palette(header, fg-bold);
 				font-weight: _font(weight-bold);
 				border: 0;
