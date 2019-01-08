@@ -1,27 +1,61 @@
-# (WIP) Alpha - Jekyll Theme
+## Stackit website
 
-A Jekyll version of the "Alpha" theme by [HTML5 UP](https://html5up.net/).
+The website [https://stackit.us](https://stackit.us) was made using Jekyll.
 
-![Alpha Theme](images/alpha.jpg "Alpha Theme")
 
-# How to Use
+## About Jekyll
 
 For those unfamiliar with how Jekyll works, check out [https://jekyllrb.com/](https://jekyllrb.com/) for all the details, 
 or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
 and [creating pages](https://jekyllrb.com/docs/pages/).
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file!
 
-# Issues
+## Jekyll template
 
-If you would like to report a bug, ask a question, request a feature, feel free to do so on [the GitLab repository](https://gitlab.com/andrewbanchich/alpha-jekyll-theme) and I will be more than happy to help!
+A Jekyll version of the "Alpha" theme by [HTML5 UP](https://html5up.net/).
 
-Alternatively, you can open an issue via email by emailing [incoming+andrewbanchich/alpha-jekyll-theme@incoming.gitlab.com](mailto:incoming+andrewbanchich/alpha-jekyll-theme@incoming.gitlab.com).
 
-The GitHub repository is simply a mirror of the GitLab repository.
+## Setup environment
 
-# Credits
+1. Install Ruby language - [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
+
+After installing Ruby language, install bundler, jekyll and guard:
+
+1. `$ gem install bundler jekyll guard`
+
+## Editing website
+
+Before start content and layout changes, please run those commands in different terminal windows:
+
+1. `$ sass --watch _sass/main.scss:assets/css/main.css` // to update css files
+2. `$ jekyll serve --watch --incremental` // to serve the latest website version
+3. Open browser in [http://127.0.0.1:4000](http://127.0.0.1:4000)
+
+Files and folders reference:
+
+* `_site/` - automaticly generated static files, website public files, we never change those files manually;
+* `_includes/` - are partial files that are included in the website, like header, footer and etc.;
+* `_layout/` - layout files that specify the html page;
+* `_sass/` - has the sass files from where the css files are generated, usually visual changes are made on files below that folder;
+* `_assets/` - has the css, fonts and javascript static files, usually we don't need to change it;
+* `_images` - self explanatory;
+* `*.md` - are MarkDown files that become `*.html` files in `_sites/` during the build phase;
+* `*.html` - are special `*.html` files that accept a header in YAML and becomes basic `*.html` files in `_sites/` during the build phase;
+
+## Deploying
+
+Generating a build to upload to servers:
+
+1. `$ JEKYLL_ENV=production jekyll build` // runs Jekyll build
+2. `$ git status` // show file changes
+3. `$ git add [filename]` // to add changes
+3. `$ git commit -am '[Comment the changes here]'` // to commit changes
+4. `$ git push origin master` // to push to source code repository
+
+After pushing to BitBucket repository the [Netlify](http://netlify.com) service will start a new deploy in couple minutes.
+
+
+## Credits
 
 Original README from HTML5 UP:
 
