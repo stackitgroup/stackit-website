@@ -19,9 +19,9 @@ A Jekyll version of the "Alpha" theme by [HTML5 UP](https://html5up.net/).
 
 1. Install Ruby language - [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
 
-After installing Ruby language, install bundler, jekyll and guard:
+After installing Ruby language, install bundler, jekyll, guard and sass:
 
-1. `$ gem install bundler jekyll guard`
+1. `$ gem install bundler jekyll guard sass`
 
 ## Editing website
 
