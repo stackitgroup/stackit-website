@@ -1,6 +1,6 @@
 {
   "name": "stackit",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
@@ -33,7 +33,10 @@
     "eslint": "^7.18.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.5.0",
+    "fibers": "^5.0.0",
     "jest": "^26.6.3",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
     "stylelint": "^13.9.0",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.4.4",
