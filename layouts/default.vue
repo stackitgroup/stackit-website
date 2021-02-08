@@ -10,6 +10,7 @@
     </CThemeProvider>
   </div>
 </template>
+
 <script>
 import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
 
