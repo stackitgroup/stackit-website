@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <c-box id="home" d="flex" h="100vh" flex-dir="column" justify-content="center">
+<!--    <c-box id="banner" d="flex" h="100vh" flex-dir="column" justify-content="center">-->
 <!--      <home />-->
 <!--      {{ version }}-->
-      <page-summary />
-    </c-box>
+<!--      <page-summary />-->
+<!--    </c-box>-->
+    <banner />
     <c-box id="mobile" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
       <page-summary />
     </c-box>
@@ -28,6 +29,7 @@
 
 <script lang="js">
 import { CBox } from '@chakra-ui/vue'
+import Banner from '~/components/banner'
 import Home from '~/components/home'
 import Mobile from '~/components/mobile'
 import Web from '~/components/web'
@@ -40,6 +42,7 @@ import PageSummary from '~/components/page-summary'
 export default {
   name: 'App',
   components: {
+    Banner,
     PageSummary,
     CBox,
     Home,

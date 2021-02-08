@@ -6,6 +6,10 @@ export default {
     mono: '"Source Sans Pro", sans-serif',
   },
   colors: {
+    banner: {
+      bg: '#0b0f7d',
+      button: '#ed4c57'
+    },
     brand: {
       50: '#daffff',
       100: '#b1fbfb',
