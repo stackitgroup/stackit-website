@@ -5,24 +5,24 @@
 <!--      {{ version }}-->
       <page-summary />
     </c-box>
-<!--    <c-box id="mobile" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <page-summary />-->
-<!--    </c-box>-->
-<!--    <c-box id="web" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <web />-->
-<!--    </c-box>-->
-<!--    <c-box id="office" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <office />-->
-<!--    </c-box>-->
-<!--    <c-box id="support" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <support />-->
-<!--    </c-box>-->
-<!--    <c-box id="clients" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <clients />-->
-<!--    </c-box>-->
-<!--    <c-box id="footer" d="flex" w="100vw" h="100px" flex-dir="column" justify-content="center">-->
-<!--      <footer-brand />-->
-<!--    </c-box>-->
+    <c-box id="mobile" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
+      <page-summary />
+    </c-box>
+    <c-box id="web" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
+      <page-summary />
+    </c-box>
+    <c-box id="office" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
+      <page-summary />
+    </c-box>
+    <c-box id="support" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
+      <page-summary />
+    </c-box>
+    <c-box id="clients" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
+      <page-summary />
+    </c-box>
+    <c-box id="footer" d="flex" w="100vw" h="100px" flex-dir="column" justify-content="center">
+      <footer-brand />
+    </c-box>
   </div>
 </template>
 

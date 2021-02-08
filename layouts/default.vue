@@ -13,6 +13,11 @@
 
 <script>
 import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Start library for displaying components smooth
+AOS.init()
 
 export default {
   name: 'App',
