@@ -13,6 +13,8 @@
     <c-box>
       <lets-talk />
     </c-box>
+
+    <contact-dialog />
   </div>
 </template>
 
@@ -21,10 +23,12 @@ import { CBox } from '@chakra-ui/vue'
 import LetsTalk from '~/components/lets-talk'
 import Banner from '~/components/banner'
 import Service from '~/components/service'
+import ContactDialog from '~/components/contact-dialog'
 
 export default {
   name: 'App',
   components: {
+    ContactDialog,
     LetsTalk,
     Banner,
     Service,
@@ -32,6 +36,7 @@ export default {
   },
   data() {
     return {
+      showContactDialog: false,
       services: [
         {
           title: 'Custom Software',
