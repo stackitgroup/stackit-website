@@ -8,13 +8,42 @@
     justify="center"
     align="center"
   >
-    <c-text class="banner-title" w="1094px" font-size="6xl" text-align="center" z-index="1">
+    <c-text
+      class="banner-title"
+      w="1094px"
+      font-size="6xl"
+      text-align="center"
+      z-index="1"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="100"
+      data-aos-offset="0"
+    >
       We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
     </c-text>
-    <c-text font-size="2xl" mt="12" mb="10" w="1094px" text-align="center" z-index="1">
+    <c-text
+      font-size="2xl"
+      mt="12"
+      mb="10"
+      w="1094px"
+      text-align="center"
+      z-index="1"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="350"
+      data-aos-offset="0"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>
-    <c-button bg="banner.button" right-icon="arrow-forward" size="lg" font-size="xl" font-weight="400">
+    <c-button
+      bg="banner.button"
+      right-icon="arrow-forward"
+      size="lg"
+      font-size="xl"
+      font-weight="400"
+      data-aos="fade-up"
+      data-aos-delay="500"
+    >
       LET'S TALK
     </c-button>
   </c-flex>

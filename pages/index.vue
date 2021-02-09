@@ -9,17 +9,23 @@
     >
       <service :service="service" :position="index % 2 === 0 ? 'left' : 'right'" />
     </c-box>
+
+    <c-box>
+      <lets-talk />
+    </c-box>
   </div>
 </template>
 
 <script lang="js">
 import { CBox } from '@chakra-ui/vue'
+import LetsTalk from '~/components/lets-talk'
 import Banner from '~/components/banner'
 import Service from '~/components/service'
 
 export default {
   name: 'App',
   components: {
+    LetsTalk,
     Banner,
     Service,
     CBox,
