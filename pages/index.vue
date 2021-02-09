@@ -1,28 +1,13 @@
 <template>
   <div class="container">
-<!--    <c-box id="banner" d="flex" h="100vh" flex-dir="column" justify-content="center">-->
-<!--      <home />-->
-<!--      {{ version }}-->
-<!--      <page-summary />-->
-<!--    </c-box>-->
     <banner />
-    <c-box id="mobile" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
-      <page-summary />
-    </c-box>
-    <c-box id="web" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
-      <page-summary />
-    </c-box>
-    <c-box id="office" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
-      <page-summary />
-    </c-box>
-    <c-box id="support" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
-      <page-summary />
-    </c-box>
-    <c-box id="clients" d="flex" w="100vw" h="100vh" flex-dir="column" justify-content="center">
-      <page-summary />
-    </c-box>
-    <c-box id="footer" d="flex" w="100vw" h="100px" flex-dir="column" justify-content="center">
-      <footer-brand />
+
+    <c-box
+      v-for="(service, index) in services"
+      :key="`service-${index}`"
+      :my="['8rem']"
+    >
+      <service :service="service" :position="index % 2 === 0 ? 'left' : 'right'" />
     </c-box>
   </div>
 </template>
@@ -30,31 +15,40 @@
 <script lang="js">
 import { CBox } from '@chakra-ui/vue'
 import Banner from '~/components/banner'
-import Home from '~/components/home'
-import Mobile from '~/components/mobile'
-import Web from '~/components/web'
-import Office from '~/components/office'
-import Support from '~/components/support'
-import Clients from '~/components/clients'
-import FooterBrand from '~/components/footer'
-import PageSummary from '~/components/page-summary'
+import Service from '~/components/service'
 
 export default {
   name: 'App',
   components: {
     Banner,
-    PageSummary,
+    Service,
     CBox,
-    Home,
-    Mobile,
-    Web,
-    Office,
-    Support,
-    Clients,
-    FooterBrand,
   },
   data() {
-    return {}
+    return {
+      services: [
+        {
+          title: 'Custom Software',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          image: 'service-custom-software.png',
+        },
+        {
+          title: 'Staffing',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          image: 'service-custom-software.png',
+        },
+        {
+          title: 'Consulting',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          image: 'service-custom-software.png',
+        },
+        {
+          title: 'Maintenance & Support',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          image: 'service-custom-software.png',
+        },
+      ],
+    }
   },
   computed: {
     version: () => {
