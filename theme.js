@@ -8,7 +8,6 @@ export default {
   colors: {
     banner: {
       bg: '#0b0f7d',
-      button: '#ed4c57'
     },
     brand: {
       50: '#daffff',

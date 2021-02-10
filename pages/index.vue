@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <contact-dialog />
+
     <banner />
 
     <c-box
@@ -13,8 +15,6 @@
     <c-box>
       <lets-talk />
     </c-box>
-
-    <contact-dialog />
   </div>
 </template>
 

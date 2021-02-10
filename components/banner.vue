@@ -36,8 +36,9 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>
     <c-button
-      bg="banner.button"
+      class="btn-main"
       right-icon="arrow-forward"
+      rounded="10px"
       size="lg"
       font-size="xl"
       font-weight="400"

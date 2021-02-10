@@ -21,18 +21,24 @@
         </c-drawer-header>
 
         <c-drawer-body>
-          <c-input ref="inputInsideModal" placeholder="First name" />
-          <c-input ref="inputInsideModal" placeholder="Last name" />
-          <c-input ref="inputInsideModal" placeholder="Email" />
-          <c-textarea placeholder="Message" />
+          <c-stack spacing="6">
+            <c-input placeholder="First name" size="lg" />
+            <c-input placeholder="Last name" size="lg" />
+            <c-input placeholder="Email" size="lg" />
+            <c-textarea placeholder="Message" size="lg" />
+          </c-stack>
         </c-drawer-body>
 
         <c-drawer-footer>
-          <c-button variant="outline" mr="3" @click="isOpen = false">
-            Cancel
-          </c-button>
-          <c-button variant-color="blue">
-            Save
+          <c-button
+            class="btn-main"
+            right-icon="arrow-forward"
+            rounded="10px"
+            size="lg"
+            font-size="xl"
+            font-weight="400"
+          >
+            SEND MESSAGE
           </c-button>
         </c-drawer-footer>
       </c-drawer-content>
@@ -49,6 +55,7 @@ import {
   CDrawerOverlay,
   CDrawerContent,
   CDrawerCloseButton,
+  CStack,
   CButton,
   CInput,
   CTextarea
@@ -63,6 +70,7 @@ export default {
     CDrawerOverlay,
     CDrawerContent,
     CDrawerCloseButton,
+    CStack,
     CButton,
     CInput,
     CTextarea
