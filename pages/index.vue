@@ -15,6 +15,18 @@
     <c-box>
       <lets-talk />
     </c-box>
+
+    <c-box mt="6rem">
+      <we-are-different />
+    </c-box>
+
+    <c-box mt="12rem">
+      <lorem />
+    </c-box>
+
+    <c-box mt="12rem">
+      <st-footer />
+    </c-box>
   </div>
 </template>
 
@@ -24,10 +36,16 @@ import LetsTalk from '~/components/lets-talk'
 import Banner from '~/components/banner'
 import Service from '~/components/service'
 import ContactDialog from '~/components/contact-dialog'
+import WeAreDifferent from '~/components/we-are-different'
+import Lorem from '~/components/lorem'
+import StFooter from '~/components/footer'
 
 export default {
   name: 'App',
   components: {
+    StFooter,
+    Lorem,
+    WeAreDifferent,
     ContactDialog,
     LetsTalk,
     Banner,

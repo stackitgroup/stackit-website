@@ -1,7 +1,6 @@
 <template>
   <c-flex
     class="banner"
-    background-color="banner.bg"
     direction="column"
     h="590px"
     color="white"
@@ -84,7 +83,7 @@ export default {
 .banner::before {
   content: '';
   position: absolute;
-  background-color: #0b0f7d;
+  background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
   opacity: 0.7;
   top: 0;
   right: 0;
