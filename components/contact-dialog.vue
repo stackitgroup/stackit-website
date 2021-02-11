@@ -15,26 +15,36 @@
         data-aos="fade-left"
         data-aos-delay="150"
       >
-        <c-drawer-close-button />
-        <c-drawer-header>
-          Contact
-        </c-drawer-header>
+        <form>
+          <c-drawer-close-button />
+          <c-drawer-header>
+            Contact
+          </c-drawer-header>
 
-        <c-drawer-body>
-          <c-input ref="inputInsideModal" placeholder="First name" />
-          <c-input ref="inputInsideModal" placeholder="Last name" />
-          <c-input ref="inputInsideModal" placeholder="Email" />
-          <c-textarea placeholder="Message" />
-        </c-drawer-body>
+          <c-drawer-body>
+            <c-stack spacing="6">
+              <c-input v-model="form.firstName" placeholder="First name" is-required size="lg" />
+              <c-input v-model="form.lastName" placeholder="Last name" size="lg" />
+              <c-input v-model="form.email" placeholder="Email" is-required size="lg" />
+              <c-textarea v-model="form.message" placeholder="Message" is-required size="lg" />
+            </c-stack>
+          </c-drawer-body>
 
-        <c-drawer-footer>
-          <c-button variant="outline" mr="3" @click="isOpen = false">
-            Cancel
-          </c-button>
-          <c-button variant-color="blue">
-            Save
-          </c-button>
-        </c-drawer-footer>
+          <c-drawer-footer>
+            <c-button
+              class="btn-main"
+              right-icon="arrow-forward"
+              rounded="10px"
+              size="lg"
+              font-size="xl"
+              font-weight="400"
+              :disabled="isFormValid"
+              @click="sendMessage()"
+            >
+              SEND MESSAGE
+            </c-button>
+          </c-drawer-footer>
+        </form>
       </c-drawer-content>
     </c-drawer>
   </div>
@@ -49,10 +59,13 @@ import {
   CDrawerOverlay,
   CDrawerContent,
   CDrawerCloseButton,
+  CStack,
   CButton,
   CInput,
   CTextarea
 } from '@chakra-ui/vue'
+
+const axios = require('axios').default
 
 export default {
   components: {
@@ -63,18 +76,65 @@ export default {
     CDrawerOverlay,
     CDrawerContent,
     CDrawerCloseButton,
+    CStack,
     CButton,
     CInput,
     CTextarea
   },
   data () {
     return {
-      isOpen: false
+      api: 'https://stackit.b4a.io/parse/classes',
+      headers: {
+        'X-Parse-Application-Id': 'MHe5i3Mlyj2o3MTb1XItqVVFqReD3POoTiw976fT',
+        'X-Parse-REST-API-Key': 'pQKgZSmwVT3IFsDiO0iO8RY1bzHOyBFzfZUJK7dD',
+        'Content-Type': 'application/json',
+      },
+      isOpen: false,
+      form: {
+        firstName: 'Isaias',
+        lastName: '',
+        email: 'isaias@stackitgroup.com',
+        message: 'Hello world!!',
+      },
+    }
+  },
+  computed: {
+    isFormValid() {
+      const errors = []
+
+      if (!this.form.firstName) {
+        errors.push('FirstName is required.')
+      }
+
+      if (!this.form.email) {
+        errors.push('Email is required.')
+      } else if (!this.validEmail(this.form.email)) {
+        errors.push('Email is not valid.')
+      }
+
+      if (!this.form.message) {
+        errors.push('Message is required.')
+      }
+
+      return errors.length > 0
     }
   },
   methods: {
-    close () {
+    close() {
       this.isOpen = false
+    },
+    async sendMessage() {
+      console.warn('loading...')
+      try {
+        await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
+        console.warn('ok')
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    validEmail (email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(email)
     }
   }
 }

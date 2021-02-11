@@ -6,9 +6,9 @@ export default {
     mono: '"Source Sans Pro", sans-serif',
   },
   colors: {
+    'st-orange': '#ff786b',
     banner: {
       bg: '#0b0f7d',
-      button: '#ed4c57'
     },
     brand: {
       50: '#daffff',

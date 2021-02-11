@@ -1,7 +1,6 @@
 <template>
   <c-flex
     class="banner"
-    background-color="banner.bg"
     direction="column"
     h="590px"
     color="white"
@@ -36,8 +35,9 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>
     <c-button
-      bg="banner.button"
+      class="btn-main"
       right-icon="arrow-forward"
+      rounded="10px"
       size="lg"
       font-size="xl"
       font-weight="400"
@@ -83,7 +83,7 @@ export default {
 .banner::before {
   content: '';
   position: absolute;
-  background-color: #0b0f7d;
+  background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
   opacity: 0.7;
   top: 0;
   right: 0;
