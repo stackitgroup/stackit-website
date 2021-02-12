@@ -26,6 +26,7 @@
       font-weight="400"
       data-aos="fade-left"
       data-aos-delay="150"
+      @click="$emit('action')"
     >
       LET'S TALK
     </c-button>

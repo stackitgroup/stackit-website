@@ -34,20 +34,20 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
         </c-text>
       </c-flex>
-      <c-button
-        class="btn-main"
-        right-icon="arrow-forward"
-        rounded="10px"
-        size="lg"
-        font-size="xl"
-        font-weight="400"
-        data-aos="fade-right"
-        data-aos-delay="150"
-        :w="['300px']"
-        :mt="['2.5rem']"
-      >
-        READ CASE STUDY
-      </c-button>
+      <!--      <c-button-->
+      <!--        class="btn-main"-->
+      <!--        right-icon="arrow-forward"-->
+      <!--        rounded="10px"-->
+      <!--        size="lg"-->
+      <!--        font-size="xl"-->
+      <!--        font-weight="400"-->
+      <!--        data-aos="fade-right"-->
+      <!--        data-aos-delay="150"-->
+      <!--        :w="['300px']"-->
+      <!--        :mt="['2.5rem']"-->
+      <!--      >-->
+      <!--        READ CASE STUDY-->
+      <!--      </c-button>-->
     </c-stack>
   </c-flex>
 </template>

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <c-button ref="btnRef" @click="isOpen =true">
-      Open Drawer
-    </c-button>
-
     <c-drawer
       :is-open="isOpen"
       placement="right"
@@ -18,15 +14,17 @@
         <form>
           <c-drawer-close-button />
           <c-drawer-header>
-            Contact
+            <c-text class="obar" :font-size="['5xl']" :font-weight="400">
+              Contact
+            </c-text>
           </c-drawer-header>
 
           <c-drawer-body>
-            <c-stack spacing="6">
-              <c-input v-model="form.firstName" placeholder="First name" is-required size="lg" />
-              <c-input v-model="form.lastName" placeholder="Last name" size="lg" />
-              <c-input v-model="form.email" placeholder="Email" is-required size="lg" />
-              <c-textarea v-model="form.message" placeholder="Message" is-required size="lg" />
+            <c-stack spacing="6" my="1.5rem">
+              <c-input v-model="form.firstName" h="3.75rem" placeholder="First name" is-required size="lg" />
+              <c-input v-model="form.email" h="3.75rem" placeholder="Email" is-required size="lg" />
+              <c-input v-model="form.phone" h="3.75rem" placeholder="Phone number" is-required size="lg" />
+              <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" is-required size="lg" />
             </c-stack>
           </c-drawer-body>
 
@@ -62,7 +60,8 @@ import {
   CStack,
   CButton,
   CInput,
-  CTextarea
+  CText,
+  CTextarea,
 } from '@chakra-ui/vue'
 
 const axios = require('axios').default
@@ -79,7 +78,8 @@ export default {
     CStack,
     CButton,
     CInput,
-    CTextarea
+    CText,
+    CTextarea,
   },
   data () {
     return {
@@ -92,7 +92,7 @@ export default {
       isOpen: false,
       form: {
         firstName: 'Isaias',
-        lastName: '',
+        phone: '',
         email: 'isaias@stackitgroup.com',
         message: 'Hello world!!',
       },
@@ -104,6 +104,10 @@ export default {
 
       if (!this.form.firstName) {
         errors.push('FirstName is required.')
+      }
+
+      if (!this.form.phone) {
+        errors.push('Phone number is required.')
       }
 
       if (!this.form.email) {
@@ -120,6 +124,9 @@ export default {
     }
   },
   methods: {
+    open() {
+      this.isOpen = true
+    },
     close() {
       this.isOpen = false
     },
@@ -140,8 +147,23 @@ export default {
 }
 </script>
 
-<style scoped type="scss">
+<style type="scss" scoped>
 .lets-talk {
   background-image: linear-gradient(90deg, #eb4256 0%, #0c0263 100%);
+}
+
+.obar {
+  position: relative;
+  width: fit-content;
+}
+
+.obar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 4px;
+  background-image: linear-gradient(90deg, #eb4256 0%, #ffa363 100%);
 }
 </style>

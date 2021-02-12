@@ -5,6 +5,7 @@
         <CBox font-family="body" as="main">
           <CReset />
           <Nuxt />
+          <st-footer />
         </CBox>
       </CColorModeProvider>
     </CThemeProvider>
@@ -12,9 +13,12 @@
 </template>
 
 <script>
-import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
+
+import StFooter from '~/components/footer'
 
 // Start library for displaying components smooth
 AOS.init()
@@ -25,7 +29,8 @@ export default {
     CThemeProvider,
     CColorModeProvider,
     CReset,
-    CBox
+    CBox,
+    StFooter,
   }
 }
 </script>

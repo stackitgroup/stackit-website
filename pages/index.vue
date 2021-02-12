@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <contact-dialog />
+    <contact-dialog ref="contactDialog" />
 
-    <banner />
+    <banner @action="launchContactForm()" />
 
     <c-box :mt="['6rem']" :mx="[5, 5, 5, '5%', '10%']">
       <services />
     </c-box>
 
     <c-box :mt="['6rem']">
-      <lets-talk />
+      <lets-talk @action="launchContactForm()" />
     </c-box>
 
     <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
@@ -20,8 +20,8 @@
       <lorem />
     </c-box>
 
-    <c-box mt="12rem">
-      <st-footer />
+    <c-box mt="12rem" :mx="[5, 5, 5, '5%', '10%']">
+      <clients />
     </c-box>
   </div>
 </template>
@@ -35,10 +35,12 @@ import ContactDialog from '~/components/contact-dialog'
 import WeAreDifferent from '~/components/we-are-different'
 import Lorem from '~/components/lorem'
 import StFooter from '~/components/footer'
+import Clients from '~/components/clients'
 
 export default {
   name: 'App',
   components: {
+    Clients,
     StFooter,
     Lorem,
     WeAreDifferent,
@@ -54,6 +56,9 @@ export default {
     }
   },
   methods: {
+    launchContactForm() {
+      this.$refs.contactDialog.open()
+    }
   }
 }
 </script>

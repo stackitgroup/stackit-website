@@ -2,7 +2,7 @@
   <c-flex
     class="banner"
     direction="column"
-    h="590px"
+    p="5.25rem"
     color="white"
     justify="center"
     align="center"
@@ -18,9 +18,15 @@
       data-aos-delay="100"
       data-aos-offset="0"
     >
-      We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
+      <template v-if="custom">
+        {{ custom }}
+      </template>
+      <template v-else>
+        We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
+      </template>
     </c-text>
     <c-text
+      v-if="!custom"
       font-size="2xl"
       mt="12"
       mb="10"
@@ -35,6 +41,7 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>
     <c-button
+      v-if="!custom"
       class="btn-main"
       right-icon="arrow-forward"
       rounded="10px"
@@ -43,6 +50,7 @@
       font-weight="400"
       data-aos="fade-up"
       data-aos-delay="500"
+      @click="$emit('action')"
     >
       LET'S TALK
     </c-button>
@@ -57,7 +65,13 @@ export default {
     CFlex,
     CText,
     CButton,
-  }
+  },
+  props: {
+    custom: {
+      type: String,
+      default: undefined
+    },
+  },
 }
 </script>
 
@@ -69,6 +83,7 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  z-index: 0;
 
   .banner-title {
     font-weight: lighter;
