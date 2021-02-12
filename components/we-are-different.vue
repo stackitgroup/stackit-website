@@ -4,7 +4,6 @@
     direction="column"
     justify="center"
     align="center"
-    :px="['141px']"
   >
     <c-stack w="100%" spacing="0">
       <c-heading as="h1" :font-weight="600" :font-size="['lg', 'lg', '2xl', '4xl', '6xl']">

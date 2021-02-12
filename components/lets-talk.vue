@@ -2,11 +2,11 @@
   <c-flex
     class="lets-talk"
     background-color="banner.bg"
-    h="15.375rem"
     color="white"
     align="center"
     justify="space-between"
-    :px="['141px']"
+    :py="['4.25rem']"
+    :px="[5, 5, 5, '5%', '10%']"
   >
     <c-heading
       as="h1"

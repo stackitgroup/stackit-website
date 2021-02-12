@@ -2,7 +2,6 @@
   <c-flex
     class="banner"
     justify="space-between"
-    :px="['141px']"
   >
     <c-box class="lorem-bar" :w="['35%']" :p="['65px']">
       <c-text color="white" font-size="6xl" font-weight="600" line-height="1.3">
