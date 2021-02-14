@@ -3,32 +3,45 @@
     class="banner"
     justify="space-between"
   >
-    <c-box class="lorem-bar" :w="['35%']" :p="['65px']">
+    <c-box
+      class="lorem-bar"
+      :w="['35%']"
+      :p="['65px']"
+      data-aos="fade-right"
+      data-aos-delay="150"
+    >
       <c-text color="white" font-size="6xl" font-weight="600" line-height="1.3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
       </c-text>
     </c-box>
 
     <c-stack spacing="8" :w="['60%']">
-      <c-heading as="h1" :font-size="['6xl']" font-weight="600">
+      <c-heading
+        as="h1"
+        :font-size="['6xl']"
+        font-weight="600"
+        data-aos="fade-zoom-in"
+        data-aos-delay="100"
+      >
         Lorem ipsum dolor sit amet
       </c-heading>
-      <c-text font-size="xl">
+      <c-text
+        font-size="xl"
+        data-aos="fade-zoom-in"
+        data-aos-delay="120"
+        data-aos-offset="0"
+        data-aos-easing="ease-in-back"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </c-text>
-      <c-flex>
-        <c-image src="./check.svg" h="60px" w="60px" mr="4" />
-        <c-text font-size="xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
-        </c-text>
-      </c-flex>
-      <c-flex>
-        <c-image src="./check.svg" h="60px" w="60px" mr="4" />
-        <c-text font-size="xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
-        </c-text>
-      </c-flex>
-      <c-flex>
+      <c-flex
+        v-for="{a, index} in [1, 2, 3, 4]"
+        :key="`case-${index}`"
+        data-aos="fade-zoom-in"
+        :data-aos-delay="(index + 1) * 200"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+      >
         <c-image src="./check.svg" h="60px" w="60px" mr="4" />
         <c-text font-size="xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
@@ -72,7 +85,7 @@ export default {
 }
 </script>
 
-<style scoped type="scss">
+<style scoped lang="scss">
 .lorem-bar {
   border-radius: 10px;
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);

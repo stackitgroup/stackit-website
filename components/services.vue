@@ -1,30 +1,31 @@
 <template>
-  <c-stack :spacing="['7rem']">
-    <c-box
+  <c-stack :spacing="['2rem', '3rem', '4rem', '7rem']">
+    <c-flex
       v-for="(service, index) in services"
       :key="`service-${index}`"
-      display="flex"
-      flex-wrap="wrap"
-      justify-content="space-between"
+      class="service-container"
+      :class="{'reverse': index % 2 === 0}"
+      wrap="wrap"
+      justify="space-between"
     >
-      <c-box
-        v-if="index % 2 === 0"
+      <c-flex
         :mt="['40px', '40px', '40px', 0]"
-        :width="['100%', '100%', '60%', '30%', '35%']"
+        :width="['100%', '100%', '100%', '30%', '35%']"
+        :justify="['center', 'center', 'center', 'flex-start']"
       >
         <c-image
           data-aos="fade-right"
           data-aos-delay="150"
           class="summary-image"
-          :src="service.image"
+          :src="`services/${service.image}`"
         />
-      </c-box>
+      </c-flex>
 
       <c-box :width="['100%', '100%', '100%', '70%', '65%']">
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading
             as="h1"
-            :font-size="['lg', 'lg', '2xl', '4xl', '6xl']"
+            :font-size="['2xl', '3xl', '4xl', '5xl']"
             font-weight="600"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
@@ -38,7 +39,7 @@
         <c-stack
           class="stack"
           :spacing="6"
-          font-size="xl"
+          :font-size="['lg', 'xl']"
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-delay="300"
@@ -49,30 +50,17 @@
           </c-text>
         </c-stack>
       </c-box>
-
-      <!--   TODO Improve this code   -->
-      <c-box
-        v-if="index % 2 !== 0"
-        :mt="['40px', '40px', '40px', 0]"
-        :width="['100%', '100%', '60%', '30%', '35%']"
-      >
-        <c-image
-          data-aos="fade-left"
-          data-aos-delay="150"
-          class="summary-image"
-          :src="service.image"
-        />
-      </c-box>
-    </c-box>
+    </c-flex>
   </c-stack>
 </template>
 
 <script>
-import { CBox, CStack, CImage, CText, CHeading } from '@chakra-ui/vue'
+import { CBox, CFlex, CStack, CImage, CText, CHeading } from '@chakra-ui/vue'
 
 export default {
   components: {
     CBox,
+    CFlex,
     CStack,
     CImage,
     CHeading,
@@ -89,17 +77,17 @@ export default {
         {
           title: 'Staffing',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
+          image: 'staffing.png',
         },
         {
           title: 'Consulting',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
+          image: 'consulting.png',
         },
         {
           title: 'Maintenance & Support',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
+          image: 'support.png',
         },
       ],
     }
@@ -107,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #title-icon {
   margin-right: 1.6rem;
 }
@@ -119,5 +107,23 @@ export default {
 .summary-image {
   border-radius: 20px;
   filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.1));
+}
+
+.service-container {
+  flex-direction: row;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-container {
+    flex-direction: column-reverse !important;
+
+    //&.reverse {
+    //  flex-direction: column-reverse;
+    //}
+  }
 }
 </style>

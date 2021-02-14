@@ -1,12 +1,14 @@
 <template>
   <c-flex align="center" justify="space-between">
     <c-image
-      v-for="client in clients"
+      v-for="(client, index) in clients"
       :key="`client-${client.name}`"
       :src="`./clients/${client.src}`"
       :alt="client.name"
       :w="['178px']"
       h="fit-content"
+      data-aos="flip-left"
+      :data-aos-delay="(index + 1) * 250"
     />
   </c-flex>
 </template>

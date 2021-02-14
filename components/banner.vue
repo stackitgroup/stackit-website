@@ -2,15 +2,16 @@
   <c-flex
     class="banner"
     direction="column"
-    p="5.25rem"
+    :py="['5.25rem']"
+    :px="['5%']"
     color="white"
     justify="center"
     align="center"
   >
     <c-text
       class="banner-title"
-      w="1094px"
-      font-size="6xl"
+      :font-size="['3xl', '4xl', '5xl', '6xl']"
+      max-w="1094px"
       text-align="center"
       z-index="1"
       data-aos="fade-zoom-in"
@@ -27,10 +28,10 @@
     </c-text>
     <c-text
       v-if="!custom"
-      font-size="2xl"
+      :font-size="['md', 'lg', 'xl', '2xl']"
       mt="12"
       mb="10"
-      w="1094px"
+      max-w="1094px"
       text-align="center"
       z-index="1"
       data-aos="fade-zoom-in"
@@ -75,7 +76,7 @@ export default {
 }
 </script>
 
-<style scoped type="scss">
+<style scoped lang="scss">
 .banner {
   position: relative;
   background-image: url('/banner-background.png');

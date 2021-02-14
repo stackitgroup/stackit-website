@@ -16,11 +16,11 @@
       <we-are-different />
     </c-box>
 
-    <c-box mt="12rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
       <lorem />
     </c-box>
 
-    <c-box mt="12rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box my="9rem" :mx="[5, 5, 5, '5%', '10%']">
       <clients />
     </c-box>
   </div>

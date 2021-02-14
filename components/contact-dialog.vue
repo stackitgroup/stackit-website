@@ -147,7 +147,7 @@ export default {
 }
 </script>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
 .lets-talk {
   background-image: linear-gradient(90deg, #eb4256 0%, #0c0263 100%);
 }
