@@ -1,22 +1,30 @@
 <template>
-  <c-box id="navbar" class="sticky" color="white">
+  <div id="nav" :class="{sticky: active}">
     <c-flex
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
+      id="nav-container"
+      :class="toggleNavClass()"
+      justify="space-between"
+      w="100%"
     >
       <a href="/">
-        <c-image src="./favicon.ico" mr="2" />
-        <c-heading font-size="3xl">
-          Stackit
-        </c-heading>
+        <c-flex
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
+        >
+          <c-image src="./favicon.ico" mr="2" />
+          <c-heading font-size="3xl">
+            Stackit
+          </c-heading>
+        </c-flex>
       </a>
-    </c-flex>
 
-    <a href="/">Stackit</a>
-    <a href="/contact">Contact</a>
-    <a href="/case-study">Case Study</a>
-  </c-box>
+      <c-flex class="nav-links" :font-size="['lg', 'xl']">
+        <a href="/contact">Contact</a>
+        <a href="/case-study">Case Study</a>
+      </c-flex>
+    </c-flex>
+  </div>
 </template>
 
 <script>
@@ -29,33 +37,74 @@ export default {
     CHeading,
     CImage
   },
-  mounted () {
+  data() {
+    return {
+      active: false
+    }
+  },
+  mounted() {
+    window.document.onscroll = () => {
+      const navBar = document.getElementById('nav')
+      this.active = window.scrollY > navBar.offsetTop
+    }
+  },
+  methods: {
+    toggleNavClass() {
+      if (this.active === false) {
+        return 'nav'
+      } else {
+        return 'sticky-nav'
+      }
+    }
   }
 }
 </script>
 
-<style scoped>
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: #333;
+<style lang="scss" scoped>
+a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 0 1vw;
+}
+
+a:hover {
+  transition: linear 100ms;
+  color: white;
+}
+
+/* two classes, decided on scroll */
+.nav {
+  transition: 100ms;
+  padding: 2rem 3rem;
+}
+
+.sticky-nav {
+  transition: 100ms;
+  padding: 1rem;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
   z-index: 1000;
 }
 
-/* Navbar links */
-#navbar a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
+/* have to add the ID nav (#nav) otherwise the backgrnd color won't change as the previous background color is set in an ID and ID trumps class notation */
+#nav.sticky {
+  transition: 150ms;
+  background-color: #0b0f7d;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.nav-links a {
+  border-bottom: 4px #ed4c57 solid;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 </style>
