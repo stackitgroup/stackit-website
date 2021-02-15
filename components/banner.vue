@@ -79,7 +79,6 @@ export default {
   background-image: url('/banner-background.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   z-index: 0;
 
@@ -97,7 +96,7 @@ export default {
   content: '';
   position: absolute;
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
-  opacity: 0.7;
+  opacity: 0.85;
   top: 0;
   right: 0;
   bottom: 0;
