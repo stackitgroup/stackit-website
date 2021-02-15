@@ -40,8 +40,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </c-text>
       <c-flex
-        v-for="{a, index} in [1, 2, 3, 4]"
-        :key="`case-${index}`"
+        v-for="(a, index) in [1, 2, 3, 4]"
+        :key="`lorem-${index}`"
         data-aos="fade-zoom-in"
         :data-aos-delay="200"
         data-aos-easing="ease-in-back"

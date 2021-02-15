@@ -19,7 +19,7 @@
       data-aos-delay="100"
     >
       <template v-if="custom">
-        {{ custom }}
+        <b>{{ custom }}</b>
       </template>
       <template v-else>
         We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>

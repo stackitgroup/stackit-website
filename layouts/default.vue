@@ -4,7 +4,8 @@
       <CColorModeProvider>
         <CBox font-family="body" as="main">
           <CReset />
-          <Nuxt />
+          <navbar />
+          <Nuxt class="app-content" />
           <st-footer />
         </CBox>
       </CColorModeProvider>
@@ -15,6 +16,7 @@
 <script>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Navbar from '~/components/navbar'
 
 import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
 
@@ -26,6 +28,7 @@ AOS.init()
 export default {
   name: 'App',
   components: {
+    Navbar,
     CThemeProvider,
     CColorModeProvider,
     CReset,
@@ -34,3 +37,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.app-content {
+  /* margin-top: 300px; */
+}
+</style>
