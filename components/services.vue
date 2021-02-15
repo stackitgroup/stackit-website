@@ -10,7 +10,7 @@
     >
       <c-flex
         :mt="['40px', '40px', '40px', 0]"
-        :width="['100%', '100%', '100%', '30%', '35%']"
+        :width="['100%', '100%', '100%', '28%', '34%']"
         :justify="['center', 'center', 'center', index % 2 === 0 ? 'flex-end' : 'flex-start']"
       >
         <c-image
@@ -64,19 +64,14 @@ export default {
           image: 'service-custom-software.png',
         },
         {
-          title: 'Staffing',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'staffing.png',
+          title: 'Maintenance & Support',
+          description: 'We provide ongoing support and maintenance to make sure your software is running well, 24/7. That includes fixing bugs, monitoring your system, maintaining your database, ensuring server security and collecting analytics on an ongoing basis.',
+          image: 'support.png',
         },
         {
           title: 'Consulting',
           description: 'We review your existing software design, test your cloud infrastructure, and audit your code to make sure everything is clean, secure, and effective. This includes an assessment of your security practices and scalability of your software architecture. If your system isn’t looking up to par, we’ll help you fix things–fast.',
           image: 'consulting.png',
-        },
-        {
-          title: 'Maintenance & Support',
-          description: 'We won’t leave you hanging–we provide ongoing support and maintenance to make sure your software is running well, 24/7. That includes fixing bugs, monitoring your system, maintaining your database, ensuring server security and collecting analytics on an ongoing basis.',
-          image: 'support.png',
         },
       ],
     }

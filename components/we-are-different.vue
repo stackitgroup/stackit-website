@@ -84,12 +84,12 @@ export default {
     return {
       differences: [
         {
-          title: 'Expertise with Failures',
-          description: 'We hold all our code to the highest standards. That means relying on development practices such as iterative and incremental development, test-driven development, and CLEAN code.',
-        },
-        {
           title: 'Coding Quality',
           description: 'We can rescue your failing software project. With skill and finesse, we can transition your software out of the wrong hands and get it back on its feet.',
+        },
+        {
+          title: 'Expertise with Failures',
+          description: 'We hold all our code to the highest standards. That means relying on development practices such as iterative and incremental development, test-driven development, and CLEAN code.',
         },
         {
           title: 'Care for Our Clients',

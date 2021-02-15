@@ -126,10 +126,10 @@ export default {
       isSent: false,
       isLoading: false,
       form: {
-        name: 'Isaias',
-        phone: '4424671860',
-        email: 'isaias@stackitgroup.com',
-        message: 'Hello world!!',
+        name: '',
+        phone: '',
+        email: '',
+        message: '',
       },
     }
   },

@@ -13,7 +13,6 @@
       :font-size="['3xl', '4xl', '5xl', '6xl']"
       max-w="1094px"
       text-align="center"
-      z-index="1"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="100"
