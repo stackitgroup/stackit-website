@@ -213,10 +213,4 @@ export default {
   height: 4px;
   background-image: linear-gradient(90deg, #eb4256 0%, #ffa363 100%);
 }
-
-.confirm-image {
-  margin-top: 2rem;
-  height: 160px;
-  object-fit: cover;
-}
 </style>
