@@ -21,7 +21,7 @@
 
           <c-drawer-body>
             <c-stack v-if="!isSent" spacing="6" my="1.5rem">
-              <c-input v-model="form.firstName" h="3.75rem" placeholder="First name" is-required size="lg" />
+              <c-input v-model="form.name" h="3.75rem" placeholder="First name" is-required size="lg" />
               <c-input v-model="form.email" h="3.75rem" placeholder="Email" is-required size="lg" />
               <c-input v-model="form.phone" h="3.75rem" placeholder="Phone number" is-required size="lg" />
               <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" is-required size="lg" />
@@ -126,7 +126,7 @@ export default {
       isSent: false,
       isLoading: false,
       form: {
-        firstName: 'Isaias',
+        name: 'Isaias',
         phone: '4424671860',
         email: 'isaias@stackitgroup.com',
         message: 'Hello world!!',
@@ -137,7 +137,7 @@ export default {
     isFormValid() {
       const errors = []
 
-      if (!this.form.firstName) {
+      if (!this.form.name) {
         errors.push('FirstName is required.')
       }
 

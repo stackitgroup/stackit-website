@@ -2,7 +2,7 @@
   <div class="container">
     <banner custom="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
 
-    <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'">
+    <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'" wrap="wrap">
       <c-heading
         as="h1"
         :font-size="['3xl', '4xl', '5xl', '6xl']"
@@ -18,21 +18,32 @@
 
       <c-flex justify="space-between" wrap="wrap">
         <c-stack :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
-          <c-input v-model="form.firstName" placeholder="Name" is-required size="lg" />
+          <c-input v-model="form.name" h="3.75rem" placeholder="Name" is-required size="lg" />
           <c-flex justify="space-between">
-            <c-input v-model="form.email" :w="['45%']" placeholder="Email" is-required size="lg" />
-            <c-input v-model="form.email" :w="['45%']" placeholder="Phone" is-required size="lg" />
+            <c-input v-model="form.email" h="3.75rem" :w="['48%']" placeholder="Email" is-required size="lg" />
+            <c-input v-model="form.phone" h="3.75rem" :w="['48%']" placeholder="Phone" is-required size="lg" />
           </c-flex>
-          <c-textarea v-model="form.message" placeholder="Message" is-required size="lg" />
+          <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" size="lg" />
         </c-stack>
 
         <c-stack
-          :spacing="['1rem', '1rem', '1rem', '1rem', '3.5rem']"
+          :mt="['1.5rem', '1.5rem', '1.5rem', '0rem']"
+          :spacing="['1rem', '1rem', '1rem', '3.5rem', '3.5rem']"
           :w="['100%', '100%', '100%', '45%', '37%']"
         >
           <c-flex v-for="image in ['pin.svg', 'message.svg', 'phone.svg']" :key="`indicator-${image}`" align="center">
-            <c-flex class="icon-container" mr="8">
-              <c-image :src="`/contact/${image}`" h="32px" w="32px" />
+            <c-flex
+              class="icon-container"
+              :mr="[4, 4, 4, 8]"
+              :h="['35px', '35px', '35px', '70px']"
+              :w="['35px', '35px', '35px', '70px']"
+            >
+              <c-image
+                :src="`/contact/${image}`"
+                :h="['16px', '16px', '16px', '32px']"
+                :w="['16px', '16px', '16px', '32px']"
+                object-fit="contain"
+              />
             </c-flex>
             <c-text font-size="lg">
               Lorem ipsum dolor sit amet, consectetur
@@ -89,7 +100,7 @@ export default {
       },
       isOpen: false,
       form: {
-        firstName: '',
+        name: '',
         lastName: '',
         email: '',
         message: '',
@@ -100,7 +111,7 @@ export default {
     isFormValid() {
       const errors = []
 
-      if (!this.form.firstName) {
+      if (!this.form.name) {
         errors.push('FirstName is required.')
       }
 
@@ -142,8 +153,6 @@ export default {
 .icon-container {
   background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
   justify-content: center;
   align-items: center;
 }
