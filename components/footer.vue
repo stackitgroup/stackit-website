@@ -21,10 +21,11 @@
     >
       <c-stack :w="['30%']">
         <c-text font-weight="600">
-          Let's work together!
+          Let’s build custom software for you.
         </c-text>
         <c-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+          Contact us today to start talking about your next custom software project.<br>
+          Let’s talk.
         </c-text>
       </c-stack>
 
@@ -32,17 +33,11 @@
         <c-text font-weight="600">
           Quick Links
         </c-text>
-        <c-link>
-          Services
+        <c-link href="/contact">
+          Contact
         </c-link>
-        <c-link>
-          We care
-        </c-link>
-        <c-link>
+        <c-link href="/case-study">
           Case Study
-        </c-link>
-        <c-link>
-          Clients
         </c-link>
       </c-stack>
 
