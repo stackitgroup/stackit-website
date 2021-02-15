@@ -37,7 +37,7 @@
       data-aos-easing="ease-in-back"
       data-aos-delay="350"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
+      You can depend on us to deliver quality custom software designed for your unique business.
     </c-text>
     <c-button
       v-if="!custom"

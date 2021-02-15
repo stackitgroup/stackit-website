@@ -11,7 +11,7 @@
       <c-flex
         :mt="['40px', '40px', '40px', 0]"
         :width="['100%', '100%', '100%', '30%', '35%']"
-        :justify="['center', 'center', 'center', 'flex-start']"
+        :justify="['center', 'center', 'center', index % 2 === 0 ? 'flex-end' : 'flex-start']"
       >
         <c-image
           :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'"
@@ -60,7 +60,7 @@ export default {
       services: [
         {
           title: 'Custom Software',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          description: 'We are full-stack developers with expertise in mobile and web applications, and front-end and back-end development. Relying on the latest in coding technology and agile development practices, we’ve built software to help businesses transform their operations, create new payments processing, integrate existing systems, and much, much more.  Bottom line? We can build you just about anything.',
           image: 'service-custom-software.png',
         },
         {
@@ -70,12 +70,12 @@ export default {
         },
         {
           title: 'Consulting',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          description: 'We review your existing software design, test your cloud infrastructure, and audit your code to make sure everything is clean, secure, and effective. This includes an assessment of your security practices and scalability of your software architecture. If your system isn’t looking up to par, we’ll help you fix things–fast.',
           image: 'consulting.png',
         },
         {
           title: 'Maintenance & Support',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
+          description: 'We won’t leave you hanging–we provide ongoing support and maintenance to make sure your software is running well, 24/7. That includes fixing bugs, monitoring your system, maintaining your database, ensuring server security and collecting analytics on an ongoing basis.',
           image: 'support.png',
         },
       ],

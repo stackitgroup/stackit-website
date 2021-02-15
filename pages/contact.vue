@@ -3,16 +3,21 @@
     <banner custom="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
 
     <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'">
-      <c-heading as="h1" font-size="6xl" font-weight="600" max-w="60%">
+      <c-heading
+        as="h1"
+        :font-size="['3xl', '4xl', '5xl', '6xl']"
+        font-weight="600"
+        :max-w="['100%', '100%', '100%', '100%', '60%']"
+      >
         Let's talk about your project
       </c-heading>
 
-      <c-text font-size="lg" max-w="60%">
+      <c-text font-size="lg" :max-w="['100%', '100%', '100%', '100%', '60%']">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
       </c-text>
 
-      <c-flex justify="space-between">
-        <c-stack :w="['60%']" spacing="6" wrap="wrap">
+      <c-flex justify="space-between" wrap="wrap">
+        <c-stack :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
           <c-input v-model="form.firstName" placeholder="Name" is-required size="lg" />
           <c-flex justify="space-between">
             <c-input v-model="form.email" :w="['45%']" placeholder="Email" is-required size="lg" />
@@ -21,26 +26,13 @@
           <c-textarea v-model="form.message" placeholder="Message" is-required size="lg" />
         </c-stack>
 
-        <c-stack spacing="3.5rem" :w="['30%']">
-          <c-flex align="center">
+        <c-stack
+          :spacing="['1rem', '1rem', '1rem', '1rem', '3.5rem']"
+          :w="['100%', '100%', '100%', '45%', '37%']"
+        >
+          <c-flex v-for="image in ['pin.svg', 'message.svg', 'phone.svg']" :key="`indicator-${image}`" align="center">
             <c-flex class="icon-container" mr="8">
-              <c-image src="/contact/pin.svg" h="32px" w="32px" />
-            </c-flex>
-            <c-text font-size="lg">
-              Lorem ipsum dolor sit amet, consectetur
-            </c-text>
-          </c-flex>
-          <c-flex align="center">
-            <c-flex class="icon-container" mr="8">
-              <c-image src="/contact/message.svg" h="32px" w="32px" />
-            </c-flex>
-            <c-text font-size="lg">
-              Lorem ipsum dolor sit amet, consectetur
-            </c-text>
-          </c-flex>
-          <c-flex align="center">
-            <c-flex class="icon-container" mr="8">
-              <c-image src="/contact/phone.svg" h="32px" w="32px" />
+              <c-image :src="`/contact/${image}`" h="32px" w="32px" />
             </c-flex>
             <c-text font-size="lg">
               Lorem ipsum dolor sit amet, consectetur

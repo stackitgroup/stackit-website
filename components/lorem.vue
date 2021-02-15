@@ -29,7 +29,7 @@
         data-aos="fade-zoom-in"
         data-aos-delay="100"
       >
-        Lorem ipsum dolor sit amet
+        How Stackit Helped Save a Half-Baked Project & Launch an MVP
       </c-heading>
       <c-text
         :font-size="['lg', 'xl']"
