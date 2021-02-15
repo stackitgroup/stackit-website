@@ -1,0 +1,110 @@
+<template>
+  <div id="nav" :class="{sticky: active}">
+    <c-flex
+      id="nav-container"
+      :class="toggleNavClass()"
+      justify="space-between"
+      w="100%"
+    >
+      <a href="/">
+        <c-flex
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
+        >
+          <c-image src="./favicon.ico" mr="2" />
+          <c-heading font-size="3xl">
+            Stackit
+          </c-heading>
+        </c-flex>
+      </a>
+
+      <c-flex class="nav-links" :font-size="['lg', 'xl']">
+        <a href="/contact">Contact</a>
+        <a href="/case-study">Case Study</a>
+      </c-flex>
+    </c-flex>
+  </div>
+</template>
+
+<script>
+import { CBox, CFlex, CHeading, CImage } from '@chakra-ui/vue'
+
+export default {
+  components: {
+    CBox,
+    CFlex,
+    CHeading,
+    CImage
+  },
+  data() {
+    return {
+      active: false
+    }
+  },
+  mounted() {
+    window.document.onscroll = () => {
+      const navBar = document.getElementById('nav')
+      this.active = window.scrollY > navBar.offsetTop
+    }
+  },
+  methods: {
+    toggleNavClass() {
+      if (this.active === false) {
+        return 'nav'
+      } else {
+        return 'sticky-nav'
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 0 1vw;
+}
+
+a:hover {
+  transition: linear 100ms;
+  color: white;
+}
+
+/* two classes, decided on scroll */
+.nav {
+  transition: 100ms;
+  padding: 2rem 3rem;
+}
+
+.sticky-nav {
+  transition: 100ms;
+  padding: 1rem;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* have to add the ID nav (#nav) otherwise the backgrnd color won't change as the previous background color is set in an ID and ID trumps class notation */
+#nav.sticky {
+  transition: 150ms;
+  background-color: #0b0f7d;
+}
+
+.nav-links a {
+  border-bottom: 4px #ed4c57 solid;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+</style>

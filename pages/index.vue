@@ -1,31 +1,27 @@
 <template>
   <div class="container">
-    <contact-dialog />
+    <contact-dialog ref="contactDialog" />
 
-    <banner />
+    <banner @action="launchContactForm()" />
 
-    <c-box
-      v-for="(service, index) in services"
-      :key="`service-${index}`"
-      :my="['8rem']"
-    >
-      <service :service="service" :position="index % 2 === 0 ? 'left' : 'right'" />
+    <c-box :mt="['6rem']" :mx="[5, 5, 5, '5%', '10%']">
+      <services />
     </c-box>
 
-    <c-box>
-      <lets-talk />
+    <c-box :mt="['6rem']">
+      <lets-talk @action="launchContactForm()" />
     </c-box>
 
-    <c-box mt="6rem">
+    <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
       <we-are-different />
     </c-box>
 
-    <c-box mt="12rem">
+    <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
       <lorem />
     </c-box>
 
-    <c-box mt="12rem">
-      <st-footer />
+    <c-box my="9rem" :mx="[5, 5, 5, '5%', '10%']">
+      <clients />
     </c-box>
   </div>
 </template>
@@ -34,57 +30,35 @@
 import { CBox } from '@chakra-ui/vue'
 import LetsTalk from '~/components/lets-talk'
 import Banner from '~/components/banner'
-import Service from '~/components/service'
+import Services from '~/components/services'
 import ContactDialog from '~/components/contact-dialog'
 import WeAreDifferent from '~/components/we-are-different'
 import Lorem from '~/components/lorem'
 import StFooter from '~/components/footer'
+import Clients from '~/components/clients'
 
 export default {
   name: 'App',
   components: {
+    Clients,
     StFooter,
     Lorem,
     WeAreDifferent,
     ContactDialog,
     LetsTalk,
     Banner,
-    Service,
+    Services,
     CBox,
   },
   data() {
     return {
       showContactDialog: false,
-      services: [
-        {
-          title: 'Custom Software',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
-        },
-        {
-          title: 'Staffing',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
-        },
-        {
-          title: 'Consulting',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
-        },
-        {
-          title: 'Maintenance & Support',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.',
-          image: 'service-custom-software.png',
-        },
-      ],
-    }
-  },
-  computed: {
-    version: () => {
-      return process.env.version
     }
   },
   methods: {
+    launchContactForm() {
+      this.$refs.contactDialog.open()
+    }
   }
 }
 </script>

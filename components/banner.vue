@@ -2,39 +2,45 @@
   <c-flex
     class="banner"
     direction="column"
-    h="590px"
+    :py="['5.25rem']"
+    :px="['5%']"
     color="white"
     justify="center"
     align="center"
   >
     <c-text
       class="banner-title"
-      w="1094px"
-      font-size="6xl"
+      :font-size="['3xl', '4xl', '5xl', '6xl']"
+      max-w="1094px"
       text-align="center"
       z-index="1"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="100"
-      data-aos-offset="0"
     >
-      We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
+      <template v-if="custom">
+        <b>{{ custom }}</b>
+      </template>
+      <template v-else>
+        We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
+      </template>
     </c-text>
     <c-text
-      font-size="2xl"
+      v-if="!custom"
+      :font-size="['md', 'lg', 'xl', '2xl']"
       mt="12"
       mb="10"
-      w="1094px"
+      max-w="1094px"
       text-align="center"
       z-index="1"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="350"
-      data-aos-offset="0"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>
     <c-button
+      v-if="!custom"
       class="btn-main"
       right-icon="arrow-forward"
       rounded="10px"
@@ -43,6 +49,7 @@
       font-weight="400"
       data-aos="fade-up"
       data-aos-delay="500"
+      @click="$emit('action')"
     >
       LET'S TALK
     </c-button>
@@ -57,11 +64,17 @@ export default {
     CFlex,
     CText,
     CButton,
-  }
+  },
+  props: {
+    custom: {
+      type: String,
+      default: undefined
+    },
+  },
 }
 </script>
 
-<style scoped type="scss">
+<style scoped lang="scss">
 .banner {
   position: relative;
   background-image: url('/banner-background.png');
@@ -69,6 +82,7 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  z-index: 0;
 
   .banner-title {
     font-weight: lighter;
