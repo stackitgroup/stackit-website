@@ -14,37 +14,26 @@
         :justify="['center', 'center', 'center', 'flex-start']"
       >
         <c-image
-          data-aos="fade-right"
+          :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'"
           data-aos-delay="150"
           class="summary-image"
           :src="`services/${service.image}`"
         />
       </c-flex>
 
-      <c-box :width="['100%', '100%', '100%', '70%', '65%']">
+      <c-box
+        :width="['100%', '100%', '100%', '70%', '65%']"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="150"
+      >
         <c-box display="flex" align-items="center" :spacing="3">
-          <c-heading
-            as="h1"
-            :font-size="['2xl', '3xl', '4xl', '5xl']"
-            font-weight="600"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="100"
-            data-aos-offset="0"
-          >
+          <c-heading as="h1" :font-size="['2xl', '3xl', '4xl', '5xl']" font-weight="600">
             {{ service.title }}
           </c-heading>
         </c-box>
 
-        <c-stack
-          class="stack"
-          :spacing="6"
-          :font-size="['lg', 'xl']"
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="300"
-          data-aos-offset="0"
-        >
+        <c-stack class="stack" :spacing="6" :font-size="['lg', 'xl']">
           <c-text>
             {{ service.description }}
           </c-text>
@@ -117,13 +106,9 @@ export default {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .service-container {
     flex-direction: column-reverse !important;
-
-    //&.reverse {
-    //  flex-direction: column-reverse;
-    //}
   }
 }
 </style>

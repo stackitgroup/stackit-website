@@ -10,6 +10,10 @@ export default {
     banner: {
       bg: '#0b0f7d',
     },
+    contact: {
+      title: '#404040',
+      description: '#404040de',
+    },
     brand: {
       50: '#daffff',
       100: '#b1fbfb',

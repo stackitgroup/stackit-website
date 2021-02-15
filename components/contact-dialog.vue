@@ -15,21 +15,31 @@
           <c-drawer-close-button />
           <c-drawer-header>
             <c-text class="obar" :font-size="['5xl']" :font-weight="400">
-              Contact
+              Contact us
             </c-text>
           </c-drawer-header>
 
           <c-drawer-body>
-            <c-stack spacing="6" my="1.5rem">
+            <c-stack v-if="!isSent" spacing="6" my="1.5rem">
               <c-input v-model="form.firstName" h="3.75rem" placeholder="First name" is-required size="lg" />
               <c-input v-model="form.email" h="3.75rem" placeholder="Email" is-required size="lg" />
               <c-input v-model="form.phone" h="3.75rem" placeholder="Phone number" is-required size="lg" />
               <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" is-required size="lg" />
             </c-stack>
+            <c-stack v-else spacing="1rem">
+              <c-image class="confirm-image" src="contact/confirm_check.gif" />
+              <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
+                Message sent
+              </c-heading>
+              <c-text :font-weight="400" :font-size="['lg']" text-align="center" color="contact.description">
+                Thank you for reaching out, we will be in touch within 24 hours.
+              </c-text>
+            </c-stack>
           </c-drawer-body>
 
           <c-drawer-footer>
             <c-button
+              v-if="!isSent"
               class="btn-main"
               right-icon="arrow-forward"
               rounded="10px"
@@ -37,10 +47,25 @@
               font-size="xl"
               font-weight="400"
               :disabled="isFormValid"
+              :is-loading="isLoading"
+              loading-text="Sending"
               @click="sendMessage()"
             >
               SEND MESSAGE
             </c-button>
+            <c-flex v-else w="100%" justify="center" mt="2rem">
+              <c-button
+                class="btn-main"
+                right-icon="close"
+                rounded="10px"
+                size="lg"
+                font-size="xl"
+                font-weight="400"
+                @click="close()"
+              >
+                CLOSE
+              </c-button>
+            </c-flex>
           </c-drawer-footer>
         </form>
       </c-drawer-content>
@@ -60,8 +85,12 @@ import {
   CStack,
   CButton,
   CInput,
+  CHeading,
   CText,
   CTextarea,
+  CImage,
+  CBox,
+  CFlex,
 } from '@chakra-ui/vue'
 
 const axios = require('axios').default
@@ -78,8 +107,12 @@ export default {
     CStack,
     CButton,
     CInput,
+    CHeading,
     CText,
     CTextarea,
+    CImage,
+    CBox,
+    CFlex,
   },
   data () {
     return {
@@ -90,9 +123,11 @@ export default {
         'Content-Type': 'application/json',
       },
       isOpen: false,
+      isSent: false,
+      isLoading: false,
       form: {
         firstName: 'Isaias',
-        phone: '',
+        phone: '4424671860',
         email: 'isaias@stackitgroup.com',
         message: 'Hello world!!',
       },
@@ -126,18 +161,30 @@ export default {
   methods: {
     open() {
       this.isOpen = true
+      this.isSent = false
     },
     close() {
       this.isOpen = false
+      this.isSent = false
     },
     async sendMessage() {
-      console.warn('loading...')
+      this.isLoading = true
+
       try {
         await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
-        console.warn('ok')
+        this.isSent = true
       } catch (error) {
         console.error(error)
+
+        this.$toast({
+          title: 'Something went wrong.',
+          description: 'Sorry we couldn\'t send your message. Please try again.',
+          status: 'error',
+          duration: 5000
+        })
       }
+
+      this.isLoading = false
     },
     validEmail (email) {
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -165,5 +212,11 @@ export default {
   width: 80%;
   height: 4px;
   background-image: linear-gradient(90deg, #eb4256 0%, #ffa363 100%);
+}
+
+.confirm-image {
+  margin-top: 2rem;
+  height: 160px;
+  object-fit: cover;
 }
 </style>

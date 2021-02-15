@@ -1,24 +1,30 @@
 <template>
   <c-flex
-    class="banner"
+    class="lorem-container"
     justify="space-between"
+    wrap="wrap"
   >
     <c-box
       class="lorem-bar"
-      :w="['35%']"
-      :p="['65px']"
+      :w="['100%', '100%', '100%', '100%', '35%']"
+      :p="['1rem', '2rem', '3rem', '4rem']"
       data-aos="fade-right"
       data-aos-delay="150"
     >
-      <c-text color="white" font-size="6xl" font-weight="600" line-height="1.3">
+      <c-text
+        color="white"
+        :font-size="['2xl', '3xl', '4xl', '5xl']"
+        font-weight="600"
+        line-height="1.3"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
       </c-text>
     </c-box>
 
-    <c-stack spacing="8" :w="['60%']">
+    <c-stack spacing="8" :w="['100%', '100%', '100%', '100%', '60%']">
       <c-heading
         as="h1"
-        :font-size="['6xl']"
+        :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
         data-aos="fade-zoom-in"
         data-aos-delay="100"
@@ -26,10 +32,9 @@
         Lorem ipsum dolor sit amet
       </c-heading>
       <c-text
-        font-size="xl"
+        :font-size="['lg', 'xl']"
         data-aos="fade-zoom-in"
         data-aos-delay="120"
-        data-aos-offset="0"
         data-aos-easing="ease-in-back"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -38,12 +43,11 @@
         v-for="{a, index} in [1, 2, 3, 4]"
         :key="`case-${index}`"
         data-aos="fade-zoom-in"
-        :data-aos-delay="(index + 1) * 200"
+        :data-aos-delay="200"
         data-aos-easing="ease-in-back"
-        data-aos-offset="0"
       >
         <c-image src="./check.svg" h="60px" w="60px" mr="4" />
-        <c-text font-size="xl">
+        <c-text :font-size="['lg', 'xl']">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
         </c-text>
       </c-flex>
@@ -89,5 +93,15 @@ export default {
 .lorem-bar {
   border-radius: 10px;
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
+}
+
+@media (max-width: 1279px) {
+  .lorem-container {
+    flex-direction: column-reverse !important;
+  }
+
+  .lorem-bar {
+    margin-top: 3rem;
+  }
 }
 </style>

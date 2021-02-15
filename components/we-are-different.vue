@@ -9,11 +9,10 @@
       <c-heading
         as="h1"
         :font-weight="600"
-        :font-size="['lg', 'lg', '2xl', '4xl', '6xl']"
+        :font-size="['2xl', '3xl', '4xl', '5xl']"
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="100"
-        data-aos-offset="0"
       >
         We’re Different.
       </c-heading>
@@ -22,49 +21,48 @@
         as="h1"
         color="st-orange"
         :font-weight="600"
-        :font-size="['lg', 'lg', '2xl', '4xl', '6xl']"
+        :font-size="['2xl', '3xl', '4xl', '5xl']"
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="100"
-        data-aos-offset="0"
       >
         Here’s Why.
       </c-heading>
     </c-stack>
 
-    <c-flex mt="5.5rem">
-      <c-stack v-for="(difference, index) in differences" :key="`difference-${index}`" class="difference-box">
-        <c-box v-if="index < differences.length - 1" class="difference-bar" />
+    <c-flex :mt="['1rem', '1rem', '1rem', '5.5rem']" wrap="wrap">
+      <c-stack
+        v-for="(difference, index) in differences"
+        :key="`difference-${index}`"
+        class="difference-box"
+        :w="['100%', '100%', '100%', '25%']"
+      >
+        <c-box
+          v-if="index < differences.length - 1"
+          class="difference-bar"
+          :display="['none', 'none', 'none', 'block']"
+        />
 
         <c-text
           class="difference-index"
-          font-size="2xl"
+          :font-size="['xl', '2xl']"
           font-weight="600"
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-delay="100"
-          data-aos-offset="0"
         >
           {{ index + 1 }}
         </c-text>
 
-        <c-text
-          font-size="2xl"
-          font-weight="600"
-          mt="3.5rem"
-          data-aos="fade-left"
-          :data-aos-delay="(index + 1) * 450"
-        >
-          {{ difference.title }}
-        </c-text>
+        <c-stack class="difference-data" data-aos="fade-left" :data-aos-delay="(index + 1) * 450">
+          <c-text :font-size="['xl', '2xl']" font-weight="600" :mt="['0px', '0px', '0px', '3.5rem']">
+            {{ difference.title }}
+          </c-text>
 
-        <c-text
-          font-size="xl"
-          data-aos="fade-left"
-          :data-aos-delay="(index + 1) * 450"
-        >
-          {{ difference.description }}
-        </c-text>
+          <c-text :font-size="['lg', 'xl']">
+            {{ difference.description }}
+          </c-text>
+        </c-stack>
       </c-stack>
     </c-flex>
   </c-flex>
@@ -139,5 +137,20 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: white;
+}
+
+@media (max-width: 991px) {
+  .difference-box {
+    margin-top: 1.75rem;
+  }
+
+  .difference-data {
+    margin-left: calc(2.5rem + 48px);
+  }
+
+  .difference-index {
+    position: absolute;
+    top: calc(50% - 24px);
+  }
 }
 </style>

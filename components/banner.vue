@@ -17,7 +17,6 @@
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="100"
-      data-aos-offset="0"
     >
       <template v-if="custom">
         {{ custom }}
@@ -37,7 +36,6 @@
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="350"
-      data-aos-offset="0"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
     </c-text>

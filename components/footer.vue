@@ -3,8 +3,7 @@
     <c-flex
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="200"
-      data-aos-offset="0"
+      data-aos-delay="100"
     >
       <c-image src="./favicon.ico" mr="2" />
       <c-heading font-size="3xl">
@@ -18,8 +17,7 @@
       font-weight="300"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="200"
-      data-aos-offset="0"
+      data-aos-delay="100"
     >
       <c-stack :w="['30%']">
         <c-text font-weight="600">
@@ -65,7 +63,7 @@
       text-align="center"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="200"
+      data-aos-delay="100"
       data-aos-offset="0"
     >
       © 2021 Stackit. All Rights Reserved<br>
