@@ -1,12 +1,12 @@
 <template>
-  <div id="nav" :class="{sticky: active}">
+  <c-box id="nav" :class="{sticky: active}">
     <c-flex
       id="nav-container"
       :class="toggleNavClass()"
       justify="space-between"
       w="100%"
     >
-      <a href="/">
+      <router-link to="/">
         <c-flex
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
@@ -17,14 +17,18 @@
             Stackit
           </c-heading>
         </c-flex>
-      </a>
+      </router-link>
 
       <c-flex class="nav-links" :font-size="['lg', 'xl']">
-        <a href="/contact">Contact</a>
-        <a href="/case-study">Case Study</a>
+        <router-link to="/contact">
+          Contact
+        </router-link>
+        <router-link to="/case-study">
+          Case Study
+        </router-link>
       </c-flex>
     </c-flex>
-  </div>
+  </c-box>
 </template>
 
 <script>
@@ -91,7 +95,11 @@ a:hover {
   background-color: transparent;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 0;
+}
+
+#nav-container {
+  z-index: 1100;
 }
 
 /* have to add the ID nav (#nav) otherwise the backgrnd color won't change as the previous background color is set in an ID and ID trumps class notation */
@@ -100,11 +108,14 @@ a:hover {
   background-color: #0b0f7d;
 }
 
-.nav-links a {
-  border-bottom: 4px #ed4c57 solid;
+.nav-links {
+  a:hover {
+    border-bottom: 4px #ed4c57 solid;
+    opacity: 0.9;
+  }
 
-  &:hover {
-    opacity: 0.7;
+  .nuxt-link-active {
+    border-bottom: 4px #ed4c57 solid;
   }
 }
 </style>

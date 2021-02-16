@@ -37,7 +37,7 @@
         data-aos-delay="120"
         data-aos-easing="ease-in-back"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        When Mike Jacobsen approached Stackit in 2016, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet...and build an effective MVP for It’s Borrowed.
       </c-text>
       <c-flex
         v-for="(a, index) in [1, 2, 3, 4]"
@@ -51,20 +51,22 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
         </c-text>
       </c-flex>
-      <!--      <c-button-->
-      <!--        class="btn-main"-->
-      <!--        right-icon="arrow-forward"-->
-      <!--        rounded="10px"-->
-      <!--        size="lg"-->
-      <!--        font-size="xl"-->
-      <!--        font-weight="400"-->
-      <!--        data-aos="fade-right"-->
-      <!--        data-aos-delay="150"-->
-      <!--        :w="['300px']"-->
-      <!--        :mt="['2.5rem']"-->
-      <!--      >-->
-      <!--        READ CASE STUDY-->
-      <!--      </c-button>-->
+      <router-link to="/case-study">
+        <c-button
+          class="btn-main"
+          right-icon="arrow-forward"
+          rounded="10px"
+          size="lg"
+          font-size="xl"
+          font-weight="400"
+          data-aos="fade-right"
+          data-aos-delay="150"
+          :w="['300px']"
+          :mt="['2.5rem']"
+        >
+          READ CASE STUDY
+        </c-button>
+      </router-link>
     </c-stack>
   </c-flex>
 </template>

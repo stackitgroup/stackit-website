@@ -2,37 +2,70 @@
   <div class="container">
     <banner custom="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
 
-    <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'">
+    <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'" wrap="wrap">
       <c-heading
         as="h1"
         :font-size="['3xl', '4xl', '5xl', '6xl']"
         font-weight="600"
         :max-w="['100%', '100%', '100%', '100%', '60%']"
+        data-aos="fade-zoom-in"
+        data-aos-delay="100"
       >
         Let's talk about your project
       </c-heading>
 
-      <c-text font-size="lg" :max-w="['100%', '100%', '100%', '100%', '60%']">
+      <c-text
+        font-size="lg"
+        :max-w="['100%', '100%', '100%', '100%', '60%']"
+        data-aos="fade-zoom-in"
+        data-aos-delay="200"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
       </c-text>
 
-      <c-flex justify="space-between" wrap="wrap">
-        <c-stack :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
-          <c-input v-model="form.firstName" placeholder="Name" is-required size="lg" />
+      <c-flex
+        justify="space-between"
+        wrap="wrap"
+        data-aos="fade-zoom-in"
+        data-aos-delay="300"
+      >
+        <c-stack v-if="!isSent" :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
+          <c-input v-model="form.name" h="3.75rem" placeholder="Name" is-required size="lg" />
           <c-flex justify="space-between">
-            <c-input v-model="form.email" :w="['45%']" placeholder="Email" is-required size="lg" />
-            <c-input v-model="form.email" :w="['45%']" placeholder="Phone" is-required size="lg" />
+            <c-input v-model="form.email" h="3.75rem" :w="['48%']" placeholder="Email" is-required size="lg" />
+            <c-input v-model="form.phone" h="3.75rem" :w="['48%']" placeholder="Phone" is-required size="lg" />
           </c-flex>
-          <c-textarea v-model="form.message" placeholder="Message" is-required size="lg" />
+          <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" size="lg" />
+        </c-stack>
+
+        <c-stack v-else spacing="1rem">
+          <c-image class="confirm-image" src="/contact/confirm_check.gif" />
+          <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
+            Message sent
+          </c-heading>
+          <c-text :font-weight="400" :font-size="['lg']" text-align="center" color="contact.description">
+            Thank you for reaching out, we will be in touch within 24 hours.
+          </c-text>
         </c-stack>
 
         <c-stack
-          :spacing="['1rem', '1rem', '1rem', '1rem', '3.5rem']"
+          :mt="['1.5rem', '1.5rem', '1.5rem', '0rem']"
+          :spacing="['1rem', '1rem', '1rem', '3.5rem', '3.5rem']"
           :w="['100%', '100%', '100%', '45%', '37%']"
         >
           <c-flex v-for="image in ['pin.svg', 'message.svg', 'phone.svg']" :key="`indicator-${image}`" align="center">
-            <c-flex class="icon-container" mr="8">
-              <c-image :src="`/contact/${image}`" h="32px" w="32px" />
+            <c-flex
+              class="icon-container"
+              :mr="[4, 4, 4, 8]"
+              :h="['35px', '35px', '35px', '70px']"
+              :w="['35px', '35px', '35px', '70px']"
+            >
+              <c-image
+                :src="`/contact/${image}`"
+                :h="['16px', '16px', '16px', '32px']"
+                :w="['16px', '16px', '16px', '32px']"
+                object-fit="contain"
+              />
             </c-flex>
             <c-text font-size="lg">
               Lorem ipsum dolor sit amet, consectetur
@@ -42,6 +75,7 @@
       </c-flex>
 
       <c-button
+        v-if="!isSent"
         class="btn-main"
         right-icon="arrow-forward"
         rounded="10px"
@@ -50,6 +84,10 @@
         font-weight="400"
         w="290px"
         :disabled="isFormValid"
+        :is-loading="isLoading"
+        loading-text="Sending"
+        data-aos="fade-zoom-in"
+        data-aos-delay="300"
         @click="sendMessage()"
       >
         SEND MESSAGE
@@ -87,10 +125,11 @@ export default {
         'X-Parse-REST-API-Key': 'pQKgZSmwVT3IFsDiO0iO8RY1bzHOyBFzfZUJK7dD',
         'Content-Type': 'application/json',
       },
-      isOpen: false,
+      isSent: false,
+      isLoading: false,
       form: {
-        firstName: '',
-        lastName: '',
+        name: '',
+        phone: '',
         email: '',
         message: '',
       },
@@ -100,7 +139,7 @@ export default {
     isFormValid() {
       const errors = []
 
-      if (!this.form.firstName) {
+      if (!this.form.name) {
         errors.push('FirstName is required.')
       }
 
@@ -118,17 +157,24 @@ export default {
     }
   },
   methods: {
-    close() {
-      this.isOpen = false
-    },
     async sendMessage() {
-      console.warn('loading...')
+      this.isLoading = true
+
       try {
         await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
-        console.warn('ok')
+        this.isSent = true
       } catch (error) {
         console.error(error)
+
+        this.$toast({
+          title: 'Something went wrong.',
+          description: 'Sorry we couldn\'t send your message. Please try again.',
+          status: 'error',
+          duration: 5000
+        })
       }
+
+      this.isLoading = false
     },
     validEmail (email) {
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -142,8 +188,6 @@ export default {
 .icon-container {
   background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
   justify-content: center;
   align-items: center;
 }

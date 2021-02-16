@@ -4,8 +4,8 @@
       <CColorModeProvider>
         <CBox font-family="body" as="main">
           <CReset />
-          <navbar />
           <Nuxt class="app-content" />
+          <navbar />
           <st-footer />
         </CBox>
       </CColorModeProvider>
