@@ -5,14 +5,14 @@ const mailgun = require('mailgun-js')({ apiKey, domain })
 // eslint-disable-next-line no-undef
 Parse.Cloud.afterSave('Contact', (request) => {
   const email = request.object.get('email')
+  const name = request.object.get('name')
 
   const data = {
     from: 'Stackit <no-reply@stackitgroup.com>',
     subject: 'Stackit Contact',
-    template: 'retrospective-invitation',
+    template: 'stackit-contact',
     to: email,
-    'v:retrospective-name': 'Test 1',
-    'v:retrospective-link': 'Test 2',
+    'v:contact-name': name,
   }
 
   mailgun.messages().send(data)
