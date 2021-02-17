@@ -7,17 +7,18 @@
     <c-box
       class="lorem-bar"
       :w="['100%', '100%', '100%', '100%', '35%']"
-      :p="['1rem', '2rem', '3rem', '4rem']"
+      :p="['1.5rem', '1.5rem', '2rem', '3rem', '4rem']"
       data-aos="fade-right"
       data-aos-delay="150"
     >
       <c-text
         color="white"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
+        :font-size="['xl', '2xl', '3xl', '3xl', '4xl']"
         font-weight="600"
         line-height="1.3"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
+        "We are so blessed to have amazing people like you on this adventure. There is no way to thank you enough."<br>
+        - Mike Jacobsen
       </c-text>
     </c-box>
 
@@ -37,20 +38,8 @@
         data-aos-delay="120"
         data-aos-easing="ease-in-back"
       >
-        When Mike Jacobsen approached Stackit in 2016, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet...and build an effective MVP for It’s Borrowed.
+        When Mike Jacobsen approached Stackit, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet and build an effective MVP for It’s Borrowed.
       </c-text>
-      <c-flex
-        v-for="(a, index) in [1, 2, 3, 4]"
-        :key="`lorem-${index}`"
-        data-aos="fade-zoom-in"
-        :data-aos-delay="200"
-        data-aos-easing="ease-in-back"
-      >
-        <c-image src="./check.svg" h="60px" w="60px" mr="4" />
-        <c-text :font-size="['lg', 'xl']">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec
-        </c-text>
-      </c-flex>
       <router-link to="/case-study">
         <c-button
           class="btn-main"
