@@ -37,9 +37,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.app-content {
-  /* margin-top: 300px; */
-}
-</style>

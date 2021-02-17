@@ -2,7 +2,8 @@
   <c-flex
     class="banner"
     direction="column"
-    :py="['5.25rem']"
+    :pt="['10rem', '8.5rem', '8.5rem', '5.25rem']"
+    :pb="['5.25rem']"
     :px="['5%']"
     color="white"
     justify="center"

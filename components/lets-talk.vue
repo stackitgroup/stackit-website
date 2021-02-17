@@ -17,7 +17,7 @@
       data-aos-delay="100"
       :w="['100%', '100%', '100%', '80%', '80%']"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
+      The result? A high quality, custom fit product that will provide the value you were expecting.
     </c-heading>
     <c-button
       class="btn-main"

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <banner custom="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    <banner custom="Let’s build custom software for you." />
 
     <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'" wrap="wrap">
       <c-heading
@@ -30,12 +30,43 @@
         data-aos-delay="300"
       >
         <c-stack v-if="!isSent" :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
-          <c-input v-model="form.name" h="3.75rem" placeholder="Name" is-required size="lg" />
+          <c-input
+            v-model="form.name"
+            h="3.75rem"
+            placeholder="Name"
+            is-required
+            size="lg"
+            maxlength="150"
+          />
           <c-flex justify="space-between">
-            <c-input v-model="form.email" h="3.75rem" :w="['48%']" placeholder="Email" is-required size="lg" />
-            <c-input v-model="form.phone" h="3.75rem" :w="['48%']" placeholder="Phone" is-required size="lg" />
+            <c-input
+              v-model="form.email"
+              type="email"
+              h="3.75rem"
+              :w="['48%']"
+              placeholder="Email"
+              is-required
+              size="lg"
+              maxlength="150"
+            />
+            <c-input
+              v-model="form.phone"
+              type="tel"
+              h="3.75rem"
+              :w="['48%']"
+              placeholder="Phone"
+              is-required
+              size="lg"
+              maxlength="150"
+            />
           </c-flex>
-          <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" size="lg" />
+          <c-textarea
+            v-model="form.message"
+            h="9.5rem"
+            placeholder="Message"
+            size="lg"
+            maxlength="150"
+          />
         </c-stack>
 
         <c-stack v-else spacing="1rem">
