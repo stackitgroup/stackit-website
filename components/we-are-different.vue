@@ -1,6 +1,5 @@
 <template>
   <c-flex
-    class="banner"
     direction="column"
     justify="center"
     align="center"
@@ -35,7 +34,7 @@
         v-for="(difference, index) in differences"
         :key="`difference-${index}`"
         class="difference-box"
-        :w="['100%', '100%', '100%', '25%']"
+        :w="['100%', '100%', '100%', '33%']"
       >
         <c-box
           v-if="index < differences.length - 1"
@@ -84,20 +83,16 @@ export default {
     return {
       differences: [
         {
-          title: 'Coding Quality',
-          description: 'We can rescue your failing software project. With skill and finesse, we can transition your software out of the wrong hands and get it back on its feet.',
+          title: 'Authentic Desire For Our Clients To Succeed',
+          description: 'Our main focus is to provide maximum value to our clients. We take ownership not only in managing and creating a high quality product but in ensuring what we deliver is impactful.',
         },
         {
-          title: 'Expertise with Failures',
-          description: 'We hold all our code to the highest standards. That means relying on development practices such as iterative and incremental development, test-driven development, and CLEAN code.',
+          title: 'Work Quality',
+          description: 'We’ve built a culture that’s founded on individual pride, team cohesion, and structure. We sustain this culture by investing on how we vet our new team members, how we coach our teams and by establishing processes that reward teamwork, creativity and accountability.',
         },
         {
-          title: 'Care for Our Clients',
-          description: 'We care about our clients. Big time. We apply our experience, skill, and expertise to your project to get you a great result from both a technical and business perspective.',
-        },
-        {
-          title: 'Systematic Approach',
-          description: 'We use the latest in development and management practices–including agile, scrum, lean, and kanban processes.',
+          title: 'Realigning Off Track Projects',
+          description: 'There are many reasons why projects get in trouble. No matter the reason it takes a mature, disciplined and expert team to rescue the project. We have years of accumulated wisdom, technical know-how, and the grit to complete the job.',
         },
       ],
     }
@@ -106,14 +101,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.banner {
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .difference-box {
   position: relative;
   padding: 0 1.5rem;

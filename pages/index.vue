@@ -17,6 +17,10 @@
     </c-box>
 
     <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
+      <process />
+    </c-box>
+
+    <c-box mt="6rem" :mx="[5, 5, 5, '5%', '10%']">
       <lorem />
     </c-box>
 
@@ -36,10 +40,12 @@ import WeAreDifferent from '~/components/we-are-different'
 import Lorem from '~/components/lorem'
 import StFooter from '~/components/footer'
 import Clients from '~/components/clients'
+import Process from '~/components/process'
 
 export default {
   name: 'App',
   components: {
+    Process,
     Clients,
     StFooter,
     Lorem,
