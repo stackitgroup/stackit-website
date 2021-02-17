@@ -21,10 +21,40 @@
 
           <c-drawer-body>
             <c-stack v-if="!isSent" spacing="6" my="1.5rem">
-              <c-input v-model="form.name" h="3.75rem" placeholder="First name" is-required size="lg" />
-              <c-input v-model="form.email" h="3.75rem" placeholder="Email" is-required size="lg" />
-              <c-input v-model="form.phone" h="3.75rem" placeholder="Phone number" is-required size="lg" />
-              <c-textarea v-model="form.message" h="9.5rem" placeholder="Message" is-required size="lg" />
+              <c-input
+                v-model="form.name"
+                h="3.75rem"
+                placeholder="First name"
+                is-required
+                size="lg"
+                maxlength="150"
+              />
+              <c-input
+                v-model="form.email"
+                type="email"
+                h="3.75rem"
+                placeholder="Email"
+                is-required
+                size="lg"
+                maxlength="150"
+              />
+              <c-input
+                v-model="form.phone"
+                type="tel"
+                h="3.75rem"
+                placeholder="Phone number"
+                is-required
+                size="lg"
+                maxlength="150"
+              />
+              <c-textarea
+                v-model="form.message"
+                h="9.5rem"
+                placeholder="Message"
+                is-required
+                size="lg"
+                maxlength="1500"
+              />
             </c-stack>
             <c-stack v-else spacing="1rem">
               <c-image class="confirm-image" src="contact/confirm_check.gif" />
