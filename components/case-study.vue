@@ -1,11 +1,11 @@
 <template>
   <c-flex
-    class="lorem-container"
+    class="study-container"
     justify="space-between"
     wrap="wrap"
   >
     <c-box
-      class="lorem-bar"
+      class="study-bar"
       :w="['100%', '100%', '100%', '100%', '35%']"
       :p="['1.5rem', '1.5rem', '2rem', '3rem', '4rem']"
       data-aos="fade-right"
@@ -81,17 +81,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.lorem-bar {
+.study-bar {
   border-radius: 10px;
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
 }
 
 @media (max-width: 1279px) {
-  .lorem-container {
+  .study-container {
     flex-direction: column-reverse !important;
   }
 
-  .lorem-bar {
+  .study-bar {
     margin-top: 3rem;
   }
 }

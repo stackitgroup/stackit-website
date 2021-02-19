@@ -21,7 +21,7 @@
     </c-box>
 
     <c-box my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
-      <lorem />
+      <case-study />
     </c-box>
 
     <c-box my="9rem" :mx="[5, 5, 5, '5%', '10%']">
@@ -37,8 +37,7 @@ import Banner from '~/components/banner'
 import Services from '~/components/services'
 import ContactDialog from '~/components/contact-dialog'
 import WeAreDifferent from '~/components/we-are-different'
-import Lorem from '~/components/lorem'
-import StFooter from '~/components/footer'
+import CaseStudy from '~/components/case-study'
 import Clients from '~/components/clients'
 import Process from '~/components/process'
 
@@ -47,8 +46,7 @@ export default {
   components: {
     Process,
     Clients,
-    StFooter,
-    Lorem,
+    CaseStudy,
     WeAreDifferent,
     ContactDialog,
     LetsTalk,
