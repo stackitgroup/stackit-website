@@ -12,8 +12,9 @@
   >
     <c-heading
       as="h1"
-      :font-size="['2xl', '3xl', '3xl', '4xl', '5xl']"
+      :font-size="['2xl', '2xl', '3xl', '3xl', '4xl']"
       :w="['100%', '100%', '100%', '80%', '80%']"
+      font-weight="600"
     >
       The result? A high quality, custom fit product that will provide the value you were expecting.
     </c-heading>
