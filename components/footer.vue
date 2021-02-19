@@ -22,21 +22,27 @@
         <c-text>
           Contact us today to start talking about your next custom software project.<br>
         </c-text>
-        <c-link href="/contact">
-          Let’s talk.
-        </c-link>
+        <router-link to="/contact">
+          <c-link>
+            Let’s talk.
+          </c-link>
+        </router-link>
       </c-stack>
 
       <c-stack :w="['100%', '50%', '20%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
         <c-text font-weight="600">
           Quick Links
         </c-text>
-        <c-link href="/contact">
-          Contact
-        </c-link>
-        <c-link href="/case-study">
-          Case Study
-        </c-link>
+        <router-link to="/contact">
+          <c-link>
+            Contact
+          </c-link>
+        </router-link>
+        <router-link to="/case-study">
+          <c-link>
+            Case Study
+          </c-link>
+        </router-link>
       </c-stack>
 
       <c-stack :w="['100%', '50%', '38%', '20%']" :mt="['1.5rem', '1.5rem', 0]">

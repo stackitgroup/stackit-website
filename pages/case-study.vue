@@ -1,14 +1,12 @@
 <template>
   <div class="container case-study">
-    <banner custom="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    <banner custom="We take ownership not only in managing and creating a high quality product but in ensuring what we deliver is impactful." />
 
     <c-stack :px="[5, 5, 5, '5%', '10%']">
       <c-heading
         class="case-title"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         How Stackit Helped “It’s Borrowed” Save a Half-Baked Project & Launch a Successful MVP
       </c-heading>
@@ -16,8 +14,6 @@
       <c-box
         class="case-data"
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
       >
         <p>When Mike Jacobsen approached Stackit in 2016, he had been in the tech scene for about 10 years. Mike had worked for a variety of startups and companies in the Bay Area, with success in sales and sales management. But it was time for him to test out one of his own ideas and see if it would fly in the marketplace.</p>
         <p>So, Mike began development of It’s Borrowed–a SaaS platform that would allow users to share and borrow items with valuations of roughly less than $500. If you needed to borrow a lawn mower for the afternoon, for example, you could use It’s Borrowed to find and borrow that item without dropping hundreds of dollars at Home Depot. Or, if you wanted to go camping for the weekend, you could use It’s Borrowed to find a neighbor with a spare tent.</p>
@@ -30,8 +26,6 @@
         class="case-title"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         The Challenges
       </c-heading>
@@ -39,8 +33,6 @@
       <c-text
         class="case-data"
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
       >
         <p>The concept of It’s Borrowed was fairly straightforward and intuitive–save cash by borrowing, rather than buying. The development of the platform, however, was not so simple. Though Mike had hired a large software development firm in the Bay Area to build his product, he quickly found that they weren’t always adherent to his timeline….or his budget.</p>
         <p>“I had hired a developing team in San Francisco to complete the project,” explains Mike. “But after working on it for 9 or 10 months, they were still failing to come in within budget. It was costing a lot of money….and I was the sole provider of backing for development.”</p>
@@ -60,8 +52,6 @@
         class="case-title"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         The Solution
       </c-heading>
@@ -69,8 +59,6 @@
       <c-text
         class="case-data"
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
       >
         <p>When Mike first approached Stackit founder Rene Reyes, he had a tall order to fill. But Rene’s experience with lean startups and entrepreneurs persuaded Mike that this custom software development firm might be just what It’s Borrowed needed to launch.</p>
         <p>“The first thing I noticed about Stackit was they look at the big picture of getting a product to market and engaging the audience,” explains Mike. “They wanted to hit coding milestones so that It’s Borrowed could get in front of users as quickly as possible.”</p>
@@ -97,8 +85,6 @@
       <c-heading
         as="h1"
         :font-size="['xl', 'xl', '2xl', '3xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         Mike explains, “When it comes to software, larger firms just don’t care about your needs as much as they care about putting out a product that looks a certain way.”
       </c-heading>
@@ -109,8 +95,6 @@
         class="case-title"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         Key Takeaways
       </c-heading>
@@ -118,8 +102,6 @@
       <c-text
         class="case-data"
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
       >
         <p>What was Mike’s final takeaway from his partnership with Stackit?</p>
         <p>By going to a small custom software company, he received a level of quality, customization, and craftsmanship that he couldn’t get with a larger firm that specialized in corporate brands.</p>

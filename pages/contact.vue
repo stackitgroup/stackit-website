@@ -8,8 +8,6 @@
         :font-size="['3xl', '4xl', '5xl', '6xl']"
         font-weight="600"
         :max-w="['100%', '100%', '100%', '100%', '60%']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         Let's talk about your project
       </c-heading>
@@ -17,8 +15,6 @@
       <c-text
         font-size="lg"
         :max-w="['100%', '100%', '100%', '100%', '60%']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
       </c-text>
@@ -26,8 +22,6 @@
       <c-flex
         justify="space-between"
         wrap="wrap"
-        data-aos="fade-zoom-in"
-        data-aos-delay="300"
       >
         <c-stack v-if="!isSent" :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
           <c-input
@@ -117,8 +111,6 @@
         :disabled="isFormValid"
         :is-loading="isLoading"
         loading-text="Sending"
-        data-aos="fade-zoom-in"
-        data-aos-delay="300"
         @click="sendMessage()"
       >
         SEND MESSAGE
