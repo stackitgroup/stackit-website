@@ -31,9 +31,6 @@
         <router-link to="/" exact>
           Home
         </router-link>
-        <router-link to="/about">
-          About us
-        </router-link>
         <router-link to="/contact">
           Contact
         </router-link>
