@@ -1,50 +1,44 @@
 <template>
   <c-stack spacing="6" bg="#0e046d" color="white" :px="[5, 5, 5, '5%', '10%']" :py="['3.25rem']">
-    <c-flex
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
-    >
-      <c-image src="./favicon.ico" mr="2" />
-      <c-heading font-size="3xl">
-        Stackit
-      </c-heading>
-    </c-flex>
+    <c-image src="/stackit-logo.png" w="180px" />
 
     <c-flex
       justify="space-between"
       :font-size="['lg']"
       font-weight="300"
       wrap="wrap"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
     >
-      <c-stack :w="['100%', '100%', '38%']">
+      <c-stack :w="['100%', '100%', '38%', '30%']">
         <c-text font-weight="600">
           Let’s build custom software for you.
         </c-text>
         <c-text>
           Contact us today to start talking about your next custom software project.<br>
         </c-text>
-        <c-link href="/contact">
-          Let’s talk.
-        </c-link>
+        <router-link to="/contact">
+          <c-link>
+            Let’s talk.
+          </c-link>
+        </router-link>
       </c-stack>
 
-      <c-stack :w="['100%', '100%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
+      <c-stack :w="['100%', '50%', '20%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
         <c-text font-weight="600">
           Quick Links
         </c-text>
-        <c-link href="/contact">
-          Contact
-        </c-link>
-        <c-link href="/case-study">
-          Case Study
-        </c-link>
+        <router-link to="/contact">
+          <c-link>
+            Contact
+          </c-link>
+        </router-link>
+        <router-link to="/case-study">
+          <c-link>
+            Case Study
+          </c-link>
+        </router-link>
       </c-stack>
 
-      <c-stack :w="['100%', '100%', '38%']" :mt="['1.5rem', '1.5rem', 0]">
+      <c-stack :w="['100%', '50%', '38%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
         <c-text font-weight="600">
           Contact
         </c-text>
@@ -61,10 +55,6 @@
     <c-text
       mt="1.25rem"
       text-align="center"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
-      data-aos-offset="0"
     >
       © 2021 Stackit. All Rights Reserved<br>
       v{{ version }}

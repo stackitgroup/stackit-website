@@ -1,19 +1,24 @@
+@import './variables';
+
 html {
   scroll-behavior: smooth;
 }
 
 .btn-main {
-  background-image: linear-gradient(90deg, #eb4256 0%, #ffa363 100%);
+  background-image: var(--sti-color-button);
   border-radius: 10px;
   color: white;
 
-  &:hover {
-    background-image: linear-gradient(90deg, #eb4256 0%, #eb4256 100%);
+  &:not([disabled]):hover {
+    background-image: none;
+    background-color: transparent !important;
+    border: var(--sti-color-button-hover) solid 1px;
+    color: var(--sti-color-button-hover);
   }
 }
 
 .lets-talk {
-  background-image: linear-gradient(90deg, #eb4256 0%, #0c0263 100%);
+  background-image: var(--sti-color-lets-talk);
 }
 
 .confirm-image {

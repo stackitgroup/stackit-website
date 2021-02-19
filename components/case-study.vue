@@ -1,15 +1,13 @@
 <template>
   <c-flex
-    class="lorem-container"
+    class="study-container"
     justify="space-between"
     wrap="wrap"
   >
     <c-box
-      class="lorem-bar"
+      class="study-bar"
       :w="['100%', '100%', '100%', '100%', '35%']"
       :p="['1.5rem', '1.5rem', '2rem', '3rem', '4rem']"
-      data-aos="fade-right"
-      data-aos-delay="150"
     >
       <c-text
         color="white"
@@ -17,8 +15,9 @@
         font-weight="600"
         line-height="1.3"
       >
-        "We are so blessed to have amazing people like you on this adventure. There is no way to thank you enough."<br>
-        - Mike Jacobsen
+        We are so blessed to have amazing people like you on this adventure. There is no way to thank you enough.<br><br>
+        Mike Jacobsen<br>
+        It's Borrowed Owner
       </c-text>
     </c-box>
 
@@ -27,18 +26,13 @@
         as="h1"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         How Stackit Helped Save a Half-Baked Project & Launch an MVP
       </c-heading>
       <c-text
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="120"
-        data-aos-easing="ease-in-back"
       >
-        When Mike Jacobsen approached Stackit, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet and build an effective MVP for It’s Borrowed.
+        When Mike Jacobsen approached Stackit, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet and build an effective MVP for <b>It’s Borrowed</b>.
       </c-text>
       <router-link to="/case-study">
         <c-button
@@ -48,8 +42,6 @@
           size="lg"
           font-size="xl"
           font-weight="400"
-          data-aos="fade-right"
-          data-aos-delay="150"
           :w="['300px']"
           :mt="['2.5rem']"
         >
@@ -81,17 +73,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.lorem-bar {
+.study-bar {
   border-radius: 10px;
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
 }
 
 @media (max-width: 1279px) {
-  .lorem-container {
+  .study-container {
     flex-direction: column-reverse !important;
   }
 
-  .lorem-bar {
+  .study-bar {
     margin-top: 3rem;
   }
 }

@@ -1,5 +1,6 @@
 <template>
   <c-flex
+    class="difference-container"
     direction="column"
     justify="center"
     align="center"
@@ -9,9 +10,6 @@
         as="h1"
         :font-weight="600"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="100"
       >
         We’re Different.
       </c-heading>
@@ -21,9 +19,6 @@
         color="st-orange"
         :font-weight="600"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="100"
       >
         Here’s Why.
       </c-heading>
@@ -46,9 +41,6 @@
           class="difference-index"
           :font-size="['xl', '2xl']"
           font-weight="600"
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="100"
         >
           {{ index + 1 }}
         </c-text>
@@ -101,6 +93,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.difference-container {
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
 .difference-box {
   position: relative;
   padding: 0 1.5rem;
@@ -112,7 +110,6 @@ export default {
   background-color: #e8e8e8;
   position: absolute;
   top: 24px;
-  z-index: -1;
 }
 
 .difference-index {
@@ -124,6 +121,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: white;
+  z-index: 1;
 }
 
 @media (max-width: 991px) {

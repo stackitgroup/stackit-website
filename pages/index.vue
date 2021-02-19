@@ -4,24 +4,24 @@
 
     <banner @action="launchContactForm()" />
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box pt="3.75rem" my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
       <services />
     </c-box>
 
-    <c-box mt="7.5rem">
-      <lets-talk @action="launchContactForm()" />
-    </c-box>
-
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box py="3.75rem" :px="[5, 5, 5, '5%', '10%']" bg="difference-section.bg">
       <we-are-different />
     </c-box>
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box my="3.75rem" :mx="[5, 5, 5, '5%', '10%']" max-w="80wv">
       <process />
     </c-box>
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
-      <lorem />
+    <c-box my="3.75rem">
+      <lets-talk @action="launchContactForm()" />
+    </c-box>
+
+    <c-box my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
+      <case-study />
     </c-box>
 
     <c-box my="9rem" :mx="[5, 5, 5, '5%', '10%']">
@@ -37,8 +37,7 @@ import Banner from '~/components/banner'
 import Services from '~/components/services'
 import ContactDialog from '~/components/contact-dialog'
 import WeAreDifferent from '~/components/we-are-different'
-import Lorem from '~/components/lorem'
-import StFooter from '~/components/footer'
+import CaseStudy from '~/components/case-study'
 import Clients from '~/components/clients'
 import Process from '~/components/process'
 
@@ -47,8 +46,7 @@ export default {
   components: {
     Process,
     Clients,
-    StFooter,
-    Lorem,
+    CaseStudy,
     WeAreDifferent,
     ContactDialog,
     LetsTalk,

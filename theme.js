@@ -14,6 +14,9 @@ export default {
       title: '#404040',
       description: '#404040de',
     },
+    'difference-section': {
+      bg: '#F8F8F8',
+    },
     brand: {
       50: '#daffff',
       100: '#b1fbfb',

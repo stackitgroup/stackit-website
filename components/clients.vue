@@ -3,7 +3,7 @@
     <c-image
       v-for="(client, index) in clients"
       :key="`client-${client.name}`"
-      :src="`./clients/${client.src}`"
+      :src="`/clients/${client.src}`"
       :alt="client.name"
       :w="'14%'"
       h="fit-content"

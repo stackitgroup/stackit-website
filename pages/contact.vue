@@ -2,34 +2,18 @@
   <div class="container">
     <banner custom="Let’s build custom software for you." />
 
-    <c-stack spacing="2rem" :w="['100%']" :px="[5, 5, 5, '5%', '10%']" :my="'6rem'" wrap="wrap">
+    <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
       <c-heading
         as="h1"
-        :font-size="['3xl', '4xl', '5xl', '6xl']"
+        :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        :max-w="['100%', '100%', '100%', '100%', '60%']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
+        w="100%"
       >
-        Let's talk about your project
+        Contact us today to start talking about your project.
       </c-heading>
 
-      <c-text
-        font-size="lg"
-        :max-w="['100%', '100%', '100%', '100%', '60%']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="200"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
-      </c-text>
-
-      <c-flex
-        justify="space-between"
-        wrap="wrap"
-        data-aos="fade-zoom-in"
-        data-aos-delay="300"
-      >
-        <c-stack v-if="!isSent" :w="['100%', '100%', '100%', '50%', '60%']" spacing="6" wrap="wrap">
+      <c-box w="100%">
+        <c-stack v-if="!isSent" spacing="6" wrap="wrap">
           <c-input
             v-model="form.name"
             h="3.75rem"
@@ -78,51 +62,26 @@
             Thank you for reaching out, we will be in touch within 24 hours.
           </c-text>
         </c-stack>
+      </c-box>
 
-        <c-stack
-          :mt="['1.5rem', '1.5rem', '1.5rem', '0rem']"
-          :spacing="['1rem', '1rem', '1rem', '3.5rem', '3.5rem']"
-          :w="['100%', '100%', '100%', '45%', '37%']"
+      <c-flex justify="flex-end">
+        <c-button
+          v-if="!isSent"
+          class="btn-main"
+          right-icon="arrow-forward"
+          rounded="10px"
+          size="lg"
+          font-size="xl"
+          font-weight="400"
+          w="290px"
+          :disabled="isFormValid"
+          :is-loading="isLoading"
+          loading-text="Sending"
+          @click="sendMessage()"
         >
-          <c-flex v-for="image in ['pin.svg', 'message.svg', 'phone.svg']" :key="`indicator-${image}`" align="center">
-            <c-flex
-              class="icon-container"
-              :mr="[4, 4, 4, 8]"
-              :h="['35px', '35px', '35px', '70px']"
-              :w="['35px', '35px', '35px', '70px']"
-            >
-              <c-image
-                :src="`/contact/${image}`"
-                :h="['16px', '16px', '16px', '32px']"
-                :w="['16px', '16px', '16px', '32px']"
-                object-fit="contain"
-              />
-            </c-flex>
-            <c-text font-size="lg">
-              Lorem ipsum dolor sit amet, consectetur
-            </c-text>
-          </c-flex>
-        </c-stack>
+          SEND MESSAGE
+        </c-button>
       </c-flex>
-
-      <c-button
-        v-if="!isSent"
-        class="btn-main"
-        right-icon="arrow-forward"
-        rounded="10px"
-        size="lg"
-        font-size="xl"
-        font-weight="400"
-        w="290px"
-        :disabled="isFormValid"
-        :is-loading="isLoading"
-        loading-text="Sending"
-        data-aos="fade-zoom-in"
-        data-aos-delay="300"
-        @click="sendMessage()"
-      >
-        SEND MESSAGE
-      </c-button>
     </c-stack>
   </div>
 </template>

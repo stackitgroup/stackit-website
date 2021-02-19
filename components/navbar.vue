@@ -8,30 +8,17 @@
       wrap="wrap"
     >
       <router-link to="/">
-        <c-flex
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="100"
-          :w="['100%', '100%', '100%', 'fit-content']"
-        >
-          <c-image src="./favicon.ico" mr="2" />
-          <c-heading font-size="3xl">
-            Stackit
-          </c-heading>
-        </c-flex>
+        <c-image class="logo" src="/stackit-logo.png" />
       </router-link>
 
       <c-flex
         class="nav-links"
         :font-size="['lg', 'xl']"
         :w="['100%', '100%', '100%', 'fit-content']"
-        :pt="['2rem', 0]"
+        :mt="['0.5rem', '0.5rem', '0.5rem', 0]"
       >
         <router-link to="/" exact>
           Home
-        </router-link>
-        <router-link to="/about">
-          About us
         </router-link>
         <router-link to="/contact">
           Contact
@@ -99,6 +86,10 @@ a:hover {
 .sticky-nav {
   transition: 100ms;
   padding: 1rem;
+
+  .logo {
+    width: 160px;
+  }
 }
 
 #nav {

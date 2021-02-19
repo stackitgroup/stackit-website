@@ -14,8 +14,6 @@
         :justify="['center', 'center', 'center', index % 2 === 0 ? 'flex-end' : 'flex-start']"
       >
         <c-image
-          :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'"
-          data-aos-delay="150"
           class="summary-image"
           :src="`services/${service.image}`"
         />
@@ -23,9 +21,6 @@
 
       <c-box
         :width="['100%', '100%', '100%', '70%', '65%']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="150"
       >
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading as="h1" :font-size="['2xl', '3xl', '4xl', '5xl']" font-weight="600">
@@ -34,8 +29,8 @@
         </c-box>
 
         <c-stack class="stack" :spacing="6" :font-size="['lg', 'xl']">
-          <c-text>
-            {{ service.description }}
+          <c-text v-for="(paragraph, pindex) in service.description" :key="`service-${index}-${pindex}`">
+            {{ paragraph }}
           </c-text>
         </c-stack>
       </c-box>
@@ -59,18 +54,25 @@ export default {
     return {
       services: [
         {
-          title: 'Custom Software',
-          description: 'We are full-stack developers with expertise in mobile and web applications, and front-end and back-end development. Relying on the latest in coding technology and agile development practices, we’ve built software to help businesses transform their operations, create new payments processing, integrate existing systems, and much, much more.  Bottom line? We can build you just about anything.',
+          title: 'Custom Software Development',
+          description: [
+            'We are a full-stack mobile and web application software development team. Relying on the latest in software technologies and agile development practices, we’ve built solutions to help businesses transform their business operations, logistics, product ideas, and much, much more.',
+            'Bottom line? We can build you just about anything.',
+          ],
           image: 'service-custom-software.png',
         },
         {
           title: 'Maintenance & Support',
-          description: 'We provide ongoing support and maintenance to make sure your software is running well, 24/7. That includes fixing bugs, monitoring your system, maintaining your database, ensuring server security and collecting analytics on an ongoing basis.',
+          description: [
+            'We provide ongoing maintenance and support. That includes making enhancements, fixing bugs, and monitoring your system.'
+          ],
           image: 'support.png',
         },
         {
           title: 'Consulting',
-          description: 'We review your existing software design, test your cloud infrastructure, and audit your code to make sure everything is clean, secure, and effective. This includes an assessment of your security practices and scalability of your software architecture. If your system isn’t looking up to par, we’ll help you fix things–fast.',
+          description: [
+            'We review the usability of your existing software functionality, audit your code, and test your cloud infrastructure to provide you with professional advice to help you make critical business decisions.'
+          ],
           image: 'consulting.png',
         },
       ],
