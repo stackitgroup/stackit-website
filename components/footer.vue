@@ -4,8 +4,9 @@
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="100"
+      align="center"
     >
-      <c-image src="./favicon.ico" mr="2" />
+      <c-image src="/stackit-bar.png" w="45px" mr="2" />
       <c-heading font-size="3xl">
         Stackit
       </c-heading>
@@ -20,7 +21,7 @@
       data-aos-easing="ease-in-back"
       data-aos-delay="100"
     >
-      <c-stack :w="['100%', '100%', '38%']">
+      <c-stack :w="['100%', '100%', '38%', '30%']">
         <c-text font-weight="600">
           Let’s build custom software for you.
         </c-text>
@@ -32,7 +33,7 @@
         </c-link>
       </c-stack>
 
-      <c-stack :w="['100%', '100%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
+      <c-stack :w="['100%', '50%', '20%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
         <c-text font-weight="600">
           Quick Links
         </c-text>
@@ -44,7 +45,7 @@
         </c-link>
       </c-stack>
 
-      <c-stack :w="['100%', '100%', '38%']" :mt="['1.5rem', '1.5rem', 0]">
+      <c-stack :w="['100%', '50%', '38%', '20%']" :mt="['1.5rem', '1.5rem', 0]">
         <c-text font-weight="600">
           Contact
         </c-text>
