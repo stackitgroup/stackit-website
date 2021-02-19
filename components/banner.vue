@@ -2,7 +2,7 @@
   <c-flex
     class="banner"
     direction="column"
-    :pt="['10rem', '8.5rem', '8.5rem', '5.25rem']"
+    :pt="['10rem', '8.5rem', '8.5rem', '8.5rem']"
     :pb="['5.25rem']"
     :px="['5%']"
     color="white"
@@ -25,23 +25,10 @@
         We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
       </template>
     </c-text>
-    <c-text
-      v-if="!custom"
-      :font-size="['md', 'lg', 'xl', '2xl']"
-      mt="12"
-      mb="10"
-      max-w="1094px"
-      text-align="center"
-      z-index="1"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="350"
-    >
-      You can depend on us to deliver quality custom software designed for your unique business.
-    </c-text>
     <c-button
       v-if="!custom"
       class="btn-main"
+      :mt="['12']"
       right-icon="arrow-forward"
       rounded="10px"
       size="lg"

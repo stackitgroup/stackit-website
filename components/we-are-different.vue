@@ -1,5 +1,6 @@
 <template>
   <c-flex
+    class="difference-container"
     direction="column"
     justify="center"
     align="center"
@@ -101,6 +102,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.difference-container {
+  overflow: hidden;
+}
+
 .difference-box {
   position: relative;
   padding: 0 1.5rem;

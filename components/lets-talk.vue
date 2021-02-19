@@ -5,13 +5,14 @@
     color="white"
     align="center"
     justify="space-between"
-    :py="['4.25rem']"
+    :pt="['0.5rem', '1rem', '1rem', '2rem']"
+    :pb="['0.5rem', '1rem', '1rem', '2.5rem']"
     :px="[5, 5, 5, '5%', '10%']"
     wrap="wrap"
   >
     <c-heading
       as="h1"
-      :font-size="['3xl', '3xl', '3xl', '4xl', '5xl']"
+      :font-size="['2xl', '3xl', '3xl', '4xl', '5xl']"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="100"

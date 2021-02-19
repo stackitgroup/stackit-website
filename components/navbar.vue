@@ -13,8 +13,9 @@
           data-aos-easing="ease-in-back"
           data-aos-delay="100"
           :w="['100%', '100%', '100%', 'fit-content']"
+          align="center"
         >
-          <c-image src="./favicon.ico" mr="2" />
+          <c-image src="/stackit-bar.png" w="45px" mr="2" />
           <c-heading font-size="3xl">
             Stackit
           </c-heading>
@@ -67,11 +68,11 @@ export default {
   },
   methods: {
     toggleNavClass() {
-      if (this.active === false) {
-        return 'nav'
-      } else {
+      // if (this.active === false) {
+      //   return 'nav'
+      // } else {
         return 'sticky-nav'
-      }
+      // }
     }
   }
 }

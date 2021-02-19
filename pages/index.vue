@@ -4,23 +4,23 @@
 
     <banner @action="launchContactForm()" />
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box pt="3.75rem" my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
       <services />
     </c-box>
 
-    <c-box mt="7.5rem">
-      <lets-talk @action="launchContactForm()" />
-    </c-box>
-
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box py="3.75rem" :px="[5, 5, 5, '5%', '10%']" bg="difference-section.bg">
       <we-are-different />
     </c-box>
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box my="3.75rem" :mx="[5, 5, 5, '5%', '10%']" max-w="80wv">
       <process />
     </c-box>
 
-    <c-box mt="7.5rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box my="3.75rem">
+      <lets-talk @action="launchContactForm()" />
+    </c-box>
+
+    <c-box my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
       <lorem />
     </c-box>
 
