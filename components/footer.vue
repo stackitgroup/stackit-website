@@ -1,13 +1,6 @@
 <template>
   <c-stack spacing="6" bg="#0e046d" color="white" :px="[5, 5, 5, '5%', '10%']" :py="['3.25rem']">
-    <c-flex
-      align="center"
-    >
-      <c-image src="/stackit-bar.png" w="45px" mr="2" />
-      <c-heading font-size="3xl">
-        Stackit
-      </c-heading>
-    </c-flex>
+    <c-image src="/stackit-logo.png" w="180px" />
 
     <c-flex
       justify="space-between"

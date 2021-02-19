@@ -95,6 +95,8 @@ export default {
 <style scoped lang="scss">
 .difference-container {
   overflow: hidden;
+  z-index: 0;
+  position: relative;
 }
 
 .difference-box {
