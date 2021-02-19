@@ -14,8 +14,6 @@
         :justify="['center', 'center', 'center', index % 2 === 0 ? 'flex-end' : 'flex-start']"
       >
         <c-image
-          :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'"
-          data-aos-delay="150"
           class="summary-image"
           :src="`services/${service.image}`"
         />
@@ -23,9 +21,6 @@
 
       <c-box
         :width="['100%', '100%', '100%', '70%', '65%']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="150"
       >
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading as="h1" :font-size="['2xl', '3xl', '4xl', '5xl']" font-weight="600">
@@ -59,17 +54,17 @@ export default {
     return {
       services: [
         {
-          title: 'Custom Software',
+          title: 'Custom Software Development',
           description: [
-            'We are a full-stack mobile and web application software development team.  Relying on the latest in software technologies and agile development practices, we’ve built solutions to help businesses transform their business operations, logistics, product ideas, and much, much more.',
+            'We are a full-stack mobile and web application software development team. Relying on the latest in software technologies and agile development practices, we’ve built solutions to help businesses transform their business operations, logistics, product ideas, and much, much more.',
             'Bottom line? We can build you just about anything.',
           ],
           image: 'service-custom-software.png',
         },
         {
-          title: 'Support & Maintenance',
+          title: 'Maintenance & Support',
           description: [
-            'We provide ongoing support and maintenance. That includes making enhancements, fixing bugs, and monitoring your system.'
+            'We provide ongoing maintenance and support. That includes making enhancements, fixing bugs, and monitoring your system.'
           ],
           image: 'support.png',
         },

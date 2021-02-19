@@ -1,9 +1,6 @@
 <template>
   <c-stack spacing="6" bg="#0e046d" color="white" :px="[5, 5, 5, '5%', '10%']" :py="['3.25rem']">
     <c-flex
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
       align="center"
     >
       <c-image src="/stackit-bar.png" w="45px" mr="2" />
@@ -17,9 +14,6 @@
       :font-size="['lg']"
       font-weight="300"
       wrap="wrap"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
     >
       <c-stack :w="['100%', '100%', '38%', '30%']">
         <c-text font-weight="600">
@@ -62,10 +56,6 @@
     <c-text
       mt="1.25rem"
       text-align="center"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
-      data-aos-offset="0"
     >
       © 2021 Stackit. All Rights Reserved<br>
       v{{ version }}
