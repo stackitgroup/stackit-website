@@ -59,17 +59,17 @@ export default {
     return {
       services: [
         {
-          title: 'Custom Software',
+          title: 'Custom Software Development',
           description: [
-            'We are a full-stack mobile and web application software development team.  Relying on the latest in software technologies and agile development practices, we’ve built solutions to help businesses transform their business operations, logistics, product ideas, and much, much more.',
+            'We are a full-stack mobile and web application software development team. Relying on the latest in software technologies and agile development practices, we’ve built solutions to help businesses transform their business operations, logistics, product ideas, and much, much more.',
             'Bottom line? We can build you just about anything.',
           ],
           image: 'service-custom-software.png',
         },
         {
-          title: 'Support & Maintenance',
+          title: 'Maintenance & Support',
           description: [
-            'We provide ongoing support and maintenance. That includes making enhancements, fixing bugs, and monitoring your system.'
+            'We provide ongoing maintenance and support. That includes making enhancements, fixing bugs, and monitoring your system.'
           ],
           image: 'support.png',
         },
