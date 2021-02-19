@@ -14,8 +14,6 @@
         :justify="['center', 'center', 'center', index % 2 === 0 ? 'flex-end' : 'flex-start']"
       >
         <c-image
-          :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'"
-          data-aos-delay="150"
           class="summary-image"
           :src="`services/${service.image}`"
         />
@@ -23,9 +21,6 @@
 
       <c-box
         :width="['100%', '100%', '100%', '70%', '65%']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="150"
       >
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading as="h1" :font-size="['2xl', '3xl', '4xl', '5xl']" font-weight="600">

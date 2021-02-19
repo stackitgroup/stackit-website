@@ -10,9 +10,6 @@
         as="h1"
         :font-weight="600"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="100"
       >
         We Create Custom Software For Your Business.
       </c-heading>
@@ -22,9 +19,6 @@
         color="st-orange"
         :font-weight="600"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="100"
       >
         Here's How.
       </c-heading>
@@ -45,8 +39,6 @@
         :w="['100%', '100%', '100%', '80%', '80%']"
         :my="['0.75rem', '0.75rem', '1rem', '1.5rem']"
         :mr="[0, 0, 0, `${10 * index}%`, `${10 * index}%`]"
-        data-aos="fade-left"
-        data-aos-delay="150"
       >
         <c-flex
           class="step-info"

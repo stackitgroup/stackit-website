@@ -8,8 +8,6 @@
       class="study-bar"
       :w="['100%', '100%', '100%', '100%', '35%']"
       :p="['1.5rem', '1.5rem', '2rem', '3rem', '4rem']"
-      data-aos="fade-right"
-      data-aos-delay="150"
     >
       <c-text
         color="white"
@@ -27,16 +25,11 @@
         as="h1"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
         font-weight="600"
-        data-aos="fade-zoom-in"
-        data-aos-delay="100"
       >
         How Stackit Helped Save a Half-Baked Project & Launch an MVP
       </c-heading>
       <c-text
         :font-size="['lg', 'xl']"
-        data-aos="fade-zoom-in"
-        data-aos-delay="120"
-        data-aos-easing="ease-in-back"
       >
         When Mike Jacobsen approached Stackit, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet and build an effective MVP for It’s Borrowed.
       </c-text>
@@ -48,8 +41,6 @@
           size="lg"
           font-size="xl"
           font-weight="400"
-          data-aos="fade-right"
-          data-aos-delay="150"
           :w="['300px']"
           :mt="['2.5rem']"
         >
