@@ -8,25 +8,14 @@
       wrap="wrap"
     >
       <router-link to="/">
-        <c-flex
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="100"
-          :w="['100%', '100%', '100%', 'fit-content']"
-          align="center"
-        >
-          <c-image src="/stackit-bar.png" w="45px" mr="2" />
-          <c-heading font-size="3xl">
-            Stackit
-          </c-heading>
-        </c-flex>
+        <c-image class="logo" src="/stackit-logo.png" />
       </router-link>
 
       <c-flex
         class="nav-links"
         :font-size="['lg', 'xl']"
         :w="['100%', '100%', '100%', 'fit-content']"
-        :pt="['2rem', 0]"
+        :mt="['0.5rem', '0.5rem', '0.5rem', 0]"
       >
         <router-link to="/" exact>
           Home
@@ -65,11 +54,11 @@ export default {
   },
   methods: {
     toggleNavClass() {
-      // if (this.active === false) {
-      //   return 'nav'
-      // } else {
+      if (this.active === false) {
+        return 'nav'
+      } else {
         return 'sticky-nav'
-      // }
+      }
     }
   }
 }
@@ -97,6 +86,10 @@ a:hover {
 .sticky-nav {
   transition: 100ms;
   padding: 1rem;
+
+  .logo {
+    width: 160px;
+  }
 }
 
 #nav {
