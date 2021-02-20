@@ -26,7 +26,7 @@
       </template>
     </c-text>
     <c-button
-      v-if="!custom"
+      v-if="displayAction"
       class="btn-main"
       :mt="['12']"
       right-icon="arrow-forward"
@@ -56,6 +56,10 @@ export default {
     custom: {
       type: String,
       default: undefined
+    },
+    displayAction: {
+      type: Boolean,
+      default: false
     },
   },
 }

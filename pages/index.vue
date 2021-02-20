@@ -2,7 +2,7 @@
   <div class="container">
     <contact-dialog ref="contactDialog" />
 
-    <banner @action="launchContactForm()" />
+    <banner :display-action="true" @action="launchContactForm()" />
 
     <c-box pt="3.75rem" my="3.75rem" :mx="[5, 5, 5, '5%', '10%']">
       <services />
