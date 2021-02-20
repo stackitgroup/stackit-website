@@ -11,7 +11,7 @@
     >
       <c-text
         color="white"
-        :font-size="['xl', '2xl', '3xl', '3xl', '4xl']"
+        :font-size="['lg', 'xl', 'xl', '2xl', '2rem']"
         font-weight="600"
         line-height="1.3"
       >
