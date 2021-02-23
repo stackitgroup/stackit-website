@@ -16,7 +16,7 @@
       <process />
     </c-box>
 
-    <c-box my="3.75rem">
+    <c-box my="7.5rem">
       <lets-talk @action="launchContactForm()" />
     </c-box>
 
@@ -24,7 +24,7 @@
       <case-study />
     </c-box>
 
-    <c-box my="9rem" :mx="[5, 5, 5, '5%', '10%']">
+    <c-box my="5.625rem" :mx="[5, 5, 5, '5%', '10%']">
       <clients />
     </c-box>
   </div>
