@@ -16,11 +16,15 @@
 <script>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Navbar from '~/components/navbar'
 
 import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
+import SweetAlertIcons from 'vue-sweetalert-icons'
+import Vue from 'vue'
 
+import Navbar from '~/components/navbar'
 import StFooter from '~/components/footer'
+
+Vue.use(SweetAlertIcons)
 
 // Start library for displaying components smooth
 AOS.init()
