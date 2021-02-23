@@ -28,10 +28,10 @@
       direction="column"
       align="flex-end"
       w="100%"
-      max-w="1200px"
+      max-w="75rem"
       mt="2rem"
     >
-      <c-box
+      <c-flex
         v-for="(item, index) in steps"
         :key="`process-${index}`"
         class="process-box"
@@ -39,12 +39,16 @@
         :w="['100%', '100%', '100%', '80%', '80%']"
         :my="['0.75rem', '0.75rem', '1rem', '1.5rem']"
         :mr="[0, 0, 0, `${10 * index}%`, `${10 * index}%`]"
+        align="center"
       >
         <c-flex
           class="step-info"
           :bg="item.color"
           direction="column"
           justify="center"
+          :p="['1rem', '1rem', '1.5rem']"
+          :pr="['4.5rem', '6rem', '7.5rem']"
+          :mr="['3.25rem', '4.125rem', '5rem']"
         >
           <c-text text-align="center" :font-weight="600" :font-size="['xl', 'xl', '2xl']">
             Step {{ index + 1 }}. {{ item.title }}
@@ -55,17 +59,17 @@
         </c-flex>
         <c-box
           class="step-image"
-          :display="['none', 'flex']"
-          border="5px solid"
+          display="flex"
+          border="0.25rem solid"
           :border-color="item.color"
-          w="100px"
-          height="100px"
+          :w="['7rem', '9.375rem', '11.25rem']"
+          :height="['7rem', '9.375rem', '11.25rem']"
           align-items="center"
           justify-content="center"
         >
-          <c-image :src="`/process/${item.image}`" />
+          <c-image w="65%" h="65%" :src="`/process/${item.image}`" />
         </c-box>
-      </c-box>
+      </c-flex>
     </c-flex>
   </c-flex>
 </template>
@@ -117,30 +121,20 @@ export default {
 
   .process-box {
     position: relative;
-    height: 176px;
+    min-height: 11rem;
   }
 
   .step-info {
     color: white;
-    border-radius: 20px;
-    margin-right: 68px;
-    padding-right: calc(110px + 2.5rem);
-    height: 180px;
-    padding-left: 2.5rem;
+    border-radius: 1.25rem;
+    min-height: 11.25rem;
   }
 
   .step-image {
     content: '';
-    width: 180px;
-    height: 180px;
     background-color: white;
     border-radius: 50%;
     position: absolute;
     right: 0;
-    top: 0;
-  }
-
-  .step-image img {
-    width: 100px;
   }
 </style>

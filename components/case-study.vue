@@ -6,7 +6,7 @@
   >
     <c-box
       class="study-bar"
-      :w="['100%', '100%', '100%', '100%', '35%']"
+      :w="['100%', '100%', '35%']"
       :p="['1.5rem', '1.5rem', '2rem', '3rem', '4rem']"
     >
       <c-text
@@ -21,7 +21,7 @@
       </c-text>
     </c-box>
 
-    <c-stack spacing="8" :w="['100%', '100%', '100%', '100%', '60%']">
+    <c-stack spacing="8" :w="['100%', '100%', '60%']">
       <c-heading
         as="h1"
         :font-size="['2xl', '3xl', '4xl', '5xl']"
@@ -78,7 +78,7 @@ export default {
   background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .study-container {
     flex-direction: column-reverse !important;
   }

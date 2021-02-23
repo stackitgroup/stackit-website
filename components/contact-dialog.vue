@@ -56,7 +56,9 @@
           </c-stack>
 
           <c-stack v-else spacing="1rem">
-            <c-image class="confirm-image" src="contact/confirm_check.gif" />
+            <no-ssr>
+              <sweetalert-icon icon="success" />
+            </no-ssr>
             <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
               Message sent
             </c-heading>
