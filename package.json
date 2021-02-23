@@ -20,7 +20,8 @@
     "@nuxtjs/emotion": "^0.1.0",
     "aos": "^3.0.0-beta.6",
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "vue-sweetalert-icons": "^4.3.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
