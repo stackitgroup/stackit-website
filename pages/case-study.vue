@@ -211,6 +211,11 @@ export default {
   methods: {
     launchContactForm() {
       this.$refs.contactDialog.open()
+
+      this.$gtag('event', 'click', {
+        eventCategory: 'contact-form',
+        eventLabel: 'case-study',
+      })
     }
   }
 }

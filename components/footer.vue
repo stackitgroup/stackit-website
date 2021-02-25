@@ -46,7 +46,7 @@
           Phone: +1 (619) 917 5387<br>
           Email: hello@stackitgroup.com
         </c-text>
-        <c-link href="https://www.linkedin.com/company/stackit" is-external mt="1.5rem">
+        <c-link href="https://www.linkedin.com/company/stackit" is-external mt="1.5rem" @click="trackEvent()">
           <c-image w="24px" height="24px" src="/contact/linkedin.svg" />
         </c-link>
       </c-stack>
@@ -80,5 +80,12 @@ export default {
       return process.env.version
     }
   },
+  methods: {
+    trackEvent() {
+      this.$gtag('event', 'click', {
+        eventCategory: 'linkedin',
+      })
+    }
+  }
 }
 </script>
