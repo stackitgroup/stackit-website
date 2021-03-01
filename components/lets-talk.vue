@@ -5,8 +5,8 @@
     color="white"
     align="center"
     justify="space-between"
-    :pt="['0.5rem', '1rem', '1rem', '2rem']"
-    :pb="['0.5rem', '1rem', '1rem', '2.5rem']"
+    :pt="['1.5rem', '1.5rem', '1.5rem', '2rem']"
+    :pb="['1.5rem', '1.5rem', '1.5rem', '2.5rem']"
     :px="[5, 5, 5, '5%', '10%']"
     wrap="wrap"
   >

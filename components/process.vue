@@ -30,6 +30,7 @@
       w="100%"
       max-w="75rem"
       mt="2rem"
+      :mb="['-0.75rem', '-0.75rem', '-0.75rem', '-1.5rem']"
     >
       <c-flex
         v-for="(item, index) in steps"
@@ -43,7 +44,8 @@
       >
         <c-flex
           class="step-info"
-          :bg="item.color"
+          border="0.125rem solid"
+          :border-color="item.color"
           direction="column"
           justify="center"
           :p="['1rem', '1rem', '1.5rem']"
@@ -60,7 +62,7 @@
         <c-box
           class="step-image"
           display="flex"
-          border="0.25rem solid"
+          border="0.125rem solid"
           :border-color="item.color"
           :w="['7rem', '9.375rem', '11.25rem']"
           :height="['7rem', '9.375rem', '11.25rem']"
@@ -125,7 +127,6 @@ export default {
   }
 
   .step-info {
-    color: white;
     border-radius: 1.25rem;
     min-height: 11.25rem;
   }

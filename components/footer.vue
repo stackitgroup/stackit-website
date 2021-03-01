@@ -5,7 +5,7 @@
     <c-flex
       justify="space-between"
       :font-size="['lg']"
-      font-weight="300"
+      font-weight="400"
       wrap="wrap"
     >
       <c-stack :w="['100%', '100%', '38%', '30%']">
