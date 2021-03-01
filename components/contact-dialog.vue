@@ -206,6 +206,11 @@ export default {
       try {
         await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
         this.isSent = true
+
+        this.$gtag('event', 'submit', {
+          eventCategory: 'contact-form',
+          eventLabel: 'dialog',
+        })
       } catch (error) {
         console.error(error)
 

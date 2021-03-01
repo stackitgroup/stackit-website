@@ -211,6 +211,11 @@ export default {
   methods: {
     launchContactForm() {
       this.$refs.contactDialog.open()
+
+      this.$gtag('event', 'click', {
+        eventCategory: 'contact-form',
+        eventLabel: 'case-study',
+      })
     }
   }
 }
@@ -254,13 +259,13 @@ export default {
     }
 
     &::before {
-      background-image: url('/quote-left.svg');
+      background-image: url('/quotes-left.png');
       left: 0;
       top: 0;
     }
 
     &::after {
-      background-image: url('/quote-right.svg');
+      background-image: url('/quotes-right.png');
       right: 0;
       bottom: 0;
     }

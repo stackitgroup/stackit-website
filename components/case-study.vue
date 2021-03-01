@@ -44,6 +44,7 @@
           font-weight="400"
           :w="['300px']"
           :mt="['2.5rem']"
+          @click="trackEvent()"
         >
           READ CASE STUDY
         </c-button>
@@ -67,6 +68,13 @@ export default {
   },
   data() {
     return {
+    }
+  },
+  methods: {
+    trackEvent() {
+      this.$gtag('event', 'click', {
+        eventCategory: 'case-study',
+      })
     }
   }
 }
