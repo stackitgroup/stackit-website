@@ -68,10 +68,11 @@ export default {
 <style scoped lang="scss">
 .banner {
   position: relative;
-  background-image: url('/banner-background.png');
+  background-image: url('/banner-background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   z-index: 0;
 
   .banner-title {
