@@ -1,5 +1,5 @@
 <template>
-  <c-flex align="center" justify="space-between" wrap="wrap">
+  <c-flex class="clients-container" align="center" justify="space-between" wrap="wrap">
     <c-image
       v-for="(client, index) in clients"
       :key="`client-${client.name}`"
@@ -37,3 +37,10 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .clients-container {
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+  }
+</style>

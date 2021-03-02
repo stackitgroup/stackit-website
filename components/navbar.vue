@@ -55,11 +55,7 @@ export default {
   },
   methods: {
     toggleNavClass() {
-      if (this.active === false) {
-        return 'nav'
-      } else {
-        return 'sticky-nav'
-      }
+      return 'nav'
     }
   }
 }
