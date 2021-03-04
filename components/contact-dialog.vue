@@ -12,45 +12,45 @@
         data-aos-delay="150"
       >
         <c-drawer-header>
-          <c-text class="obar" :font-size="['5xl']" :font-weight="400">
+          <c-text class="obar" :font-size="['2xl', '3xl', '4xl', '5xl']" :font-weight="400">
             Contact us
           </c-text>
         </c-drawer-header>
 
         <c-drawer-body>
-          <c-stack v-if="!isSent" spacing="6" my="1.5rem">
+          <c-stack v-if="!isSent" class="contact-form" :spacing="[4, 6]" :my="['0.5rem', '1.5rem']">
             <c-input
               v-model="form.name"
-              h="3.75rem"
+              :h="['auto', '3rem']"
               placeholder="First name"
               is-required
-              size="lg"
+              :size="['md', 'lg']"
               maxlength="150"
             />
             <c-input
               v-model="form.email"
               type="email"
-              h="3.75rem"
+              :h="['auto', '3rem']"
               placeholder="Email"
               is-required
-              size="lg"
+              :size="['md', 'lg']"
               maxlength="150"
             />
             <c-input
               v-model="form.phone"
               type="tel"
-              h="3.75rem"
+              :h="['auto', '3rem']"
               placeholder="Phone number"
               is-required
-              size="lg"
+              :size="['md', 'lg']"
               maxlength="150"
             />
             <c-textarea
               v-model="form.message"
-              h="9.5rem"
+              :h="['auto', '9rem']"
               placeholder="Message"
               is-required
-              size="lg"
+              :size="['md', 'lg']"
               maxlength="1500"
             />
           </c-stack>
@@ -69,6 +69,7 @@
 
           <c-button
             v-if="!isSent"
+            mt="1rem"
             class="btn-main"
             right-icon="arrow-forward"
             rounded="10px"
@@ -206,6 +207,11 @@ export default {
       try {
         await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
         this.isSent = true
+
+        this.$gtag('event', 'submit', {
+          eventCategory: 'contact-form',
+          eventLabel: 'dialog',
+        })
       } catch (error) {
         console.error(error)
 

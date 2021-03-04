@@ -3,19 +3,20 @@
     <c-flex
       id="nav-container"
       :class="toggleNavClass()"
-      justify="space-between"
+      :justify="['center', 'center', 'space-between']"
       w="100%"
       wrap="wrap"
     >
       <router-link to="/">
-        <c-image class="logo" src="/stackit-logo.png" />
+        <c-image class="logo" :w="['160px', '160px', '235px']" src="/stackit-logo.png" />
       </router-link>
 
       <c-flex
         class="nav-links"
         :font-size="['lg', 'xl']"
-        :w="['100%', '100%', '100%', 'fit-content']"
-        :mt="['0.5rem', '0.5rem', '0.5rem', 0]"
+        :w="['100%', '100%', 'fit-content']"
+        justify="center"
+        :mt="['1rem', '1rem', 0]"
       >
         <router-link to="/" exact>
           Home
@@ -54,11 +55,7 @@ export default {
   },
   methods: {
     toggleNavClass() {
-      if (this.active === false) {
-        return 'nav'
-      } else {
-        return 'sticky-nav'
-      }
+      return 'nav'
     }
   }
 }

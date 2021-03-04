@@ -58,7 +58,8 @@ export default {
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/google-gtag',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -70,4 +71,15 @@ export default {
   chakra: {
     extendTheme: theme
   },
+
+  'google-gtag': {
+    id: 'G-ZHE66P40BJ', // required
+    config: {
+      // check out official docs: https://developers.google.com/analytics/devguides/collection/gtagjs/
+      send_page_view: false,
+      linker: {
+        domains: ['stackitgroup.com']
+      }
+    },
+  }
 }
