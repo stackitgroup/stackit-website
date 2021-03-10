@@ -10,6 +10,7 @@
       <c-drawer-content
         data-aos="fade-left"
         data-aos-delay="150"
+        h="100%"
       >
         <c-drawer-header>
           <c-text class="obar" :font-size="['2xl', '3xl', '4xl', '5xl']" :font-weight="400">
