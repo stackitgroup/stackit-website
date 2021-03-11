@@ -39,7 +39,6 @@
               h="3.75rem"
               :w="['48%']"
               placeholder="Phone"
-              is-required
               size="lg"
               maxlength="150"
             />
@@ -49,7 +48,7 @@
             h="9.5rem"
             placeholder="Message"
             size="lg"
-            maxlength="150"
+            maxlength="300"
           />
         </c-stack>
 
@@ -141,10 +140,6 @@ export default {
         errors.push('Email is not valid.')
       }
 
-      if (!this.form.message) {
-        errors.push('Message is required.')
-      }
-
       return errors.length > 0
     }
   },
@@ -182,10 +177,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.icon-container {
-  background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
+  .icon-container {
+    background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    position: relative;
+    z-index: 0;
+  }
 </style>

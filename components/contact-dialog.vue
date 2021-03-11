@@ -10,6 +10,7 @@
       <c-drawer-content
         data-aos="fade-left"
         data-aos-delay="150"
+        h="100%"
       >
         <c-drawer-header>
           <c-text class="obar" :font-size="['2xl', '3xl', '4xl', '5xl']" :font-weight="400">
@@ -41,17 +42,13 @@
               type="tel"
               :h="['auto', '3rem']"
               placeholder="Phone number"
-              is-required
               :size="['md', 'lg']"
               maxlength="150"
             />
             <c-textarea
               v-model="form.message"
-              :h="['auto', '9rem']"
               placeholder="Message"
-              is-required
-              :size="['md', 'lg']"
-              maxlength="1500"
+              maxlength="300"
             />
           </c-stack>
 
@@ -175,18 +172,10 @@ export default {
         errors.push('FirstName is required.')
       }
 
-      if (!this.form.phone) {
-        errors.push('Phone number is required.')
-      }
-
       if (!this.form.email) {
         errors.push('Email is required.')
       } else if (!this.validEmail(this.form.email)) {
         errors.push('Email is not valid.')
-      }
-
-      if (!this.form.message) {
-        errors.push('Message is required.')
       }
 
       return errors.length > 0
