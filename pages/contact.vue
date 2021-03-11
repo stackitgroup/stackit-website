@@ -39,7 +39,6 @@
               h="3.75rem"
               :w="['48%']"
               placeholder="Phone"
-              is-required
               size="lg"
               maxlength="150"
             />
@@ -49,7 +48,7 @@
             h="9.5rem"
             placeholder="Message"
             size="lg"
-            maxlength="150"
+            maxlength="300"
           />
         </c-stack>
 
@@ -139,10 +138,6 @@ export default {
         errors.push('Email is required.')
       } else if (!this.validEmail(this.form.email)) {
         errors.push('Email is not valid.')
-      }
-
-      if (!this.form.message) {
-        errors.push('Message is required.')
       }
 
       return errors.length > 0
