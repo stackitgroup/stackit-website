@@ -43,8 +43,8 @@
           Contact
         </c-text>
         <c-text>
-          Phone: +1 (619) 917 5387<br>
-          Email: hello@stackitgroup.com
+          Phone: <a href="tel:+1 (619) 917 5387">+1 (619) 917 5387</a><br>
+          Email: <a href="mailto:hello@stackitgroup.com">hello@stackitgroup.com</a>
         </c-text>
         <c-link href="https://www.linkedin.com/company/stackit" is-external mt="1.5rem" @click="trackEvent()">
           <c-image w="24px" height="24px" src="/contact/linkedin.svg" />

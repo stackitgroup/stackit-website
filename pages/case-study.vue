@@ -179,16 +179,25 @@
         class="quote"
         :font-size="['sm', 'md']"
       >
-        <p>1 A minimum viable product, or MVP, is a product with enough features to attract early-adopter customers and validate a product idea early in the product development cycle.</p>
-        <p>2 Lean startup is a methodology for developing businesses and products that aims to shorten product development cycles and rapidly discover if a proposed business model is viable</p>
-        <p>Watch It's borrowed demo https://www.youtube.com/watch?v=9hKEOpT-2B8</p>
+        <p class="quote-number">
+          <span>1</span>
+          A minimum viable product, or MVP, is a product with enough features to attract early-adopter customers and validate a product idea early in the product development cycle.</p>
+        <p class="quote-number">
+          <span>2</span>
+          Lean startup is a methodology for developing businesses and products that aims to shorten product development cycles and rapidly discover if a proposed business model is viable</p>
+        <c-text :mt="['0.5rem', '1rem']" color="red">
+          Watch It's borrowed
+          <c-link class="borrowed-video" href="https://www.youtube.com/watch?v=9hKEOpT-2B8" is-external>
+            demo
+          </c-link>
+        </c-text>
       </c-box>
     </c-stack>
   </div>
 </template>
 
 <script lang="js">
-import { CBox, CStack, CHeading, CText, CImage, CFlex, CButton } from '@chakra-ui/vue'
+import { CBox, CStack, CHeading, CText, CImage, CFlex, CButton, CLink } from '@chakra-ui/vue'
 import Banner from '@/components/banner'
 import ContactDialog from '@/components/contact-dialog'
 
@@ -204,6 +213,7 @@ export default {
     CFlex,
     CImage,
     CButton,
+    CLink,
   },
   data() {
     return {}
@@ -282,5 +292,21 @@ export default {
       }
     }
   }
+}
+
+.quote-number {
+  text-indent: 8px;
+  position: relative;
+
+  > span {
+    font-size: 10px;
+    position: absolute;
+    left: -8px;
+    top: 0;
+  }
+}
+
+.borrowed-video {
+  color: blue;
 }
 </style>
