@@ -21,7 +21,7 @@
         <c-image class="summary-image" :src="`services/${service.image}`" />
       </c-flex>
 
-      <c-box :width="['100%', '100%', '100%', '60%', '65%']">
+      <c-box :width="['100%', '100%', '100%', '70%', '65%']">
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading
             display="flex"
@@ -75,20 +75,27 @@ export default {
     return {
       services: [
         {
-          title: "Who we are",
+          title: "Software Development",
           description: [
-            "At Stack IT, we believe that talent drives success. Since 2019, we've connected companies with top LATAM tech professionals for cost-effective, flexible, and productive remote staffing solutions.",
-            "Our motto is “Success. Coded.” because our part in your success is to deliver the perfect technical figure you need."
+            "Stack IT is your partner in digital transformation. With extensive experience in cutting-edge technologies, including blockchain and AI, we develop innovative mobile and web applications. ",
+            "Our expertise and agile approach enable us to deliver solutions that transform your operations. If you envision it, we can build it."
           ],
-          image: "who_we_are.png"
+          image: "custom_software_development.png"
         },
         {
-          title: "Staffing Innovation",
+          title: "Maintenance & Support",
           description: [
-            "Our staffing solution is designed to deliver top-tier software developers and help push your business to new heights.",
-            "With a meticulous selection process, tailored training, and keen evaluation, we handpick the perfect talent to match your requirements, industry, and technological demands."
+            "We don’t just create; we care. Stack IT offers ongoing maintenance and support encompassing enhancements, bug fixes, and system monitoring.",
+            "We continually assess your software's usability, audit your code, and test your cloud infrastructure, providing insightful advice that informs your business decisions."
           ],
-          image: "staffing_innovation.png"
+          image: "maintenance.png"
+        },
+        {
+          title: "Consulting",
+          description: [
+            "Our tech consulting services bring a fresh perspective to your existing software functionality. We meticulously review your code, test your cloud infrastructure, and provide expert advice that supports your strategic business decisions."
+          ],
+          image: "custom_consulting.png"
         }
       ]
     };

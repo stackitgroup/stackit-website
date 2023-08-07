@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <banner custom="Let’s build custom software for you." />
+    <banner
+      custom="Let's build you custom software. If you envision it, we can build it."
+    />
 
     <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
       <c-heading
@@ -56,10 +58,21 @@
           <no-ssr>
             <sweetalert-icon icon="success" />
           </no-ssr>
-          <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
+          <c-heading
+            as="h1"
+            :font-weight="400"
+            :font-size="['4xl']"
+            text-align="center"
+            color="contact.title"
+          >
             Message sent
           </c-heading>
-          <c-text :font-weight="400" :font-size="['lg']" text-align="center" color="contact.description">
+          <c-text
+            :font-weight="400"
+            :font-size="['lg']"
+            text-align="center"
+            color="contact.description"
+          >
             Thank you for reaching out, we will be in touch within 24 hours.
           </c-text>
         </c-stack>
@@ -177,15 +190,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .icon-container {
-    background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-  }
+.icon-container {
+  background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
 
-  .container {
-    position: relative;
-    z-index: 0;
-  }
+.container {
+  position: relative;
+  z-index: 0;
+}
 </style>

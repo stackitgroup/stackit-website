@@ -107,24 +107,24 @@ export default {
     return {
       steps: [
         {
-          title: "Connection",
+          title: "Listen",
           description:
-            "We Connect directly with you to understand your unique project requirements and the specific skills you need.",
-          image: "step1.png",
+            "We pay careful attention to your business goals, using this understanding to gauge project complexity and size accurately.",
+          image: "custom-software/listen.png",
           color: "#354a5e"
         },
         {
-          title: "Selection",
+          title: "Plan",
           description:
-            "We handpick the perfect candidates from our pool of skilled Latin American Developers based on your requirements.",
-          image: "step2.png",
+            "Armed with your vision and our expertise, we craft a comprehensive plan of action. This includes projected timelines for feature and functionality delivery, fostering an environment of agile teams, dynamic work, insightful discussions, and functional results.",
+          image: "custom-software/plan.png",
           color: "#3f5f7e"
         },
         {
-          title: "Integration",
+          title: "Succeed",
           description:
-            "We ensure seamless integration of the selected developers into your team, driving successful outcomes and bringing value to your projects.",
-          image: "step3.png",
+            "We don't just deliver code; we deliver success, neatly packaged and ready to integrate seamlessly into your business. Let’s talk! Discover how Stack IT can drive your digital transformation.",
+          image: "custom-software/succeed.png",
           color: "#0d046d"
         }
       ]

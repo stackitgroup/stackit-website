@@ -1,24 +1,23 @@
-@import './variables';
+@import "./variables";
 
 html {
   scroll-behavior: smooth;
 }
-
+.capped-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .btn-main {
-  background-image: var(--sti-color-button);
+  background-color: var(--sti-color-button) !important;
   border-radius: 10px;
   color: white;
 
   &:not([disabled]):hover {
-    background-image: none;
-    background-color: transparent !important;
-    border: var(--sti-color-button-hover) solid 1px;
-    color: var(--sti-color-button-hover);
+    background-color: #257ecc !important;
   }
 }
-
 .lets-talk {
-  background-image: var(--sti-color-lets-talk);
+  background-color: var(--sti-color-lets-talk);
 }
 
 .confirm-image {
@@ -32,4 +31,25 @@ html {
   textarea {
     padding: 0.5rem;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #283c4dba;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--sti-color-button);
+  border-radius: 9999px;
+  opacity: 0.4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sti-color-button-hover);
 }

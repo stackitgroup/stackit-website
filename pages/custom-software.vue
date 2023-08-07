@@ -2,30 +2,22 @@
   <div class="container" :padding="0">
     <contact-dialog ref="contactDialog" />
 
-    <banner :display-action="true" @action="launchContactForm()" />
+    <banner
+      :display-action="true"
+      @action="launchContactForm()"
+      custom="Let's build you custom software. If you can invision it, we can build it"
+    />
 
     <c-box>
-      <services />
+      <custom-software-services />
     </c-box>
 
     <c-box :background-color="['#f2f2f2']">
-      <we-are-different />
+      <why-excel />
     </c-box>
 
     <c-box>
-      <process />
-    </c-box>
-
-    <c-box :background-color="['#283c4d']">
-      <lets-talk @action="launchContactForm()" />
-    </c-box>
-
-    <!-- <c-box :my="['2rem', '2rem', '3.75rem']" :mx="[5, 5, 5, '5%', '10%']">
-      <case-study />
-    </c-box> -->
-
-    <c-box>
-      <clients />
+      <custom-process />
     </c-box>
   </div>
 </template>
