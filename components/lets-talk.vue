@@ -28,7 +28,7 @@
       rounded="full"
       size="lg"
       font-size="xl"
-      font-weight="400"
+      font-weight="600"
       :w="['100%', '100%', '100%', '18%', '18%']"
       :mt="['2rem', '2rem', '2rem', 0]"
       :mx="['auto', 'auto', 'auto', 0]"

@@ -86,7 +86,7 @@
           rounded="10px"
           size="lg"
           font-size="xl"
-          font-weight="400"
+          font-weight="600"
           w="290px"
           :disabled="isFormValid"
           :is-loading="isLoading"

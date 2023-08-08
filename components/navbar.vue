@@ -38,7 +38,7 @@
             rounded="full"
             size="sm"
             font-size="md"
-            font-weight="400"
+            font-weight="600"
             :border-bottom="['4px solid transparent']"
           >
             LET'S TALK

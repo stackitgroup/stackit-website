@@ -33,7 +33,7 @@
       rounded="full"
       size="lg"
       font-size="xl"
-      font-weight="400"
+      font-weight="600"
       data-aos="fade-up"
       data-aos-delay="400"
       @click="$emit('action')"

@@ -30,14 +30,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "sui_generis_regular", "sans-serif" !important;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: "sui_generis_regular", "sans-serif" !important;
+// }
 .capped-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,7 +49,6 @@ h6 {
   background-color: var(--sti-color-button) !important;
   border-radius: 10px;
   color: white;
-  // font-family: "sui_generis_regular";
 
   &:not([disabled]):hover {
     background-color: #257ecc !important;
