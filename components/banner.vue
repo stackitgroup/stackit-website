@@ -11,7 +11,7 @@
   >
     <c-text
       class="banner-title"
-      :font-size="['3xl', '4xl', '5xl', '6xl']"
+      :font-size="['3xl', '4xl', '5xl']"
       max-w="1094px"
       text-align="center"
       data-aos="fade-zoom-in"
@@ -19,10 +19,10 @@
       data-aos-delay="100"
     >
       <template v-if="custom">
-        <b>{{ custom }}</b>
+        {{ custom }}
       </template>
       <template v-else>
-        We <b>design, create</b>, and <b>maintain</b> quality <b>custom software.</b>
+        Staffing Innovation Worldwide with Elite LATAM's Software Talent
       </template>
     </c-text>
     <c-button
@@ -30,12 +30,12 @@
       class="btn-main"
       :mt="['12']"
       right-icon="arrow-forward"
-      rounded="10px"
+      rounded="full"
       size="lg"
       font-size="xl"
-      font-weight="400"
+      font-weight="600"
       data-aos="fade-up"
-      data-aos-delay="500"
+      data-aos-delay="400"
       @click="$emit('action')"
     >
       LET'S TALK
@@ -44,13 +44,13 @@
 </template>
 
 <script>
-import { CFlex, CText, CButton } from '@chakra-ui/vue'
+import { CFlex, CText, CButton } from "@chakra-ui/vue";
 
 export default {
   components: {
     CFlex,
     CText,
-    CButton,
+    CButton
   },
   props: {
     custom: {
@@ -60,18 +60,15 @@ export default {
     displayAction: {
       type: Boolean,
       default: false
-    },
-  },
-}
+    }
+  }
+};
 </script>
 
 <style scoped lang="scss">
 .banner {
   position: relative;
-  background-image: url('/banner-background.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--sti-color-dark-blue);
   overflow: hidden;
   z-index: 0;
 
@@ -83,16 +80,5 @@ export default {
       font-weight: 600;
     }
   }
-}
-
-.banner::before {
-  content: '';
-  position: absolute;
-  background-image: linear-gradient(90deg, #2626bc 0%, #0a024d 100%);
-  opacity: 0.85;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 </style>

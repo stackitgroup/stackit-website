@@ -1,14 +1,20 @@
 <template>
-  <c-box id="nav" :class="{sticky: active}">
+  <c-box id="nav" :class="{ sticky: active }">
     <c-flex
       id="nav-container"
       :class="toggleNavClass()"
       :justify="['center', 'center', 'space-between']"
       w="100%"
+      :max-width="['1200px']"
+      :mx="['auto']"
       wrap="wrap"
     >
-      <router-link to="/">
-        <c-image class="logo" :w="['160px', '160px', '235px']" src="/stackit-logo.png" />
+      <router-link to="/" w="auto">
+        <c-image
+          class="logo"
+          :w="['160px', '160px', '180px']"
+          src="/stackit_logo.png"
+        />
       </router-link>
 
       <c-flex
@@ -19,13 +25,24 @@
         :mt="['1rem', '1rem', 0]"
       >
         <router-link to="/" exact>
-          Home
+          Staffing
+        </router-link>
+        <router-link to="/custom-software">
+          Custom Software
         </router-link>
         <router-link to="/contact">
-          Contact
-        </router-link>
-        <router-link to="/case-study">
-          Case Study
+          <c-button
+            class="btn-main"
+            :vertical-align="middle"
+            :text-align="center"
+            rounded="full"
+            size="sm"
+            font-size="md"
+            font-weight="600"
+            :border-bottom="['4px solid transparent']"
+          >
+            LET'S TALK
+          </c-button>
         </router-link>
       </c-flex>
     </c-flex>
@@ -33,7 +50,7 @@
 </template>
 
 <script>
-import { CBox, CFlex, CHeading, CImage } from '@chakra-ui/vue'
+import { CBox, CFlex, CHeading, CImage } from "@chakra-ui/vue";
 
 export default {
   components: {
@@ -45,28 +62,26 @@ export default {
   data() {
     return {
       active: false
-    }
+    };
   },
   mounted() {
     window.document.onscroll = () => {
-      const navBar = document.getElementById('nav')
-      this.active = window.scrollY > navBar.offsetTop
-    }
+      const navBar = document.getElementById("nav");
+      this.active = window.scrollY > navBar.offsetTop;
+    };
   },
   methods: {
     toggleNavClass() {
-      return 'nav'
+      return "nav";
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 a {
-  font-weight: bold;
   color: white;
   text-decoration: none;
-  margin: 0 1vw;
 }
 
 a:hover {
@@ -76,8 +91,10 @@ a:hover {
 
 /* two classes, decided on scroll */
 .nav {
+  height: 70px;
   transition: 100ms;
-  padding: 2rem 3rem;
+  align-items: center;
+  padding: 0 5%;
 }
 
 .sticky-nav {
@@ -106,17 +123,46 @@ a:hover {
 /* have to add the ID nav (#nav) otherwise the backgrnd color won't change as the previous background color is set in an ID and ID trumps class notation */
 #nav.sticky {
   transition: 150ms;
-  background-color: #0b0f7d;
+  background-color: #283c4d;
 }
 
 .nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  a {
+    height: fit-content;
+    opacity: 0.8;
+    border-bottom: 4px solid transparent;
+  }
+
   a:hover {
-    border-bottom: 4px #ed4c57 solid;
-    opacity: 0.9;
+    border-bottom: 4px #016fce solid;
+    opacity: 1;
   }
 
   .nuxt-link-active {
-    border-bottom: 4px #ed4c57 solid;
+    font-weight: bold;
+    opacity: 1;
+    border-bottom: 4px #016fce solid;
+  }
+
+  :last-child {
+    border-bottom: 0 solid transparent !important;
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding: 3% 5%;
   }
 }
 </style>
