@@ -9,7 +9,7 @@
       :mx="['auto']"
       wrap="wrap"
     >
-      <router-link to="/">
+      <router-link to="/" w="auto">
         <c-image
           class="logo"
           :w="['160px', '160px', '180px']"
@@ -29,6 +29,20 @@
         </router-link>
         <router-link to="/custom-software">
           Custom Software
+        </router-link>
+        <router-link to="/contact">
+          <c-button
+            class="btn-main"
+            :vertical-align="middle"
+            :text-align="center"
+            rounded="full"
+            size="sm"
+            font-size="md"
+            font-weight="400"
+            :border-bottom="['4px solid transparent']"
+          >
+            LET'S TALK
+          </c-button>
         </router-link>
       </c-flex>
     </c-flex>
@@ -68,7 +82,6 @@ export default {
 a {
   color: white;
   text-decoration: none;
-  margin: 0 1vw;
 }
 
 a:hover {
@@ -78,7 +91,7 @@ a:hover {
 
 /* two classes, decided on scroll */
 .nav {
-  height: 66px;
+  height: 70px;
   transition: 100ms;
   align-items: center;
   padding: 0 5%;
@@ -114,9 +127,15 @@ a:hover {
 }
 
 .nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   a {
     height: fit-content;
     opacity: 0.8;
+    border-bottom: 4px solid transparent;
   }
 
   a:hover {
@@ -128,6 +147,15 @@ a:hover {
     font-weight: bold;
     opacity: 1;
     border-bottom: 4px #016fce solid;
+  }
+
+  :last-child {
+    border-bottom: 0 solid transparent !important;
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    justify-content: center;
   }
 }
 

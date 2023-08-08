@@ -20,9 +20,9 @@
           :w="['100%', '50%', '20%', '20%']"
           :mt="['1.5rem', '1.5rem', 0]"
         >
-          <c-text font-weight="600" font-size="1.2rem">
+          <c-heading as="h6" font-weight="400" font-size="1.2rem">
             Quick Links
-          </c-text>
+          </c-heading>
           <router-link to="/">
             <c-link :opacity="['0.8']">
               Staffing
@@ -38,9 +38,9 @@
           :w="['100%', '50%', '38%', '20%']"
           :mt="['1.5rem', '1.5rem', 0]"
         >
-          <c-text font-weight="600" font-size="1.2rem">
+          <c-heading as="h6" font-weight="400" font-size="1.2rem">
             Contact
-          </c-text>
+          </c-heading>
           <c-text :opacity="['0.8']">
             <strong>Phone:</strong
             ><a href="tel:+1 (619) 917 5387"> +1 (619) 917 5387</a><br />

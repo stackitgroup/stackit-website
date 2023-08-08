@@ -14,10 +14,10 @@
   >
     <c-heading
       class="cta-quote"
-      as="h1"
-      :font-size="['2xl', '2xl', '3xl', '3xl', '4xl']"
+      as="h2"
+      :font-size="['xl', 'xl', '2xl', '2xl']"
       :w="['100%', '100%', '100%', '80%', '80%']"
-      font-weight="600"
+      font-weight="200"
     >
       Kickstart your journey towards a rewarding career with top-tier tech
       companies.
@@ -56,6 +56,10 @@ export default {
 @media (max-width: 980px) {
   .cta-quote {
     text-align: center;
+  }
+
+  .lets-talk {
+    padding: 5%;
   }
 }
 </style>

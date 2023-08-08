@@ -19,11 +19,7 @@
         :h="['40px']"
         :margin-right="['10px']"
       />
-      <c-heading
-        as="h1"
-        :font-weight="600"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
-      >
+      <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
         Some of our Clients
       </c-heading>
     </c-stack>

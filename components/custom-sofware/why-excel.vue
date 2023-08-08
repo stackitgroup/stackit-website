@@ -20,11 +20,7 @@
         :h="['40px']"
         :margin-right="['10px']"
       />
-      <c-heading
-        as="h2"
-        :font-weight="600"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
-      >
+      <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
         Why we excel. Why us?
       </c-heading>
     </c-stack>
@@ -55,13 +51,14 @@
           data-aos="fade-left"
           :data-aos-delay="(index + 1) * 450"
         >
-          <c-text
+          <c-heading
+            as="h3"
             :font-size="['xl', '2xl']"
-            font-weight="600"
+            font-weight="400"
             :mt="['0px', '0px', '0px', '3.5rem']"
           >
             {{ difference.title }}
-          </c-text>
+          </c-heading>
 
           <c-text :font-size="['lg', 'xl']" :font-weight="300">
             {{ difference.description }}

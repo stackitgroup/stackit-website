@@ -21,15 +21,15 @@
         <c-image class="summary-image" :src="`services/${service.image}`" />
       </c-flex>
 
-      <c-box :width="['100%', '100%', '100%', '60%', '65%']">
+      <c-box :width="['90%', '90%', '90%', '60%', '65%']">
         <c-box display="flex" align-items="center" :spacing="3">
           <c-heading
             display="flex"
             flex-direction="row"
             align-items="center"
             as="h2"
-            :font-size="['2xl', '3xl', '4xl', '5xl']"
-            font-weight="600"
+            :font-size="['2xl', '3xl', '4xl']"
+            :font-weight="400"
           >
             <c-image
               src="/stackit_item.png"
@@ -77,16 +77,16 @@ export default {
         {
           title: "Who we are",
           description: [
-            "At Stack IT, we believe that talent drives success. Since 2019, we've connected companies with top LATAM tech professionals for cost-effective, flexible, and productive remote staffing solutions.",
-            "Our motto is “Success. Coded.” because our part in your success is to deliver the perfect technical figure you need."
+            "At Stack IT, a San Diego, CA-based company, we believe that talent  drives  success.  Since  2017,  we've  connected companies  with  top  tech  professionals  from  Latin America  for  cost-effective,  flexible,  and  productive  remote staffing solutions.",
+            "Our  motto  is  “Success.  Coded.”  because  our  part  in  your success is to deliver the perfect technical figure you need."
           ],
           image: "who_we_are.png"
         },
         {
           title: "Staffing Innovation",
           description: [
-            "Our staffing solution is designed to deliver top-tier software developers and help push your business to new heights.",
-            "With a meticulous selection process, tailored training, and keen evaluation, we handpick the perfect talent to match your requirements, industry, and technological demands."
+            "Our  full-stack  staffing  solution  is  designed  to  deliver  top-tier software developers and help push your business to new heights.",
+            " With  a  meticulous  selection  process,  tailored  training, and  keen  evaluation,  we  handpick  the  perfect  talent  to match  your  requirements,  industry,  and  technological demands."
           ],
           image: "staffing_innovation.png"
         }
@@ -103,6 +103,10 @@ export default {
 
 .stack {
   margin-top: 1.5rem;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 }
 
 .summary-image {

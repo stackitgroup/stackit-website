@@ -28,8 +28,8 @@
             flex-direction="row"
             align-items="center"
             as="h2"
-            :font-size="['2xl', '3xl', '4xl', '5xl']"
-            font-weight="600"
+            :font-size="['2xl', '3xl', '4xl']"
+            :font-weight="400"
           >
             <c-image
               src="/stackit_item.png"

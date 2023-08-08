@@ -11,7 +11,7 @@
   >
     <c-text
       class="banner-title"
-      :font-size="['3xl', '4xl', '5xl', '6xl']"
+      :font-size="['3xl', '4xl', '5xl']"
       max-w="1094px"
       text-align="center"
       data-aos="fade-zoom-in"
@@ -22,8 +22,7 @@
         {{ custom }}
       </template>
       <template v-else>
-        <strong>Staffing</strong> Innovation Worldwide with Elite
-        <strong>LATAM's</strong> Software Talent
+        Staffing Innovation Worldwide with Elite LATAM's Software Talent
       </template>
     </c-text>
     <c-button
@@ -34,7 +33,7 @@
       rounded="full"
       size="lg"
       font-size="xl"
-      font-weight="600"
+      font-weight="400"
       data-aos="fade-up"
       data-aos-delay="400"
       @click="$emit('action')"

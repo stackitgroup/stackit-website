@@ -18,11 +18,7 @@
         :h="['40px']"
         :margin-right="['10px']"
       />
-      <c-heading
-        as="h1"
-        :font-weight="600"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
-      >
+      <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
         How to Work Together
       </c-heading>
     </c-stack>
@@ -53,9 +49,13 @@
           :mr="['3.25rem', '4.125rem', '5rem']"
           :gap="['20px']"
         >
-          <c-text :font-weight="600" :font-size="['xl', 'xl', '2xl']">
+          <c-heading
+            as="h3"
+            :font-weight="600"
+            :font-size="['xl', 'xl', '2xl']"
+          >
             {{ item.title }}
-          </c-text>
+          </c-heading>
           <c-text
             :font-size="['sm', 'md', 'lg']"
             :max-width="['620px']"
@@ -107,9 +107,9 @@ export default {
     return {
       steps: [
         {
-          title: "Connection",
+          title: "Discover",
           description:
-            "We Connect directly with you to understand your unique project requirements and the specific skills you need.",
+            "We connect with you to understand your unique project requirements and the specific skills you need.",
           image: "step1.png",
           color: "#354a5e"
         },

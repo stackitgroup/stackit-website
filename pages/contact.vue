@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <banner
-      custom="Let's build you custom software. If you envision it, we can build it."
+      custom="Let's build your custom software. If you can envision it, we can build it"
     />
 
     <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
       <c-heading
         as="h1"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
-        font-weight="600"
+        :font-size="['2xl', '3xl', '4xl']"
+        font-weight="400"
         w="100%"
       >
         Contact us today to start talking about your project.
