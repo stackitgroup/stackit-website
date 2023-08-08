@@ -46,11 +46,7 @@
           {{ index + 1 }}
         </c-text>
 
-        <c-stack
-          class="difference-data"
-          data-aos="fade-left"
-          :data-aos-delay="(index + 1) * 450"
-        >
+        <c-stack class="difference-data">
           <c-heading
             as="h3"
             :font-size="['xl', '2xl']"

@@ -12,16 +12,16 @@
     margin="auto"
     padding="0 5%"
   >
-    <c-heading
+    <c-text
       class="cta-quote"
-      as="h2"
-      :font-size="['xl', 'xl', '2xl', '2xl']"
+      :font-size="['xl', 'xl', '2xl', '3xl']"
       :w="['100%', '100%', '100%', '80%', '80%']"
-      font-weight="200"
+      font-weight="600"
+      color="#181818"
     >
-      Kickstart your journey towards a rewarding career with top-tier tech
-      companies.
-    </c-heading>
+      The result? Top-tier professionals with the skillset to build you nothing
+      but the best software.
+    </c-text>
     <c-button
       class="btn-main"
       right-icon="arrow-forward"
@@ -35,7 +35,7 @@
       max-w="203px"
       @click="$emit('action')"
     >
-      LET'S TALK
+      Let's Talk
     </c-button>
   </c-flex>
 </template>

@@ -14,15 +14,13 @@
       :font-size="['3xl', '4xl', '5xl']"
       max-w="1094px"
       text-align="center"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="100"
     >
       <template v-if="custom">
         {{ custom }}
       </template>
       <template v-else>
-        Staffing Innovation Worldwide with Elite LATAM's Software Talent
+        Staffing Innovation Worldwide <br />
+        with Elite Latin Ametica Software Talent
       </template>
     </c-text>
     <c-button
@@ -34,11 +32,9 @@
       size="lg"
       font-size="xl"
       font-weight="600"
-      data-aos="fade-up"
-      data-aos-delay="400"
       @click="$emit('action')"
     >
-      LET'S TALK
+      Let's Talk
     </c-button>
   </c-flex>
 </template>
@@ -73,7 +69,6 @@ export default {
   z-index: 0;
 
   .banner-title {
-    font-weight: lighter;
     z-index: 1;
 
     b {

@@ -1,18 +1,31 @@
 <template>
   <div class="container">
     <banner
-      custom="Let's build your custom software. If you can envision it, we can build it"
+      custom="Let's build your custom software. If you can envision it, we can build it."
     />
 
     <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
-      <c-heading
-        as="h1"
-        :font-size="['2xl', '3xl', '4xl']"
-        font-weight="400"
+      <c-stack
         w="100%"
+        spacing="0"
+        display="flex"
+        flex-direction="row"
+        align-items="start"
       >
-        Contact us today to start talking about your project.
-      </c-heading>
+        <c-image
+          src="/stackit_item.png"
+          :w="['40px']"
+          :h="['40px']"
+          :margin-right="['10px']"
+        />
+        <c-heading
+          as="h2"
+          :font-weight="400"
+          :font-size="['2xl', '3xl', '4xl']"
+        >
+          Contact us today to start talking about your project.
+        </c-heading>
+      </c-stack>
 
       <c-box w="100%">
         <c-stack v-if="!isSent" spacing="6" wrap="wrap">
@@ -93,7 +106,7 @@
           loading-text="Sending"
           @click="sendMessage()"
         >
-          SEND MESSAGE
+          Send Message
         </c-button>
       </c-flex>
     </c-stack>

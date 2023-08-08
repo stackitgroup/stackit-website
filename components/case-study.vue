@@ -44,7 +44,7 @@
           :mt="['2.5rem']"
           @click="trackEvent()"
         >
-          READ CASE STUDY
+          Read Case Study
         </c-button>
       </router-link>
     </c-stack>

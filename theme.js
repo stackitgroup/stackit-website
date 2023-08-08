@@ -1,9 +1,9 @@
 export default {
   // breakpoints: ['30em', '48em', '62em', '80em'],
   fonts: {
-    heading: '"sui_generis_regular","Source Sans Pro", sans-serif',
-    body: '"Titillium Web","Source Sans Pro", sans-serif',
-    mono: '"Titillium Web","Source Sans Pro", sans-serif'
+    heading: '"sui_generis_regular", sans-serif',
+    body: '"Open Sans", sans-serif',
+    mono: '"Open Sans",sans-serif'
   },
   colors: {
     "st-orange": "#ff786b",
