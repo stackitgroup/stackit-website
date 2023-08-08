@@ -20,7 +20,7 @@
       </template>
       <template v-else>
         Staffing Innovation Worldwide <br />
-        with Elite Latin Ametica Software Talent
+        with Elite Latin Ametica Software Talent.
       </template>
     </c-text>
     <c-button
