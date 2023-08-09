@@ -2,11 +2,7 @@
   <div class="container" :padding="0">
     <contact-dialog ref="contactDialog" />
 
-    <banner
-      :display-action="true"
-      @action="launchContactForm()"
-      custom="Custom-built software. Empowering your Success."
-    />
+    <custom-banner :display-action="true" @action="launchContactForm()" />
 
     <c-box>
       <custom-software-services />

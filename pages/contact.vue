@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <banner
-      custom="Let's build your custom software. If you can envision it, we can build it."
-    />
+    <contact-banner />
 
     <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
       <c-stack
