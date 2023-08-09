@@ -21,7 +21,7 @@
         :margin-right="['10px']"
       />
       <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
-        Why we excel. Why us?
+        Why we excel. Why us.
       </c-heading>
     </c-stack>
 

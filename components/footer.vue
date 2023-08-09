@@ -34,10 +34,7 @@
             </c-link>
           </router-link>
         </c-stack>
-        <c-stack
-          :w="['100%', '50%', '40%', '30%']"
-          :mt="['1.5rem', '1.5rem', 0]"
-        >
+        <c-stack :w="['fit-content']" :mt="['1.5rem', '1.5rem', 0]">
           <c-heading as="h6" font-weight="400" font-size="1.2rem">
             Contact
           </c-heading>
