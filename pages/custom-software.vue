@@ -15,6 +15,9 @@
     <c-box>
       <custom-process />
     </c-box>
+    <c-box :background-color="['#f2f2f2']">
+      <custom-lets-talk />
+    </c-box>
   </div>
 </template>
 
