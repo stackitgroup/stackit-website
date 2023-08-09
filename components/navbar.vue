@@ -30,20 +30,20 @@
         <router-link to="/custom-software">
           Custom Software
         </router-link>
-        <router-link to="/contact">
-          <c-button
-            class="btn-main"
-            :vertical-align="middle"
-            :text-align="center"
-            rounded="full"
-            size="sm"
-            font-size="md"
-            font-weight="600"
-            :border-bottom="['4px solid transparent']"
-          >
-            Let's Talk
-          </c-button>
-        </router-link>
+
+        <c-button
+          class="btn-main"
+          :vertical-align="middle"
+          :text-align="center"
+          rounded="full"
+          size="sm"
+          font-size="md"
+          font-weight="600"
+          :border-bottom="['4px solid transparent']"
+          @click="$emit('action')"
+        >
+          Let's Talk
+        </c-button>
       </c-flex>
     </c-flex>
   </c-box>
@@ -58,6 +58,12 @@ export default {
     CFlex,
     CHeading,
     CImage
+  },
+  props: {
+    displayAction: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {

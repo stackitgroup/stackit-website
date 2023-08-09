@@ -45,7 +45,7 @@
           class="stack"
           :spacing="6"
           :font-size="['lg', 'xl']"
-          :font-weight="300"
+          :font-weight="400"
         >
           <c-text
             v-for="(paragraph, pindex) in service.description"
