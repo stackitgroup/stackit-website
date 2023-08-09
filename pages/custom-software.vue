@@ -5,7 +5,7 @@
     <banner
       :display-action="true"
       @action="launchContactForm()"
-      custom=" Custom built software. Empowering your Success."
+      custom="Custom-built software. Empowering your Success."
     />
 
     <c-box>
