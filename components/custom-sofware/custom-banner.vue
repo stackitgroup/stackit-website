@@ -19,8 +19,8 @@
         {{ custom }}
       </template>
       <template v-else>
-        Staffing Innovation Worldwide <br />
-        with Latin America Software Talent.
+        Custom-built software. <br />
+        Empowering your Success.
       </template>
     </c-text>
     <c-button

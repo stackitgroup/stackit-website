@@ -18,7 +18,7 @@
         :h="['40px']"
         :margin-right="['10px']"
       />
-      <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
+      <c-heading aas="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
         How to Work Together
       </c-heading>
     </c-stack>
@@ -41,21 +41,18 @@
         <c-flex
           class="step-info"
           border="0.125rem solid"
+          :border-color="item.color"
+          max-height="180px"
           direction="column"
           justify="start"
-          max-height="180px"
           :p="['1rem', '1rem', '1.5rem']"
           :pr="['4.5rem', '6rem', '7.5rem']"
           :mr="['3.25rem', '4.125rem', '5rem']"
-          :gap="['20px']"
+          :gap="['10px']"
         >
-          <c-heading
-            as="h3"
-            :font-weight="600"
-            :font-size="['xl', 'xl', '2xl']"
-          >
+          <c-text :font-weight="600" :font-size="['xl', 'xl', '2xl']">
             {{ item.title }}
-          </c-heading>
+          </c-text>
           <c-text
             :font-size="['sm', 'md', 'lg']"
             :max-width="['620px']"
@@ -71,7 +68,7 @@
           align-items="center"
           justify-content="center"
         >
-          <c-image w="70%" h="65%" :src="`/process/${item.image}`" />
+          <c-image w="65%" h="65%" :src="`/process/${item.image}`" />
         </c-box>
       </c-flex>
     </c-flex>
@@ -103,24 +100,24 @@ export default {
     return {
       steps: [
         {
-          title: "Discovery",
+          title: "Listen",
           description:
-            "We connect with you to understand your unique project requirements and the specific skills you need.",
-          image: "step1.png",
+            "We pay careful attention to your business goals, using this understanding to gauge project complexity and size accurately.",
+          image: "custom-software/listen.png",
           color: "#354a5e"
         },
         {
-          title: "Selection",
+          title: "Plan",
           description:
-            "We handpick the perfect candidates from our pool of skilled Latin American Developers based on your requirements.",
-          image: "step2.png",
+            "Armed with your vision and our expertise, we craft a comprehensive plan of action. This includes projected timelines for feature and functionality delivery, fostering an environment of agile teams, and functional results.",
+          image: "custom-software/plan.png",
           color: "#3f5f7e"
         },
         {
-          title: "Integration",
+          title: "Succeed",
           description:
-            "We ensure seamless integration of the selected developers into your team, driving successful outcomes and bringing value to your projects.",
-          image: "step3.png",
+            "We don't just deliver code; we deliver success, neatly packaged and ready to integrate seamlessly into your business. Let’s talk! Discover how Stack IT can drive your digital transformation.",
+          image: "custom-software/succeed.png",
           color: "#0d046d"
         }
       ]
@@ -146,23 +143,23 @@ export default {
 .step-info {
   border-radius: 1.25rem;
   min-height: 11.25rem;
-  border-color: var(--sti-color-dark-blue);
 }
 
 .step-image {
-  height: 180px;
-  width: 180px;
   content: "";
   background-color: white;
   border-radius: 50%;
   position: absolute;
   right: 0;
+  height: 180px;
+  width: 180px;
   border-color: var(--sti-color-dark-blue);
 }
 
 @media (max-width: 768px) {
   .step-image {
     height: 180px;
+    width: 180px;
     position: relative;
     margin: 20px 0;
   }

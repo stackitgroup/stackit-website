@@ -1,9 +1,5 @@
 <template>
-  <c-flex
-    class="study-container"
-    justify="space-between"
-    wrap="wrap"
-  >
+  <c-flex class="study-container" justify="space-between" wrap="wrap">
     <c-box
       class="study-bar"
       :w="['100%', '100%', '35%']"
@@ -15,8 +11,9 @@
         font-weight="600"
         line-height="1.3"
       >
-        We are so blessed to have amazing people like you on this adventure. There is no way to thank you enough.<br><br>
-        Mike Jacobsen<br>
+        We are so blessed to have amazing people like you on this adventure.
+        There is no way to thank you enough.<br /><br />
+        Mike Jacobsen<br />
         It's Borrowed Owner
       </c-text>
     </c-box>
@@ -29,10 +26,11 @@
       >
         How Stackit Helped Save a Half-Baked Project & Launch an MVP
       </c-heading>
-      <c-text
-        :font-size="['lg', 'xl']"
-      >
-        When Mike Jacobsen approached Stackit, he had a great idea for a SaaS product–and a half-baked project on his hands. Learn how Stackit stepped in to get the failing project back on its feet and build an effective MVP for <b>It’s Borrowed</b>.
+      <c-text :font-size="['lg', 'xl']">
+        When Mike Jacobsen approached Stackit, he had a great idea for a SaaS
+        product–and a half-baked project on his hands. Learn how Stackit stepped
+        in to get the failing project back on its feet and build an effective
+        MVP for <b>It’s Borrowed</b>.
       </c-text>
       <router-link to="/case-study">
         <c-button
@@ -46,7 +44,7 @@
           :mt="['2.5rem']"
           @click="trackEvent()"
         >
-          READ CASE STUDY
+          Read Case Study
         </c-button>
       </router-link>
     </c-stack>
@@ -54,7 +52,15 @@
 </template>
 
 <script>
-import { CFlex, CText, CButton, CHeading, CStack, CBox, CImage } from '@chakra-ui/vue'
+import {
+  CFlex,
+  CText,
+  CButton,
+  CHeading,
+  CStack,
+  CBox,
+  CImage
+} from "@chakra-ui/vue";
 
 export default {
   components: {
@@ -64,20 +70,19 @@ export default {
     CButton,
     CHeading,
     CStack,
-    CBox,
+    CBox
   },
   data() {
-    return {
-    }
+    return {};
   },
   methods: {
     trackEvent() {
-      this.$gtag('event', 'click', {
-        eventCategory: 'case-study',
-      })
+      this.$gtag("event", "click", {
+        eventCategory: "case-study"
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
