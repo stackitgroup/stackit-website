@@ -12,7 +12,7 @@
       <router-link to="/" w="auto">
         <c-image
           class="logo"
-          :w="['160px', '160px', '180px']"
+          :w="['160px', '180px', '180px']"
           src="/stackit_logo.png"
         />
       </router-link>
