@@ -65,10 +65,6 @@
           class="step-image"
           display="flex"
           border="0.125rem solid"
-          :border-color="item.color"
-          :w="['20%']"
-          :min-width="['200px']"
-          :height="['100%']"
           align-items="center"
           justify-content="center"
         >
@@ -157,6 +153,7 @@ export default {
   right: 0;
   height: 180px;
   width: 180px;
+  border-color: var(--sti-color-dark-blue);
 }
 
 @media (max-width: 768px) {
