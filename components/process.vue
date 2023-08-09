@@ -41,9 +41,9 @@
         <c-flex
           class="step-info"
           border="0.125rem solid"
-          :border-color="item.color"
           direction="column"
           justify="start"
+          max-height="180px"
           :p="['1rem', '1rem', '1.5rem']"
           :pr="['4.5rem', '6rem', '7.5rem']"
           :mr="['3.25rem', '4.125rem', '5rem']"
@@ -68,14 +68,10 @@
           class="step-image"
           display="flex"
           border="0.125rem solid"
-          :border-color="item.color"
-          :w="['20%']"
-          :min-width="['200px']"
-          :height="['100%']"
           align-items="center"
           justify-content="center"
         >
-          <c-image w="65%" h="65%" :src="`/process/${item.image}`" />
+          <c-image w="70%" h="65%" :src="`/process/${item.image}`" />
         </c-box>
       </c-flex>
     </c-flex>
@@ -107,7 +103,7 @@ export default {
     return {
       steps: [
         {
-          title: "Discover",
+          title: "Discovery",
           description:
             "We connect with you to understand your unique project requirements and the specific skills you need.",
           image: "step1.png",
@@ -150,14 +146,18 @@ export default {
 .step-info {
   border-radius: 1.25rem;
   min-height: 11.25rem;
+  border-color: var(--sti-color-dark-blue);
 }
 
 .step-image {
+  height: 180px;
+  width: 180px;
   content: "";
   background-color: white;
   border-radius: 50%;
   position: absolute;
   right: 0;
+  border-color: var(--sti-color-dark-blue);
 }
 
 @media (max-width: 768px) {

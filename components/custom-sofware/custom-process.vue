@@ -42,12 +42,13 @@
           class="step-info"
           border="0.125rem solid"
           :border-color="item.color"
+          max-height="180px"
           direction="column"
           justify="start"
           :p="['1rem', '1rem', '1.5rem']"
           :pr="['4.5rem', '6rem', '7.5rem']"
           :mr="['3.25rem', '4.125rem', '5rem']"
-          :gap="['20px']"
+          :gap="['10px']"
         >
           <c-text :font-weight="600" :font-size="['xl', 'xl', '2xl']">
             {{ item.title }}
@@ -64,10 +65,6 @@
           class="step-image"
           display="flex"
           border="0.125rem solid"
-          :border-color="item.color"
-          :w="['20%']"
-          :min-width="['200px']"
-          :height="['100%']"
           align-items="center"
           justify-content="center"
         >
@@ -112,7 +109,7 @@ export default {
         {
           title: "Plan",
           description:
-            "Armed with your vision and our expertise, we craft a comprehensive plan of action. This includes projected timelines for feature and functionality delivery, fostering an environment of agile teams, dynamic work, insightful discussions, and functional results.",
+            "Armed with your vision and our expertise, we craft a comprehensive plan of action. This includes projected timelines for feature and functionality delivery, fostering an environment of agile teams, and functional results.",
           image: "custom-software/plan.png",
           color: "#3f5f7e"
         },
@@ -154,6 +151,9 @@ export default {
   border-radius: 50%;
   position: absolute;
   right: 0;
+  height: 180px;
+  width: 180px;
+  border-color: var(--sti-color-dark-blue);
 }
 
 @media (max-width: 768px) {

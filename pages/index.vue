@@ -16,17 +16,17 @@
       <process />
     </c-box>
 
-    <c-box :background-color="['#283c4d']">
+    <c-box>
+      <clients />
+    </c-box>
+
+    <c-box :background-color="['#f2f2f2']">
       <lets-talk @action="launchContactForm()" />
     </c-box>
 
     <!-- <c-box :my="['2rem', '2rem', '3.75rem']" :mx="[5, 5, 5, '5%', '10%']">
       <case-study />
     </c-box> -->
-
-    <c-box>
-      <clients />
-    </c-box>
   </div>
 </template>
 

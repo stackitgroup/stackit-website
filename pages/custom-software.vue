@@ -2,11 +2,7 @@
   <div class="container" :padding="0">
     <contact-dialog ref="contactDialog" />
 
-    <banner
-      :display-action="true"
-      @action="launchContactForm()"
-      custom="Let's build your custom software. If you can envision it, we can build it"
-    />
+    <custom-banner :display-action="true" @action="launchContactForm()" />
 
     <c-box>
       <custom-software-services />
@@ -18,6 +14,9 @@
 
     <c-box>
       <custom-process />
+    </c-box>
+    <c-box :background-color="['#f2f2f2']">
+      <custom-lets-talk />
     </c-box>
   </div>
 </template>

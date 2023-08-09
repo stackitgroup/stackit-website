@@ -21,7 +21,7 @@
         :margin-right="['10px']"
       />
       <c-heading as="h2" :font-weight="400" :font-size="['2xl', '3xl', '4xl']">
-        Why we excel. Why us?
+        Why we excel. Why us.
       </c-heading>
     </c-stack>
 
@@ -46,11 +46,7 @@
           {{ index + 1 }}
         </c-text>
 
-        <c-stack
-          class="difference-data"
-          data-aos="fade-left"
-          :data-aos-delay="(index + 1) * 450"
-        >
+        <c-stack class="difference-data">
           <c-heading
             as="h3"
             :font-size="['xl', '2xl']"

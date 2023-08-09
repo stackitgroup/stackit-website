@@ -41,7 +41,7 @@
             font-weight="600"
             :border-bottom="['4px solid transparent']"
           >
-            LET'S TALK
+            Let's Talk
           </c-button>
         </router-link>
       </c-flex>
@@ -151,6 +151,7 @@ a:hover {
 
   :last-child {
     border-bottom: 0 solid transparent !important;
+    opacity: 1;
   }
 
   @media (max-width: 768px) {

@@ -36,8 +36,6 @@
         :alt="client.name"
         :w="['45%', '30%', '15%', '15%']"
         :my="['1rem', '1rem', '1rem', 0]"
-        data-aos="flip-left"
-        :data-aos-delay="(index + 1) * 250"
       />
     </c-flex>
   </c-flex>

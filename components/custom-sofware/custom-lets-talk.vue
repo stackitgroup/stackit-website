@@ -19,8 +19,7 @@
       font-weight="600"
       color="#181818"
     >
-      The result? Top-tier professionals with the skillset to build you nothing
-      but the best software.
+      The result? A solid custom software solution for your business.
     </c-text>
     <c-button
       class="btn-main"
