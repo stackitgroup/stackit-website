@@ -50,13 +50,17 @@
           :mr="['3.25rem', '4.125rem', '5rem']"
           :gap="['10px']"
         >
-          <c-text :font-weight="600" :font-size="['xl', 'xl', '2xl']">
+          <c-heading
+            as="h4"
+            :font-weight="400"
+            :font-size="['xl', 'xl', '2xl']"
+          >
             {{ item.title }}
-          </c-text>
+          </c-heading>
           <c-text
             :font-size="['sm', 'md', 'lg']"
             :max-width="['620px']"
-            :font-weight="300"
+            :font-weight="400"
           >
             {{ item.description }}
           </c-text>

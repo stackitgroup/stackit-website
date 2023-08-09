@@ -56,7 +56,7 @@
             {{ difference.title }}
           </c-heading>
 
-          <c-text :font-size="['lg', 'xl']" :font-weight="300">
+          <c-text :font-size="['lg', 'xl']" :font-weight="400">
             {{ difference.description }}
           </c-text>
         </c-stack>

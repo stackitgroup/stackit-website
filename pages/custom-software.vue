@@ -16,7 +16,7 @@
       <custom-process />
     </c-box>
     <c-box :background-color="['#f2f2f2']">
-      <custom-lets-talk />
+      <custom-lets-talk @action="launchContactForm()" />
     </c-box>
   </div>
 </template>

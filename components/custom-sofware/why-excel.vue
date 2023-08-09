@@ -50,13 +50,13 @@
           <c-heading
             as="h3"
             :font-size="['xl', '2xl']"
-            font-weight="400"
+            font-weight="600"
             :mt="['0px', '0px', '0px', '3.5rem']"
           >
             {{ difference.title }}
           </c-heading>
 
-          <c-text :font-size="['lg', 'xl']" :font-weight="300">
+          <c-text :font-size="['lg', 'xl']" :font-weight="400">
             {{ difference.description }}
           </c-text>
         </c-stack>

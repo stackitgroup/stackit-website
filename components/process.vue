@@ -51,7 +51,7 @@
         >
           <c-heading
             as="h3"
-            :font-weight="600"
+            :font-weight="400"
             :font-size="['xl', 'xl', '2xl']"
           >
             {{ item.title }}
@@ -59,7 +59,7 @@
           <c-text
             :font-size="['sm', 'md', 'lg']"
             :max-width="['620px']"
-            :font-weight="300"
+            :font-weight="400"
           >
             {{ item.description }}
           </c-text>
