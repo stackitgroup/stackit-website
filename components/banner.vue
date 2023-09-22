@@ -23,19 +23,23 @@
         with Latin America Software Talent.
       </template>
     </c-text>
-    <c-button
-      v-if="displayAction"
-      class="btn-main"
-      :mt="['12']"
-      right-icon="arrow-forward"
-      rounded="full"
-      size="lg"
-      font-size="xl"
-      font-weight="600"
-      @click="$emit('action')"
+    <a
+      href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
+      target="_blank"
     >
-      Let's Talk
-    </c-button>
+      <c-button
+        v-if="displayAction"
+        class="btn-main"
+        :mt="['12']"
+        right-icon="arrow-forward"
+        rounded="full"
+        size="lg"
+        font-size="xl"
+        font-weight="600"
+      >
+        Let's talk
+      </c-button>
+    </a>
   </c-flex>
 </template>
 
