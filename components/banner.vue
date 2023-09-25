@@ -42,7 +42,7 @@
     </a>
   </c-flex>
 </template>
-
+<!--  -->
 <script>
 import { CFlex, CText, CButton } from "@chakra-ui/vue";
 

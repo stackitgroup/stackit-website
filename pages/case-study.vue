@@ -287,21 +287,26 @@
         Discover more about how Stackit can help you build an internal system,
         launch a customer-facing product, or save a struggling project.
       </c-heading>
-      <c-button
-        class="btn-main"
-        right-icon="arrow-forward"
-        rounded="10px"
-        size="lg"
-        font-size="xl"
-        font-weight="400"
-        :w="['100%', '100%', '100%', '18%', '18%']"
-        :mt="['2rem', '2rem', '2rem', 0]"
-        :mx="['auto', 'auto', 'auto', 0]"
-        max-w="203px"
-        @click="launchContactForm()"
+      <a
+        href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
+        target="_blank"
       >
-        Let's Talk
-      </c-button>
+        <c-button
+          class="btn-main"
+          right-icon="arrow-forward"
+          rounded="10px"
+          size="lg"
+          font-size="xl"
+          font-weight="400"
+          :w="['100%', '100%', '100%', '18%', '18%']"
+          :mt="['2rem', '2rem', '2rem', 0]"
+          :mx="['auto', 'auto', 'auto', 0]"
+          max-w="203px"
+        >
+          <!-- @click="launchContactForm()" -->
+          Let's Talk
+        </c-button>
+      </a>
     </c-flex>
 
     <c-stack :px="[5, 5, 5, '5%', '10%']">
