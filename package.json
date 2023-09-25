@@ -2,6 +2,7 @@
   "dependencies": {
     "@chakra-ui/nuxt": "0.2.4",
     "@chakra-ui/vue": "0.7.4",
+    "@nuxt/builder-edge": "^2.17.2-28260019.6132947",
     "@nuxt/cli-edge": "2.17.2-28260019.6132947",
     "@nuxt/core-edge": "2.17.2-28260019.6132947",
     "@nuxt/typescript-runtime": "2.0.1",
