@@ -30,20 +30,24 @@
         <router-link to="/custom-software">
           Custom Software
         </router-link>
-
-        <c-button
-          class="btn-main"
-          :vertical-align="middle"
-          :text-align="center"
-          rounded="full"
-          size="sm"
-          font-size="md"
-          font-weight="600"
-          :border-bottom="['4px solid transparent']"
-          @click="$emit('action')"
+        <a
+          href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
+          target="_blank"
         >
-          Let's Talk
-        </c-button>
+          <c-button
+            class="btn-main"
+            :vertical-align="middle"
+            :text-align="center"
+            rounded="full"
+            size="sm"
+            font-size="md"
+            font-weight="600"
+            :border-bottom="['4px solid transparent']"
+          >
+            <!-- @click="$emit('action')" -->
+            Let's Talk
+          </c-button>
+        </a>
       </c-flex>
     </c-flex>
   </c-box>

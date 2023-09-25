@@ -22,21 +22,26 @@
       The result? Top-tier professionals with the skillset to build you nothing
       but the best software.
     </c-text>
-    <c-button
-      class="btn-main"
-      right-icon="arrow-forward"
-      rounded="full"
-      size="lg"
-      font-size="xl"
-      font-weight="600"
-      :w="['100%', '100%', '100%', '18%', '18%']"
-      :mt="['2rem', '2rem', '2rem', 0]"
-      :mx="['auto', 'auto', 'auto', 0]"
-      max-w="203px"
-      @click="$emit('action')"
+    <a
+      href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
+      target="_blank"
     >
-      Let's Talk
-    </c-button>
+      <c-button
+        class="btn-main"
+        right-icon="arrow-forward"
+        rounded="full"
+        size="lg"
+        font-size="xl"
+        font-weight="600"
+        :w="['100%', '100%', '100%', '18%', '18%']"
+        :mt="['2rem', '2rem', '2rem', 0]"
+        :mx="['auto', 'auto', 'auto', 0]"
+        max-w="203px"
+      >
+        <!-- @click="$emit('action')" -->
+        Let's Talk
+      </c-button>
+    </a>
   </c-flex>
 </template>
 
