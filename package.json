@@ -5,6 +5,7 @@
     "@nuxt/builder-edge": "^2.17.2-28260019.6132947",
     "@nuxt/cli-edge": "2.17.2-28260019.6132947",
     "@nuxt/core-edge": "2.17.2-28260019.6132947",
+    "@nuxt/generator-edge": "^2.17.2-28260019.6132947",
     "@nuxt/typescript-runtime": "2.0.1",
     "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/emotion": "0.1.0",
