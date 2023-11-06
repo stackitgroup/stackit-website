@@ -27,15 +27,13 @@
     >
       <c-button
         class="btn-main"
-        right-icon="arrow-forward"
+        :vertical-align="middle"
+        :text-align="center"
         rounded="full"
-        size="lg"
-        font-size="xl"
+        size="sm"
+        font-size="md"
         font-weight="600"
-        :w="['100%', '100%', '100%', '18%', '18%']"
-        :mt="['2rem', '2rem', '2rem', 0]"
-        :mx="['auto', 'auto', 'auto', 0]"
-        max-w="203px"
+        :border-bottom="['4px solid transparent']"
       >
         <!-- @click="$emit('action')" -->
         Let's Talk
