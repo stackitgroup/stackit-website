@@ -1,16 +1,29 @@
 <template>
   <div class="container">
-    <banner custom="Let’s build custom software for you." />
+    <contact-banner />
 
     <c-stack spacing="3rem" :px="[5, 5, 5, '5%', '23%']" :my="'4rem'">
-      <c-heading
-        as="h1"
-        :font-size="['2xl', '3xl', '4xl', '5xl']"
-        font-weight="600"
+      <c-stack
         w="100%"
+        spacing="0"
+        display="flex"
+        flex-direction="row"
+        align-items="start"
       >
-        Contact us today to start talking about your project.
-      </c-heading>
+        <c-image
+          src="/stackit_item.png"
+          :w="['40px']"
+          :h="['40px']"
+          :margin-right="['10px']"
+        />
+        <c-heading
+          as="h2"
+          :font-weight="400"
+          :font-size="['2xl', '3xl', '4xl']"
+        >
+          Contact us today to start talking about your project.
+        </c-heading>
+      </c-stack>
 
       <c-box w="100%">
         <c-stack v-if="!isSent" spacing="6" wrap="wrap">
@@ -56,10 +69,21 @@
           <no-ssr>
             <sweetalert-icon icon="success" />
           </no-ssr>
-          <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
+          <c-heading
+            as="h1"
+            :font-weight="400"
+            :font-size="['4xl']"
+            text-align="center"
+            color="contact.title"
+          >
             Message sent
           </c-heading>
-          <c-text :font-weight="400" :font-size="['lg']" text-align="center" color="contact.description">
+          <c-text
+            :font-weight="400"
+            :font-size="['lg']"
+            text-align="center"
+            color="contact.description"
+          >
             Thank you for reaching out, we will be in touch within 24 hours.
           </c-text>
         </c-stack>
@@ -73,14 +97,14 @@
           rounded="10px"
           size="lg"
           font-size="xl"
-          font-weight="400"
+          font-weight="600"
           w="290px"
           :disabled="isFormValid"
           :is-loading="isLoading"
           loading-text="Sending"
           @click="sendMessage()"
         >
-          SEND MESSAGE
+          Send Message
         </c-button>
       </c-flex>
     </c-stack>
@@ -177,15 +201,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .icon-container {
-    background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-  }
+.icon-container {
+  background-image: linear-gradient(90deg, #ffa363 0%, #eb4256 100%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
 
-  .container {
-    position: relative;
-    z-index: 0;
-  }
+.container {
+  position: relative;
+  z-index: 0;
+}
 </style>

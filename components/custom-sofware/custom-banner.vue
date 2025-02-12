@@ -19,8 +19,8 @@
         {{ custom }}
       </template>
       <template v-else>
-        Staffing Innovation Worldwide <br />
-        with Latin America Software Talent.
+        Custom-built software. <br />
+        Empowering your Success.
       </template>
     </c-text>
     <a
@@ -37,12 +37,13 @@
         font-size="xl"
         font-weight="600"
       >
-        Let's talk
+        <!-- @click="$emit('action')" -->
+        Let's Talk
       </c-button>
     </a>
   </c-flex>
 </template>
-<!--  -->
+
 <script>
 import { CFlex, CText, CButton } from "@chakra-ui/vue";
 

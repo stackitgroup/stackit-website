@@ -19,8 +19,7 @@
       font-weight="600"
       color="#181818"
     >
-      The result? Top-tier professionals with the skillset to build you nothing
-      but the best software.
+      The result? A solid custom software solution for your business.
     </c-text>
     <a
       href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
@@ -28,15 +27,13 @@
     >
       <c-button
         class="btn-main"
-        right-icon="arrow-forward"
+        :vertical-align="middle"
+        :text-align="center"
         rounded="full"
-        size="lg"
-        font-size="xl"
+        size="sm"
+        font-size="md"
         font-weight="600"
-        :w="['100%', '100%', '100%', '100%', '100%']"
-        :mt="['2rem', '2rem', '2rem', 0]"
-        :mx="['auto', 'auto', 'auto', 0]"
-        max-w="203px"
+        :border-bottom="['4px solid transparent']"
       >
         <!-- @click="$emit('action')" -->
         Let's Talk

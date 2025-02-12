@@ -5,7 +5,8 @@
         <CBox font-family="body" as="main">
           <CReset />
           <Nuxt class="app-content" />
-          <navbar />
+          <navbar @action="launchContactForm()" />
+          <contact-dialog ref="contactDialog" />
           <st-footer />
         </CBox>
       </CColorModeProvider>
@@ -14,30 +15,51 @@
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import { CThemeProvider, CColorModeProvider, CReset, CBox } from '@chakra-ui/vue'
-import SweetAlertIcons from 'vue-sweetalert-icons'
-import Vue from 'vue'
+import {
+  CThemeProvider,
+  CColorModeProvider,
+  CReset,
+  CBox
+} from "@chakra-ui/vue";
+import SweetAlertIcons from "vue-sweetalert-icons";
+import Vue from "vue";
 
-import Navbar from '~/components/navbar'
-import StFooter from '~/components/footer'
+import Navbar from "~/components/navbar";
+import StFooter from "~/components/footer";
+import ContactDialog from "~/components/contact-dialog";
 
-Vue.use(SweetAlertIcons)
+Vue.use(SweetAlertIcons);
 
 // Start library for displaying components smooth
-AOS.init()
+AOS.init();
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
     CThemeProvider,
     CColorModeProvider,
     CReset,
     CBox,
-    StFooter,
+    StFooter
+  },
+  data() {
+    return {
+      showContactDialog: false
+    };
+  },
+  methods: {
+    launchContactForm() {
+      this.$refs.contactDialog.open();
+
+      this.$gtag("event", "click", {
+        eventCategory: "contact-form",
+        eventLabel: "home"
+      });
+    }
   }
-}
+};
 </script>

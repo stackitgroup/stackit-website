@@ -4,22 +4,29 @@
       :is-open="isOpen"
       placement="right"
       :on-close="close"
-      :initial-focus-ref="()=>$refs.inputInsideModal"
+      :initial-focus-ref="() => $refs.inputInsideModal"
     >
       <c-drawer-overlay />
-      <c-drawer-content
-        data-aos="fade-left"
-        data-aos-delay="150"
-        h="100%"
-      >
+      <c-drawer-content data-aos="fade-left" data-aos-delay="150" h="100%">
         <c-drawer-header>
-          <c-text class="obar" :font-size="['2xl', '3xl', '4xl', '5xl']" :font-weight="400">
+          <c-heading
+            as="h3"
+            class="obar"
+            :font-size="['2xl', '3xl', '4xl']"
+            :font-weight="400"
+            :border-bottom="['4px solid #016fce']"
+          >
             Contact us
-          </c-text>
+          </c-heading>
         </c-drawer-header>
 
         <c-drawer-body>
-          <c-stack v-if="!isSent" class="contact-form" :spacing="[4, 6]" :my="['0.5rem', '1.5rem']">
+          <c-stack
+            v-if="!isSent"
+            class="contact-form"
+            :spacing="[4, 6]"
+            :my="['0.5rem', '1.5rem']"
+          >
             <c-input
               v-model="form.name"
               :h="['auto', '3rem']"
@@ -56,10 +63,21 @@
             <no-ssr>
               <sweetalert-icon icon="success" />
             </no-ssr>
-            <c-heading as="h1" :font-weight="400" :font-size="['4xl']" text-align="center" color="contact.title">
+            <c-heading
+              as="h1"
+              :font-weight="400"
+              :font-size="['4xl']"
+              text-align="center"
+              color="contact.title"
+            >
               Message sent
             </c-heading>
-            <c-text :font-weight="400" :font-size="['lg']" text-align="center" color="contact.description">
+            <c-text
+              :font-weight="400"
+              :font-size="['lg']"
+              text-align="center"
+              color="contact.description"
+            >
               Thank you for reaching out, we will be in touch within 24 hours.
             </c-text>
           </c-stack>
@@ -120,10 +138,10 @@ import {
   CImage,
   CBox,
   CFlex,
-  CIcon,
-} from '@chakra-ui/vue'
+  CIcon
+} from "@chakra-ui/vue";
 
-const axios = require('axios').default
+const axios = require("axios").default;
 
 export default {
   components: {
@@ -143,83 +161,85 @@ export default {
     CImage,
     CBox,
     CFlex,
-    CIcon,
+    CIcon
   },
-  data () {
+  data() {
     return {
-      api: 'https://stackit.b4a.io/parse/classes',
+      api: "https://stackit.b4a.io/parse/classes",
       headers: {
-        'X-Parse-Application-Id': 'MHe5i3Mlyj2o3MTb1XItqVVFqReD3POoTiw976fT',
-        'X-Parse-REST-API-Key': 'pQKgZSmwVT3IFsDiO0iO8RY1bzHOyBFzfZUJK7dD',
-        'Content-Type': 'application/json',
+        "X-Parse-Application-Id": "MHe5i3Mlyj2o3MTb1XItqVVFqReD3POoTiw976fT",
+        "X-Parse-REST-API-Key": "pQKgZSmwVT3IFsDiO0iO8RY1bzHOyBFzfZUJK7dD",
+        "Content-Type": "application/json"
       },
       isOpen: false,
       isSent: false,
       isLoading: false,
       form: {
-        name: '',
-        phone: '',
-        email: '',
-        message: '',
-      },
-    }
+        name: "",
+        phone: "",
+        email: "",
+        message: ""
+      }
+    };
   },
   computed: {
     isFormValid() {
-      const errors = []
+      const errors = [];
 
       if (!this.form.name) {
-        errors.push('FirstName is required.')
+        errors.push("FirstName is required.");
       }
 
       if (!this.form.email) {
-        errors.push('Email is required.')
+        errors.push("Email is required.");
       } else if (!this.validEmail(this.form.email)) {
-        errors.push('Email is not valid.')
+        errors.push("Email is not valid.");
       }
 
-      return errors.length > 0
+      return errors.length > 0;
     }
   },
   methods: {
     open() {
-      this.isOpen = true
-      this.isSent = false
+      this.isOpen = true;
+      this.isSent = false;
     },
     close() {
-      this.isOpen = false
-      this.isSent = false
+      this.isOpen = false;
+      this.isSent = false;
     },
     async sendMessage() {
-      this.isLoading = true
+      this.isLoading = true;
 
       try {
-        await axios.post(`${this.api}/Contact`, this.form, { headers: this.headers })
-        this.isSent = true
+        await axios.post(`${this.api}/Contact`, this.form, {
+          headers: this.headers
+        });
+        this.isSent = true;
 
-        this.$gtag('event', 'submit', {
-          eventCategory: 'contact-form',
-          eventLabel: 'dialog',
-        })
+        this.$gtag("event", "submit", {
+          eventCategory: "contact-form",
+          eventLabel: "dialog"
+        });
       } catch (error) {
-        console.error(error)
+        console.error(error);
 
         this.$toast({
-          title: 'Something went wrong.',
-          description: 'Sorry we couldn\'t send your message. Please try again.',
-          status: 'error',
+          title: "Something went wrong.",
+          description: "Sorry we couldn't send your message. Please try again.",
+          status: "error",
           duration: 5000
-        })
+        });
       }
 
-      this.isLoading = false
+      this.isLoading = false;
     },
-    validEmail (email) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return re.test(email)
+    validEmail(email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -233,13 +253,12 @@ export default {
 }
 
 .obar::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 80%;
   height: 4px;
-  background-image: linear-gradient(90deg, #eb4256 0%, #ffa363 100%);
 }
 
 .btn-close {

@@ -50,7 +50,7 @@
           <c-heading
             as="h3"
             :font-size="['xl', '2xl']"
-            font-weight="400"
+            font-weight="600"
             :mt="['0px', '0px', '0px', '3.5rem']"
           >
             {{ difference.title }}
@@ -81,19 +81,19 @@ export default {
     return {
       differences: [
         {
-          title: "Expertise",
+          title: "Partnership",
           description:
-            "We leverage our deep knowledge of the LATAM tech industry to connect you with the region's top talent."
+            "We're your partners in success. At Stack IT, our primary aim is to maximize the value we bring to our clients. We take pride in creating, managing, and delivering products that aren't just high-quality, but also impactful."
         },
         {
           title: "Quality",
           description:
-            "Our veteran tech and HR team upholds rigorous vetting procedures, ensuring each candidate we place is a perfect technical and cultural fit."
+            "Our culture is one of individual excellence, team synergy, and structured process. We invest in meticulous hiring practices, proactive team coaching, and foster an environment that values creativity, teamwork, and accountability."
         },
         {
-          title: "Consistency",
+          title: "Expertise",
           description:
-            "We continually coach our professionals while maintaining close collaboration with your organization. Sustaining the highest quality is our priority."
+            "Project roadblocks are inevitable. Regardless of the issue, it takes an expert team to keep things on track. With years of industry wisdom, and unwavering determination, we're the team to call when the going gets tough."
         }
       ]
     };
