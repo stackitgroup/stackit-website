@@ -2,6 +2,8 @@
 
 ## Build Setup
 
+> **Note:** Please use Node.js version 14.19.0.
+
 ```bash
 # install dependencies
 $ npm install
