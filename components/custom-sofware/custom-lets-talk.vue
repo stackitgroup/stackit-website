@@ -21,7 +21,7 @@
     >
       The result? A solid custom software solution for your business.
     </c-text>
-    <a
+    <!-- <a
       href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
       target="_blank"
     >
@@ -35,23 +35,22 @@
         font-weight="600"
         :border-bottom="['4px solid transparent']"
       >
-        <!-- @click="$emit('action')" -->
+
         Let's Talk
       </c-button>
-    </a>
+    </a> -->
+    <lets-talk-button class="btn-main" />
   </c-flex>
 </template>
 
 <script>
-import { CFlex, CHeading, CButton } from "@chakra-ui/vue";
+import { CFlex } from '@chakra-ui/vue'
 
 export default {
   components: {
-    CFlex,
-    CHeading,
-    CButton
+    CFlex
   }
-};
+}
 </script>
 
 <style>

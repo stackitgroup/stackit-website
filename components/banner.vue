@@ -19,11 +19,11 @@
         {{ custom }}
       </template>
       <template v-else>
-        Staffing Innovation Worldwide <br />
+        Staffing Innovation Worldwide <br>
         with Latin America Software Talent.
       </template>
     </c-text>
-    <a
+    <!-- <a
       href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
       target="_blank"
     >
@@ -39,18 +39,18 @@
       >
         Let's talk
       </c-button>
-    </a>
+    </a> -->
+    <lets-talk-button />
   </c-flex>
 </template>
 <!--  -->
 <script>
-import { CFlex, CText, CButton } from "@chakra-ui/vue";
+import { CFlex, CText } from '@chakra-ui/vue'
 
 export default {
   components: {
     CFlex,
-    CText,
-    CButton
+    CText
   },
   props: {
     custom: {
@@ -62,7 +62,7 @@ export default {
       default: false
     }
   }
-};
+}
 </script>
 
 <style scoped lang="scss">

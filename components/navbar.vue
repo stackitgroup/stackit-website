@@ -30,7 +30,7 @@
         <router-link to="/custom-software">
           Custom Software
         </router-link>
-        <a
+        <!-- <a
           href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
           target="_blank"
         >
@@ -44,23 +44,23 @@
             font-weight="600"
             :border-bottom="['4px solid transparent']"
           >
-            <!-- @click="$emit('action')" -->
+
             Let's Talk
           </c-button>
-        </a>
+        </a> -->
+        <lets-talk-button class="btn-main" />
       </c-flex>
     </c-flex>
   </c-box>
 </template>
 
 <script>
-import { CBox, CFlex, CHeading, CImage } from "@chakra-ui/vue";
+import { CBox, CFlex, CImage } from '@chakra-ui/vue'
 
 export default {
   components: {
     CBox,
     CFlex,
-    CHeading,
     CImage
   },
   props: {
@@ -72,20 +72,20 @@ export default {
   data() {
     return {
       active: false
-    };
+    }
   },
   mounted() {
     window.document.onscroll = () => {
-      const navBar = document.getElementById("nav");
-      this.active = window.scrollY > navBar.offsetTop;
-    };
+      const navBar = document.getElementById('nav')
+      this.active = window.scrollY > navBar.offsetTop
+    }
   },
   methods: {
     toggleNavClass() {
-      return "nav";
+      return 'nav'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

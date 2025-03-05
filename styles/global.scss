@@ -1,4 +1,5 @@
-@import "./variables";
+@import "./variables.scss";
+
 @font-face {
   font-family: "sui_generis";
   src: url("/fonts/sui_generis.ttf") format("truetype");
@@ -46,9 +47,6 @@ html {
     background-color: #257ecc !important;
   }
 }
-.lets-talk {
-  background-color: var(--sti-color-lets-talk);
-}
 
 .confirm-image {
   margin-top: 2rem;
@@ -82,4 +80,14 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--sti-color-button-hover);
+}
+
+.qxCTlb{
+  border-radius: 50px !important;
+  font-weight: 400 !important;
+  font-family:'Open Sans', sans-serif !important;
+  transition: ease-in-out 0.3s;
+}
+.qxCTlb:hover{
+  background-color:black !important;
 }

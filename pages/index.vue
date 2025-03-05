@@ -37,7 +37,6 @@ import Banner from '~/components/banner'
 import Services from '~/components/services'
 import ContactDialog from '~/components/contact-dialog'
 import WeAreDifferent from '~/components/we-are-different'
-import CaseStudy from '~/components/case-study'
 import Clients from '~/components/clients'
 import Process from '~/components/process'
 
@@ -46,7 +45,6 @@ export default {
   components: {
     Process,
     Clients,
-    CaseStudy,
     WeAreDifferent,
     ContactDialog,
     LetsTalk,

@@ -22,7 +22,7 @@
       The result? Top-tier professionals with the skillset to build you nothing
       but the best software.
     </c-text>
-    <a
+    <!-- <a
       href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
       target="_blank"
     >
@@ -38,23 +38,22 @@
         :mx="['auto', 'auto', 'auto', 0]"
         max-w="203px"
       >
-        <!-- @click="$emit('action')" -->
+
         Let's Talk
       </c-button>
-    </a>
+    </a> -->
+    <lets-talk-button class="btn-main" />
   </c-flex>
 </template>
 
 <script>
-import { CFlex, CHeading, CButton } from "@chakra-ui/vue";
+import { CFlex } from '@chakra-ui/vue'
 
 export default {
   components: {
     CFlex,
-    CHeading,
-    CButton
   }
-};
+}
 </script>
 
 <style>

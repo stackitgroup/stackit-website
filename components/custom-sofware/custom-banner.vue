@@ -19,39 +19,21 @@
         {{ custom }}
       </template>
       <template v-else>
-        Custom-built software. <br />
+        Custom-built software. <br>
         Empowering your Success.
       </template>
     </c-text>
-    <a
-      href="https://calendly.com/fiore-0pe/introductory-meeting-with-stack-it"
-      target="_blank"
-    >
-      <c-button
-        v-if="displayAction"
-        class="btn-main"
-        :mt="['12']"
-        right-icon="arrow-forward"
-        rounded="full"
-        size="lg"
-        font-size="xl"
-        font-weight="600"
-      >
-        <!-- @click="$emit('action')" -->
-        Let's Talk
-      </c-button>
-    </a>
+    <lets-talk-button class="btn-main" />
   </c-flex>
 </template>
 
 <script>
-import { CFlex, CText, CButton } from "@chakra-ui/vue";
+import { CFlex, CText } from '@chakra-ui/vue'
 
 export default {
   components: {
     CFlex,
-    CText,
-    CButton
+    CText
   },
   props: {
     custom: {
@@ -63,7 +45,7 @@ export default {
       default: false
     }
   }
-};
+}
 </script>
 
 <style scoped lang="scss">
