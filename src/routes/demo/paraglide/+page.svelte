@@ -1,16 +1,8 @@
 <script lang="ts">
-	import { setLocale } from '$lib/paraglide/runtime'
-	import { m } from '$lib/paraglide/messages.js'
+	import I18nDemo from '$lib/components/i18n-demo.svelte'
 </script>
 
-<h1>{m.hello_world({ name: 'SvelteKit User' })}</h1>
-<div>
-	<button onclick={() => setLocale('en')}>en</button>
-	<button onclick={() => setLocale('es')}>es</button>
+<div class="min-h-screen bg-gradient-to-br from-slate-50 to-sky-100 py-12">
+	<I18nDemo />
+
 </div>
-<p>
-	If you use VSCode, install the <a
-		href="https://marketplace.visualstudio.com/items?itemName=inlang.vs-code-extension"
-		target="_blank">Sherlock i18n extension</a
-	> for a better i18n experience.
-</p>
