@@ -30,19 +30,18 @@
 </script>
 
 <!-- Site Footer -->
-<footer class="relative overflow-hidden bg-gray-900 border-t border-gray-700">
+<footer class="relative overflow-hidden bg-gray-100 border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700">
 	<GridBackground />
 
-	<div class="relative z-10 px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16"
-	>
+	<div class="relative z-10 px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
 		<!-- Footer Content -->
 		<div class="text-center">
 			<!-- Logo and Tagline -->
 			<div class="mb-8 lg:mb-12">
-				<div class="inline-block px-4 py-2 mb-4 text-xl font-bold text-white bg-gray-800 border border-gray-600 sm:text-2xl">
+				<div class="inline-block px-4 py-2 mb-4 text-xl font-bold text-gray-900 bg-gray-200 border border-gray-300 dark:text-white dark:bg-gray-800 dark:border-gray-600 sm:text-2xl">
 					StackIt Logo
 				</div>
-				<p class="text-sm font-medium text-gray-300 sm:text-base">
+				<p class="text-sm font-medium text-gray-600 dark:text-gray-300 sm:text-base">
 					Success.<br />
 					Coded.
 				</p>
@@ -50,7 +49,7 @@
 
 			<!-- Connect With Us -->
 			<div class="mb-8 lg:mb-12">
-				<h2 class="mb-6 text-2xl font-light text-white sm:text-3xl lg:mb-8">
+				<h2 class="mb-6 text-2xl font-light text-gray-900 dark:text-white sm:text-3xl lg:mb-8">
 					Connect With Us
 				</h2>
 
@@ -61,11 +60,11 @@
 							href={social.href}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-gray-800 border border-gray-600 rounded-lg hover:bg-gray-700 sm:h-12 sm:w-12"
+							class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-gray-200 border border-gray-300 rounded-lg hover:bg-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 sm:h-12 sm:w-12"
 							aria-label={social.label}
 						>
 							<svg
-								class="w-5 h-5 text-gray-300 sm:h-6 sm:w-6"
+								class="w-5 h-5 text-gray-700 dark:text-gray-300 sm:h-6 sm:w-6"
 								fill="currentColor"
 								viewBox="0 0 24 24"
 							>
@@ -79,22 +78,16 @@
 	</div>
 
 	<!-- Footer Bottom -->
-	<div class="relative z-10 border-t border-gray-800">
+	<div class="relative z-10 border-t border-gray-300 dark:border-gray-800">
 		<div class="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 			<div class="text-center">
-				<p class="text-xs text-gray-400 sm:text-sm">
+				<p class="text-xs text-gray-500 dark:text-gray-400 sm:text-sm">
 					© {new Date().getFullYear()} StackIt |
-					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-					>Privacy Policy</span
-					>
+					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Privacy Policy</span>
 					|
-					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-					>Terms</span
-					>
+					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Terms</span>
 					|
-					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-					>Cookies</span
-					>
+					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Cookies</span>
 				</p>
 			</div>
 		</div>

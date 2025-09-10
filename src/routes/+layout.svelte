@@ -3,13 +3,25 @@
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import favicon from '$lib/assets/favicon.svg'
 	import SiteFooter from '$lib/components/site-footer.svelte'
+	import { onMount } from 'svelte'
 
 	let { children } = $props()
+
+	// Force early theme initialization (redundant safety check)
+	onMount(() => {
+		// Ensure theme is properly initialized even if early init failed
+		const currentTheme = localStorage.getItem('theme')
+		if (!currentTheme) {
+			localStorage.setItem('theme', 'light')
+			if (typeof document !== 'undefined') {
+				document.documentElement.classList.remove('dark')
+			}
+		}
+	})
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>StackIt - Your Success Partner</title>
 </svelte:head>
 

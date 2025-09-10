@@ -1,11 +1,42 @@
 <!doctype html>
 <html lang="%paraglide.lang%">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Theme initialization script - runs before any content renders -->
+	<script>
+		// Debug: Clear any existing theme first
+		console.log('🎨 Theme initialization starting...')
+
+		try {
+			const stored = localStorage.getItem('theme')
+			console.log('🎨 Stored theme:', stored)
+
+			// Always default to light unless explicitly dark
+			if (stored === 'dark') {
+				document.documentElement.classList.add('dark')
+				console.log('🎨 Applied dark theme')
+			} else {
+				// Ensure light theme
+				localStorage.setItem('theme', 'light')
+				console.log('🎨 Applied light theme (default)')
+			}
+		} catch (e) {
+			// If localStorage fails, force light
+			console.log('🎨 localStorage failed, forcing light theme')
+		}
+
+	</script>
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		%sveltekit.body%
+	</div>
+
+
+</body>
+
 </html>

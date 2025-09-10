@@ -4,7 +4,7 @@
 
 <!-- Proven Process section -->
 <section
-	class="relative overflow-hidden border-t border-gray-700 bg-gray-900"
+	class="relative overflow-hidden border-t border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="proven-process-heading"
 >
 	<GridBackground />
@@ -14,7 +14,7 @@
 		<header class="mb-16 text-center lg:mb-20">
 			<h2
 				id="proven-process-heading"
-				class="text-3xl leading-tight font-light text-white sm:text-4xl lg:text-5xl"
+				class="text-3xl leading-tight font-light text-gray-900 dark:text-white sm:text-4xl lg:text-5xl"
 			>
 				Our Proven Process
 			</h2>
@@ -36,10 +36,10 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">1</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">1</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Introduction Call</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Introduction Call</h3>
 						<p class="mb-3 text-sm font-medium text-blue-400 lg:text-base">
 							A conversation to explore your vision and our process
 						</p>
@@ -57,10 +57,10 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-yellow-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">2</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">2</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Clarify the Why</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Clarify the Why</h3>
 						<p class="mb-3 text-sm font-medium text-yellow-400 lg:text-base">
 							Uncovering Your Purpose
 						</p>
@@ -78,10 +78,10 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">3</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">3</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Proposal</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Proposal</h3>
 						<p class="mb-3 text-sm font-medium text-red-400 lg:text-base">
 							Creating the game plan for the winning team
 						</p>
@@ -99,7 +99,7 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">4</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">4</span>
 					</div>
 					<article class="flex-1">
 						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Build Mode ON</h3>

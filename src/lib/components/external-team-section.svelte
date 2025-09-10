@@ -4,7 +4,7 @@
 
 <!-- External team experience section -->
 <section
-	class="relative overflow-hidden border-t border-gray-700 bg-gray-900"
+	class="relative overflow-hidden border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="external-team-heading"
 >
 	<GridBackground />
@@ -14,7 +14,7 @@
 		<header class="mb-12 text-center sm:mb-16">
 			<h2
 				id="external-team-heading"
-				class="mb-4 px-4 text-2xl leading-tight font-light text-white sm:text-3xl md:text-4xl lg:text-5xl"
+				class="mb-4 px-4 text-2xl leading-tight font-light text-gray-900 dark:text-white sm:text-3xl md:text-4xl lg:text-5xl"
 			>
 				Your external team should feel like a top in-house<br class="hidden sm:block" />
 				team. We deliver that experience.
@@ -24,8 +24,8 @@
 		<!-- Feature Cards -->
 		<div class="mb-12 grid gap-6 sm:mb-16 sm:gap-8 md:grid-cols-3">
 			<!-- Card 1: Designed to Integrate -->
-			<article class="rounded-lg border border-blue-500 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
-				<h3 class="mb-3 text-center text-lg font-semibold text-white sm:mb-4 sm:text-xl">
+			<article class="rounded-lg border border-blue-500 bg-blue-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
+				<h3 class="mb-3 text-center text-lg font-semibold text-blue-900 dark:text-white sm:mb-4 sm:text-xl">
 					Designed to<br />
 					Integrate
 				</h3>
@@ -41,9 +41,9 @@
 			</article>
 
 			<!-- Card 2: Your Success is Our Success -->
-			<article class="rounded-lg border border-yellow-500 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8"
+			<article class="rounded-lg border border-yellow-500 bg-yellow-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8"
 			>
-				<h3 class="mb-3 text-center text-lg font-semibold text-white sm:mb-4 sm:text-xl">
+				<h3 class="mb-3 text-center text-lg font-semibold text-yellow-900 dark:text-white sm:mb-4 sm:text-xl">
 					Your Success is Our<br />
 					Success
 				</h3>
@@ -61,8 +61,8 @@
 			</article>
 
 			<!-- Card 3: More Than Just Code -->
-			<article class="rounded-lg border border-red-500 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
-				<h3 class="mb-3 text-center text-lg font-semibold text-white sm:mb-4 sm:text-xl">
+			<article class="rounded-lg border border-red-500 bg-red-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
+				<h3 class="mb-3 text-center text-lg font-semibold text-red-900 dark:text-white sm:mb-4 sm:text-xl">
 					More Than Just<br />
 					Code
 				</h3>
