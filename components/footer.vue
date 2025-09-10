@@ -56,7 +56,7 @@
       </c-flex>
 
       <c-text mt="1.25rem" text-align="center" :opacity="['0.6']">
-        © 2025 StackIT. All Rights Reserved<br />
+        © 2025 StackIT. All Rights Reserved by StackIT<br />
         v{{ version }}
       </c-text>
     </c-stack>

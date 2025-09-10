@@ -50,5 +50,5 @@
     "start": "nuxt-ts start",
     "test": "jest"
   },
-  "version": "2.0.0-beta.6"
+  "version": "2.0.0-beta.5"
 }
