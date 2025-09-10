@@ -4,7 +4,7 @@
 
 <!-- Partner search section -->
 <section
-	class="relative overflow-hidden border-t border-gray-700 bg-gray-900"
+	class="relative overflow-hidden border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="partner-search-heading"
 >
 	<GridBackground />

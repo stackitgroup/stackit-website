@@ -4,7 +4,7 @@
 
 <!-- Product complexity section -->
 <section
-	class="relative overflow-hidden border-t border-gray-700 bg-gray-900"
+	class="relative overflow-hidden border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="product-complexity-heading"
 >
 	<GridBackground />
@@ -15,7 +15,7 @@
 			<header class="text-center lg:text-left">
 				<h2
 					id="product-complexity-heading"
-					class="mb-8 text-3xl leading-tight font-light text-white sm:text-4xl lg:mb-12 lg:text-5xl"
+					class="mb-8 text-3xl leading-tight font-light text-gray-900 dark:text-white sm:text-4xl lg:mb-12 lg:text-5xl"
 				>
 					We know that creating a<br />
 					<span class="italic">great product is complicated</span>
@@ -48,7 +48,7 @@
 						</svg>
 					</div>
 					<div>
-						<p class="text-base leading-relaxed text-white sm:text-lg">
+						<p class="text-base leading-relaxed text-gray-600 dark:text-white sm:text-lg">
 							Our <span class="font-medium text-blue-400">Proven Process</span> brings structure and
 							discipline to development, replacing <span class="text-red-400 italic">chaos</span>
 							with
@@ -69,7 +69,7 @@
 						</svg>
 					</div>
 					<div>
-						<p class="text-base leading-relaxed text-white sm:text-lg">
+						<p class="text-base leading-relaxed text-gray-600 dark:text-white sm:text-lg">
 							We make <span class="font-medium text-blue-400">deep collaboration</span> a priority, which
 							does more than prevent misunderstandings; it builds the shared purpose and creative energy
 							that define a winning team.
@@ -92,7 +92,7 @@
 						</svg>
 					</div>
 					<div>
-						<p class="text-base leading-relaxed text-white sm:text-lg">
+						<p class="text-base leading-relaxed text-gray-600 dark:text-white sm:text-lg">
 							We're <span class="font-medium text-orange-400">entrepreneurs at heart</span>. We
 							bring a deep personal stake to your project, transforming your vision into an
 							extraordinary product.

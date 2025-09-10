@@ -4,7 +4,7 @@
 
 <!-- Finding a good team section -->
 <section
-	class="relative overflow-hidden border-t border-gray-700 bg-gray-900"
+	class="relative overflow-hidden border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="finding-team-heading"
 >
 	<GridBackground />
@@ -14,13 +14,13 @@
 			<!-- Section Heading -->
 			<h2
 				id="finding-team-heading"
-				class="mb-6 text-2xl leading-tight font-light text-white sm:mb-8 sm:text-3xl md:text-4xl lg:text-5xl"
+				class="mb-6 text-2xl leading-tight font-light text-gray-900 dark:text-white sm:mb-8 sm:text-3xl md:text-4xl lg:text-5xl"
 			>
 				Finding a good team shouldn't be so hard
 			</h2>
 
 			<!-- Section Description -->
-			<p class="mx-auto mb-8 max-w-2xl px-4 text-base leading-relaxed text-gray-300 sm:mb-12 sm:text-lg md:text-xl"
+			<p class="mx-auto mb-8 max-w-2xl px-4 text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:mb-12 sm:text-lg md:text-xl"
 			>
 				Leaders with great ideas shouldn't have to struggle<br class="hidden sm:block" />
 				to find a competent, high-performing team to<br class="hidden sm:block" />
