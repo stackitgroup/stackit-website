@@ -1,22 +1,38 @@
-# stackit
+# sv
 
-## Build Setup
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-> **Note:** Please use Node.js version 14.19.0.
+## Creating a project
 
-```bash
-# install dependencies
-$ npm install
+If you're seeing this, you've probably already done this step. Congrats!
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+```sh
+# create a new project in the current directory
+npx sv create
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+# create a new project in my-app
+npx sv create my-app
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@slack/web-api": "^6.0.0",
-    "mailgun-js": "^0.22.0"
-  }
-}
