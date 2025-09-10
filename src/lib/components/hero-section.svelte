@@ -19,8 +19,7 @@
 			</h1>
 
 			<!-- Subtitle -->
-			<p
-				class="mx-auto mb-8 max-w-3xl px-4 text-lg leading-relaxed text-gray-300 sm:mb-12 sm:text-xl md:text-2xl"
+			<p class="mx-auto mb-8 max-w-3xl px-4 text-lg leading-relaxed text-gray-300 sm:mb-12 sm:text-xl md:text-2xl"
 			>
 				Build extraordinary software, with a partner who<br class="hidden sm:block" />
 				shares your standards

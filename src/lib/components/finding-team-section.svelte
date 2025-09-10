@@ -20,8 +20,7 @@
 			</h2>
 
 			<!-- Section Description -->
-			<p
-				class="mx-auto mb-8 max-w-2xl px-4 text-base leading-relaxed text-gray-300 sm:mb-12 sm:text-lg md:text-xl"
+			<p class="mx-auto mb-8 max-w-2xl px-4 text-base leading-relaxed text-gray-300 sm:mb-12 sm:text-lg md:text-xl"
 			>
 				Leaders with great ideas shouldn't have to struggle<br class="hidden sm:block" />
 				to find a competent, high-performing team to<br class="hidden sm:block" />

@@ -41,8 +41,7 @@
 			</article>
 
 			<!-- Card 2: Your Success is Our Success -->
-			<article
-				class="rounded-lg border border-yellow-500 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8"
+			<article class="rounded-lg border border-yellow-500 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8"
 			>
 				<h3 class="mb-3 text-center text-lg font-semibold text-white sm:mb-4 sm:text-xl">
 					Your Success is Our<br />

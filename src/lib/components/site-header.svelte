@@ -4,8 +4,7 @@
 		<div class="flex h-14 items-center justify-between sm:h-16">
 			<!-- Logo -->
 			<div class="flex-shrink-0">
-				<div
-					class="border border-gray-600 bg-gray-800 px-2 py-1 text-lg font-bold text-white sm:px-3 sm:text-xl"
+				<div class="border border-gray-600 bg-gray-800 px-2 py-1 text-lg font-bold text-white sm:px-3 sm:text-xl"
 				>
 					StackIt Logo
 				</div>

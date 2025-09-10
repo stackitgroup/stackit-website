@@ -33,14 +33,13 @@
 <footer class="relative overflow-hidden bg-gray-900 border-t border-gray-700">
 	<GridBackground />
 
-	<div class="relative z-10 px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
+	<div class="relative z-10 px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16"
+	>
 		<!-- Footer Content -->
 		<div class="text-center">
 			<!-- Logo and Tagline -->
 			<div class="mb-8 lg:mb-12">
-				<div
-					class="inline-block px-4 py-2 mb-4 text-xl font-bold text-white bg-gray-800 border border-gray-600 sm:text-2xl"
-				>
+				<div class="inline-block px-4 py-2 mb-4 text-xl font-bold text-white bg-gray-800 border border-gray-600 sm:text-2xl">
 					StackIt Logo
 				</div>
 				<p class="text-sm font-medium text-gray-300 sm:text-base">
@@ -51,13 +50,17 @@
 
 			<!-- Connect With Us -->
 			<div class="mb-8 lg:mb-12">
-				<h2 class="mb-6 text-2xl font-light text-white sm:text-3xl lg:mb-8">Connect With Us</h2>
+				<h2 class="mb-6 text-2xl font-light text-white sm:text-3xl lg:mb-8">
+					Connect With Us
+				</h2>
 
 				<!-- Social Media Icons -->
 				<div class="flex justify-center gap-4 sm:gap-6">
-					{#each SOCIAL_LINKS as social}
+					{#each SOCIAL_LINKS as social (social.name)}
 						<a
 							href={social.href}
+							target="_blank"
+							rel="noopener noreferrer"
 							class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-gray-800 border border-gray-600 rounded-lg hover:bg-gray-700 sm:h-12 sm:w-12"
 							aria-label={social.label}
 						>
@@ -82,13 +85,16 @@
 				<p class="text-xs text-gray-400 sm:text-sm">
 					© {new Date().getFullYear()} StackIt |
 					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-						>Privacy Policy</span>
+					>Privacy Policy</span
+					>
 					|
 					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-						>Terms</span>
+					>Terms</span
+					>
 					|
 					<span class="transition-colors duration-200 cursor-pointer hover:text-gray-300"
-						>Cookies</span>
+					>Cookies</span
+					>
 				</p>
 			</div>
 		</div>

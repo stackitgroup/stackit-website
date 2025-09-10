@@ -34,11 +34,9 @@
 			<!-- Description -->
 			<div class="mb-8 lg:mb-12">
 				<p class="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
-					The search for a capable dev partner shouldn't end in frustration and chaos.<br
-						class="hidden sm:block"
+					The search for a capable dev partner shouldn't end in frustration and chaos.<br class="hidden sm:block"
 					/>
-					We're equipped with a clear understanding of what goes into running<br
-						class="hidden sm:block"
+					We're equipped with a clear understanding of what goes into running<br class="hidden sm:block"
 					/>
 					and start building the extraordinary software their vision demands.
 				</p>
