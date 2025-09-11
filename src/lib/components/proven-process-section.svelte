@@ -60,10 +60,10 @@
 		<!-- Process Steps -->
 		<div class="relative">
 			<!-- Vertical Line (Hidden on mobile, visible on larger screens) -->
-			<div
+			<!-- <div
 				class="absolute top-0 bottom-0 z-0 hidden w-px bg-gray-400 left-6 lg:block"
 				aria-hidden="true"
-			></div>
+			></div> -->
 
 			<!-- Process Steps List -->
 			<ol class="space-y-12 lg:space-y-16">
@@ -73,7 +73,7 @@
 
 						{#if index < processSteps.length - 1}
 							<!-- Connector line below the circle for this step (visible on lg+) -->
-							<div class="absolute bottom-0 z-0 block w-px bg-gray-300 left-6 top-12 lg:hidden" aria-hidden="true"></div>
+							<div class="absolute bottom-0 z-0 block w-px bg-gray-300 left-6 top-12 lg:left-8" aria-hidden="true"></div>
 						{/if}
 						<article class="flex-1">
 							<Typography variant="h3" className="mb-2">{step.title}</Typography>
