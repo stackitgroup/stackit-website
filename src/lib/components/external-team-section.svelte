@@ -1,5 +1,55 @@
 <script>
 	import GridBackground from './grid-background.svelte'
+
+	const cards = [
+		{
+			title: 'Designed to\nIntegrate',
+			titleColor: 'text-blue-900',
+			border: 'border-blue-500',
+			bg: 'bg-blue-50',
+			body: [
+				'Our In-House Drive is',
+				'defined by three key',
+				'elements: a hands-on',
+				'engineering discipline,',
+				'always-collaborate-first',
+				'and an ingrained',
+				'entrepreneurial spirit.'
+			]
+		},
+		{
+			title: 'Your Success is Our\nSuccess',
+			titleColor: 'text-yellow-900',
+			border: 'border-yellow-500',
+			bg: 'bg-yellow-50',
+			body: [
+				'All our achievements',
+				'are forged from the',
+				'shared pursuit of',
+				'excellence and the',
+				'drive to create',
+				'something truly',
+				'impactful. It\'s the',
+				'foundation we\'re built',
+				'on.'
+			]
+		},
+		{
+			title: 'More Than Just\nCode',
+			titleColor: 'text-red-900',
+			border: 'border-red-500',
+			bg: 'bg-red-50',
+			body: [
+				'Exceptional Software',
+				'is the result. As one',
+				'team, you\'ll always',
+				'get more than just',
+				'code; you get the',
+				'perfect storm for',
+				'innovation.'
+			]
+		}
+	]
 </script>
 
 <!-- External team experience section -->
@@ -23,59 +73,21 @@
 
 		<!-- Feature Cards -->
 		<div class="mb-12 grid gap-6 sm:mb-16 sm:gap-8 md:grid-cols-3">
-			<!-- Card 1: Designed to Integrate -->
-			<article class="rounded-lg border border-blue-500 bg-blue-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
-				<h3 class="mb-3 text-center text-lg font-semibold text-blue-900 dark:text-white sm:mb-4 sm:text-xl">
-					Designed to<br />
-					Integrate
-				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
-					Our In-House Drive is<br class="hidden sm:block" />
-					defined by three key<br class="hidden sm:block" />
-					elements: a hands-on<br class="hidden sm:block" />
-					engineering discipline,<br class="hidden sm:block" />
-					always-collaborate-first<br class="hidden sm:block" />
-					and an ingrained<br class="hidden sm:block" />
-					entrepreneurial spirit.
-				</p>
-			</article>
-
-			<!-- Card 2: Your Success is Our Success -->
-			<article class="rounded-lg border border-yellow-500 bg-yellow-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8"
-			>
-				<h3 class="mb-3 text-center text-lg font-semibold text-yellow-900 dark:text-white sm:mb-4 sm:text-xl">
-					Your Success is Our<br />
-					Success
-				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
-					All our achievements<br class="hidden sm:block" />
-					are forged from the<br class="hidden sm:block" />
-					shared pursuit of<br class="hidden sm:block" />
-					excellence and the<br class="hidden sm:block" />
-					drive to create<br class="hidden sm:block" />
-					something truly<br class="hidden sm:block" />
-					impactful. It's the<br class="hidden sm:block" />
-					foundation we're built<br class="hidden sm:block" />
-					on.
-				</p>
-			</article>
-
-			<!-- Card 3: More Than Just Code -->
-			<article class="rounded-lg border border-red-500 bg-red-50 dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
-				<h3 class="mb-3 text-center text-lg font-semibold text-red-900 dark:text-white sm:mb-4 sm:text-xl">
-					More Than Just<br />
-					Code
-				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
-					Exceptional Software<br class="hidden sm:block" />
-					is the result. As one<br class="hidden sm:block" />
-					team, you'll always<br class="hidden sm:block" />
-					get more than just<br class="hidden sm:block" />
-					code; you get the<br class="hidden sm:block" />
-					perfect storm for<br class="hidden sm:block" />
-					innovation.
-				</p>
-			</article>
+			{#each cards as card, idx (idx)}
+				<article class="rounded-lg border {card.border} {card.bg} dark:bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
+					<h3 class="mb-3 text-center text-lg font-semibold {card.titleColor} text-balance dark:text-white sm:mb-4 sm:text-xl">
+						{card.title}
+					</h3>
+					<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
+						{#each card.body as line, i (i)}
+							<span>{line}</span>
+							{#if i < card.body.length - 1}
+								<br class="hidden sm:block" />
+							{/if}
+						{/each}
+					</p>
+				</article>
+			{/each}
 		</div>
 
 		<!-- CTA Button -->
