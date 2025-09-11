@@ -24,7 +24,7 @@
 		<div class="relative z-10">
 			<!-- Section Heading (centered, bold) -->
 			<header id="partner-search-heading" class="mb-6 text-center lg:mb-8">
-				<Typography variant="h1" className="mb-2">
+				<Typography variant="h2" className="mb-2">
 					The Partner You've been searching for...
 				</Typography>
 			</header>

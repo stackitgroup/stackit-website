@@ -13,7 +13,7 @@
 <section class="py-16 bg-white dark:bg-gray-900 sm:py-24">
 	<div class="max-w-2xl px-4 mx-auto text-center sm:px-6">
 		<!-- Title -->
-		<Typography variant="h1" className="mb-16 text-center">
+		<Typography variant="h2" className="mb-16 text-center">
 			We know that creating a great<br />product is complicated
 		</Typography>
 

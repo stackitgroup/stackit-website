@@ -20,31 +20,32 @@
 
 <!-- External team experience section - Minimalist Design -->
 <section
-	class="py-16 bg-white dark:bg-gray-900 sm:py-20"
+	class="py-12 bg-white dark:bg-gray-900 sm:py-16 md:py-20 lg:py-24"
 	aria-labelledby="external-team-heading"
 >
-	<div class="max-w-4xl px-4 mx-auto text-center sm:px-6">
+	<div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
 		<!-- Section Heading -->
-		<header id="external-team-heading" class="mb-12 sm:mb-16">
-			<Typography variant="h1" className="mb-4 text-center">
+		<header id="external-team-heading" class="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+			<Typography variant="h2" className="mb-4 text-center max-w-4xl mx-auto">
 				Your external team should feel like a top in-house team. We deliver that experience.
 			</Typography>
 		</header>
 
 		<!-- Feature Cards -->
-		<div class="mb-12 space-y-6 sm:mb-16">
-			{#each cards as card, idx (idx)}
-				<article class="max-w-md p-6 mx-auto bg-gray-200 rounded-lg dark:bg-gray-700 sm:p-8">
+		<div class="mb-12 sm:mb-16 md:mb-20">
+			<div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+				{#each cards as card, idx (idx)}
+					<article class="p-6 transition-transform bg-gray-200 rounded-lg dark:bg-gray-700 sm:p-8 md:p-6 lg:p-8 hover:scale-105">
+						<div class="text-center">
+							<Typography variant="h3" className="mb-3 text-center">{card.title}</Typography>
 
-					<div class="text-center">
-						<Typography variant="h2" className="mb-3 text-center">{card.title}</Typography>
+							<Typography variant="p" className="mb-5 text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base lg:text-sm xl:text-base">{card.body}</Typography>
 
-						<Typography variant="p" className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">{card.body}</Typography>
-
-						<div class="mx-auto mt-5 bg-white rounded-full shadow-sm size-20"></div>
-					</div>
-				</article>
-			{/each}
+							<div class="mx-auto bg-white rounded-full shadow-sm size-16 sm:size-20 lg:size-16 xl:size-20"></div>
+						</div>
+					</article>
+				{/each}
+			</div>
 		</div>
 
 		<!-- CTA Button -->

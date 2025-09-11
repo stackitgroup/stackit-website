@@ -1,6 +1,7 @@
 <script>
 	import DarkIsologo from '$lib/assets/dark_isologo.webp'
 	import LightIsologo from '$lib/assets/light_isologo.webp'
+	import Typography from './typography.svelte'
 
 	const SOCIAL_LINKS = [
 		{
@@ -31,8 +32,8 @@
 </script>
 
 <!-- Minimalist Footer -->
-<footer class="bg-gray-200 py-16 dark:bg-gray-800">
-	<div class="mx-auto max-w-2xl px-4 text-center sm:px-6">
+<footer class="py-16 bg-gray-200 dark:bg-gray-800">
+	<div class="max-w-2xl px-4 mx-auto text-center sm:px-6">
 		<!-- Logo Section -->
 		<div class="mb-8">
 			<div class="mb-4">
@@ -40,13 +41,13 @@
 					src={LightIsologo}
 					alt="StackIt logo"
 					loading="lazy"
-					class="mx-auto block h-12 w-auto dark:hidden"
+					class="block w-auto h-12 mx-auto dark:hidden"
 				/>
 				<img
 					src={DarkIsologo}
 					alt="StackIt logo (dark)"
 					loading="lazy"
-					class="mx-auto hidden h-12 w-auto dark:block"
+					class="hidden w-auto h-12 mx-auto dark:block"
 				/>
 			</div>
 
@@ -60,9 +61,9 @@
 
 		<!-- Connect With Us -->
 		<div class="mb-12">
-			<h2 class="mb-6 font-sans text-2xl font-semibold text-gray-900 dark:text-white">
+			<Typography variant="h3" className="mb-6">
 				Connect With Us
-			</h2>
+			</Typography>
 
 			<!-- Social Media Icons -->
 			<div class="flex justify-center gap-4">
@@ -71,11 +72,11 @@
 						href={social.href}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white transition-colors duration-200 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600"
+						class="flex items-center justify-center w-12 h-12 text-white transition-colors duration-200 bg-gray-900 rounded-full hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600"
 						aria-label={social.label}
 					>
 						<svg
-							class="h-5 w-5"
+							class="w-5 h-5"
 							fill="currentColor"
 							viewBox="0 0 24 24"
 						>
@@ -87,12 +88,12 @@
 		</div>
 
 		<!-- Copyright and Links -->
-		<div class="border-t border-gray-200 pt-8 dark:border-gray-700">
+		<div class="pt-8 border-t border-gray-200 dark:border-gray-700">
 			<p class="font-sans text-sm text-gray-500 dark:text-gray-400">
 				© 2025 StackIt |
-				<span class="hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer">Privacy Policy</span> |
-				<span class="hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer">Terms</span> |
-				<span class="hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer">Cookies</span>
+				<span class="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Privacy Policy</span> |
+				<span class="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Terms</span> |
+				<span class="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Cookies</span>
 			</p>
 		</div>
 	</div>
