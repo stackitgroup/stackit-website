@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css'
 	import SiteHeader from '$lib/components/site-header.svelte'
-	import favicon from '$lib/assets/favicon.svg'
 	import SiteFooter from '$lib/components/site-footer.svelte'
+	import favicon from '$lib/assets/favicon.svg'
 	import { onMount } from 'svelte'
 
 	let { children } = $props()

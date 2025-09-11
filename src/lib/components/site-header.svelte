@@ -1,47 +1,46 @@
 <script>
-	import ThemeSwitcher from './theme-switcher.svelte'
 	import DarkIsologo from '$lib/assets/dark_isologo.webp'
 	import LightIsologo from '$lib/assets/light_isologo.webp'
 </script>
 
-<!-- Header with semantic HTML -->
-<header class="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
-
-	<nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-		<div class="flex h-14 items-center justify-between sm:h-16">
-			<!-- Logo -->
-			<div class="flex-shrink-0">
-				<!-- Use two images and toggle via dark: classes to avoid runtime JS swapping -->
-				<img
-					src={LightIsologo}
-					alt="StackIt logo"
-					loading="lazy"
-					class="block h-8 w-auto dark:hidden sm:h-10"
-				/>
-
-				<img
-					src={DarkIsologo}
-					alt="StackIt logo (dark)"
-					loading="lazy"
-					class="hidden h-8 w-auto dark:block sm:h-10"
-				/>
-
-			</div>
-
-			<!-- Actions -->
-			<div class="flex items-center gap-3">
-				<!-- Theme Switcher -->
-				<ThemeSwitcher variant="minimal" />
-
-				<!-- Introduction Call Button -->
-				<button
-					type="button"
-					class="rounded border border-green-500 bg-transparent px-3 py-1.5 text-sm text-green-500 transition-colors duration-200 hover:bg-green-500 hover:text-white sm:px-4 sm:py-2 sm:text-base"
-				>
-					<span class="hidden sm:inline">Introduction Call</span>
-					<span class="sm:hidden">Call</span>
-				</button>
-			</div>
+<!-- Minimalist Header -->
+<header class="bg-gray-200 dark:bg-gray-900">
+	<div class="flex items-center justify-between px-4 py-4 sm:px-6">
+		<!-- Logo -->
+		<div class="flex-shrink-0">
+			<img
+				src={LightIsologo}
+				alt="StackIt logo"
+				loading="lazy"
+				class="block h-8 w-auto dark:hidden"
+			/>
+			<img
+				src={DarkIsologo}
+				alt="StackIt logo (dark)"
+				loading="lazy"
+				class="hidden h-8 w-auto dark:block"
+			/>
 		</div>
-	</nav>
+
+		<!-- Menu Button -->
+		<button
+			type="button"
+			class="flex h-10 w-10 items-center justify-center rounded border border-gray-300 dark:border-gray-600"
+			aria-label="Menu"
+		>
+			<svg
+				class="h-5 w-5 text-gray-600 dark:text-gray-300"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16M4 18h16"
+				/>
+			</svg>
+		</button>
+	</div>
 </header>
