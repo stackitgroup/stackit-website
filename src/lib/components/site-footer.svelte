@@ -1,5 +1,7 @@
 <script>
 	import GridBackground from './grid-background.svelte'
+	import DarkIsologo from '$lib/assets/dark_isologo.webp'
+	import LightIsologo from '$lib/assets/light_isologo.webp'
 
 	const SOCIAL_LINKS = [
 		{
@@ -38,9 +40,20 @@
 		<div class="text-center">
 			<!-- Logo and Tagline -->
 			<div class="mb-8 lg:mb-12">
-				<div class="inline-block px-4 py-2 mb-4 text-xl font-bold text-gray-900 bg-gray-200 border border-gray-300 dark:text-white dark:bg-gray-800 dark:border-gray-600 sm:text-2xl">
-					StackIt Logo
-				</div>
+				<!-- Light / Dark isologo swap; responsive sizing -->
+				<img
+					src={LightIsologo}
+					alt="StackIt logo"
+					loading="lazy"
+					class="inline-block h-8 w-auto dark:hidden sm:h-10 mb-4"
+				/>
+
+				<img
+					src={DarkIsologo}
+					alt="StackIt logo (dark)"
+					loading="lazy"
+					class="hidden dark:inline-block h-8 w-auto sm:h-10 mb-4"
+				/>
 				<p class="text-sm font-medium text-gray-600 dark:text-gray-300 sm:text-base">
 					Success.<br />
 					Coded.

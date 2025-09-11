@@ -43,7 +43,7 @@
 						<p class="mb-3 text-sm font-medium text-blue-400 lg:text-base">
 							A conversation to explore your vision and our process
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							We hold a structured, two-way conversation to understand your vision, challenges, and
 							goals. We'll provide a transparent overview of our process, ensuring we both have a
 							shared perspective.
@@ -64,7 +64,7 @@
 						<p class="mb-3 text-sm font-medium text-yellow-400 lg:text-base">
 							Uncovering Your Purpose
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							We dig deep to get to the heart of your project's why and what success truly looks
 							like. By mapping out your product roadmap against practical terms like budget and
 							timeline, we create a realistic roadmap for your vision.
@@ -85,7 +85,7 @@
 						<p class="mb-3 text-sm font-medium text-red-400 lg:text-base">
 							Creating the game plan for the winning team
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							Building on our shared understanding, we present your tailored game plan. The
 							comprehensive proposal clearly defines the path deliverables, timeline, and team
 							structure, giving you full confidence in the path ahead.
@@ -102,11 +102,11 @@
 						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">4</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Build Mode ON</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Build Mode ON</h3>
 						<p class="mb-3 text-sm font-medium text-purple-400 lg:text-base">
 							Building with Confidence From Day One
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							With our game plan in place, we translate big-level requirements into achievable
 							tasks. Our team establishes a clear collaboration protocol and primes the technical
 							environment for a purposeful and efficient build.
@@ -120,14 +120,14 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">5</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">5</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Pulse</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Pulse</h3>
 						<p class="mb-3 text-sm font-medium text-green-400 lg:text-base">
 							See your vision manifest - two weeks at a time
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							Your project comes alive in a steady "Pulse" of focused, two-week development cycles.
 							Every Pulse cycle ends with tangible progress, quick test, and iterative alignment,
 							delivering to our core promise: a demonstration of working software every two weeks.
@@ -141,14 +141,14 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">6</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">6</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">The Quality Gate</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">The Quality Gate</h3>
 						<p class="mb-3 text-sm font-medium text-teal-400 lg:text-base">
 							Your Green Light for a Confident Launch
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							Before launch, we ensure your software meets readiness. Every feature is rigorously
 							tested against our highest standards, and we prepare your dedicated environment and
 							empower your team for a seamless, confident go-live.
@@ -162,14 +162,14 @@
 						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 lg:h-16 lg:w-16"
 						aria-hidden="true"
 					>
-						<span class="text-lg font-bold text-white lg:text-xl">7</span>
+						<span class="text-lg font-bold text-gray-900 dark:text-white lg:text-xl">7</span>
 					</div>
 					<article class="flex-1">
-						<h3 class="mb-2 text-xl font-semibold text-white lg:text-2xl">Beyond Launch</h3>
+						<h3 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white lg:text-2xl">Beyond Launch</h3>
 						<p class="mb-3 text-sm font-medium text-orange-400 lg:text-base">
 							Your Partner in Continued Growth and Evolution
 						</p>
-						<p class="text-sm leading-relaxed text-gray-300 lg:text-base">
+						<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300 lg:text-base">
 							With your solution live, our focus shifts to ensuring its ongoing success. We provide
 							robust support and proactive monitoring, turning system insights into actionable
 							intelligence that drives your business forward.

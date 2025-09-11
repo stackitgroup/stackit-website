@@ -25,7 +25,7 @@
 			<header class="mb-8 lg:mb-12">
 				<h2
 					id="partner-search-heading"
-					class="mb-6 text-3xl leading-tight font-light text-white sm:text-4xl lg:text-5xl"
+					class="mb-6 text-3xl leading-tight font-light text-gray-900 dark:text-white sm:text-4xl lg:text-5xl"
 				>
 					<span class="italic">The Partner You've been searching for.</span>
 				</h2>
@@ -33,7 +33,7 @@
 
 			<!-- Description -->
 			<div class="mb-8 lg:mb-12">
-				<p class="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
+				<p class="mx-auto max-w-4xl text-lg leading-relaxed text-gray-600 dark:text-gray-300 sm:text-xl lg:text-2xl">
 					The search for a capable dev partner shouldn't end in frustration and chaos.<br class="hidden sm:block"
 					/>
 					We're equipped with a clear understanding of what goes into running<br class="hidden sm:block"

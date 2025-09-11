@@ -29,7 +29,7 @@
 					Designed to<br />
 					Integrate
 				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-300 sm:text-base">
+				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
 					Our In-House Drive is<br class="hidden sm:block" />
 					defined by three key<br class="hidden sm:block" />
 					elements: a hands-on<br class="hidden sm:block" />
@@ -47,7 +47,7 @@
 					Your Success is Our<br />
 					Success
 				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-300 sm:text-base">
+				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
 					All our achievements<br class="hidden sm:block" />
 					are forged from the<br class="hidden sm:block" />
 					shared pursuit of<br class="hidden sm:block" />
@@ -66,7 +66,7 @@
 					More Than Just<br />
 					Code
 				</h3>
-				<p class="text-center text-sm leading-relaxed text-gray-300 sm:text-base">
+				<p class="text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
 					Exceptional Software<br class="hidden sm:block" />
 					is the result. As one<br class="hidden sm:block" />
 					team, you'll always<br class="hidden sm:block" />

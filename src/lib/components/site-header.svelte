@@ -1,5 +1,7 @@
 <script>
 	import ThemeSwitcher from './theme-switcher.svelte'
+	import DarkIsologo from '$lib/assets/dark_isologo.webp'
+	import LightIsologo from '$lib/assets/light_isologo.webp'
 </script>
 
 <!-- Header with semantic HTML -->
@@ -9,9 +11,21 @@
 		<div class="flex h-14 items-center justify-between sm:h-16">
 			<!-- Logo -->
 			<div class="flex-shrink-0">
-				<div class="border border-gray-300 bg-gray-100 px-2 py-1 text-lg font-bold text-gray-900 dark:border-gray-600 dark:bg-gray-800 dark:text-white sm:px-3 sm:text-xl">
-					StackIt Logo
-				</div>
+				<!-- Use two images and toggle via dark: classes to avoid runtime JS swapping -->
+				<img
+					src={LightIsologo}
+					alt="StackIt logo"
+					loading="lazy"
+					class="block h-8 w-auto dark:hidden sm:h-10"
+				/>
+
+				<img
+					src={DarkIsologo}
+					alt="StackIt logo (dark)"
+					loading="lazy"
+					class="hidden h-8 w-auto dark:block sm:h-10"
+				/>
+
 			</div>
 
 			<!-- Actions -->
