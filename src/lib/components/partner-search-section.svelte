@@ -39,7 +39,7 @@
 			<!-- CTA Link (underlined, left-aligned within content width) -->
 			<div class="mt-4">
 				<div class="max-w-3xl mx-auto">
-					<a href="#partners" class="text-lg font-medium text-gray-900 underline decoration-current hover:text-gray-700">Continue reading...</a>
+					<span class="text-lg font-medium text-gray-900 underline decoration-current hover:text-gray-700">Continue reading...</span>
 				</div>
 			</div>
 		</div>
