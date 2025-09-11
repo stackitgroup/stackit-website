@@ -35,7 +35,7 @@
 		<div class="mb-12 sm:mb-16 md:mb-20">
 			<div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
 				{#each cards as card, idx (idx)}
-					<article class="p-6 transition-transform bg-gray-200 rounded-lg dark:bg-gray-700 sm:p-8 md:p-6 lg:p-8 hover:scale-105">
+					<article class="p-6 transition-transform duration-200 bg-gray-200 rounded-lg dark:bg-gray-700 sm:p-8 md:p-6 lg:p-8 hover:scale-105">
 						<div class="text-center">
 							<Typography variant="h3" className="mb-3 text-center">{card.title}</Typography>
 
