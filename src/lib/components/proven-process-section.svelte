@@ -1,5 +1,4 @@
 <script>
-	import GridBackground from './grid-background.svelte'
 	import CtaButton from './cta-button.svelte'
 	import Typography from './typography.svelte'
 
@@ -47,7 +46,6 @@
 	class="relative overflow-hidden"
 	aria-labelledby="proven-process-heading"
 >
-	<GridBackground />
 
 	<div class="relative z-10 max-w-6xl px-4 py-16 mx-auto sm:px-6 lg:px-8 lg:py-24">
 		<!-- Section Heading -->

@@ -1,5 +1,4 @@
 <script>
-	import GridBackground from './grid-background.svelte'
 	import Typography from './typography.svelte'
 </script>
 
@@ -8,7 +7,6 @@
 	class="relative overflow-hidden border-t border-b border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900"
 	aria-labelledby="partner-search-heading"
 >
-	<GridBackground />
 
 	<div class="relative z-10 max-w-5xl px-4 py-16 mx-auto sm:px-6 lg:px-8 lg:py-24">
 		<!-- Large background text effect -->

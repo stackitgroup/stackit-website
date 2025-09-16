@@ -5,9 +5,11 @@
 	import PartnerSearchSection from '$lib/components/partner-search-section.svelte'
 	import ProductComplexitySection from '$lib/components/product-complexity-section.svelte'
 	import ProvenProcessSection from '$lib/components/proven-process-section.svelte'
+	import GridBackground from '$lib/components/grid-background.svelte'
 </script>
 
-<main class="px-5">
+<main class="relative px-5">
+	<GridBackground className="z-10 pointer-events-none" />
 	<HeroSection />
 	<FindingTeamSection />
 	<ExternalTeamSection />

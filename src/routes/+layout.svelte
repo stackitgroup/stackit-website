@@ -2,7 +2,7 @@
 	import '../app.css'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import SiteFooter from '$lib/components/site-footer.svelte'
-	import favicon from '$lib/assets/favicon.svg'
+	import favicon from '$lib/assets/logo.webp'
 	import { onMount } from 'svelte'
 
 	let { children } = $props()
