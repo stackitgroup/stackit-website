@@ -10,7 +10,7 @@
         theme: {
           extend: {
             colors: {
-              black: '#181818'
+              black: '#000'
             }
           }
         }
@@ -25,7 +25,7 @@
     <style>
       body {
         font-family: 'Figtree', sans-serif;
-        background-color: #181818; /* Black background */
+        background-color: #000; /* Black background */
       }
       .gradient-text {
         background: linear-gradient(
@@ -47,17 +47,17 @@
       }
     </style>
   </head>
-  <body class="bg-[#181818] text-gray-300 antialiased">
+  <body class="bg-black text-gray-300 antialiased">
     <header
       id="header"
-      class="bg-[#181818] border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
+      class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
     >
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
         <a href="index.html" class="flex items-center">
           <img
-            src="stackit_logo_white.png"
+            src="stackit-logo-white-purple.png"
             alt="Stackit Logo"
             class="h-9 w-auto"
           />
@@ -65,15 +65,15 @@
         <div class="flex items-center space-x-6">
           <a
             href="#contact"
-            class="bg-transparent text-white border-2 border-[#3F5FDD] font-semibold px-6 py-3 text-base hover:bg-[#3F5FDD] hover:text-white transition-colors duration-300 rounded-lg"
-            >Meet the team</a
+            class="bg-[#2F5CEC] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
+            >Introduction Call</a
           >
         </div>
       </div>
     </header>
 
     <main>
-      <section class="min-h-screen flex items-center bg-[#181818] pt-20">
+      <section class="min-h-screen flex items-center bg-black pt-20">
         <div class="container mx-auto px-6 text-center">
           <div class="max-w-5xl mx-auto">
             <h1
@@ -83,7 +83,7 @@
               <span class="gradient-text">In-House Drive</span>
             </h1>
             <p
-              class="text-xl sm:text-2xl md:text-4xl text-gray-400 max-w-4xl mx-auto fade-in-section"
+              class="text-xl sm:text-2xl md:text-4xl text-gray-300 max-w-4xl mx-auto fade-in-section"
               style="transition-delay: 150ms"
             >
               Build extraordinary software, with a partner who shares your
@@ -100,9 +100,7 @@
         </div>
       </section>
 
-      <section
-        class="min-h-screen flex items-center bg-[#181818] border-y border-gray-800"
-      >
+      <section class="min-h-screen flex items-center bg-black">
         <div class="container mx-auto px-6 text-center">
           <div class="max-w-5xl mx-auto fade-in-section">
             <h2
@@ -110,18 +108,18 @@
             >
               Finding a good team shouldn't be so hard
             </h2>
-            <p class="text-xl sm:text-2xl md:text-4xl text-gray-400">
+            <p class="text-xl sm:text-2xl md:text-4xl text-gray-300">
               Leaders with great ideas shouldn't have to struggle to find a
               competent, high-performing team to execute their vision.
             </p>
             <div
               class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6"
             >
-              <a
+              <!-- <a
                 href="case-study.html"
-                class="bg-transparent border-2 border-white text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl hover:bg-white hover:text-[#181818] transition-colors duration-300 inline-block rounded-2xl"
-                >View Case Studies</a
-              >
+                class="bg-transparent border-2 border-white text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl hover:bg-white hover:text-black transition-colors duration-300 inline-block rounded-2xl opacity-80 hover:opacity-100"
+                >View Our Latest Case Study</a
+              > -->
               <a
                 href="#contact"
                 class="bg-[#3F5FDD] text-white font-semibold px-12 py-5 text-xl sm:px-24 sm:py-6 sm:text-2xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
@@ -132,15 +130,13 @@
         </div>
       </section>
 
-      <section
-        class="min-h-dvh py-20 md:py-32 bg-[#181818] border-y border-gray-800"
-      >
+      <section class="min-h-dvh py-20 md:py-32 bg-black">
         <div class="container mx-auto px-6">
           <div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
             <h2 class="text-4xl md:text-6xl font-bold text-white">
               Your external team should feel like a top in-house team.
             </h2>
-            <p class="text-xl md:text-2xl text-gray-400 mt-6">
+            <p class="text-xl md:text-2xl text-gray-300 mt-6">
               We deliver that experience.
             </p>
           </div>
@@ -164,7 +160,7 @@
               <h3 class="text-3xl font-bold text-white mb-3">
                 Designed to Integrate
               </h3>
-              <p class="text-xl text-gray-400">
+              <p class="text-xl text-gray-300">
                 Our <strong>In-House Drive</strong> is defined by three key
                 principles: <strong>rigorous engineering discipline</strong>,
                 <strong>deep collaboration</strong>, and an
@@ -190,7 +186,7 @@
               <h3 class="text-3xl font-bold text-white mb-3">
                 Your Success is Our Success
               </h3>
-              <p class="text-xl text-gray-400">
+              <p class="text-xl text-gray-300">
                 True <strong>Partnerships</strong> are forged from the
                 <strong>shared pursuit of excellence</strong> and the drive to
                 create something truly impactful. It's the foundation we're
@@ -220,7 +216,7 @@
               <h3 class="text-3xl font-bold text-white mb-3">
                 More Than Just Code
               </h3>
-              <p class="text-xl text-gray-400">
+              <p class="text-xl text-gray-300">
                 Exceptional Software is the result. As one cohesive team, you
                 get more than just code—you get the perfect storm for
                 <strong>innovation</strong>.
@@ -229,17 +225,18 @@
           </div>
           <div class="mt-16 text-center fade-in-section">
             <a
-              href="#process"
-              class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
-              >Discover Our Process</a
+              href="#contact"
+              class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl"
+              >Meet the Team</a
             >
           </div>
         </div>
       </section>
-      <section class="py-20 md:py-32 bg-[#181818] min-h-dvh flex items-center">
+
+      <section class="py-20 md:py-32 bg-black min-h-dvh flex items-center">
         <div class="container mx-auto p-6">
           <div
-            class="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center"
+            class="flex flex-col gap-12 md:grid md:grid-cols-2 md:gap-16 md:items-center"
           >
             <div
               class="md:order-2 space-y-8 fade-in-section"
@@ -329,15 +326,9 @@
                 >
               </div>
             </div>
-            <div class="order-last mt-12 md:hidden text-center">
-              <a
-                href="#contact"
-                class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
-                >Let's Talk</a
-              >
-            </div>
           </div>
-          <div class="mt-32 fade-in-section">
+
+          <div class="mt-20 md:mt-32 fade-in-section">
             <div
               class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8"
             >
@@ -347,10 +338,10 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="Siemens-logo-gray.png"
+                  src="Siemens-logo.png"
                   alt="Siemens Logo"
-                  class="h-11 w-auto transition-all duration-300"
-                  style="filter: brightness(0) invert(1) opacity(0.7)"
+                  class="h-11 w-auto opacity-80 transition-all duration-300"
+                  style="filter: invert(1)"
                 />
               </a>
               <a
@@ -361,8 +352,8 @@
                 <img
                   src="i2sl-logo.png"
                   alt="I2SL Logo"
-                  class="h-11 w-auto transition-all duration-300"
-                  style="filter: brightness(0) invert(1) opacity(0.7)"
+                  class="h-11 w-auto opacity-80 transition-all duration-300"
+                  style="filter: invert(1)"
                 />
               </a>
               <a
@@ -373,38 +364,44 @@
                 <img
                   src="aircuity_logo.png"
                   alt="Aircuity Logo"
-                  class="h-11 w-auto transition-all duration-300"
-                  style="filter: brightness(0) invert(1) opacity(0.7)"
+                  class="h-11 w-auto opacity-80 transition-all duration-300"
+                  style="filter: invert(1)"
                 />
               </a>
+            </div>
+
+            <div class="mt-16 md:hidden text-center">
+              <a
+                href="#contact"
+                class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
+                >Let's Talk</a
+              >
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="process"
-        class="py-20 md:py-32 bg-[#181818] border-y border-gray-800"
-      >
+      <section id="process" class="py-20 md:py-32 bg-black">
         <div class="container mx-auto px-6">
           <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-1 lg:sticky top-28">
               <h2
-                class="text-5xl md:text-6xl font-bold text-white fade-in-section"
+                class="text-5xl md:text-6xl text-center md:text-left font-bold text-white fade-in-section"
               >
                 Our Proven Process
               </h2>
               <p
-                class="text-xl text-gray-400 mt-6 fade-in-section"
+                class="text-xl text-gray-300 mt-6 fade-in-section text-center md:text-left"
                 style="transition-delay: 100ms"
               >
-                We bring structure and discipline to development, replacing
-                chaos with clarity, predictability, and quality.
+                From initial idea to final launch, we've engineered a process
+                that ensures clarity, predictability, and quality at every step.
+                This is how we build extraordinary software, together.
               </p>
-              <div class="mt-6 fade-in-section">
+              <div class="mt-8 hidden lg:block fade-in-section">
                 <a
                   href="#contact"
-                  class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+                  class="bg-[#3F5FDD] text-white font-semibold px-8 py-3 text-base hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
                   >Introduction Call</a
                 >
               </div>
@@ -416,9 +413,11 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   Introduction Call
                 </h3>
-                <p class="text-gray-400">
-                  A structured, two-way conversation to understand your vision
-                  and ensure we're the right fit as partners.
+                <p class="text-gray-300">
+                  We hold a structured, two-way conversation to understand your
+                  vision, challenges, and goals. We'll provide a transparent
+                  overview of our process, ensuring we both have a confident
+                  decision on our fit as partners.
                 </p>
               </div>
 
@@ -427,9 +426,11 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   Clarify the Why
                 </h3>
-                <p class="text-gray-400">
-                  We dig deep to uncover your project's core purpose and map
-                  your needs to a feasible, practical roadmap.
+                <p class="text-gray-300">
+                  We dig deep to get to the heart of your project's 'why' and
+                  what success truly looks like. By mapping out your product
+                  needs against practical limits like budget and timeline, we
+                  create a feasible roadmap for your vision.
                 </p>
               </div>
 
@@ -438,9 +439,11 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   Proposal
                 </h3>
-                <p class="text-gray-400">
-                  We deliver a comprehensive game plan outlining cost,
-                  deliverables, and timeline, giving you full confidence.
+                <p class="text-gray-300">
+                  Building on our shared understanding, we present your tailored
+                  game plan. This comprehensive proposal clearly outlines the
+                  cost, deliverables, timeline, and team structure, giving you
+                  full confidence in the path ahead.
                 </p>
               </div>
 
@@ -449,18 +452,22 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   Build Mode: ON
                 </h3>
-                <p class="text-gray-400">
-                  Our team translates requirements into actionable tasks and
-                  primes the technical environment for an efficient build.
+                <p class="text-gray-300">
+                  With the game plan in place, we translate high-level
+                  requirements into actionable tasks. Our team establishes a
+                  clear collaboration protocol and primes the technical
+                  environment for a purposeful and efficient build.
                 </p>
               </div>
 
               <div class="fade-in-section">
                 <div class="text-5xl font-black text-[#99C4FE]">05</div>
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">Pulse</h3>
-                <p class="text-gray-400">
-                  Your project comes alive in two-week development cycles, with
-                  a working software demo every two weeks.
+                <p class="text-gray-300">
+                  Your project comes alive in a steady "Pulse" of focused,
+                  two-week development cycles. This rhythm makes progress
+                  visible and maintains alignment, culminating in our core
+                  promise: a demonstration of working software every two weeks.
                 </p>
               </div>
 
@@ -469,9 +476,11 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   The Quality Gate
                 </h3>
-                <p class="text-gray-400">
-                  Every feature is rigorously tested to our highest standards,
-                  ensuring a seamless and confident go-live.
+                <p class="text-gray-300">
+                  Before launch, we ensure total readiness. Every feature is
+                  rigorously tested against our highest standards, and we
+                  prepare your operational environment and empower your team for
+                  a seamless, confident go-live.
                 </p>
               </div>
 
@@ -480,7 +489,7 @@
                 <h3 class="text-2xl font-bold text-white mt-4 mb-2">
                   Beyond Launch
                 </h3>
-                <p class="text-gray-400">
+                <p class="text-gray-300">
                   With your solution live, our focus shifts to ensuring its
                   ongoing success. We provide robust support and proactive
                   monitoring, turning system insights into actionable
@@ -489,13 +498,246 @@
               </div>
             </div>
           </div>
+          <div class="mt-12 text-center lg:hidden">
+            <a
+              href="#contact"
+              class="bg-[#3F5FDD] text-white font-semibold px-8 py-3 text-base hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+              >Introduction Call</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- <section
+        id="process"
+        class="py-20 md:py-32 bg-black border-y border-gray-800"
+      >
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-1 lg:sticky top-28">
+              <h2
+                class="text-5xl md:text-6xl font-bold text-white fade-in-section"
+              >
+                Our Proven Process
+              </h2>
+              <p
+                class="text-xl text-gray-300 mt-6 fade-in-section"
+                style="transition-delay: 100ms"
+              >
+                From initial idea to final launch, we've engineered a process
+                that ensures clarity, predictability, and quality at every step.
+                This is how we build extraordinary software, together.
+              </p>
+              <div class="mt-8 hidden lg:block fade-in-section">
+                <a
+                  href="#contact"
+                  class="bg-[#3F5FDD] text-white font-semibold px-8 py-3 text-base hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
+                  >Introduction Call</a
+                >
+              </div>
+            </div>
+
+            <div class="lg:col-span-2">
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    01
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">
+                    Introduction Call
+                  </h3>
+                  <p class="text-gray-300">
+                    We hold a structured, two-way conversation to understand
+                    your vision, challenges, and goals. We'll provide a
+                    transparent overview of our process, ensuring we both have a
+                    confident decision on our fit as partners.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    02
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">
+                    Clarify the Why
+                  </h3>
+                  <p class="text-gray-300">
+                    We dig deep to get to the heart of your project's 'why' and
+                    what success truly looks like. By mapping out your product
+                    needs against practical limits like budget and timeline, we
+                    create a feasible roadmap for your vision.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    03
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">Proposal</h3>
+                  <p class="text-gray-300">
+                    Building on our shared understanding, we present your
+                    tailored game plan. This comprehensive proposal clearly
+                    outlines the cost, deliverables, timeline, and team
+                    structure, giving you full confidence in the path ahead.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    04
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">
+                    Build Mode: ON
+                  </h3>
+                  <p class="text-gray-300">
+                    With the game plan in place, we translate high-level
+                    requirements into actionable tasks. Our team establishes a
+                    clear collaboration protocol and primes the technical
+                    environment for a purposeful and efficient build.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    05
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">Pulse</h3>
+                  <p class="text-gray-300">
+                    Your project comes alive in a steady "Pulse" of focused,
+                    two-week development cycles. This rhythm makes progress
+                    visible and maintains alignment, culminating in our core
+                    promise: a demonstration of working software every two
+                    weeks.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    06
+                  </div>
+                  <div class="w-px h-full bg-gray-700"></div>
+                </div>
+                <div class="pb-12">
+                  <h3 class="text-2xl font-bold text-white mb-2">
+                    The Quality Gate
+                  </h3>
+                  <p class="text-gray-300">
+                    Before launch, we ensure total readiness. Every feature is
+                    rigorously tested against our highest standards, and we
+                    prepare your operational environment and empower your team
+                    for a seamless, confident go-live.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex fade-in-section">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+                  >
+                    07
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white mb-2">
+                    Beyond Launch
+                  </h3>
+                  <p class="text-gray-300">
+                    With your solution live, our focus shifts to ensuring its
+                    ongoing success. We provide robust support and proactive
+                    monitoring, turning system insights into actionable
+                    intelligence that informs your next strategic move.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 text-center lg:hidden">
+            <a
+              href="#contact"
+              class="bg-[#3F5FDD] text-white font-semibold px-8 py-3 text-base hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+              >Introduction Call</a
+            >
+          </div>
+        </div>
+      </section> -->
+      <section
+        class="min-h-screen flex items-center py-20 md:py-32 text-white"
+        style="
+          background: linear-gradient(
+            to bottom,
+            #000000,
+            #0a1a62,
+            #3f5fdd,
+            #0a1a62,
+            #000000
+          );
+        "
+      >
+        <div class="container mx-auto px-6">
+          <div class="max-w-3xl mx-auto text-left">
+            <h2 class="text-5xl md:text-6xl font-bold fade-in-section">
+              The Partner You've Been Searching For...
+            </h2>
+            <p
+              class="text-xl text-gray-200 mt-8 fade-in-section"
+              style="transition-delay: 100ms"
+            >
+              The search for a capable dev partner shouldn't end in frustration
+              and chaos. We've designed a clear path for leaders who are ready
+              to stop micromanaging and start building the extraordinary
+              software their vision demands.
+            </p>
+            <div class="mt-8 fade-in-section" style="transition-delay: 200ms">
+              <a
+                href="./partnertship.html"
+                class="text-[#99C4FE] text-xl font-semibold hover:underline transition-all duration-300"
+              >
+                Continue reading...
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer
-      class="bg-[#181818] text-gray-300 border-t border-gray-800 min-h-screen flex items-center"
-    >
+    <footer class="bg-black text-gray-300 min-h-screen flex items-center">
       <div class="container mx-auto px-6 py-24">
         <div class="grid grid-cols-1 md:grid-cols-10 gap-16">
           <!-- Left: Bio & Newsletter -->
@@ -507,7 +749,7 @@
                 class="h-6 w-auto"
               />
             </a>
-            <div class="text-gray-400 text-base mb-12">
+            <div class="text-gray-300 text-base mb-12">
               <p>
                 Stackit is a software development agency. With a specialty in
                 business systems, SaaS, and critical application design, we're
@@ -620,7 +862,7 @@
                 </div>
               </div>
             </div>
-            <div class="mt-12">
+            <div class="w-full mt-12 flex flex-col items-center md:items-start">
               <img
                 src="success-coded-white-transparent.png"
                 alt="Success. Coded."
@@ -634,13 +876,13 @@
 
     <div
       id="contact-panel"
-      class="fixed inset-y-0 right-0 z-[60] w-full max-w-5xl bg-[#181818] shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden"
+      class="fixed inset-y-0 right-0 z-[60] w-full max-w-5xl bg-black shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden"
     >
       <div class="relative h-full flex flex-col">
         <div class="absolute top-0 right-0 pt-6 pr-6">
           <button
             id="close-panel-btn"
-            class="text-gray-400 hover:text-white transition-colors"
+            class="text-gray-300 hover:text-white transition-colors"
           >
             <svg
               class="w-8 h-8"
@@ -684,11 +926,11 @@
             </div>
           </div>
 
-          <div class="bg-[#181818] p-8 md:p-12 flex flex-col justify-center">
+          <div class="bg-black p-8 md:p-12 flex flex-col justify-center">
             <h2 class="text-3xl font-bold text-white mb-2">
               Think we can help?
             </h2>
-            <p class="text-xl text-gray-400 mb-8">
+            <p class="text-xl text-gray-300 mb-8">
               Share the challenge you’re facing or the outcome you’re aiming
               for, and let’s get started.
             </p>
@@ -697,7 +939,7 @@
                 <div>
                   <label
                     for="full-name"
-                    class="block text-sm font-medium text-gray-400"
+                    class="block text-sm font-medium text-gray-300"
                     >Full Name</label
                   >
                   <input
@@ -711,7 +953,7 @@
                 <div>
                   <label
                     for="contact-info"
-                    class="block text-sm font-medium text-gray-400"
+                    class="block text-sm font-medium text-gray-300"
                     >Email or Phone Number</label
                   >
                   <input
@@ -724,7 +966,7 @@
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium text-gray-400"
+                    class="block text-sm font-medium text-gray-300"
                     >What do you want to build?</label
                   >
                   <textarea
@@ -751,7 +993,7 @@
 
     <div
       id="overlay"
-      class="fixed inset-0 z-50 bg-[#181818] opacity-0 hidden transition-opacity duration-500 ease-in-out"
+      class="fixed inset-0 z-50 bg-black opacity-0 hidden transition-opacity duration-500 ease-in-out"
     ></div>
 
     <script>
