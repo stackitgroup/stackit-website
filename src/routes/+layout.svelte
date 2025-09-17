@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css'
-	import SiteHeader from '$lib/components/site-header.svelte'
-	import SiteFooter from '$lib/components/site-footer.svelte'
+	// import SiteHeader from '$lib/components/site-header.svelte'
+	// import SiteFooter from '$lib/components/site-footer.svelte'
 	import favicon from '$lib/assets/logo.webp'
 	import { onMount } from 'svelte'
 
@@ -25,6 +25,6 @@
 	<title>StackIt - Your Success Partner</title>
 </svelte:head>
 
-<SiteHeader />
+<!-- <SiteHeader /> -->
 {@render children?.()}
-<SiteFooter />
+<!-- <SiteFooter /> -->
