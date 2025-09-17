@@ -23,6 +23,7 @@
 			if (overlay && contactPanel) {
 				overlay.classList.remove('hidden')
 				contactPanel.classList.remove('hidden')
+				document.documentElement.style.overflow = 'hidden'
 				document.body.style.overflow = 'hidden'
 
 				requestAnimationFrame(() => {
@@ -40,6 +41,7 @@
 				setTimeout(() => {
 					overlay.classList.add('hidden')
 					contactPanel.classList.add('hidden')
+					document.documentElement.style.overflow = ''
 					document.body.style.overflow = ''
 				}, 500)
 			}
@@ -75,16 +77,23 @@
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
+		overflow-x: hidden;
 	}
 	:global(body) {
 		font-family: 'Figtree', sans-serif;
-		background-color: #ffffff;
+		background-color: #181818;
 		color: #1f2937;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		overflow-x: hidden;
+		position: relative;
 	}
 	:global(.gradient-text) {
-		background: linear-gradient(to right, #00BBDD, #3CFEFF);
+		background: linear-gradient(
+          to right,
+          #5878e8,
+          #3f5fdd
+        );
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -117,290 +126,509 @@
 	:global(.timeline-item:last-child::before) {
 		display: none;
 	}
+	:global(*) {
+		box-sizing: border-box;
+	}
+	:global(.container) {
+		max-width: 100%;
+	}
+	/* Mejorar el scroll en dispositivos móviles */
+	:global(body) {
+		-webkit-overflow-scrolling: touch;
+	}
+	/* Prevenir scroll horizontal */
+	:global(.container) {
+		overflow-x: hidden;
+	}
+	:global(main) {
+		overflow-x: hidden;
+	}
 </style>
-
-<!-- Header -->
-<header id="header" class="bg-black fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-	<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-		<span class="flex items-center">
-			<img src="stackit-logo-white-purple.png" alt="Stackit Logo" class="h-9 w-auto">
-		</span>
+<header
+	id="header"
+	class="bg-[#181818] border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
+>
+	<div class="container mx-auto px-6 py-4 flex justify-between items-center"
+	>
+		<a href="index.html" class="flex items-center">
+			<img
+				src="stackit_logo_white.png"
+				alt="Stackit Logo"
+				class="h-9 w-auto"
+			/>
+		</a>
 		<div class="flex items-center space-x-6">
-			<a href="#contact" class="bg-transparent border-2 border-[#2F5CEC] text-white font-semibold px-6 py-3 text-base hover:bg-[#2F5CEC] hover:text-white transition-colors duration-300 rounded-lg">Introduction Call</a>
+			<a
+				href="#contact"
+				class="bg-transparent text-white border-2 border-[#3F5FDD] font-semibold px-6 py-3 text-base hover:bg-[#3F5FDD] hover:text-white transition-colors duration-300 rounded-lg"
+			>Meet the team</a
+			>
 		</div>
 	</div>
 </header>
 
 <main>
-	<!-- Hero Section -->
-	<section class="min-h-screen flex items-center bg-black">
+	<section class="min-h-screen flex items-center bg-[#181818] pt-24">
 		<div class="container mx-auto px-6 text-center">
 			<div class="max-w-5xl mx-auto">
-				<h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 fade-in-section">
-					Your External Dev Team with <span class="gradient-text">In-House Drive</span>
+				<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 fade-in-section"
+				>
+					Your External Dev Team with
+					<span class="gradient-text">In-House Drive</span>
 				</h1>
-				<p class="text-2xl md:text-4xl text-gray-300 max-w-4xl mx-auto fade-in-section" style="transition-delay: 150ms;">
-					Build extraordinary software, with a partner who shares your standards.
+				<p
+					class="text-xl sm:text-2xl md:text-4xl text-gray-400 max-w-4xl mx-auto fade-in-section"
+					style="transition-delay: 150ms"
+				>
+					Build extraordinary software, with a partner who shares your
+					standards.
 				</p>
-				<div class="mt-10 fade-in-section" style="transition-delay: 300ms;">
-					<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl">Get Started</a>
+				<div class="mt-10 fade-in-section" style="transition-delay: 300ms">
+					<a
+						href="#contact"
+						class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+					>Get Started</a
+					>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- The Stakes Section -->
-	<section class="min-h-screen flex items-center bg-black">
+	<section class="min-h-screen flex items-center bg-[#181818] border-y border-gray-800"
+	>
 		<div class="container mx-auto px-6 text-center">
 			<div class="max-w-5xl mx-auto fade-in-section">
-				<h2 class="text-5xl md:text-7xl font-bold text-white mb-12">Finding a good team shouldn't be so hard</h2>
-				<p class="text-2xl md:text-4xl text-gray-300">
-					Leaders with great ideas shouldn't have to struggle to find a competent, high-performing team to execute their vision.
+				<h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-12"
+				>
+					Finding a good team shouldn't be so hard
+				</h2>
+				<p class="text-xl sm:text-2xl md:text-4xl text-gray-400">
+					Leaders with great ideas shouldn't have to struggle to find a
+					competent, high-performing team to execute their vision.
 				</p>
-				<div class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6">
-					<a href="#case-study" id="case-study" class="bg-transparent border-2 border-gray-300 text-gray-300 font-semibold px-20 py-5 hover:bg-gray-300 hover:text-black transition-colors duration-300 text-xl inline-block rounded-2xl">View Our Latest Case Study</a>
-					<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-2xl inline-block rounded-2xl">Let's Discuss</a>
+				<div class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6"
+				>
+					<span class="bg-transparent border-2 border-white text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl hover:bg-white hover:text-[#181818] transition-colors duration-300 inline-block rounded-2xl"
+					>View Case Studies</span
+					>
+					<a
+						href="#contact"
+						class="bg-[#3F5FDD] text-white font-semibold px-12 py-5 text-xl sm:px-24 sm:py-6 sm:text-2xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+					>Let's Discuss</a
+					>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- In-House Drive Section -->
-	<section class="py-20 md:py-32 bg-black">
+	<section class="min-h-dvh py-20 md:py-32 bg-[#181818] border-y border-gray-800"
+	>
 		<div class="container mx-auto px-6">
 			<div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
-				<h2 class="text-4xl md:text-6xl font-bold text-white">Your external team should feel like a top in-house team.</h2>
-				<p class="text-xl md:text-2xl text-gray-300 mt-6">We deliver that experience.</p>
+				<h2 class="text-4xl md:text-6xl font-bold text-white">
+					Your external team should feel like a top in-house team.
+				</h2>
+				<p class="text-xl md:text-2xl text-gray-400 mt-6">
+					We deliver that experience.
+				</p>
 			</div>
 			<div class="grid md:grid-cols-3 gap-8">
-				<!-- Card 1 -->
-				<div class="bg-gray-900/50 p-8 rounded-xl border border-white/20 backdrop-blur-sm fade-in-section" style="transition-delay: 100ms;">
+				<div
+					class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+					style="transition-delay: 100ms"
+				>
 					<div class="mb-5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-12 w-12 text-white"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86L15.428 6.572a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86L6.572 15.428z" /></svg>
+							viewBox="0 0 640 640"
+							class="h-12 w-12 text-[#99C4FE]"
+							fill="currentColor"
+						>
+							<path d="M288 64C323.3 64 352 85.5 352 112C352 122.4 347.6 132 340 139.9C333.4 146.8 328 155.2 328 164.8C328 179.8 340.2 192 355.2 192L400 192C426.5 192 448 213.5 448 240L448 284.8C448 299.8 460.2 312 475.2 312C484.7 312 493.2 306.6 500.1 300C508 292.5 517.6 288 528 288C554.5 288 576 316.7 576 352C576 387.3 554.5 416 528 416C517.6 416 507.9 411.6 500.1 404C493.2 397.4 484.8 392 475.2 392C460.2 392 448 404.2 448 419.2L448 528C448 554.5 426.5 576 400 576L343.2 576C330.4 576 320 565.6 320 552.8C320 543.6 325.8 535.5 333.2 530C344.8 521.3 352 509.3 352 496C352 469.5 323.3 448 288 448C252.7 448 224 469.5 224 496C224 509.3 231.2 521.3 242.8 530C250.2 535.5 256 543.5 256 552.8C256 565.6 245.6 576 232.8 576L112 576C85.5 576 64 554.5 64 528L64 407.2C64 394.4 74.4 384 87.2 384C96.4 384 104.5 389.8 110 397.2C118.7 408.8 130.7 416 144 416C170.5 416 192 387.3 192 352C192 316.7 170.5 288 144 288C130.7 288 118.7 295.2 110 306.8C104.5 314.2 96.5 320 87.2 320C74.4 320 64 309.6 64 296.8L64 240C64 213.5 85.5 192 112 192L220.8 192C235.8 192 248 179.8 248 164.8C248 155.3 242.6 146.8 236 139.9C228.5 132 224 122.4 224 112C224 85.5 252.7 64 288 64z"
+							/>
+						</svg>
 					</div>
-					<h3 class="text-3xl font-bold text-white mb-3">Designed to Integrate</h3>
-					<p class="text-xl text-gray-300">Our <strong>In-House Drive</strong> is defined by three key principles: <strong>rigorous engineering discipline</strong>, <strong>deep collaboration</strong>, and an <strong>ingrained entrepreneurial spirit</strong>.</p>
+					<h3 class="text-3xl font-bold text-white mb-3">
+						Designed to Integrate
+					</h3>
+					<p class="text-xl text-gray-400">
+						Our <strong>In-House Drive</strong> is defined by three key
+						principles: <strong>rigorous engineering discipline</strong>,
+						<strong>deep collaboration</strong>, and an
+						<strong>ingrained entrepreneurial spirit</strong>.
+					</p>
 				</div>
-				<!-- Card 2 -->
-				<div class="bg-gray-900/50 p-8 rounded-xl border border-white/20 backdrop-blur-sm fade-in-section" style="transition-delay: 200ms;">
+				<div
+					class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+					style="transition-delay: 200ms"
+				>
 					<div class="mb-5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-12 w-12 text-white"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+							viewBox="0 0 640 640"
+							class="h-12 w-12 text-[#99C4FE]"
+							fill="currentColor"
+						>
+							<path d="M320.3 192L235.7 51.1C229.2 40.3 215.6 36.4 204.4 42L117.8 85.3C105.9 91.2 101.1 105.6 107 117.5L176.6 256.6C146.5 290.5 128.3 335.1 128.3 384C128.3 490 214.3 576 320.3 576C426.3 576 512.3 490 512.3 384C512.3 335.1 494 290.5 464 256.6L533.6 117.5C539.5 105.6 534.7 91.2 522.9 85.3L436.2 41.9C425 36.3 411.3 40.3 404.9 51L320.3 192zM351.1 334.5C352.5 337.3 355.1 339.2 358.1 339.6L408.2 346.9C415.9 348 418.9 357.4 413.4 362.9L377.1 398.3C374.9 400.5 373.9 403.5 374.4 406.6L383 456.5C384.3 464.1 376.3 470 369.4 466.4L324.6 442.8C321.9 441.4 318.6 441.4 315.9 442.8L271.1 466.4C264.2 470 256.2 464.2 257.5 456.5L266.1 406.6C266.6 403.6 265.6 400.5 263.4 398.3L227.1 362.9C221.5 357.5 224.6 348.1 232.3 346.9L282.4 339.6C285.4 339.2 288.1 337.2 289.4 334.5L311.8 289.1C315.2 282.1 325.1 282.1 328.6 289.1L351 334.5z"
+							/>
+						</svg>
 					</div>
-					<h3 class="text-3xl font-bold text-white mb-3">Your Success is Our Success</h3>
-					<p class="text-xl text-gray-300">True Partnerships are forged from the shared pursuit of excellence and the drive to create something truly impactful. It's the foundation we're built on.</p>
+					<h3 class="text-3xl font-bold text-white mb-3">
+						Your Success is Our Success
+					</h3>
+					<p class="text-xl text-gray-400">
+						True <strong>Partnerships</strong> are forged from the
+						<strong>shared pursuit of excellence</strong> and the drive to
+						create something truly impactful. It's the foundation we're
+						built on.
+					</p>
 				</div>
-				<!-- Card 3 -->
-				<div class="bg-gray-900/50 p-8 rounded-xl border border-white/20 backdrop-blur-sm fade-in-section" style="transition-delay: 300ms;">
+				<div
+					class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+					style="transition-delay: 300ms"
+				>
 					<div class="mb-5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="h-12 w-12 text-white"
+							class="h-12 w-12 text-[#99C4FE]"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
-							stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+							/>
+						</svg>
 					</div>
-					<h3 class="text-3xl font-bold text-white mb-3">More Than Just Code</h3>
-					<p class="text-xl text-gray-300">Exceptional Software is the result. As one cohesive team, you get more than just code—you get the perfect storm for innovation.</p>
+					<h3 class="text-3xl font-bold text-white mb-3">
+						More Than Just Code
+					</h3>
+					<p class="text-xl text-gray-400">
+						Exceptional Software is the result. As one cohesive team, you
+						get more than just code—you get the perfect storm for
+						<strong>innovation</strong>.
+					</p>
 				</div>
 			</div>
 			<div class="mt-16 text-center fade-in-section">
-				<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl">Meet the Team</a>
+				<a
+					href="#process"
+					class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
+				>Discover Our Process</a
+				>
 			</div>
 		</div>
 	</section>
-
-	<!-- Complicated Product Section -->
-	<section class="py-20 md:py-32 bg-black">
-		<div class="container mx-auto px-6">
-			<div class="grid md:grid-cols-2 gap-16 items-center">
-				<div class="fade-in-section">
-					<h2 class="text-5xl md:text-6xl font-bold text-white leading-tight">We know that creating a great product is complicated.</h2>
-					<div class="mt-10">
-						<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl">Let's Talk</a>
+	<section class="py-20 md:py-32 bg-[#181818] min-h-dvh flex items-center">
+		<div class="container mx-auto p-6">
+			<div class="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center"
+			>
+				<div
+					class="md:order-2 space-y-8 fade-in-section"
+					style="transition-delay: 150ms"
+				>
+					<div class="flex items-start">
+						<svg
+							class="w-8 h-8 text-[#99C4FE] mr-4 mt-1 flex-shrink-0"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+							></path>
+						</svg>
+						<p class="text-xl text-gray-300">
+							Our
+							<strong class="text-[#99C4FE]">Proven Process</strong> brings
+							structure and discipline to development, replacing chaos with
+							clarity, predictability, and quality.
+						</p>
+					</div>
+					<div class="flex items-start">
+						<svg
+							class="w-8 h-8 text-[#99C4FE] mr-4 mt-1 flex-shrink-0"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+							></path>
+						</svg>
+						<p class="text-xl text-gray-300">
+							We make
+							<strong class="text-[#99C4FE]">deep collaboration</strong> a
+							priority, which does more than prevent misunderstandings—it
+							builds the shared purpose and creative energy that define a
+							winning team.
+						</p>
+					</div>
+					<div class="flex items-start">
+						<svg
+							class="w-8 h-8 text-[#99C4FE] mr-4 mt-1 flex-shrink-0"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+							></path>
+						</svg>
+						<p class="text-xl text-gray-300">
+							We're
+							<strong class="text-[#99C4FE]">entrepreneurs at heart</strong
+							>. We bring a deep personal stake to your project,
+							transforming your vision into an extraordinary product.
+						</p>
 					</div>
 				</div>
-				<div class="space-y-8 fade-in-section" style="transition-delay: 150ms;">
-					<div class="flex items-start">
-						<svg
-							class="w-8 h-8 text-[#2F5CEC] mr-4 mt-1 flex-shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-						<p class="text-xl text-gray-300">Our <strong>Proven Process</strong> brings structure and discipline to development, replacing chaos with clarity, predictability, and quality.</p>
+				<div class="order-first md:order-1 fade-in-section text-center md:text-left"
+				>
+					<h2 class="text-5xl md:text-6xl font-bold text-white leading-tight"
+					>
+						We know that creating a great product is complicated.
+					</h2>
+					<div class="mt-10 hidden md:block">
+						<a
+							href="#contact"
+							class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
+						>Let's Talk</a
+						>
 					</div>
-					<div class="flex items-start">
-						<svg
-							class="w-8 h-8 text-[#2F5CEC] mr-4 mt-1 flex-shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-						<p class="text-xl text-gray-300">We make <strong>deep collaboration</strong> a priority, which does more than prevent misunderstandings—it builds the shared purpose and creative energy that define a winning team.</p>
-					</div>
-					<div class="flex items-start">
-						<svg
-							class="w-8 h-8 text-[#2F5CEC] mr-4 mt-1 flex-shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-						<p class="text-xl text-gray-300">We're <strong>entrepreneurs at heart</strong>. We bring a deep personal stake to your project, transforming your vision into an extraordinary product.</p>
-					</div>
+				</div>
+				<div class="order-last mt-12 md:hidden text-center">
+					<a
+						href="#contact"
+						class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
+					>Let's Talk</a
+					>
 				</div>
 			</div>
-			<!-- Trusted By Logos -->
 			<div class="mt-32 fade-in-section">
-				<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
-					<a href="https://www.siemens.com/global/en.html" target="_blank" rel="noopener noreferrer">
+				<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8"
+				>
+					<a
+						href="https://www.siemens.com/global/en.html"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
-							src="Siemens-logo.png"
+							src="Siemens-logo-gray.png"
 							alt="Siemens Logo"
-							class="h-11 w-auto opacity-80 transition-all duration-300"
-							style="filter: invert(1)">
+							class="h-11 w-auto transition-all duration-300"
+							style="filter: brightness(0) invert(1) opacity(0.7)"
+						/>
 					</a>
-					<a href="https://www.i2sl.org/" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.i2sl.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
 							src="i2sl-logo.png"
 							alt="I2SL Logo"
-							class="h-11 w-auto opacity-80 transition-all duration-300"
-							style="filter: invert(1)">
+							class="h-11 w-auto transition-all duration-300"
+							style="filter: brightness(0) invert(1) opacity(0.7)"
+						/>
 					</a>
-					<a href="https://www.aircuity.com/" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.aircuity.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
 							src="aircuity_logo.png"
 							alt="Aircuity Logo"
-							class="h-11 w-auto opacity-80 transition-all duration-300"
-							style="filter: invert(1)">
+							class="h-11 w-auto transition-all duration-300"
+							style="filter: brightness(0) invert(1) opacity(0.7)"
+						/>
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Our Proven Process Section -->
-	<section id="process" class="py-20 md:py-32 bg-black">
+	<section
+		id="process"
+		class="py-20 md:py-32 bg-[#181818] border-y border-gray-800"
+	>
 		<div class="container mx-auto px-6">
-			<div class="text-center max-w-4xl mx-auto mb-20 fade-in-section">
-				<h2 class="text-5xl md:text-6xl font-bold text-white">Our Proven Process</h2>
-				<p class="text-xl md:text-2xl text-gray-300 mt-6">From initial idea to final launch, we've engineered a process that ensures clarity, predictability, and quality at every step. This is how we build extraordinary software, together.</p>
-			</div>
-			<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-x-12 gap-y-16">
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">1</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Introduction Call</h3>
-						<p class="text-lg text-gray-300">We hold a structured, two-way conversation to understand your vision, challenges, and goals.</p>
+			<div class="grid lg:grid-cols-3 gap-12 items-start">
+				<div class="lg:col-span-1 lg:sticky top-24">
+					<h2 class="text-5xl md:text-6xl font-bold text-white fade-in-section"
+					>
+						Our Proven Process
+					</h2>
+					<p
+						class="text-xl text-gray-400 mt-6 fade-in-section"
+						style="transition-delay: 100ms"
+					>
+						We bring structure and discipline to development, replacing
+						chaos with clarity, predictability, and quality.
+					</p>
+					<div class="mt-6 fade-in-section">
+						<a
+							href="#contact"
+							class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+						>Introduction Call</a
+						>
 					</div>
 				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">2</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Clarify the Why</h3>
-						<p class="text-lg text-gray-300">We dig deep to get to the heart of your project's 'why' and what success truly looks like.</p>
+
+				<div class="lg:col-span-2 grid sm:grid-cols-2 gap-x-8 gap-y-12">
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">01</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							Introduction Call
+						</h3>
+						<p class="text-gray-400">
+							A structured, two-way conversation to understand your vision
+							and ensure we're the right fit as partners.
+						</p>
+					</div>
+
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">02</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							Clarify the Why
+						</h3>
+						<p class="text-gray-400">
+							We dig deep to uncover your project's core purpose and map
+							your needs to a feasible, practical roadmap.
+						</p>
+					</div>
+
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">03</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							Proposal
+						</h3>
+						<p class="text-gray-400">
+							We deliver a comprehensive game plan outlining cost,
+							deliverables, and timeline, giving you full confidence.
+						</p>
+					</div>
+
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">04</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							Build Mode: ON
+						</h3>
+						<p class="text-gray-400">
+							Our team translates requirements into actionable tasks and
+							primes the technical environment for an efficient build.
+						</p>
+					</div>
+
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">05</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">Pulse</h3>
+						<p class="text-gray-400">
+							Your project comes alive in two-week development cycles, with
+							a working software demo every two weeks.
+						</p>
+					</div>
+
+					<div class="fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">06</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							The Quality Gate
+						</h3>
+						<p class="text-gray-400">
+							Every feature is rigorously tested to our highest standards,
+							ensuring a seamless and confident go-live.
+						</p>
+					</div>
+
+					<div class="sm:col-span-2 fade-in-section">
+						<div class="text-5xl font-black text-[#99C4FE]">07</div>
+						<h3 class="text-2xl font-bold text-white mt-4 mb-2">
+							Beyond Launch
+						</h3>
+						<p class="text-gray-400">
+							With your solution live, our focus shifts to ensuring its
+							ongoing success. We provide robust support and proactive
+							monitoring, turning system insights into actionable
+							intelligence that informs your next strategic move.
+						</p>
 					</div>
 				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">3</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Proposal</h3>
-						<p class="text-lg text-gray-300">Building on our shared understanding, we present your tailored game plan.</p>
-					</div>
-				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">4</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Build Mode: ON</h3>
-						<p class="text-lg text-gray-300">With the game plan in place, we translate high-level requirements into actionable tasks.</p>
-					</div>
-				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">5</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Pulse</h3>
-						<p class="text-lg text-gray-300">Your project comes alive in a steady "Pulse" of focused, two-week development cycles.</p>
-					</div>
-				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">6</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">The Quality Gate</h3>
-						<p class="text-lg text-gray-300">Before launch, we ensure total readiness. Every feature is rigorously tested against our highest standards.</p>
-					</div>
-				</div>
-				<div class="fade-in-section flex items-start">
-					<div class="text-5xl font-black gradient-text mr-6 mt-[-2px]">7</div>
-					<div>
-						<h3 class="text-2xl font-bold text-white mb-3">Beyond Launch</h3>
-						<p class="text-lg text-gray-300">With your solution live, our focus shifts to ensuring its ongoing success. We provide robust support and proactive monitoring.</p>
-					</div>
-				</div>
-			</div>
-			<div class="mt-20 pt-20 fade-in-section text-center">
-				<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl">Introduction Call</a>
 			</div>
 		</div>
 	</section>
 </main>
 
-<!-- Footer -->
-<footer class="bg-black text-gray-300 border-t border-gray-800 min-h-screen flex items-center">
+<footer class="bg-[#181818] text-gray-300 border-t border-gray-800 min-h-screen flex items-center"
+>
 	<div class="container mx-auto px-6 py-24">
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-16">
 			<!-- Left: Bio & Newsletter -->
 			<div class="md:col-span-7">
-				<span class="inline-block mb-6">
-					<img src="stackit-logo-white-white.png" alt="Stackit Logo" class="h-6 w-auto">
-				</span>
+				<a href="index.html" class="inline-block mb-6">
+					<img
+						src="stackit-logo-white-white.png"
+						alt="Stackit Logo"
+						class="h-6 w-auto"
+					/>
+				</a>
 				<div class="text-gray-400 text-base mb-12">
 					<p>
-						Stackit is a software development agency. With a specialty in business systems, SaaS, and critical application design, we're the preferred partner for companies that want to build extraordinary software with a team that shares their standards. We provide a true software development partnership, built on a culture of deep collaboration and rigorous engineering discipline. We give you the confidence of a great in-house team, freeing you to innovate at speed.
+						Stackit is a software development agency. With a specialty in
+						business systems, SaaS, and critical application design, we're
+						the preferred partner for companies that want to build
+						extraordinary software with a team that shares their standards.
+						We provide a true software development partnership, built on a
+						culture of deep collaboration and rigorous engineering
+						discipline. We give you the confidence of a great in-house team,
+						freeing you to innovate at speed.
 					</p>
 					<p class="mt-4 font-semibold text-gray-300">San Diego, CA</p>
 				</div>
-				<h2 class="text-2xl font-bold text-white mb-4">Insights for your inbox</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">
+					Insights for your inbox
+				</h2>
 				<form class="flex">
 					<input
 						type="email"
 						placeholder="Enter your email"
 						class="w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#2F5CEC]"
-						required>
-					<button type="submit" class="bg-[#2F5CEC] text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-[#234baf] transition-colors">
+						required
+					/>
+					<button
+						type="submit"
+						aria-label="Submit newsletter subscription"
+						class="bg-[#2F5CEC] text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-[#234baf] transition-colors"
+					>
 						<svg
 							class="w-6 h-6"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M14 5l7 7m0 0l-7 7m7-7H3"
+							></path>
+						</svg>
 					</button>
 				</form>
 			</div>
@@ -417,10 +645,19 @@
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
-								stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+								/>
 							</svg>
-							<a href="mailto:hello@stackitgroup.com" class="hover:text-white transition-colors">hello@stackitgroup.com</a>
+							<a
+								href="mailto:hello@stackitgroup.com"
+								class="hover:text-white transition-colors"
+							>hello@stackitgroup.com</a
+							>
 						</p>
 						<p class="flex items-center">
 							<svg
@@ -429,101 +666,161 @@
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
-								stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+								/>
 							</svg>
-							<a href="tel:+16199175387" class="hover:text-white transition-colors">+1 (619) 917-5387</a>
+							<a
+								href="tel:+16199175387"
+								class="hover:text-white transition-colors"
+							>+1 (619) 917-5387</a
+							>
 						</p>
 						<div class="flex items-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="h-5 w-5 mr-3 text-gray-500"
 								fill="currentColor"
-								viewBox="0 0 24 24">
-								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+								viewBox="0 0 24 24"
+							>
+								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+								/>
 							</svg>
 							<a
 								href="https://www.linkedin.com/company/stackit/"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-semibold text-white hover:underline">LinkedIn</a>
+								class="font-semibold text-white hover:underline"
+							>LinkedIn</a
+							>
 						</div>
 					</div>
 				</div>
 				<div class="mt-12">
-					<img src="success-coded-white-transparent.png" alt="Success. Coded." class="h-16 w-auto">
+					<img
+						src="success-coded-white-transparent.png"
+						alt="Success. Coded."
+						class="h-16 w-auto"
+					/>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
 
-<!-- Contact Form Slide-out Panel -->
-<div id="contact-panel" class="fixed top-0 right-0 z-[60] w-full max-w-4xl h-screen bg-black text-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
-	<div class="relative h-full flex flex-col overflow-y-auto">
-		<div class="sticky top-0 right-0 pt-6 pr-6 z-10 flex justify-end">
-			<button id="close-panel-btn" class="text-gray-400 hover:text-white transition-colors bg-gray-800 rounded-full p-2 shadow-md">
+<div
+	id="contact-panel"
+	class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-[#181818] shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden overflow-y-auto"
+>
+	<div class="relative h-full flex flex-col">
+		<div class="absolute top-0 right-0 pt-6 pr-6">
+			<button
+				aria-label="Close panel"
+				id="close-panel-btn"
+				class="text-gray-400 hover:text-white transition-colors"
+			>
 				<svg
-					class="w-6 h-6"
+					class="w-8 h-8"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"><path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M6 18L18 6M6 6l12 12"></path></svg>
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12"
+					></path>
+				</svg>
 			</button>
 		</div>
-		<div class="flex-1 flex flex-col lg:grid lg:grid-cols-2">
-			<!-- Left Side: What Happens Next -->
-			<div class="bg-gray-900 p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center min-h-[50vh] lg:min-h-0">
-				<h3 class="text-2xl md:text-3xl font-bold text-white mb-6" id="contact">What happens next?</h3>
+		<div class="flex-grow grid grid-cols-1 md:grid-cols-2">
+			<div class="bg-[#0A1A62] p-8 md:p-12 flex flex-col justify-center">
+				<h3 class="text-3xl font-bold text-white mb-6">
+					What happens next?
+				</h3>
 				<div class="space-y-6">
 					<div>
-						<h4 class="text-lg md:text-xl font-bold text-white">1. Introduction Call</h4>
-						<p class="text-base md:text-lg text-gray-300 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
+						<h4 class="text-xl font-bold text-white" id="contact">
+							1. Introduction Call
+						</h4>
+						<p class="text-lg text-gray-300 mt-2">
+							We hold a structured, two-way conversation to understand your
+							vision, challenges, and goals. We'll provide a transparent
+							overview of our process, ensuring we both have a confident
+							decision on our fit as partners.
+						</p>
 					</div>
 					<div class="pt-4 border-t border-gray-700">
-						<p class="text-sm text-gray-500">A member of our team will reach out within one business day to schedule your call.</p>
+						<p class="text-sm text-gray-500">
+							A member of our team will reach out within one business day to
+							schedule your call.
+						</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- Right Side: Form -->
-			<div class="p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center bg-black min-h-[50vh] lg:min-h-0">
-				<h2 class="text-3xl font-bold text-white mb-2">Think we can help?</h2>
-				<p class="text-xl text-gray-300 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
+			<div class="bg-[#181818] p-8 md:p-12 flex flex-col justify-center">
+				<h2 class="text-3xl font-bold text-white mb-2">
+					Think we can help?
+				</h2>
+				<p class="text-xl text-gray-400 mb-8">
+					Share the challenge you’re facing or the outcome you’re aiming
+					for, and let’s get started.
+				</p>
 				<form action="#" method="POST">
-					<div class="space-y-4 md:space-y-6">
+					<div class="space-y-6">
 						<div>
-							<label for="full-name" class="block text-sm font-medium text-gray-400">Full Name</label>
+							<label
+								for="full-name"
+								class="block text-sm font-medium text-gray-400"
+							>Full Name</label
+							>
 							<input
 								type="text"
 								name="full-name"
 								id="full-name"
 								autocomplete="name"
-								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md">
+								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+							/>
 						</div>
 						<div>
-							<label for="contact-info" class="block text-sm font-medium text-gray-400">Email or Phone Number</label>
+							<label
+								for="contact-info"
+								class="block text-sm font-medium text-gray-400"
+							>Email or Phone Number</label
+							>
 							<input
 								type="text"
 								name="contact-info"
 								id="contact-info"
-								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md">
+								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+							/>
 						</div>
 						<div>
-							<label for="message" class="block text-sm font-medium text-gray-400">What do you want to build?</label>
+							<label
+								for="message"
+								class="block text-sm font-medium text-gray-400"
+							>What do you want to build?</label
+							>
 							<textarea
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md resize-vertical"></textarea>
+								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+							></textarea>
 						</div>
 					</div>
-					<div class="mt-6 md:mt-8">
-						<button type="submit" class="w-full bg-[#2F5CEC] text-white font-semibold px-6 py-3 md:px-8 md:py-4 hover:bg-[#234baf] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2F5CEC] text-lg md:text-xl rounded-xl">
+					<div class="mt-8">
+						<button
+							type="submit"
+							class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block rounded-2xl"
+						>
 							Send
 						</button>
 					</div>
@@ -533,5 +830,7 @@
 	</div>
 </div>
 
-<!-- Overlay for Slide-out -->
-<div id="overlay" class="fixed inset-y-0 right-0 z-50 bg-black opacity-0 hidden transition-opacity duration-500 ease-in-out"></div>
+<div
+	id="overlay"
+	class="fixed inset-0 z-[9998] bg-[#181818] opacity-0 hidden transition-opacity duration-500 ease-in-out"
+></div>
