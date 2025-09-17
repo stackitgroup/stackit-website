@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte'
-	import logoWhiteBackground from '$lib/assets/logo-2025-white-background.png'
 
 	onMount(() => {
 		// Fade-in animations on scroll
@@ -123,9 +122,9 @@
 <!-- Header -->
 <header id="header" class="bg-black fixed top-0 left-0 right-0 z-50 transition-all duration-300">
 	<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-		<a href="index.html" class="flex items-center">
+		<span class="flex items-center">
 			<img src="stackit-logo-white-purple.png" alt="Stackit Logo" class="h-9 w-auto">
-		</a>
+		</span>
 		<div class="flex items-center space-x-6">
 			<a href="#contact" class="bg-transparent border-2 border-[#2F5CEC] text-white font-semibold px-6 py-3 text-base hover:bg-[#2F5CEC] hover:text-white transition-colors duration-300 rounded-lg">Introduction Call</a>
 		</div>
@@ -159,7 +158,7 @@
 					Leaders with great ideas shouldn't have to struggle to find a competent, high-performing team to execute their vision.
 				</p>
 				<div class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6">
-					<a href="case-study.html" class="bg-transparent border-2 border-gray-300 text-gray-300 font-semibold px-20 py-5 hover:bg-gray-300 hover:text-black transition-colors duration-300 text-xl inline-block rounded-2xl">View Our Latest Case Study</a>
+					<a href="#case-study" id="case-study" class="bg-transparent border-2 border-gray-300 text-gray-300 font-semibold px-20 py-5 hover:bg-gray-300 hover:text-black transition-colors duration-300 text-xl inline-block rounded-2xl">View Our Latest Case Study</a>
 					<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-2xl inline-block rounded-2xl">Let's Discuss</a>
 				</div>
 			</div>
@@ -375,9 +374,9 @@
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-16">
 			<!-- Left: Bio & Newsletter -->
 			<div class="md:col-span-7">
-				<a href="index.html" class="inline-block mb-6">
+				<span class="inline-block mb-6">
 					<img src="stackit-logo-white-white.png" alt="Stackit Logo" class="h-6 w-auto">
-				</a>
+				</span>
 				<div class="text-gray-400 text-base mb-12">
 					<p>
 						Stackit is a software development agency. With a specialty in business systems, SaaS, and critical application design, we're the preferred partner for companies that want to build extraordinary software with a team that shares their standards. We provide a true software development partnership, built on a culture of deep collaboration and rigorous engineering discipline. We give you the confidence of a great in-house team, freeing you to innovate at speed.
@@ -460,12 +459,12 @@
 </footer>
 
 <!-- Contact Form Slide-out Panel -->
-<div id="contact-panel" class="fixed inset-y-0 right-0 z-[60] w-full max-w-5xl bg-black text-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
-	<div class="relative h-full flex flex-col">
-		<div class="absolute top-0 right-0 pt-6 pr-6">
-			<button id="close-panel-btn" class="text-gray-400 hover:text-white transition-colors">
+<div id="contact-panel" class="fixed top-0 right-0 z-[60] w-full max-w-4xl h-screen bg-black text-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
+	<div class="relative h-full flex flex-col overflow-y-auto">
+		<div class="sticky top-0 right-0 pt-6 pr-6 z-10 flex justify-end">
+			<button id="close-panel-btn" class="text-gray-400 hover:text-white transition-colors bg-gray-800 rounded-full p-2 shadow-md">
 				<svg
-					class="w-8 h-8"
+					class="w-6 h-6"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
@@ -476,14 +475,14 @@
 					d="M6 18L18 6M6 6l12 12"></path></svg>
 			</button>
 		</div>
-		<div class="flex-grow grid grid-cols-1 md:grid-cols-2">
+		<div class="flex-1 flex flex-col lg:grid lg:grid-cols-2">
 			<!-- Left Side: What Happens Next -->
-			<div class="bg-gray-900 p-8 md:p-12 flex flex-col justify-center">
-				<h3 class="text-3xl font-bold text-white mb-6">What happens next?</h3>
+			<div class="bg-gray-900 p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center min-h-[50vh] lg:min-h-0">
+				<h3 class="text-2xl md:text-3xl font-bold text-white mb-6" id="contact">What happens next?</h3>
 				<div class="space-y-6">
 					<div>
-						<h4 class="text-xl font-bold text-white">1. Introduction Call</h4>
-						<p class="text-lg text-gray-300 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
+						<h4 class="text-lg md:text-xl font-bold text-white">1. Introduction Call</h4>
+						<p class="text-base md:text-lg text-gray-300 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
 					</div>
 					<div class="pt-4 border-t border-gray-700">
 						<p class="text-sm text-gray-500">A member of our team will reach out within one business day to schedule your call.</p>
@@ -492,11 +491,11 @@
 			</div>
 
 			<!-- Right Side: Form -->
-			<div class="p-8 md:p-12 flex flex-col justify-center bg-black">
+			<div class="p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center bg-black min-h-[50vh] lg:min-h-0">
 				<h2 class="text-3xl font-bold text-white mb-2">Think we can help?</h2>
 				<p class="text-xl text-gray-300 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
 				<form action="#" method="POST">
-					<div class="space-y-6">
+					<div class="space-y-4 md:space-y-6">
 						<div>
 							<label for="full-name" class="block text-sm font-medium text-gray-400">Full Name</label>
 							<input
@@ -504,7 +503,7 @@
 								name="full-name"
 								id="full-name"
 								autocomplete="name"
-								class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md">
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md">
 						</div>
 						<div>
 							<label for="contact-info" class="block text-sm font-medium text-gray-400">Email or Phone Number</label>
@@ -512,7 +511,7 @@
 								type="text"
 								name="contact-info"
 								id="contact-info"
-								class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md">
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md">
 						</div>
 						<div>
 							<label for="message" class="block text-sm font-medium text-gray-400">What do you want to build?</label>
@@ -520,11 +519,11 @@
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md"></textarea>
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-base md:text-lg text-white rounded-md resize-vertical"></textarea>
 						</div>
 					</div>
-					<div class="mt-8">
-						<button type="submit" class="w-full bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2F5CEC] text-xl inline-block rounded-2xl">
+					<div class="mt-6 md:mt-8">
+						<button type="submit" class="w-full bg-[#2F5CEC] text-white font-semibold px-6 py-3 md:px-8 md:py-4 hover:bg-[#234baf] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2F5CEC] text-lg md:text-xl rounded-xl">
 							Send
 						</button>
 					</div>

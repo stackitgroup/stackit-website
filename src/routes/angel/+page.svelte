@@ -124,9 +124,9 @@
 >
 	<div class="container mx-auto px-6 py-4 flex justify-between items-center"
 	>
-		<a href="index.html" class="flex items-center">
+		<span class="flex items-center">
 			<img src="stackit_logo.png" alt="Stackit Logo" class="h-9 w-auto" />
-		</a>
+		</span>
 		<div class="flex items-center space-x-6">
 			<a
 				href="#contact"
@@ -182,10 +182,10 @@
 				<div class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6"
 				>
 					<a
-						href="case-study.html"
+						href="#case-study"
+						id="case-study"
 						class="bg-transparent border-2 border-black text-black font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl hover:bg-black hover:text-white transition-colors duration-300 inline-block rounded-2xl"
-					>View Case Studies</a
-					>
+					>View Case Studies</a>
 					<a
 						href="#contact"
 						class="bg-[#3F5FDD] text-white font-semibold px-12 py-5 text-xl sm:px-24 sm:py-6 sm:text-2xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
@@ -692,16 +692,16 @@
 
 <div
 	id="contact-panel"
-	class="fixed inset-y-0 right-0 z-[60] w-full max-w-5xl bg-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden"
+	class="fixed top-0 right-0 z-[60] w-full max-w-4xl h-screen bg-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden"
 >
-	<div class="relative h-full flex flex-col">
-		<div class="absolute top-0 right-0 pt-6 pr-6">
+	<div class="relative h-full flex flex-col overflow-y-auto">
+		<div class="sticky top-0 right-0 pt-6 pr-6 z-10 flex justify-end">
 			<button
 				id="close-panel-btn"
-				class="text-gray-500 hover:text-gray-800 transition-colors"
+				class="text-gray-500 hover:text-gray-800 transition-colors bg-white rounded-full p-2 shadow-md"
 			>
 				<svg
-					class="w-8 h-8"
+					class="w-6 h-6"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
@@ -716,17 +716,17 @@
 				</svg>
 			</button>
 		</div>
-		<div class="flex-grow grid grid-cols-1 md:grid-cols-2">
-			<div class="bg-gray-50 p-8 md:p-12 flex flex-col justify-center">
-				<h3 class="text-3xl font-bold text-black mb-6">
+		<div class="flex-1 flex flex-col lg:grid lg:grid-cols-2">
+			<div class="bg-gray-50 p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center min-h-[50vh] lg:min-h-0">
+				<h3 class="text-2xl md:text-3xl font-bold text-black mb-6" id="contact">
 					What happens next?
 				</h3>
 				<div class="space-y-6">
 					<div>
-						<h4 class="text-xl font-bold text-black">
+						<h4 class="text-lg md:text-xl font-bold text-black">
 							1. Introduction Call
 						</h4>
-						<p class="text-lg text-gray-700 mt-2">
+						<p class="text-base md:text-lg text-gray-700 mt-2">
 							We hold a structured, two-way conversation to understand your
 							vision, challenges, and goals. We'll provide a transparent
 							overview of our process, ensuring we both have a confident
@@ -742,8 +742,8 @@
 				</div>
 			</div>
 
-			<div class="p-8 md:p-12 flex flex-col justify-center">
-				<h2 class="text-3xl font-bold text-black mb-2">
+			<div class="p-6 md:p-8 lg:p-12 flex flex-col justify-start lg:justify-center min-h-[50vh] lg:min-h-0">
+				<h2 class="text-2xl md:text-3xl font-bold text-black mb-2">
 					Think we can help?
 				</h2>
 				<p class="text-xl text-gray-700 mb-8">
@@ -751,7 +751,7 @@
 					for, and let’s get started.
 				</p>
 				<form action="#" method="POST">
-					<div class="space-y-6">
+					<div class="space-y-4 md:space-y-6">
 						<div>
 							<label
 								for="full-name"
@@ -763,7 +763,7 @@
 								name="full-name"
 								id="full-name"
 								autocomplete="name"
-								class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-base md:text-lg"
 							/>
 						</div>
 						<div>
@@ -776,7 +776,7 @@
 								type="text"
 								name="contact-info"
 								id="contact-info"
-								class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-base md:text-lg"
 							/>
 						</div>
 						<div>
@@ -789,14 +789,14 @@
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-3 py-2 md:px-4 md:py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-base md:text-lg resize-vertical"
 							></textarea>
 						</div>
 					</div>
-					<div class="mt-8">
+					<div class="mt-6 md:mt-8">
 						<button
 							type="submit"
-							class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block rounded-2xl"
+							class="w-full bg-[#3F5FDD] text-white font-semibold px-6 py-3 md:px-8 md:py-4 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-lg md:text-xl rounded-xl"
 						>
 							Send
 						</button>
