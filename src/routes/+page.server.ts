@@ -2,6 +2,12 @@ import { fail, type Actions } from '@sveltejs/kit'
 import { ENVIRONMENT, SECRET_GOOGLE_CHAT_WEBHOOK_URL } from '$env/static/private'
 import { z } from 'zod'
 import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+
+// Configurar plugins de DayJS
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 // Schema para validar contactInfo como email o teléfono
 const contactInfoSchema = z.string()
@@ -53,8 +59,8 @@ export const actions: Actions = {
 
 		try {
 			// Construir el mensaje para Google Chat
-			const date = dayjs()
-			const formattedDate = `${date.format('MMMM DD, YYYY')} at ${date.format('h:mm A')}`
+			const pstDate = dayjs().tz('America/Los_Angeles')
+			const formattedDate = `${pstDate.format('MMMM DD, YYYY')} at ${pstDate.format('h:mm A')} PST`
 
 			const chatMessage = {
 				text: `New contact form submission:
