@@ -3,7 +3,7 @@
 	import SiteFooter from '$lib/components/site-footer.svelte'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import { Toaster } from 'svelte-sonner'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 	import '../app.css'
 	import { browser } from '$app/environment'
 	import { PUBLIC_GA_ID } from '$env/static/public'
@@ -24,7 +24,7 @@
 			// Asegúrate de que la función gtag() global exista antes de llamarla
 			if (typeof window.gtag === 'function') {
 				window.gtag('config', PUBLIC_GA_ID, {
-					page_path: $page.url.pathname
+					page_path: page.url.pathname
 				})
 			}
 		}
@@ -48,11 +48,11 @@
 	<meta name="keywords" content={keywords} />
 	<meta name="author" content="Stackit Group" />
 	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href={`${siteUrl}${$page.url.pathname}`} />
+	<link rel="canonical" href={`${siteUrl}${page.url.pathname}`} />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content={`${siteUrl}${$page.url.pathname}`} />
+	<meta property="og:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta property="og:title" content={siteTitle} />
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
@@ -60,7 +60,7 @@
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content={`${siteUrl}${$page.url.pathname}`} />
+	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
 
