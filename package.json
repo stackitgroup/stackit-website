@@ -12,6 +12,7 @@
 		"@tailwindcss/forms": "0.5.10",
 		"@tailwindcss/typography": "0.5.16",
 		"@tailwindcss/vite": "4.1.13",
+		"@types/node": "^24.5.2",
 		"@vitest/browser": "3.2.4",
 		"eslint": "9.35.0",
 		"eslint-plugin-svelte": "3.12.3",
@@ -48,8 +49,9 @@
 		"test:unit": "vitest"
 	},
 	"type": "module",
-	"version": "0.0.1",
+	"version": "4.0.0",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.9"
+		"@sveltejs/adapter-static": "^3.0.9",
+		"svelte-sonner": "^1.0.5"
 	}
 }
