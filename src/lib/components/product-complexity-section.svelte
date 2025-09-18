@@ -1,7 +1,7 @@
 <script>
-	import SiemensLogo from '$lib/assets/siemens-logo.webp'
-	import I2SLLogo from '$lib/assets/i2sl-logo.webp'
-	import AircuityLogo from '$lib/assets/aircuity-logo.webp'
+	import AircuityLogo from '$lib/assets/aircuity-logo.webp';
+	import I2SLLogo from '$lib/assets/i2sl-logo.webp';
+	import SiemensLogo from '$lib/assets/siemens-logo.webp';
 </script>
 
 <section class="py-20 md:py-32 bg-black min-h-dvh flex items-center">
@@ -84,7 +84,7 @@
 				>
 					We know that creating a great product is complicated
 				</h2>
-				<div class="mt-10 hidden md:block">
+				<div class="mt-20 md:mt-8 hidden md:block">
 					<a
 						href="#contact"
 						class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
@@ -94,15 +94,15 @@
 			</div>
 		</div>
 
-		<div class="mt-20 md:mt-32 fade-in-section">
-			<div class="mt-16 md:hidden text-center">
+		<div class="mt-20 md:mt-24 fade-in-section">
+			<div class="md:hidden text-center">
 				<a
 					href="#contact"
 					class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
 				>Let's Talk</a
 				>
 			</div>
-			<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-16"
+			<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-20 md:mt-24"
 			>
 				<a
 					href="https://www.siemens.com/global/en.html"

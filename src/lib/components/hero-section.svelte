@@ -1,4 +1,4 @@
-<section class="min-h-screen flex items-center bg-black pt-20">
+<section class="min-h-dvh flex items-center bg-black py-20 md:py-32">
 	<div class="container mx-auto px-6 text-center">
 		<div class="max-w-5xl mx-auto">
 			<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 fade-in-section">

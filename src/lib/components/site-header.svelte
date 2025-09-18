@@ -1,5 +1,5 @@
 <script>
-	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp'
+	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp';
 </script>
 
 <!-- Skip link for accessibility -->
@@ -26,7 +26,7 @@
 		<div class="flex items-center space-x-6">
 			<a
 				href="#contact"
-				class="bg-[#2F5CEC] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
+				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
 			>Introduction Call</a
 			>
 		</div>

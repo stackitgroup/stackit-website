@@ -168,10 +168,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-12 text-center lg:hidden">
+	
+		<div class="flex items-center justify-center  space-x-6 lg:hidden mt-12">
 			<a
 				href="#contact"
-				class="bg-[#3F5FDD] text-white font-semibold px-8 py-3 text-base hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-2xl"
+				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
 			>Introduction Call</a
 			>
 		</div>
