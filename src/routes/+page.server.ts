@@ -12,8 +12,23 @@ dayjs.extend(timezone)
 function sanitizeMessage(message: string): string {
 	if (!message) return message
 
+	// PROTECCIÓN CONTRA XSS Y HTML
+	// Remover todas las etiquetas HTML (incluyendo scripts, enlaces, etc)
+	let sanitized = message.replace(/<[^>]*>/gi, '[HTML tag removed]')
+
+	// Remover contenido JavaScript específico
+	sanitized = sanitized.replace(/javascript:/gi, '[JavaScript removed]')
+	sanitized = sanitized.replace(/on\w+\s*=/gi, '[Event handler removed]')
+
+	// Remover entidades HTML que podrían ser usadas para bypass
+	sanitized = sanitized.replace(/&[#a-zA-Z0-9]+;/gi, '[HTML entity removed]')
+
+	// Remover data: URIs que podrían contener código
+	sanitized = sanitized.replace(/data:\s*[^;]+;/gi, '[Data URI removed]')
+
+	// PROTECCIÓN CONTRA LINKS Y CONTACTO
 	// Remover URLs completas (http, https, ftp, www)
-	let sanitized = message.replace(/(https?:\/\/[^\s]+)/gi, '[URL removed]')
+	sanitized = sanitized.replace(/(https?:\/\/[^\s]+)/gi, '[URL removed]')
 	sanitized = sanitized.replace(/(www\.[^\s]+)/gi, '[URL removed]')
 	sanitized = sanitized.replace(/(ftp:\/\/[^\s]+)/gi, '[URL removed]')
 
@@ -31,6 +46,10 @@ function sanitizeMessage(message: string): string {
 
 	// Remover hashtags que podrían ser links
 	sanitized = sanitized.replace(/(#[a-zA-Z0-9_]+)/g, '[Hashtag removed]')
+
+	// LIMPIEZA FINAL
+	// Remover múltiples espacios y saltos de línea excesivos
+	sanitized = sanitized.replace(/\s+/g, ' ')
 
 	return sanitized.trim()
 }
