@@ -12,7 +12,7 @@
 
 <header
 	id="header"
-	class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
+	class="bg-black border-b border-gray-800 sticky top-0 left-0 right-0 z-50"
 >
 	<div class="container mx-auto px-6 py-4 flex justify-between items-center"
 	>

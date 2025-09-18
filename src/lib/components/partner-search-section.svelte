@@ -3,6 +3,7 @@
 
 	onMount(() => {
 		const readMoreBtn = document.getElementById('readMoreBtn')
+		const header = document.getElementById('header')
 		const expandedContent = document.getElementById('expandedContent')
 		const closeContentBtn = document.getElementById('closeContentBtn')
 
@@ -18,10 +19,15 @@
 				if (shouldScroll) {
 					// Wait a moment for the transition to start, then scroll
 					setTimeout(() => {
-						expandedContent.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start'
-						})
+						// Calculate header height dynamically (fallback to any <header> element)
+						const headerEl = header || document.getElementById('header') || document.querySelector('header')
+						const headerHeight = headerEl ? headerEl.offsetHeight : 0
+						// small extra offset so content isn't pressed against the header
+						const extraOffset = 12
+						// Compute absolute Y coordinate of the expanded content
+						const rect = expandedContent.getBoundingClientRect()
+						const targetY = window.pageYOffset + rect.top - headerHeight - extraOffset
+						window.scrollTo({ top: targetY, behavior: 'smooth' })
 					}, 300) // 300ms delay
 				}
 			}
