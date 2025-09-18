@@ -146,7 +146,7 @@
 						<button
 							type="submit"
 							disabled={isSubmitting}
-							class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+							class="w-full border-2 border-white text-black font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl bg-white ease-in-out duration-300 inline-block rounded-2xl hover:opacity-80 opacity-100"
 						>
 							{#if isSubmitting}
 								Sending...

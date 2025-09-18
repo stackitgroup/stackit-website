@@ -12,36 +12,24 @@
 
 <header
 	id="header"
-	class="bg-[#181818] border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
-
+	class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50"
 >
-	<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-		<div class="flex items-center">
+	<div class="container mx-auto px-6 py-4 flex justify-between items-center"
+	>
+		<a href="index.html" class="flex items-center">
 			<img
 				src={StackitLogoWhite}
-				alt="Stackit - Your External Dev Team with In-House Drive"
+				alt="Stackit Logo"
 				class="h-9 w-auto"
-				width="120"
-				height="36"
 			/>
+		</a>
+		<div class="flex items-center space-x-6">
+			<a
+				href="#contact"
+				class="bg-[#2F5CEC] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
+			>Introduction Call</a
+			>
 		</div>
-
-		<nav aria-label="Main navigation">
-			<ul class="flex items-center space-x-6">
-				<li>
-					<a
-						href="#contact"
-						class="bg-transparent text-white border-2 border-[#3F5FDD] font-semibold px-6 py-3 text-base hover:bg-[#3F5FDD] hover:text-white transition-colors duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#181818]"
-						aria-describedby="contact-description"
-					>
-						Meet the team
-					</a>
-					<span id="contact-description" class="sr-only">
-						Contact us to discuss your project needs
-					</span>
-				</li>
-			</ul>
-		</nav>
 	</div>
 </header>
 

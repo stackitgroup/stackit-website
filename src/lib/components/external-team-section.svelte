@@ -1,12 +1,13 @@
-	<section class="min-h-dvh py-20 md:py-32 bg-[#181818] border-y border-gray-800"
->
+    <section class="min-h-dvh py-20 md:py-32 bg-black">
 	<div class="container mx-auto px-6">
 		<div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
-			<h2 class="text-4xl md:text-6xl font-bold text-white">
-				Your external team should feel like a top in-house team.
+			<h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-12 text-left md:text-center"
+			>
+				Your external team should feel like a top in-house team
 			</h2>
-			<p class="text-xl md:text-2xl text-gray-400 mt-6">
-				We deliver that experience.
+			<p class="text-xl sm:text-2xl md:text-5xl text-gray-300 italic text-left md:text-center"
+			>
+				We deliver that experience
 			</p>
 		</div>
 		<div class="grid md:grid-cols-3 gap-8">
@@ -28,11 +29,10 @@
 				<h3 class="text-3xl font-bold text-white mb-3">
 					Designed to Integrate
 				</h3>
-				<p class="text-xl text-gray-400">
-					Our <strong>In-House Drive</strong> is defined by three key
-					principles: <strong>rigorous engineering discipline</strong>,
-					<strong>deep collaboration</strong>, and an
-					<strong>ingrained entrepreneurial spirit</strong>.
+				<p class="text-xl text-gray-300">
+					Our In-House Drive is defined by three key principles: rigorous
+					engineering discipline, deep collaboration, and an ingrained
+					entrepreneurial spirit.
 				</p>
 			</div>
 			<div
@@ -53,11 +53,10 @@
 				<h3 class="text-3xl font-bold text-white mb-3">
 					Your Success is Our Success
 				</h3>
-				<p class="text-xl text-gray-400">
-					True <strong>Partnerships</strong> are forged from the
-					<strong>shared pursuit of excellence</strong> and the drive to
-					create something truly impactful. It's the foundation we're
-					built on.
+				<p class="text-xl text-gray-300">
+					True partnerships are forged from the shared pursuit of
+					excellence and the drive to create something truly impactful.
+					It's the foundation we're built on.
 				</p>
 			</div>
 			<div
@@ -83,18 +82,18 @@
 				<h3 class="text-3xl font-bold text-white mb-3">
 					More Than Just Code
 				</h3>
-				<p class="text-xl text-gray-400">
-					Exceptional Software is the result. As one cohesive team, you
+				<p class="text-xl text-gray-300">
+					Exceptional software is the result. As one cohesive team, you
 					get more than just code—you get the perfect storm for
-					<strong>innovation</strong>.
+					innovation.
 				</p>
 			</div>
 		</div>
 		<div class="mt-16 text-center fade-in-section">
 			<a
-				href="#process"
-				class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
-			>Discover Our Process</a
+				href="#contact"
+				class="bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 text-xl inline-block rounded-2xl"
+			>Meet the Team</a
 			>
 		</div>
 	</div>

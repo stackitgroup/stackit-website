@@ -4,9 +4,9 @@
 	import AircuityLogo from '$lib/assets/aircuity-logo.png'
 </script>
 
-<section class="py-20 md:py-32 bg-[#181818] min-h-dvh flex items-center">
+<section class="py-20 md:py-32 bg-black min-h-dvh flex items-center">
 	<div class="container mx-auto p-6">
-		<div class="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center"
+		<div class="flex flex-col gap-12 md:grid md:grid-cols-2 md:gap-16 md:items-center"
 		>
 			<div
 				class="md:order-2 space-y-8 fade-in-section"
@@ -28,10 +28,11 @@
 						></path>
 					</svg>
 					<p class="text-xl text-gray-300">
-						Our
-						<strong class="text-[#99C4FE]">Proven Process</strong> brings
-						structure and discipline to development, replacing chaos with
-						clarity, predictability, and quality.
+						Our proven process brings structure and discipline to
+						development, replacing chaos with
+						<strong class="text-[#99C4FE]">clarity</strong>,
+						<strong class="text-[#99C4FE]">predictability</strong>, and
+						<strong class="text-[#99C4FE]">quality</strong>.
 					</p>
 				</div>
 				<div class="flex items-start">
@@ -50,11 +51,9 @@
 						></path>
 					</svg>
 					<p class="text-xl text-gray-300">
-						We make
-						<strong class="text-[#99C4FE]">deep collaboration</strong> a
-						priority, which does more than prevent misunderstandings—it
-						builds the shared purpose and creative energy that define a
-						winning team.
+						We make deep collaboration a priority, which does more than
+						prevent misunderstandings—it builds the shared purpose and
+						creative energy that define a winning team.
 					</p>
 				</div>
 				<div class="flex items-start">
@@ -73,18 +72,17 @@
 						></path>
 					</svg>
 					<p class="text-xl text-gray-300">
-						We're
-						<strong class="text-[#99C4FE]">entrepreneurs at heart</strong
-						>. We bring a deep personal stake to your project,
-						transforming your vision into an extraordinary product.
+						We're entrepreneurs at heart. We bring a deep personal stake
+						to your project, transforming your vision into an
+						extraordinary product.
 					</p>
 				</div>
 			</div>
 			<div class="order-first md:order-1 fade-in-section text-center md:text-left"
 			>
-				<h2 class="text-5xl md:text-6xl font-bold text-white leading-tight"
+				<h2 class="text-5xl md:text-6xl font-bold text-white leading-tight text-left"
 				>
-					We know that creating a great product is complicated.
+					We know that creating a great product is complicated
 				</h2>
 				<div class="mt-10 hidden md:block">
 					<a
@@ -94,63 +92,52 @@
 					>
 				</div>
 			</div>
-			<div class="order-last mt-12 md:hidden text-center">
+		</div>
+
+		<div class="mt-20 md:mt-32 fade-in-section">
+			<div class="mt-16 md:hidden text-center">
 				<a
 					href="#contact"
 					class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
 				>Let's Talk</a
 				>
 			</div>
-		</div>
-		<div class="mt-32 fade-in-section">
-			<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8"
+			<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-16"
 			>
 				<a
 					href="https://www.siemens.com/global/en.html"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Visit Siemens website (opens in new tab)"
 				>
 					<img
 						src={SiemensLogo}
-						alt="Siemens - trusted partner and client"
-						class="h-11 w-auto transition-all duration-300"
-						style="filter: brightness(0) invert(1) opacity(0.7)"
-						loading="lazy"
-						width="120"
-						height="44"
+						alt="Siemens Logo"
+						class="h-11 w-auto opacity-80 transition-all duration-300"
+						style="filter: invert(1)"
 					/>
 				</a>
 				<a
 					href="https://www.i2sl.org/"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Visit I2SL website (opens in new tab)"
 				>
 					<img
 						src={I2SLLogo}
-						alt="I2SL - International Institute for Sustainable Laboratories partner"
-						class="h-11 w-auto transition-all duration-300"
-						style="filter: brightness(0) invert(1) opacity(0.7)"
-						loading="lazy"
-						width="120"
-						height="44"
+						alt="I2SL Logo"
+						class="h-11 w-auto opacity-80 transition-all duration-300"
+						style="filter: invert(1)"
 					/>
 				</a>
 				<a
 					href="https://www.aircuity.com/"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Visit Aircuity website (opens in new tab)"
 				>
 					<img
 						src={AircuityLogo}
-						alt="Aircuity - building optimization solutions partner"
-						class="h-11 w-auto transition-all duration-300"
-						style="filter: brightness(0) invert(1) opacity(0.7)"
-						loading="lazy"
-						width="120"
-						height="44"
+						alt="Aircuity Logo"
+						class="h-11 w-auto opacity-80 transition-all duration-300"
+						style="filter: invert(1)"
 					/>
 				</a>
 			</div>
