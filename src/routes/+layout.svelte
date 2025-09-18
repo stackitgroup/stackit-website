@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/stackit_isologo.png'
+	import favicon from '$lib/assets/stackit-isologo.png'
 	import SiteFooter from '$lib/components/site-footer.svelte'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import { Toaster } from 'svelte-sonner'

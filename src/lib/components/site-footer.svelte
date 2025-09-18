@@ -1,16 +1,19 @@
-<footer class="bg-[#181818] text-gray-300 border-t border-gray-800 min-h-screen flex items-center"
->
+<script>
+	import StackitLogoWhiteWhite from '$lib/assets/stackit-logo-white-white.png'
+</script>
+
+<footer class="bg-[#181818] text-gray-300 border-t border-gray-800 min-h-screen flex items-center">
 	<div class="container mx-auto px-6 py-24">
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-16">
 			<!-- Left: Bio & Newsletter -->
 			<div class="md:col-span-7">
-				<a href="index.html" class="inline-block mb-6">
+				<span class="inline-block mb-6">
 					<img
-						src="stackit-logo-white-white.png"
+						src={StackitLogoWhiteWhite}
 						alt="Stackit Logo"
 						class="h-6 w-auto"
 					/>
-				</a>
+				</span>
 				<div class="text-gray-400 text-base mb-12">
 					<p>
 						Stackit is a software development agency. With a specialty in

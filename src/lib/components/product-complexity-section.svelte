@@ -1,4 +1,10 @@
-	<section class="py-20 md:py-32 bg-[#181818] min-h-dvh flex items-center">
+<script>
+	import SiemensLogo from '$lib/assets/siemens-logo.png'
+	import I2SLLogo from '$lib/assets/i2sl-logo.png'
+	import AircuityLogo from '$lib/assets/aircuity-logo.png'
+</script>
+
+<section class="py-20 md:py-32 bg-[#181818] min-h-dvh flex items-center">
 	<div class="container mx-auto p-6">
 		<div class="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center"
 		>
@@ -105,7 +111,7 @@
 					rel="noopener noreferrer"
 				>
 					<img
-						src="siemens-logo.png"
+						src={SiemensLogo}
 						alt="Siemens Logo"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
@@ -117,7 +123,7 @@
 					rel="noopener noreferrer"
 				>
 					<img
-						src="i2sl-logo.png"
+						src={I2SLLogo}
 						alt="I2SL Logo"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
@@ -129,7 +135,7 @@
 					rel="noopener noreferrer"
 				>
 					<img
-						src="aircuity_logo.png"
+						src={AircuityLogo}
 						alt="Aircuity Logo"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
