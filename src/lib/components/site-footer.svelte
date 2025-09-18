@@ -40,6 +40,7 @@
 						required
 					/>
 					<button
+						aria-label="Subscribe to newsletter"
 						type="submit"
 						class="bg-[#2F5CEC] text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-[#234baf] transition-colors"
 					>
