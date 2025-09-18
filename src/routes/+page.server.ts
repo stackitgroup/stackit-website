@@ -9,7 +9,6 @@ import timezone from 'dayjs/plugin/timezone'
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-// Función para sanitizar el mensaje y remover links/URLs
 function sanitizeMessage(message: string): string {
 	if (!message) return message
 
@@ -51,12 +50,12 @@ const contactInfoSchema = z.string()
 const contactFormSchema = z.object({
 	fullName: z.string()
 		.min(1, 'Full name is required.')
-		.min(8, 'Full name must be at least 8 characters long.'),
+		.min(3, 'Full name must be at least 8 characters long.'),
 	contactInfo: contactInfoSchema,
 	message: z.string()
 		.min(1, 'Message is required.')
-		.min(8, 'Message must be at least 8 characters long.')
-		.transform(sanitizeMessage) // Sanitizar el mensaje automáticamente
+		.min(3, 'Message must be at least 8 characters long.')
+		.transform(sanitizeMessage)
 })
 
 export const actions: Actions = {
