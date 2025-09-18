@@ -2,7 +2,7 @@
 	<div class="container mx-auto px-6">
 		<div class="grid lg:grid-cols-3 gap-12 items-start">
 			<div class="lg:col-span-1 lg:sticky top-28">
-				<h2 class="text-5xl md:text-6xl font-bold text-white fade-in-section"
+				<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white fade-in-section"
 				>
 					Our proven process
 				</h2>
@@ -17,9 +17,12 @@
 				<div class="mt-8 hidden lg:block fade-in-section">
 					<a
 						href="#contact"
-						class="bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-2xl"
-					>Introduction Call</a
-					>
+						class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
+					>Introduction Call</a>
+					<!-- <a
+					href="#contact"
+					class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg">Get
+					Started</a> -->
 				</div>
 			</div>
 
@@ -169,12 +172,10 @@
 			</div>
 		</div>
 	
-		<div class="flex items-center justify-center  space-x-6 lg:hidden mt-12">
+		<div class="flex items-center justify-center space-x-6 lg:hidden mt-12">
 			<a
-				href="#contact"
-				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
-			>Introduction Call</a
-			>
+        href="#contact"
+        class="bg-[#3F5FDD] text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block  w-full md:w-auto rounded-lg">Introduction Call</a>
 		</div>
 	</div>
 </section>

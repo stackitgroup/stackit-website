@@ -74,8 +74,9 @@
 >
 	<div class="container mx-auto px-6">
 		<div class="max-w-3xl mx-auto text-left">
-			<h2 class="text-5xl md:text-6xl font-bold fade-in-section">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold fade-in-section">
 				The partner you've been searching for...
+
 			</h2>
 			<p
 				class="text-xl text-gray-200 mt-8 fade-in-section"
