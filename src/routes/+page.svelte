@@ -28,38 +28,6 @@
 			observer.observe(section)
 		})
 
-		// Expandable Section Logic
-		const readMoreBtn = document.getElementById('readMoreBtn')
-		const expandedContent = document.getElementById('expandedContent')
-		const closeContentBtn = document.getElementById('closeContentBtn')
-
-		const toggleContent = (shouldScroll = false) => {
-			if (!expandedContent) return
-			if (expandedContent.style.maxHeight) {
-				// Action to COLLAPSE the section
-				expandedContent.style.maxHeight = ''
-			}
-			else {
-				// Action to EXPAND the section
-				expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px'
-				if (shouldScroll) {
-					// Wait a moment for the transition to start, then scroll
-					setTimeout(() => {
-						expandedContent.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start'
-						})
-					}, 300) // 300ms delay
-				}
-			}
-		}
-
-		// When "Continue reading..." is clicked, expand and scroll
-		if (readMoreBtn) readMoreBtn.addEventListener('click', () => toggleContent(true))
-
-		// When the close button is clicked, collapse without scrolling
-		if (closeContentBtn) closeContentBtn.addEventListener('click', () => toggleContent(false))
-
 		// Cleanup function
 		return () => {
 			observer.disconnect()
