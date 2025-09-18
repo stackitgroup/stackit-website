@@ -61,7 +61,16 @@ export default defineConfig([
 			'svelte/max-attributes-per-line': ['error', { multiline: 1, singleline: 3 }],
 			'svelte/first-attribute-linebreak': ['error', { multiline: 'below', singleline: 'beside' }],
 			'svelte/html-closing-bracket-spacing': 'error',
-			'svelte/no-spaces-around-equal-signs-in-attribute': 'error'
+			'svelte/no-spaces-around-equal-signs-in-attribute': 'error',
+			'svelte/no-navigation-without-resolve': [
+				'error',
+				{
+					ignoreGoto: false,
+					ignoreLinks: true,
+					ignorePushState: false,
+					ignoreReplaceState: false
+				}
+			]
 		}
 	}
 ])

@@ -2,6 +2,7 @@
 	import { enhance } from '$app/forms'
 	import { toast } from 'svelte-sonner'
 	import type { SubmitFunction } from '@sveltejs/kit'
+	import { sharedEmail } from '$lib/stores/email'
 
 	let isSubmitting = $state(false)
 
@@ -114,13 +115,13 @@
 							<label
 								for="contact-info"
 								class="block text-sm font-medium text-gray-400"
-							>Email or Phone Number</label
-							>
+							>Email</label>
 							<input
-								type="text"
+								type="email"
 								name="contactInfo"
 								id="contact-info"
 								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								bind:value={$sharedEmail}
 								disabled={isSubmitting}
 								required
 							/>
