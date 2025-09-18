@@ -1,5 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/stackit-isologo.webp'
+	import ogImage from '$lib/assets/stackit-isologo.webp'
 	import SiteFooter from '$lib/components/site-footer.svelte'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import { Toaster } from 'svelte-sonner'
@@ -57,7 +58,7 @@
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+	<meta property="og:image" content={ogImage} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
@@ -67,7 +68,7 @@
 	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
-	<meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
+	<meta name="twitter:image" content={ogImage} />
 	<meta name="twitter:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
 
 	<!-- Favicon and icons -->
@@ -91,7 +92,7 @@
 		name: 'Stackit Group',
 		url: siteUrl,
 		description: siteDescription,
-		logo: `${siteUrl}/stackit-logo.webp`,
+		logo: ogImage,
 		contactPoint: {
 		'@type': 'ContactPoint',
 		contactType: 'customer service',
