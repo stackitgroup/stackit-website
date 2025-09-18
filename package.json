@@ -52,6 +52,7 @@
 	"version": "4.0.1",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.9",
-		"svelte-sonner": "^1.0.5"
+		"svelte-sonner": "^1.0.5",
+		"zod": "^4.1.9"
 	}
 }

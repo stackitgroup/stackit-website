@@ -1,63 +1,26 @@
 <script lang="ts">
+	import { enhance } from '$app/forms'
 	import { toast } from 'svelte-sonner'
+	import type { SubmitFunction } from '@sveltejs/kit'
 
-	let fullName = $state('')
-	let contactInfo = $state('')
-	let message = $state('')
-	let isLoading = $state(false)
+	let isSubmitting = $state(false)
 
-	async function handleSubmit(event: Event) {
-		event.preventDefault()
+	const handleSubmit: SubmitFunction = () => {
+		isSubmitting = true
 
-		if (!fullName.trim()) {
-			toast.error('Full name is required.')
-			return
-		}
+		return async ({ result, formElement }) => {
+			isSubmitting = false
 
-		if (!contactInfo.trim()) {
-			toast.error('Email or phone number is required.')
-			return
-		}
-
-		if (!message.trim()) {
-			toast.error('Message cannot be empty.')
-			return
-		}
-
-		isLoading = true
-
-		try {
-			const response = await fetch('/api/messages', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					fullName: fullName.trim(),
-					contactInfo: contactInfo.trim(),
-					message: message.trim()
-				})
-			})
-
-			const data = await response.json()
-
-			if (response.ok) {
-				toast.success(data.message || 'Message sent successfully!')
-				// Reset form
-				fullName = ''
-				contactInfo = ''
-				message = ''
+			if (result.type === 'success' && result.data?.success) {
+				toast.success(result.data.message || 'Message sent successfully!')
+				formElement.reset()
+			}
+			else if (result.type === 'failure' && result.data?.error) {
+				toast.error(result.data.error)
 			}
 			else {
-				toast.error(data.message || 'Failed to send message.')
+				toast.error('Something went wrong. Please try again.')
 			}
-		}
-		catch (err) {
-			console.error('Network error:', err)
-			toast.error('Network error. Please try again.')
-		}
-		finally {
-			isLoading = false
 		}
 	}
 </script>
@@ -123,7 +86,7 @@
 					Share the challenge you’re facing or the outcome you’re aiming
 					for, and let’s get started.
 				</p>
-				<form onsubmit={handleSubmit} action="#" method="POST">
+				<form method="POST" action="?/sendGoogleChatMessage" use:enhance={handleSubmit}>
 					<div class="space-y-6">
 						<div>
 							<label
@@ -133,12 +96,11 @@
 							>
 							<input
 								type="text"
-								name="full-name"
+								name="fullName"
 								id="full-name"
 								autocomplete="name"
-								bind:value={fullName}
 								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
-								disabled={isLoading}
+								disabled={isSubmitting}
 								required
 							/>
 						</div>
@@ -150,11 +112,10 @@
 							>
 							<input
 								type="text"
-								name="contact-info"
+								name="contactInfo"
 								id="contact-info"
-								bind:value={contactInfo}
 								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
-								disabled={isLoading}
+								disabled={isSubmitting}
 								required
 							/>
 						</div>
@@ -168,9 +129,8 @@
 								id="message"
 								name="message"
 								rows="4"
-								bind:value={message}
 								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
-								disabled={isLoading}
+								disabled={isSubmitting}
 								required
 							></textarea>
 						</div>
@@ -178,10 +138,10 @@
 					<div class="mt-8">
 						<button
 							type="submit"
-							disabled={isLoading || !fullName.trim() || !contactInfo.trim() || !message.trim()}
+							disabled={isSubmitting}
 							class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
 						>
-							{#if isLoading}
+							{#if isSubmitting}
 								Sending...
 							{:else}
 								Send
