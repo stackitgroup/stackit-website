@@ -1,5 +1,5 @@
 <script>
-	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp';
+	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp'
 </script>
 
 <!-- Skip link for accessibility -->
@@ -16,13 +16,13 @@
 >
 	<div class="container mx-auto px-6 py-4 flex justify-between items-center"
 	>
-		<a href="index.html" class="flex items-center">
+		<span class="flex items-center">
 			<img
 				src={StackitLogoWhite}
 				alt="Stackit Logo"
 				class="h-9 w-auto"
 			/>
-		</a>
+		</span>
 		<div class="flex items-center space-x-6">
 			<a
 				href="#contact"

@@ -8,13 +8,13 @@
 	<div class="container mx-auto px-6 py-24">
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-16">
 			<div class="md:col-span-7">
-				<a href="index.html" class="inline-block mb-6">
+				<span class="inline-block mb-6">
 					<img
 						src={StackitLogoWhiteWhite}
 						alt="Stackit Logo"
 						class="h-6 w-auto"
 					/>
-				</a>
+				</span>
 				<div class="text-gray-300 text-base mb-12">
 					<p>
 						Stackit is a software development agency. With a specialty in
