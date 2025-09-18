@@ -137,6 +137,7 @@
 	}
 	/* Prevenir scroll horizontal */
 	:global(.container) {
+		overflow-y: hidden;
 		overflow-x: hidden;
 	}
 	:global(main) {
@@ -144,7 +145,7 @@
 	}
 </style>
 
-<main>
+<main aria-label="Main content">
 	<HeroSection />
 	<FindingTeamSection />
 	<ExternalTeamSection />

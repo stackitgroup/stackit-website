@@ -1,4 +1,5 @@
 import { fail, type Actions } from '@sveltejs/kit'
+import { SECRET_GOOGLE_CHAT_WEBHOOK_URL } from '$env/static/private'
 import { z } from 'zod'
 
 // Schema para validar contactInfo como email o teléfono
@@ -50,24 +51,38 @@ export const actions: Actions = {
 		const { fullName, contactInfo, message } = validation.data
 
 		try {
-			// Aquí iría la lógica para enviar el mensaje a Google Chat
-			// Por ejemplo, llamar a una API interna o externa
-			const response = await fetch('/api/messages', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
+			// Construir el mensaje para Google Chat
+			const chatMessage = {
+				text: `New contact form submission:
+*Name:* ${fullName}
+*Contact:* ${contactInfo}
+*Message:* ${message}`
+			}
+
+			// Enviar directamente al webhook de Google Chat
+
+			if (!SECRET_GOOGLE_CHAT_WEBHOOK_URL) {
+				console.error('Google Chat webhook URL not configured')
+				return fail(500, {
+					error: 'Server configuration error. Please try again later.',
 					fullName,
 					contactInfo,
 					message
 				})
+			}
+
+			const response = await fetch(SECRET_GOOGLE_CHAT_WEBHOOK_URL, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(chatMessage)
 			})
 
 			if (!response.ok) {
-				const errorData = await response.json().catch(() => ({}))
+				console.error('Google Chat webhook error:', response.status, response.statusText)
 				return fail(response.status, {
-					error: errorData.message || 'Failed to send message.',
+					error: 'Failed to send message. Please try again.',
 					fullName,
 					contactInfo,
 					message

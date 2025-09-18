@@ -86,7 +86,13 @@
 					Share the challenge you’re facing or the outcome you’re aiming
 					for, and let’s get started.
 				</p>
-				<form method="POST" action="?/sendGoogleChatMessage" use:enhance={handleSubmit}>
+				<form
+					method="POST"
+					action="?/sendGoogleChatMessage"
+					use:enhance={handleSubmit}
+					aria-label="Contact form"
+					novalidate
+				>
 					<div class="space-y-6">
 						<div>
 							<label

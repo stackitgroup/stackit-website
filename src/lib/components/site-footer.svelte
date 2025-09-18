@@ -10,8 +10,11 @@
 				<span class="inline-block mb-6">
 					<img
 						src={StackitLogoWhiteWhite}
-						alt="Stackit Logo"
+						alt="Stackit - Software Development Agency"
 						class="h-6 w-auto"
+						loading="lazy"
+						width="100"
+						height="24"
 					/>
 				</span>
 				<div class="text-gray-400 text-base mb-12">

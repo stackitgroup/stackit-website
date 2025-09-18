@@ -109,36 +109,48 @@
 					href="https://www.siemens.com/global/en.html"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="Visit Siemens website (opens in new tab)"
 				>
 					<img
 						src={SiemensLogo}
-						alt="Siemens Logo"
+						alt="Siemens - trusted partner and client"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
+						loading="lazy"
+						width="120"
+						height="44"
 					/>
 				</a>
 				<a
 					href="https://www.i2sl.org/"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="Visit I2SL website (opens in new tab)"
 				>
 					<img
 						src={I2SLLogo}
-						alt="I2SL Logo"
+						alt="I2SL - International Institute for Sustainable Laboratories partner"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
+						loading="lazy"
+						width="120"
+						height="44"
 					/>
 				</a>
 				<a
 					href="https://www.aircuity.com/"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="Visit Aircuity website (opens in new tab)"
 				>
 					<img
 						src={AircuityLogo}
-						alt="Aircuity Logo"
+						alt="Aircuity - building optimization solutions partner"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
+						loading="lazy"
+						width="120"
+						height="44"
 					/>
 				</a>
 			</div>
