@@ -60,7 +60,9 @@ export const actions: Actions = {
 
 *Message:* ${message}
 
-*Environment:* ${ENVIRONMENT}`
+*Environment:* ${ENVIRONMENT}
+*Sent at:* ${new Date().toISOString()}
+`
 			}
 
 			// Enviar directamente al webhook de Google Chat
