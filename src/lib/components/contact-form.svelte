@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toast } from 'sonner'
+	import { toast } from 'svelte-sonner'
 
 	let fullName = $state('')
 	let contactInfo = $state('')
