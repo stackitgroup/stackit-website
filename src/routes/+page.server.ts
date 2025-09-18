@@ -9,6 +9,33 @@ import timezone from 'dayjs/plugin/timezone'
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
+// Función para sanitizar el mensaje y remover links/URLs
+function sanitizeMessage(message: string): string {
+	if (!message) return message
+
+	// Remover URLs completas (http, https, ftp, www)
+	let sanitized = message.replace(/(https?:\/\/[^\s]+)/gi, '[URL removed]')
+	sanitized = sanitized.replace(/(www\.[^\s]+)/gi, '[URL removed]')
+	sanitized = sanitized.replace(/(ftp:\/\/[^\s]+)/gi, '[URL removed]')
+
+	// Remover patrones de dominios comunes (.com, .org, etc)
+	sanitized = sanitized.replace(/([a-zA-Z0-9-]+\.(com|org|net|edu|gov|io|co|uk|es|mx|ar|cl|pe|co\.uk|com\.mx|es\.com|org\.ar))/gi, '[Domain removed]')
+
+	// Remover emails
+	sanitized = sanitized.replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/gi, '[Email removed]')
+
+	// Remover patrones de teléfonos con links tel:
+	sanitized = sanitized.replace(/(tel:[^\s]+)/gi, '[Phone removed]')
+
+	// Remover menciones de redes sociales
+	sanitized = sanitized.replace(/(@[a-zA-Z0-9_]+)/g, '[Mention removed]')
+
+	// Remover hashtags que podrían ser links
+	sanitized = sanitized.replace(/(#[a-zA-Z0-9_]+)/g, '[Hashtag removed]')
+
+	return sanitized.trim()
+}
+
 // Schema para validar contactInfo como email o teléfono
 const contactInfoSchema = z.string()
 	.min(1, 'Email or phone number is required.')
@@ -29,6 +56,7 @@ const contactFormSchema = z.object({
 	message: z.string()
 		.min(1, 'Message is required.')
 		.min(8, 'Message must be at least 8 characters long.')
+		.transform(sanitizeMessage) // Sanitizar el mensaje automáticamente
 })
 
 export const actions: Actions = {

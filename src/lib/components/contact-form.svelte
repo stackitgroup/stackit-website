@@ -6,8 +6,33 @@
 	import { onMount } from 'svelte'
 
 	let isSubmitting = $state(false)
+	let message = $state('')
+
+	// Función para detectar links en el mensaje
+	function containsLinks(text: string): boolean {
+		if (!text) return false
+
+		const linkPatterns = [
+			/(https?:\/\/[^\s]+)/i, // URLs con protocolo
+			/(www\.[^\s]+)/i, // URLs con www
+			/([a-zA-Z0-9-]+\.(com|org|net|edu|gov|io|co|uk|es|mx|ar|cl|pe|co\.uk|com\.mx))/i, // Dominios
+			/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i, // Emails
+			/(tel:[^\s]+)/i // Links de teléfono
+		]
+
+		return linkPatterns.some(pattern => pattern.test(text))
+	}
+
+	// Derivar si mostrar advertencia de links
+	const showLinkWarning = $derived(containsLinks(message))
 
 	const handleSubmit: SubmitFunction = () => {
+		// Prevenir envío si hay links detectados
+		if (showLinkWarning) {
+			toast.error('Please remove all links, URLs, and contact information from your message before submitting.')
+			return async () => {} // Retornar función vacía para cancelar el envío
+		}
+
 		isSubmitting = true
 
 		return async ({ result, formElement }) => {
@@ -16,6 +41,7 @@
 			if (result.type === 'success' && result.data?.success) {
 				toast.success(result.data.message || 'Message sent successfully!')
 				formElement.reset()
+				message = '' // Limpiar el estado del mensaje
 			}
 			else if (result.type === 'failure' && result.data?.error) {
 				toast.error(result.data.error)
@@ -59,6 +85,7 @@
 				// Reset the contact form and clear shared email when panel closes
 				form?.reset()
 				sharedEmail.set('')
+				message = '' // Limpiar el estado del mensaje
 			}, 500)
 		}
 
@@ -194,24 +221,37 @@
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								bind:value={message}
+								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg {showLinkWarning ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
 								disabled={isSubmitting}
 								required
 							></textarea>
+							{#if showLinkWarning}
+								<p class="mt-2 text-sm text-red-400">
+									⚠️ Links, URLs, and contact information are not allowed in the message. They will be automatically removed.
+								</p>
+							{/if}
 						</div>
 					</div>
 					<div class="mt-8">
 						<button
 							type="submit"
-							disabled={isSubmitting}
-							class="w-full border-2 border-white text-black font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl bg-white ease-in-out duration-300 inline-block rounded-2xl hover:opacity-80 opacity-100"
+							disabled={isSubmitting || showLinkWarning}
+							class="w-full border-2 border-white text-black font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl ease-in-out duration-300 inline-block rounded-2xl {showLinkWarning ? 'bg-gray-400 border-gray-400 cursor-not-allowed opacity-60' : 'bg-white hover:opacity-80 opacity-100'}"
 						>
 							{#if isSubmitting}
 								Sending...
+							{:else if showLinkWarning}
+								Remove links to continue
 							{:else}
 								Send
 							{/if}
 						</button>
+						{#if showLinkWarning}
+							<p class="mt-3 text-sm text-red-400 text-center">
+								Please remove all links, URLs, and contact information from your message to proceed.
+							</p>
+						{/if}
 					</div>
 				</form>
 			</div>
