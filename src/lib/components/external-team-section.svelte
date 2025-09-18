@@ -10,7 +10,7 @@
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <div
-        class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+        class="bg-[#050e36b9] p-8 rounded-xl shadow-lg fade-in-section"
         style="transition-delay: 100ms"
       >
         <div class="mb-5">
@@ -34,7 +34,7 @@
         </p>
       </div>
       <div
-        class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+        class="bg-[#050e36b9]  p-8 rounded-xl shadow-lg fade-in-section"
         style="transition-delay: 200ms"
       >
         <div class="mb-5">
@@ -58,7 +58,7 @@
         </p>
       </div>
       <div
-        class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-lg fade-in-section"
+        class="bg-[#050e36b9] p-8 rounded-xl shadow-lg fade-in-section"
         style="transition-delay: 300ms"
       >
         <div class="mb-5">

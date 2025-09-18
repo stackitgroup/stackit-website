@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { enhance } from '$app/forms'
-	import { toast } from 'svelte-sonner'
-	import type { SubmitFunction } from '@sveltejs/kit'
-	import { sharedEmail } from '$lib/stores/email'
-	import { onMount } from 'svelte'
+	import { enhance } from '$app/forms';
+	import { sharedEmail } from '$lib/stores/email';
+	import type { SubmitFunction } from '@sveltejs/kit';
+	import { onMount } from 'svelte';
+	import { toast } from 'svelte-sonner';
 
 	let isSubmitting = $state(false)
 	let message = $state('')
@@ -134,7 +134,7 @@
 			</button>
 		</div>
 		<div class="flex-grow grid grid-cols-1 md:grid-cols-2">
-			<div class="bg-[#0A1A62] p-8 md:p-12 flex flex-col justify-center">
+			<div class="bg-[#050e36b9] p-8 md:p-12 flex flex-col justify-center">
 				<h3 class="text-3xl font-bold text-white mb-6">
 					What happens next?
 				</h3>
@@ -186,7 +186,7 @@
 								name="fullName"
 								id="full-name"
 								autocomplete="name"
-								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
 								disabled={isSubmitting}
 								required
 							/>
@@ -200,7 +200,7 @@
 								type="email"
 								name="contactInfo"
 								id="contact-info"
-								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
 								bind:value={$sharedEmail}
 								disabled={isSubmitting}
 								required
@@ -216,7 +216,7 @@
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79] text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
 								disabled={isSubmitting}
 								required
 							></textarea>

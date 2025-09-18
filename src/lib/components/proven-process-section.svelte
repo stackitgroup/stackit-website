@@ -66,7 +66,7 @@
 							Clarify the Why
 						</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							Uncovering Your Purpose.
+							Uncovering Your Purpose
 						</p>
 						<p class="text-gray-300">
 							We dig deep to get to the heart of your project's 'why' and
@@ -89,7 +89,7 @@
 					<div class="pb-12">
 						<h3 class="text-2xl font-bold text-white mb-2">Proposal</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							Creating the game plan for the winning team.
+							Creating the game plan for the winning team
 						</p>
 						<p class="text-gray-300">
 							Building on our shared understanding, we present your
@@ -114,7 +114,7 @@
 							Build Mode: ON
 						</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							Building with Confidence, From Day One.
+							Building with Confidence, From Day One
 						</p>
 						<p class="text-gray-300">
 							With the game plan in place, we translate high-level
@@ -137,7 +137,7 @@
 					<div class="pb-12">
 						<h3 class="text-2xl font-bold text-white mb-2">Pulse</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							See your vision manifest – two weeks at a time.
+							See your vision manifest – two weeks at a time
 						</p>
 						<p class="text-gray-300">
 							Your project comes alive in a steady "Pulse" of focused,
@@ -163,7 +163,7 @@
 							The Quality Gate
 						</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							Your Green Light for a Confident Launch.
+							Your Green Light for a Confident Launch
 						</p>
 						<p class="text-gray-300">
 							Before launch, we ensure total readiness. Every feature is
@@ -187,7 +187,7 @@
 							Beyond Launch
 						</h3>
 						<p class="text-lg text-gray-400 font-medium mb-4">
-							Your Partner in Continuous Growth and Evolution.
+							Your Partner in Continuous Growth and Evolution
 						</p>
 						<p class="text-gray-300">
 							With your solution live, our focus shifts to ensuring its

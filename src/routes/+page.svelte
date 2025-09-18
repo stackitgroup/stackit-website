@@ -78,7 +78,6 @@
 	<ProductComplexitySection />
 	<ProvenProcessSection />
 	<PartnerSearchSection />
-
 </main>
 
 <ContactForm />

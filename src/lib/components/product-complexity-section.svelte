@@ -121,7 +121,7 @@
             <img
               src={I2SLLogo}
               alt="I2SL Logo"
-              class="max-h-full max-w-full object-contain opacity-80 transition-all duration-300"
+              class="max-h-full max-w-full object-contain opacity-50 transition-all duration-300"
               style="filter: invert(1)"
             />
           </div>
