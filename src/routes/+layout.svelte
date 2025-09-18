@@ -1,6 +1,5 @@
 <script lang="ts">
 	import favicon from '$lib/assets/stackit-isologo.webp'
-	import ogImage from '$lib/assets/stackit-isologo.webp'
 	import SiteFooter from '$lib/components/site-footer.svelte'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import { Toaster } from 'svelte-sonner'
@@ -14,7 +13,7 @@
 	// SEO metadata
 	const siteTitle = 'Stackit - Your External Dev Team with In-House Drive'
 	const siteDescription = 'Build extraordinary software with Stackit, your external development team that shares your standards. We deliver high-quality software solutions with in-house dedication.'
-	const siteUrl = 'https://stackitgroup.com'
+	const siteUrl = 'https://stackit-uat.netlify.app'
 	const siteName = 'Stackit'
 	const keywords = 'external development team, software development, custom software, web development, mobile apps, digital solutions, tech consulting'
 
@@ -58,7 +57,7 @@
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content={ogImage} />
+	<meta property="og:image" content={`${siteUrl}/stackit-isologo.webp`} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
@@ -68,7 +67,7 @@
 	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
-	<meta name="twitter:image" content={ogImage} />
+	<meta name="twitter:image" content={`${siteUrl}/stackit-isologo.webp`} />
 	<meta name="twitter:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
 
 	<!-- Favicon and icons -->
@@ -92,7 +91,7 @@
 		name: 'Stackit Group',
 		url: siteUrl,
 		description: siteDescription,
-		logo: ogImage,
+		logo: `${siteUrl}/stackit-isologo.webp`,
 		contactPoint: {
 		'@type': 'ContactPoint',
 		contactType: 'customer service',
