@@ -1,6 +1,7 @@
 import { fail, type Actions } from '@sveltejs/kit'
 import { ENVIRONMENT, SECRET_GOOGLE_CHAT_WEBHOOK_URL } from '$env/static/private'
 import { z } from 'zod'
+import dayjs from 'dayjs'
 
 // Schema para validar contactInfo como email o teléfono
 const contactInfoSchema = z.string()
@@ -52,6 +53,9 @@ export const actions: Actions = {
 
 		try {
 			// Construir el mensaje para Google Chat
+			const date = dayjs()
+			const formattedDate = `${date.format('MMMM DD, YYYY')} at ${date.format('h:mm A')}`
+
 			const chatMessage = {
 				text: `New contact form submission:
         
@@ -61,7 +65,7 @@ export const actions: Actions = {
 *Message:* ${message}
 
 *Environment:* ${ENVIRONMENT}
-*Sent at:* ${new Date().toISOString()}
+*Sent at:* ${formattedDate}
 `
 			}
 
