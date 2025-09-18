@@ -184,7 +184,7 @@
         <div class="w-full hidden md:flex justify-center">
           <a
             href="#contact"
-            class="flex items-center justify-center w-3/6 bg-[#3F5FDD] text-white font-semibold px-10 py-5 hover:bg-[#3550B8] transition-colors duration-300 text-lg rounded-xl"
+            class="flex items-center justify-center w-3/6 bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 rounded-lg"
             >Let's talk</a
           >
         </div>
@@ -194,7 +194,7 @@
     <div class="mt-12 text-center md:hidden">
       <a
         href="#contact"
-        class="inline-flex items-center justify-center w-full sm:w-auto bg-[#3F5FDD] text-white font-semibold px-12 py-5 hover:bg-[#3550B8] transition-colors duration-300 text-lg rounded-xl"
+        class="inline-flex items-center justify-center w-full sm:w-auto bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 rounded-lg"
         >Let's talk</a
       >
     </div>
