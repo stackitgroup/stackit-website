@@ -5,6 +5,8 @@
 	import { Toaster } from 'svelte-sonner'
 	import { page } from '$app/stores'
 	import '../app.css'
+	import { browser } from '$app/environment'
+	import { PUBLIC_GA_ID } from '$env/static/public'
 
 	let { children } = $props()
 
@@ -15,9 +17,31 @@
 	const siteName = 'Stackit'
 	const keywords = 'external development team, software development, custom software, web development, mobile apps, digital solutions, tech consulting'
 
+	// Usamos $effect para reaccionar a los cambios en la URL
+	$effect(() => {
+		// Solo corre en el navegador
+		if (browser && PUBLIC_GA_ID) {
+			// Asegúrate de que la función gtag() global exista antes de llamarla
+			if (typeof window.gtag === 'function') {
+				window.gtag('config', PUBLIC_GA_ID, {
+					page_path: $page.url.pathname
+				})
+			}
+		}
+	})
+
 </script>
 
 <svelte:head>
+	<!-- Google tag (gtag.js) -->
+	{#if PUBLIC_GA_ID}
+		<script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_GA_ID}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		</script>
+	{/if}
 	<!-- Basic SEO -->
 	<title>{siteTitle}</title>
 	<meta name="description" content={siteDescription} />
