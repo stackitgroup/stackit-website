@@ -6,30 +6,27 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		const { fullName, contactInfo, message } = await request.json()
 
 		if (!fullName || !fullName.trim()) {
-			return json({ success: false, error: 'Full name is required.' }, { status: 400 })
+			return json({ message: 'Full name is required.' }, { status: 400 })
 		}
 
 		if (!contactInfo || !contactInfo.trim()) {
-			return json({ success: false, error: 'Email or phone number is required.' }, { status: 400 })
+			return json({ message: 'Email or phone number is required.' }, { status: 400 })
 		}
 
 		if (!message || !message.trim()) {
-			return json({ success: false, error: 'Message cannot be empty.' }, { status: 400 })
+			return json({ message: 'Message cannot be empty.' }, { status: 400 })
 		}
 
-		// Create a formatted message for Google Chat
 		const formattedMessage = `*New Contact Form Submission*
 
-    *Name:* ${fullName.trim()}
-    *Contact:* ${contactInfo.trim()}
+*Name:* ${fullName.trim()}
+*Contact:* ${contactInfo.trim()}
 
-    *Message:*
-    ${message.trim()}
+*Message:*
+${message.trim()}
 
-    ---
-    Received at: ${new Date().toLocaleString()}`
-
-		// The object that Google Chat expects
+---
+Received at: ${new Date().toLocaleString()}`
 
 		const response = await fetch(SECRET_GOOGLE_CHAT_WEBHOOK_URL, {
 			method: 'POST',
