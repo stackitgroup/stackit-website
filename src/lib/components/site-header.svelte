@@ -27,8 +27,8 @@
 			<a
 				href="#contact"
 				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-6 py-3 text-basehover:text-white transition-colors duration-300 rounded-lg"
-			>Introduction Call</a
-			>
+			>Introduction Call
+			</a>
 		</div>
 	</div>
 </header>

@@ -3,6 +3,7 @@
 	import { toast } from 'svelte-sonner'
 	import type { SubmitFunction } from '@sveltejs/kit'
 	import { sharedEmail } from '$lib/stores/email'
+	import { onMount } from 'svelte'
 
 	let isSubmitting = $state(false)
 
@@ -24,6 +25,63 @@
 			}
 		}
 	}
+
+	onMount(() => {
+		// Contact Panel Logic
+		const contactPanel = document.getElementById('contact-panel')
+		const overlay = document.getElementById('overlay')
+		const closeBtn = document.getElementById('close-panel-btn')
+		const openTriggers = document.querySelectorAll('a[href="#contact"]')
+		const form = document.querySelector<HTMLFormElement>('form[aria-label="Contact form"]')
+
+		function openPanel() {
+			if (!overlay || !contactPanel) return
+			overlay.classList.remove('hidden')
+			contactPanel.classList.remove('hidden')
+			document.body.style.overflow = 'hidden'
+
+			requestAnimationFrame(() => {
+				overlay.classList.add('opacity-50')
+				contactPanel.classList.remove('translate-x-full')
+			})
+		}
+
+		function closePanel() {
+			if (!overlay || !contactPanel) return
+			overlay.classList.remove('opacity-50')
+			contactPanel.classList.add('translate-x-full')
+
+			setTimeout(() => {
+				overlay.classList.add('hidden')
+				contactPanel.classList.add('hidden')
+				document.body.style.overflow = ''
+
+				// Reset the contact form and clear shared email when panel closes
+				form?.reset()
+				sharedEmail.set('')
+			}, 500)
+		}
+
+		openTriggers.forEach((trigger) => {
+			trigger.addEventListener('click', (e) => {
+				e.preventDefault()
+				openPanel()
+			})
+		})
+
+		if (closeBtn) closeBtn.addEventListener('click', closePanel)
+		if (overlay) overlay.addEventListener('click', closePanel)
+
+		return () => {
+			document.body.style.overflow = ''
+			// remove listeners
+			openTriggers.forEach((trigger) => {
+				trigger.removeEventListener('click', openPanel)
+			})
+			if (closeBtn) closeBtn.removeEventListener('click', closePanel)
+			if (overlay) overlay.removeEventListener('click', closePanel)
+		}
+	})
 </script>
 
 <div

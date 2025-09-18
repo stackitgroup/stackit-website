@@ -28,46 +28,6 @@
 			observer.observe(section)
 		})
 
-		// Contact Panel Logic
-		const contactPanel = document.getElementById('contact-panel')
-		const overlay = document.getElementById('overlay')
-		const closeBtn = document.getElementById('close-panel-btn')
-		const openTriggers = document.querySelectorAll('a[href="#contact"]')
-
-		function openPanel() {
-			if (!overlay || !contactPanel) return
-			overlay.classList.remove('hidden')
-			contactPanel.classList.remove('hidden')
-			document.body.style.overflow = 'hidden'
-
-			requestAnimationFrame(() => {
-				overlay.classList.add('opacity-50')
-				contactPanel.classList.remove('translate-x-full')
-			})
-		}
-
-		function closePanel() {
-			if (!overlay || !contactPanel) return
-			overlay.classList.remove('opacity-50')
-			contactPanel.classList.add('translate-x-full')
-
-			setTimeout(() => {
-				overlay.classList.add('hidden')
-				contactPanel.classList.add('hidden')
-				document.body.style.overflow = ''
-			}, 500)
-		}
-
-		openTriggers.forEach((trigger) => {
-			trigger.addEventListener('click', (e) => {
-				e.preventDefault()
-				openPanel()
-			})
-		})
-
-		if (closeBtn) closeBtn.addEventListener('click', closePanel)
-		if (overlay) overlay.addEventListener('click', closePanel)
-
 		// Expandable Section Logic
 		const readMoreBtn = document.getElementById('readMoreBtn')
 		const expandedContent = document.getElementById('expandedContent')

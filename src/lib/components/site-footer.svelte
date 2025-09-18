@@ -41,9 +41,9 @@
 						class="w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#2F5CEC]"
 						required
 					/>
-					<button
+					<a
 						aria-label="Subscribe to newsletter"
-						type="submit"
+						href="#contact"
 						class="bg-[#2F5CEC] text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-[#234baf] transition-colors"
 					>
 						<svg
@@ -60,7 +60,7 @@
 								d="M14 5l7 7m0 0l-7 7m7-7H3"
 							></path>
 						</svg>
-					</button>
+					</a>
 				</form>
 			</div>
 
