@@ -1,5 +1,5 @@
 import { fail, type Actions } from '@sveltejs/kit'
-import { SECRET_GOOGLE_CHAT_WEBHOOK_URL } from '$env/static/private'
+import { ENVIRONMENT, SECRET_GOOGLE_CHAT_WEBHOOK_URL } from '$env/static/private'
 import { z } from 'zod'
 
 // Schema para validar contactInfo como email o teléfono
@@ -54,9 +54,13 @@ export const actions: Actions = {
 			// Construir el mensaje para Google Chat
 			const chatMessage = {
 				text: `New contact form submission:
+        
 *Name:* ${fullName}
 *Contact:* ${contactInfo}
-*Message:* ${message}`
+
+*Message:* ${message}
+
+*Environment:* ${ENVIRONMENT}`
 			}
 
 			// Enviar directamente al webhook de Google Chat
