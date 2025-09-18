@@ -33,6 +33,8 @@
 				</h2>
 				<form class="flex">
 					<input
+						id="newsletter-email"
+						name="email"
 						type="email"
 						placeholder="Enter your email"
 						bind:value={$sharedEmail}

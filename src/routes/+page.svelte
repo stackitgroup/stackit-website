@@ -9,58 +9,60 @@
 	import { onMount } from 'svelte'
 
 	onMount(() => {
-		// Fade-in animations on scroll
 		const sections = document.querySelectorAll('.fade-in-section')
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('is-visible')
-				}
-			})
-		}, { threshold: 0.1 })
-		sections.forEach(section => observer.observe(section))
 
-		// Contact panel functionality
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible')
+					}
+				})
+			},
+			{
+				threshold: 0.1
+			}
+		)
+
+		sections.forEach((section) => {
+			observer.observe(section)
+		})
+
+		// Contact Panel Logic
 		const contactPanel = document.getElementById('contact-panel')
 		const overlay = document.getElementById('overlay')
 		const closeBtn = document.getElementById('close-panel-btn')
 		const openTriggers = document.querySelectorAll('a[href="#contact"]')
 
 		function openPanel() {
-			if (overlay && contactPanel) {
-				overlay.classList.remove('hidden')
-				contactPanel.classList.remove('hidden')
-				document.documentElement.style.overflow = 'hidden'
-				document.body.style.overflow = 'hidden'
+			if (!overlay || !contactPanel) return
+			overlay.classList.remove('hidden')
+			contactPanel.classList.remove('hidden')
+			document.body.style.overflow = 'hidden'
 
-				requestAnimationFrame(() => {
-					overlay.classList.add('opacity-50')
-					contactPanel.classList.remove('translate-x-full')
-				})
-			}
+			requestAnimationFrame(() => {
+				overlay.classList.add('opacity-50')
+				contactPanel.classList.remove('translate-x-full')
+			})
 		}
 
 		function closePanel() {
-			if (overlay && contactPanel) {
-				overlay.classList.remove('opacity-50')
-				contactPanel.classList.add('translate-x-full')
+			if (!overlay || !contactPanel) return
+			overlay.classList.remove('opacity-50')
+			contactPanel.classList.add('translate-x-full')
 
-				setTimeout(() => {
-					overlay.classList.add('hidden')
-					contactPanel.classList.add('hidden')
-					document.documentElement.style.overflow = ''
-					document.body.style.overflow = ''
-				}, 500)
-			}
+			setTimeout(() => {
+				overlay.classList.add('hidden')
+				contactPanel.classList.add('hidden')
+				document.body.style.overflow = ''
+			}, 500)
 		}
 
-		// use named handlers so we can remove them later
-		const openTriggerHandler = (e: Event) => {
-			e.preventDefault()
-			openPanel()
-		}
 		openTriggers.forEach((trigger) => {
-			trigger.addEventListener('click', openTriggerHandler)
+			trigger.addEventListener('click', (e) => {
+				e.preventDefault()
+				openPanel()
+			})
 		})
 
 		if (closeBtn) closeBtn.addEventListener('click', closePanel)
@@ -72,53 +74,44 @@
 		const closeContentBtn = document.getElementById('closeContentBtn')
 
 		const toggleContent = (shouldScroll = false) => {
-			if (!expandedContent) {
-				return
-			}
-
+			if (!expandedContent) return
 			if (expandedContent.style.maxHeight) {
-				// COLLAPSE
+				// Action to COLLAPSE the section
 				expandedContent.style.maxHeight = ''
-				return
 			}
-
-			// EXPAND
-			expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px'
-			if (shouldScroll) {
-				setTimeout(() => {
-					expandedContent.scrollIntoView({
-						behavior: 'smooth',
-						block: 'start'
-					})
-				}, 300)
+			else {
+				// Action to EXPAND the section
+				expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px'
+				if (shouldScroll) {
+					// Wait a moment for the transition to start, then scroll
+					setTimeout(() => {
+						expandedContent.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						})
+					}, 300) // 300ms delay
+				}
 			}
 		}
 
-		const readMoreHandler = () => toggleContent(true)
-		const closeContentHandler = () => toggleContent(false)
+		// When "Continue reading..." is clicked, expand and scroll
+		if (readMoreBtn) readMoreBtn.addEventListener('click', () => toggleContent(true))
 
-		if (readMoreBtn) readMoreBtn.addEventListener('click', readMoreHandler)
-		if (closeContentBtn) closeContentBtn.addEventListener('click', closeContentHandler)
+		// When the close button is clicked, collapse without scrolling
+		if (closeContentBtn) closeContentBtn.addEventListener('click', () => toggleContent(false))
 
+		// Cleanup function
 		return () => {
-			// disconnect observer to avoid leaks
 			observer.disconnect()
-			openTriggers.forEach((trigger) => {
-				trigger.removeEventListener('click', openTriggerHandler)
-			})
-			if (closeBtn) closeBtn.removeEventListener('click', closePanel)
-			if (overlay) overlay.removeEventListener('click', closePanel)
-			// cleanup expandable listeners
-			if (readMoreBtn) readMoreBtn.removeEventListener('click', readMoreHandler)
-			if (closeContentBtn) closeContentBtn.removeEventListener('click', closeContentHandler)
+			document.body.style.overflow = ''
 		}
 	})
+
 </script>
 
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
-		overflow-x: hidden;
 	}
 	:global(body) {
 		font-family: 'Figtree', sans-serif;
@@ -126,7 +119,6 @@
 		color: #1f2937;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		overflow-x: hidden;
 		position: relative;
 	}
 	:global(.gradient-text) {
@@ -151,7 +143,7 @@
 
 </style>
 
-<main id="main-content" aria-label="Main content">
+<main id="main-content" aria-label="Main content" class="relative">
 	<HeroSection />
 	<FindingTeamSection />
 	<ExternalTeamSection />
