@@ -29,7 +29,8 @@
 			<div class="lg:col-span-2">
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							01
 						</div>
@@ -39,6 +40,9 @@
 						<h3 class="text-2xl font-bold text-white mb-2">
 							Introduction Call
 						</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							A conversation to explore your vision and our process
+						</p>
 						<p class="text-gray-300">
 							We hold a structured, two-way conversation to understand
 							your vision, challenges, and goals. We'll provide a
@@ -47,10 +51,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							02
 						</div>
@@ -60,6 +65,9 @@
 						<h3 class="text-2xl font-bold text-white mb-2">
 							Clarify the Why
 						</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							Uncovering Your Purpose.
+						</p>
 						<p class="text-gray-300">
 							We dig deep to get to the heart of your project's 'why' and
 							what success truly looks like. By mapping out your product
@@ -68,10 +76,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							03
 						</div>
@@ -79,6 +88,9 @@
 					</div>
 					<div class="pb-12">
 						<h3 class="text-2xl font-bold text-white mb-2">Proposal</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							Creating the game plan for the winning team.
+						</p>
 						<p class="text-gray-300">
 							Building on our shared understanding, we present your
 							tailored game plan. This comprehensive proposal clearly
@@ -87,10 +99,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							04
 						</div>
@@ -100,6 +113,9 @@
 						<h3 class="text-2xl font-bold text-white mb-2">
 							Build Mode: ON
 						</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							Building with Confidence, From Day One.
+						</p>
 						<p class="text-gray-300">
 							With the game plan in place, we translate high-level
 							requirements into actionable tasks. Our team establishes a
@@ -108,10 +124,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							05
 						</div>
@@ -119,6 +136,9 @@
 					</div>
 					<div class="pb-12">
 						<h3 class="text-2xl font-bold text-white mb-2">Pulse</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							See your vision manifest – two weeks at a time.
+						</p>
 						<p class="text-gray-300">
 							Your project comes alive in a steady "Pulse" of focused,
 							two-week development cycles. This rhythm makes progress
@@ -128,10 +148,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							06
 						</div>
@@ -141,6 +162,9 @@
 						<h3 class="text-2xl font-bold text-white mb-2">
 							The Quality Gate
 						</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							Your Green Light for a Confident Launch.
+						</p>
 						<p class="text-gray-300">
 							Before launch, we ensure total readiness. Every feature is
 							rigorously tested against our highest standards, and we
@@ -149,10 +173,11 @@
 						</p>
 					</div>
 				</div>
-
+			
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div
+							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							07
 						</div>
@@ -161,6 +186,9 @@
 						<h3 class="text-2xl font-bold text-white mb-2">
 							Beyond Launch
 						</h3>
+						<p class="text-lg text-gray-400 font-medium mb-4">
+							Your Partner in Continuous Growth and Evolution.
+						</p>
 						<p class="text-gray-300">
 							With your solution live, our focus shifts to ensuring its
 							ongoing success. We provide robust support and proactive
