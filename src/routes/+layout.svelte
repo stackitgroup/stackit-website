@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/stackit-isologo.png'
+	import favicon from '$lib/assets/stackit-isologo.webp'
 	import SiteFooter from '$lib/components/site-footer.svelte'
 	import SiteHeader from '$lib/components/site-header.svelte'
 	import { Toaster } from 'svelte-sonner'
@@ -91,7 +91,7 @@
 		name: 'Stackit Group',
 		url: siteUrl,
 		description: siteDescription,
-		logo: `${siteUrl}/stackit-logo.png`,
+		logo: `${siteUrl}/stackit-logo.webp`,
 		contactPoint: {
 		'@type': 'ContactPoint',
 		contactType: 'customer service',

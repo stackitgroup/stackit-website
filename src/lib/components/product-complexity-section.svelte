@@ -1,7 +1,7 @@
 <script>
-	import SiemensLogo from '$lib/assets/siemens-logo.png'
-	import I2SLLogo from '$lib/assets/i2sl-logo.png'
-	import AircuityLogo from '$lib/assets/aircuity-logo.png'
+	import SiemensLogo from '$lib/assets/siemens-logo.webp'
+	import I2SLLogo from '$lib/assets/i2sl-logo.webp'
+	import AircuityLogo from '$lib/assets/aircuity-logo.webp'
 </script>
 
 <section class="py-20 md:py-32 bg-black min-h-dvh flex items-center">

@@ -1,5 +1,5 @@
 <script>
-	import StackitLogoWhite from '$lib/assets/stackit-logo-white.png'
+	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp'
 </script>
 
 <!-- Skip link for accessibility -->
