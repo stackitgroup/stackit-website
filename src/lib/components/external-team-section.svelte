@@ -1,4 +1,4 @@
-    <section class="min-h-dvh py-20 md:py-32 bg-black">
+<section class="min-h-dvh py-20 md:py-32 bg-black">
 	<div class="container mx-auto px-6">
 		<div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
 			<h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-12 text-left md:text-center"

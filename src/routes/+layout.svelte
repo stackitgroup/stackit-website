@@ -57,12 +57,18 @@
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
 	<meta property="og:locale" content="en_US" />
+	<meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
+	<meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
+	<meta name="twitter:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
 
 	<!-- Favicon and icons -->
 	<link rel="icon" type="image/png" href={favicon} />
@@ -85,12 +91,25 @@
 		name: 'Stackit Group',
 		url: siteUrl,
 		description: siteDescription,
+		logo: `${siteUrl}/stackit-logo.png`,
 		contactPoint: {
 		'@type': 'ContactPoint',
 		contactType: 'customer service',
-		availableLanguage: ['English', 'Spanish']
+		availableLanguage: ['English', 'Spanish'],
+		telephone: '+1-XXX-XXX-XXXX',
+		email: 'contact@stackitgroup.com'
 		},
-		sameAs: []
+		address: {
+		'@type': 'PostalAddress',
+		addressCountry: 'US'
+		},
+		foundingDate: '2020',
+		numberOfEmployees: '10-50',
+		industry: 'Software Development',
+		sameAs: [
+		'https://linkedin.com/company/stackit-group',
+		'https://github.com/stackitgroup'
+		]
 		})}
 	</script>
 </svelte:head>
