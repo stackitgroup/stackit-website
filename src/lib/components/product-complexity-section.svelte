@@ -105,7 +105,7 @@
 					rel="noopener noreferrer"
 				>
 					<img
-						src="Siemens-logo-gray.png"
+						src="siemens-logo.png"
 						alt="Siemens Logo"
 						class="h-11 w-auto transition-all duration-300"
 						style="filter: brightness(0) invert(1) opacity(0.7)"
