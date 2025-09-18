@@ -151,7 +151,7 @@
 
 </style>
 
-<main aria-label="Main content">
+<main id="main-content" aria-label="Main content">
 	<HeroSection />
 	<FindingTeamSection />
 	<ExternalTeamSection />

@@ -47,7 +47,7 @@
 	}
 
 	.focus\:not-sr-only:focus {
-		position: static;
+		position: absolute;
 		width: auto;
 		height: auto;
 		padding: 0.5rem 1rem;
@@ -55,5 +55,9 @@
 		overflow: visible;
 		clip: auto;
 		white-space: normal;
+		border: 0;
+		top: 1rem;
+		left: 1rem;
+		z-index: 9999;
 	}
 </style>
