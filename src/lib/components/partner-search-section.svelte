@@ -1,52 +1,72 @@
-<script>
-	import { onMount } from 'svelte'
+<script lang="ts">
+	let isExpanded = false
+	let expandedContent: HTMLElement
+	let headerElement
+	let contentHeight = '0px'
+	let partnerSearchSection: HTMLElement
 
-	onMount(() => {
-		const readMoreBtn = document.getElementById('readMoreBtn')
-		const header = document.getElementById('header')
-		const expandedContent = document.getElementById('expandedContent')
-		const closeContentBtn = document.getElementById('closeContentBtn')
+	const toggleContent = (shouldScroll = false) => {
+		if (!expandedContent) return
 
-		const toggleContent = (shouldScroll = false) => {
-			if (!expandedContent) return
-			if (expandedContent.style.maxHeight) {
-				// Action to COLLAPSE the section
-				expandedContent.style.maxHeight = ''
-			}
-			else {
-				// Action to EXPAND the section
-				expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px'
-				if (shouldScroll) {
-					// Wait a moment for the transition to start, then scroll
-					setTimeout(() => {
-						// Calculate header height dynamically (fallback to any <header> element)
-						const headerEl = header || document.getElementById('header') || document.querySelector('header')
-						const headerHeight = headerEl ? headerEl.offsetHeight : 0
-						// small extra offset so content isn't pressed against the header
-						const extraOffset = 12
-						// Compute absolute Y coordinate of the expanded content
-						const rect = expandedContent.getBoundingClientRect()
-						const targetY = window.pageYOffset + rect.top - headerHeight - extraOffset
-						window.scrollTo({ top: targetY, behavior: 'smooth' })
-					}, 300) // 300ms delay
-				}
+		if (!isExpanded) {
+			// EXPANDING: Set height to scrollHeight for smooth animation
+			contentHeight = expandedContent.scrollHeight + 'px'
+			isExpanded = true
+
+			if (shouldScroll) {
+				// Wait for the DOM to update and transition to start
+				setTimeout(() => {
+					scrollToExpandedContent()
+				}, 300) // 300ms delay
 			}
 		}
+		else {
+			// COLLAPSING: Set height to 0 for smooth animation
+			contentHeight = '0px'
+			isExpanded = false
 
-		// When "Continue reading..." is clicked, expand and scroll
-		if (readMoreBtn) readMoreBtn.addEventListener('click', () => toggleContent(true))
-
-		// When the close button is clicked, collapse without scrolling
-		if (closeContentBtn) closeContentBtn.addEventListener('click', () => toggleContent(false))
-
-		// Cleanup function
-		return () => {
-			document.body.style.overflow = ''
+			// Wait for collapse animation to complete, then scroll to "Continue reading" button
+			setTimeout(() => {
+				scrollToPartnerSearchSection()
+			}, 700) // 700ms matches the transition duration
 		}
-	})
+	}
+
+	const scrollToExpandedContent = () => {
+		if (!expandedContent) return
+
+		// Calculate header height dynamically
+		const headerEl = headerElement || document.getElementById('header') || document.querySelector('header')
+		const headerHeight = headerEl ? headerEl.offsetHeight : 0
+		// Small extra offset so content isn't pressed against the header
+		const extraOffset = 12
+		// Compute absolute Y coordinate of the expanded content
+		const rect = expandedContent.getBoundingClientRect()
+		const targetY = window.pageYOffset + rect.top - headerHeight - extraOffset
+		window.scrollTo({ top: targetY, behavior: 'smooth' })
+	}
+
+	const scrollToPartnerSearchSection = () => {
+		if (!partnerSearchSection) return
+
+		// Calculate header height dynamically
+		const headerEl = headerElement || document.getElementById('header') || document.querySelector('header')
+		const headerHeight = headerEl ? headerEl.offsetHeight : 0
+		// Small extra offset so button isn't pressed against the header
+		const extraOffset = 12
+		// Compute absolute Y coordinate of the "Continue reading" button
+		const rect = partnerSearchSection.getBoundingClientRect()
+		const targetY = window.pageYOffset + rect.top - headerHeight - extraOffset
+		window.scrollTo({ top: targetY, behavior: 'smooth' })
+	}
+
+	const handleReadMore = () => toggleContent(true)
+	const handleClose = () => toggleContent(false)
 </script>
 
 <section
+	bind:this={partnerSearchSection}
+	id="partner-search-section"
 	class="min-h-screen flex items-center py-20 md:py-32 text-white"
 	style="
 		background: linear-gradient(to bottom, #000000, #0a1a6260, #000000);
@@ -69,25 +89,21 @@
 
 			<div class="mt-8 fade-in-section" style="transition-delay: 200ms">
 				<button
-					id="readMoreBtn"
+					bind:this={partnerSearchSection}
+					on:click={handleReadMore}
 					class="text-[#99C4FE] text-xl font-semibold hover:underline transition-all duration-300"
 				>
 					Continue reading...
 				</button>
-				<!-- <a
-                class="text-[#99C4FE] text-xl font-semibold hover:underline transition-all duration-300"
-                href="./partnertship.html"
-              >
-                Continue reading...</a
-              > -->
 			</div>
 		</div>
 	</div>
 </section>
 
 <section
-	id="expandedContent"
-	class="bg-white text-gray-800 transition-all duration-700 ease-in-out max-h-0 overflow-hidden"
+	bind:this={expandedContent}
+	class="bg-white text-gray-800 transition-all duration-700 ease-in-out overflow-hidden"
+	style:max-height={contentHeight}
 >
 	<div class="container mx-auto px-6 py-20 md:py-24">
 		<div class="flex justify-between items-center mb-12">
@@ -95,7 +111,7 @@
 				A Clear Path to Extraordinary Software
 			</h2>
 			<button
-				id="closeContentBtn"
+				on:click={handleClose}
 				class="text-gray-500 hover:text-gray-900 transition-colors"
 				aria-label="Close expanded section"
 			>
