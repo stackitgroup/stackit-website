@@ -31,11 +31,14 @@
 					<p class="text-lg text-white font-semibold">
 						So, schedule an introduction call today. You can stop being drained by constant team oversight and start building the extraordinary software your vision demands.
 					</p>
-					<div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-						<a href="/#partner-section" class="text-lg font-semibold text-gray-300 hover:text-white transition-colors duration-300 group">
-							<span class="inline-block transition-transform duration-300 group-hover:-translate-x-2">&larr;</span> Back to Home
+					<div class="mt-8 flex sm:flex-row items-center sm:justify-between gap-4">
+						<a href="/#partner-section" class="text-lg font-semibold text-gray-300 hover:text-white transition-colors duration-300 group w-full sm:w-auto text-left sm:text-left">
+							<span class="inline-block transition-transform duration-300 group-hover:-translate-x-2">&larr;</span>
+							<span class="ml-2">Back to Home</span>
 						</a>
-						<a href="#contact" class="bg-[#2F5CEC] text-white font-semibold px-12 py-4 hover:bg-[#234baf] transition-colors duration-300 text-lg inline-block rounded-xl">Let's Talk</a>
+						<a
+							href="#contact"
+							class="bg-[#3F5FDD] text-white font-semibold px-6 py-3 text-lg sm:px-12 sm:py-4 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 w-full md:w-auto rounded-lg text-center">Let's Talk</a>
 					</div>
 				</div>
 			</div>
