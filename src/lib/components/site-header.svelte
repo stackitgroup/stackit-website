@@ -15,14 +15,14 @@
 	class="sticky top-0 left-0 right-0 z-50 bg-black"
 >
 	<div class="container flex items-center justify-between px-6 py-4 mx-auto">
-		<span class="flex items-center">
+		<a href="/" class="flex items-center">
 			<img
 				src={StackitLogoWhite}
 				alt="Stackit Logo"
 				class="w-auto h-7 sm:h-9"
 				loading="eager"
 			/>
-		</span>
+		</a>
 		<div class="flex items-center space-x-6">
 			<a
 				href="#contact"

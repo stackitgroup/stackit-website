@@ -6,34 +6,6 @@
 	import PartnerSearchSection from '$lib/components/partner-search-section.svelte'
 	import ProductComplexitySection from '$lib/components/product-complexity-section.svelte'
 	import ProvenProcessSection from '$lib/components/proven-process-section.svelte'
-	import { onMount } from 'svelte'
-
-	onMount(() => {
-		const sections = document.querySelectorAll('.fade-in-section')
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-visible')
-					}
-				})
-			},
-			{
-				threshold: 0.1
-			}
-		)
-
-		sections.forEach((section) => {
-			observer.observe(section)
-		})
-
-		// Cleanup function
-		return () => {
-			observer.disconnect()
-			document.body.style.overflow = ''
-		}
-	})
 
 </script>
 

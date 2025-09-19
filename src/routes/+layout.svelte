@@ -7,6 +7,7 @@
 	import '../app.css'
 	import { browser } from '$app/environment'
 	import { PUBLIC_GA_ID } from '$env/static/public'
+	import { onMount, tick } from 'svelte'
 
 	let { children } = $props()
 
@@ -27,6 +28,49 @@
 					page_path: page.url.pathname
 				})
 			}
+		}
+	})
+
+	$effect(() => {
+		// Only run in the browser and re-run whenever the pathname changes
+		if (!browser) return
+
+		// Read page.url.pathname so Svelte tracks this effect and re-runs on navigation
+		void page.url.pathname
+
+		// Observer reference for cleanup
+		let observer: IntersectionObserver | null = null
+
+		// Wait a tick so the DOM for the new route is mounted
+		;(async () => {
+			await tick()
+
+			const sections = document.querySelectorAll('.fade-in-section')
+
+			// Reset visibility so animations can replay on navigation
+			sections.forEach(s => s.classList.remove('is-visible'))
+
+			observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('is-visible')
+						}
+					})
+				},
+				{
+					threshold: 0.1
+				}
+			)
+
+			sections.forEach((section) => {
+				observer?.observe(section)
+			})
+		})()
+
+		return () => {
+			if (observer) observer.disconnect()
+			document.body.style.overflow = ''
 		}
 	})
 
