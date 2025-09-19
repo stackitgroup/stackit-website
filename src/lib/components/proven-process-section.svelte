@@ -2,7 +2,7 @@
 	<div class="container px-6 mx-auto">
 		<div class="grid items-start gap-12 lg:grid-cols-3">
 			<div class="lg:col-span-1 lg:sticky top-28">
-				<h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl fade-in-section"
+				<h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl fade-in-section"
 				>
 					Our proven process
 				</h2>

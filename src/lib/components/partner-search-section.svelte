@@ -209,7 +209,7 @@
 >
 	<div class="container px-6 mx-auto text-center">
 		<div class="max-w-4xl mx-auto fade-in-section">
-			<h2 class="mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+			<h2 class="mb-8 text-4xl sm:text-5xl md:text-6xl font-bold text-white">
 				The Partner You've Been Searching For...
 			</h2>
 			<p class="mb-12 text-xl text-gray-300">

@@ -1,7 +1,7 @@
 <section class="min-h-screen flex items-center bg-black">
 	<div class="container mx-auto px-6 text-center">
 		<div class="max-w-5xl mx-auto fade-in-section">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold text-white mb-6"
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
 			>
 				Finding a good team shouldn't be so hard
 			</h2>

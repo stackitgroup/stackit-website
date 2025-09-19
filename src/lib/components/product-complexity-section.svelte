@@ -1,7 +1,7 @@
 <script>
-	import AircuityLogo from '$lib/assets/aircuity-logo.webp'
-	import I2SLLogo from '$lib/assets/i2sl-logo.webp'
-	import SiemensLogo from '$lib/assets/siemens-logo.webp'
+	import AircuityLogo from '$lib/assets/aircuity-logo.webp';
+	import I2SLLogo from '$lib/assets/i2sl-logo.webp';
+	import SiemensLogo from '$lib/assets/siemens-logo.webp';
 </script>
 
 <section class="pt-20 md:py-32 bg-black min-h-dvh flex items-center">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div class="order-first md:order-1 fade-in-section text-center md:text-left">
-				<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-center md:text-left">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight text-center md:text-left">
 					We know that creating a great product is complicated
 				</h2>
 				<div class="text-left fade-in-section mt-16 md:inline-block hidden">
