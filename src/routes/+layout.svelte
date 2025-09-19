@@ -7,7 +7,7 @@
 	import '../app.css'
 	import { browser } from '$app/environment'
 	import { PUBLIC_GA_ID } from '$env/static/public'
-	import { onMount, tick } from 'svelte'
+	import { tick } from 'svelte'
 
 	let { children } = $props()
 
@@ -101,7 +101,7 @@
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content={`${siteUrl}/stackit-isologo.webp`} />
+	<meta property="og:image" content={`${siteUrl}/stackit-logo-white-purple.webp`} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
@@ -111,7 +111,7 @@
 	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
-	<meta name="twitter:image" content={`${siteUrl}/stackit-isologo.webp`} />
+	<meta name="twitter:image" content={`${siteUrl}/stackit-logo-white-purple.webp`} />
 	<meta name="twitter:image:alt" content="Stackit - Your External Dev Team with In-House Drive" />
 
 	<!-- Favicon and icons -->
@@ -135,7 +135,7 @@
 		name: 'Stackit Group',
 		url: siteUrl,
 		description: siteDescription,
-		logo: `${siteUrl}/stackit-isologo.webp`,
+		logo: `${siteUrl}/stackit-logo-white-purple.webp`,
 		contactPoint: {
 		'@type': 'ContactPoint',
 		contactType: 'customer service',
