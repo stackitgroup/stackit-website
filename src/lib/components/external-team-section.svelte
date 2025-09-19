@@ -2,15 +2,16 @@
   <div class="container mx-auto px-6">
     <div class="text-center max-w-4xl mx-auto mb-8 fade-in-section">
       <h2
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 text-center"
+        class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 text-center"
       >
         Your external team should <br class="hidden md:block" /> feel like a top in-house team
       </h2>
-      <p
-        class="text-2xl sm:text-3xl md:text-4xl text-gray-300 italic text-center"
+      <h3 class="text-4xl sm:text-5xl md:text-6xl text-center text-[#99C4FE] font-bold">We deliver that experience</h3>
+      <!-- <p
+        class="text-2xl md:text-4xl text-gray-300 italic text-center"
       >
         We deliver that experience
-      </p>
+      </p> -->
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <div
