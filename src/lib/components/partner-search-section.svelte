@@ -5,7 +5,7 @@
 	let contentHeight = '0px'
 	let partnerSearchSection: HTMLElement
 
-	// const toggleContent = (shouldScroll = false) => {
+// const toggleContent = (shouldScroll = false) => {
 	// 	if (!expandedContent) return
 
 	// 	if (!isExpanded) {
@@ -68,19 +68,19 @@
 
 	bind:this={partnerSearchSection}
 	id="partner-search-section"
-	class="min-h-screen flex items-center py-20 md:py-32 text-white"
+	class="flex items-center min-h-screen py-20 text-white md:py-32"
 	style="
 		background: linear-gradient(to bottom, #000000, #0a1a6260, #000000);
 	"
 >
-	<div class="container mx-auto px-6">
+	<div class="container px-6 mx-auto">
 		<div class="max-w-3xl mx-auto text-left">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold fade-in-section">
+			<h2 class="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl fade-in-section">
 				The partner you've been searching for...
 
 			</h2>
 			<p
-				class="text-xl text-gray-200 mt-8 fade-in-section"
+				class="mt-8 text-xl text-gray-200 fade-in-section"
 				style="transition-delay: 100ms"
 			>
 				The search for a capable dev partner shouldn't end in frustration
@@ -104,19 +104,19 @@
 
 <!-- <section
   bind:this={expandedContent}
-  class="bg-white text-gray-800 transition-all duration-700 ease-in-out overflow-hidden"
+  class="overflow-hidden text-gray-800 transition-all duration-700 ease-in-out bg-white"
   style:max-height={contentHeight}
 >
- 
-  <div class="relative container mx-auto px-6 py-6 md:py-24">
-    <div class="flex justify-between items-start md:items-center mb-12">
-     
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 pr-12 md:pr-0">
+
+  <div class="container relative px-6 py-6 mx-auto md:py-24">
+    <div class="flex items-start justify-between mb-12 md:items-center">
+
+      <h2 class="pr-12 text-3xl font-bold text-gray-900 md:text-4xl md:pr-0">
         A Clear Path to Extraordinary Software
       </h2>
       <button
         on:click={handleClose}
-        class="absolute top-6 right-6 md:static text-gray-500 hover:text-gray-900 transition-colors"
+        class="absolute text-gray-500 transition-colors top-6 right-6 md:static hover:text-gray-900"
         aria-label="Close expanded section"
       >
         <svg
@@ -136,7 +136,7 @@
       </button>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 text-lg leading-relaxed">
+    <div class="grid text-lg leading-relaxed md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="space-y-6">
         <p>
           At Stackit, we know you’re the kind of leader committed to
@@ -182,7 +182,7 @@
           extraordinary software your vision demands.
         </p>
 
-        <div class="w-full hidden md:flex justify-center">
+        <div class="justify-center hidden w-full md:flex">
           <a
             href="#contact"
             class="flex items-center justify-center w-3/6 bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 rounded-lg"
@@ -202,24 +202,23 @@
   </div>
 </section>  -->
 
-
 <section
-  id="partner-section"
-  class="py-20 md:py-32"
-  style="background: linear-gradient(to bottom, #000000, #0a1a6260, #000000);"
+	id="partner-section"
+	class="py-20 md:py-32"
+	style="background: linear-gradient(to bottom, #000000, #0a1a6260, #000000);"
 >
-  <div class="container mx-auto px-6 text-center">
-    <div class="max-w-4xl mx-auto fade-in-section">
-      <h2 class="text-5xl md:text-6xl font-bold text-white mb-8">
-        The Partner You've Been Searching For...
-      </h2>
-      <p class="text-xl text-gray-300 mb-12">
-        The search for a capable dev partner shouldn't end in frustration and chaos. We've designed a clear path for leaders who are ready to stop micromanaging and start building the extraordinary software their vision demands.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-        <a href="#contact" class="bg-[#3F5FDD] text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg">Get Started</a>
-        <a href="/partnership" class="bg-transparent border-2 border-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 hover:bg-[#3550B8] transition-colors duration-300 sm:text-xl inline-block w-full md:w-auto rounded-lg">Read More</a>
-      </div>
-    </div>
-  </div>
+	<div class="container px-6 mx-auto text-center">
+		<div class="max-w-4xl mx-auto fade-in-section">
+			<h2 class="mb-8 text-5xl font-bold text-white md:text-6xl">
+				The Partner You've Been Searching For...
+			</h2>
+			<p class="mb-12 text-xl text-gray-300">
+				The search for a capable dev partner shouldn't end in frustration and chaos. We've designed a clear path for leaders who are ready to stop micromanaging and start building the extraordinary software their vision demands.
+			</p>
+			<div class="flex flex-col items-center justify-center gap-6 sm:flex-row">
+				<a href="#contact" class="bg-[#3F5FDD] whitespace-nowrap text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg">Get Started</a>
+				<a href="/partnership" class="bg-transparent  whitespace-nowrap border-2 border-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 hover:bg-[#3550B8] transition-colors duration-300 sm:text-xl inline-block w-full md:w-auto rounded-lg">Read More</a>
+			</div>
+		</div>
+	</div>
 </section>

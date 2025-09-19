@@ -1,20 +1,20 @@
-  <section id="process" class="py-20 md:py-32 bg-black">
-	<div class="container mx-auto px-6">
-		<div class="grid lg:grid-cols-3 gap-12 items-start">
+  <section id="process" class="py-20 bg-black md:py-32">
+	<div class="container px-6 mx-auto">
+		<div class="grid items-start gap-12 lg:grid-cols-3">
 			<div class="lg:col-span-1 lg:sticky top-28">
-				<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white fade-in-section"
+				<h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl fade-in-section"
 				>
 					Our proven process
 				</h2>
 				<p
-					class="text-xl text-gray-300 mt-6 fade-in-section"
+					class="mt-6 text-xl text-gray-300 fade-in-section"
 					style="transition-delay: 100ms"
 				>
 					From initial idea to final launch, we've engineered a process
 					that ensures clarity, predictability, and quality at every step.
 					This is how we build extraordinary software, together.
 				</p>
-				<div class="mt-8 hidden lg:block fade-in-section">
+				<div class="hidden mt-8 lg:block fade-in-section">
 					<a
 						href="#contact"
 						class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
@@ -29,18 +29,17 @@
 			<div class="lg:col-span-2">
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							01
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">
+						<h3 class="mb-2 text-2xl font-bold text-white">
 							Introduction Call
 						</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							A conversation to explore your vision and our process
 						</p>
 						<p class="text-gray-300">
@@ -51,21 +50,20 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							02
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">
+						<h3 class="mb-2 text-2xl font-bold text-white">
 							Clarify the Why
 						</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							Uncovering Your Purpose
 						</p>
 						<p class="text-gray-300">
@@ -76,19 +74,18 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							03
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">Proposal</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<h3 class="mb-2 text-2xl font-bold text-white">Proposal</h3>
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							Creating the game plan for the winning team
 						</p>
 						<p class="text-gray-300">
@@ -99,21 +96,20 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							04
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">
+						<h3 class="mb-2 text-2xl font-bold text-white">
 							Build Mode: ON
 						</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							Building with Confidence, From Day One
 						</p>
 						<p class="text-gray-300">
@@ -124,19 +120,18 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							05
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">Pulse</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<h3 class="mb-2 text-2xl font-bold text-white">Pulse</h3>
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							See your vision manifest – two weeks at a time
 						</p>
 						<p class="text-gray-300">
@@ -148,21 +143,20 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							06
 						</div>
 						<div class="w-px h-full bg-gray-700"></div>
 					</div>
 					<div class="pb-12">
-						<h3 class="text-2xl font-bold text-white mb-2">
+						<h3 class="mb-2 text-2xl font-bold text-white">
 							The Quality Gate
 						</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							Your Green Light for a Confident Launch
 						</p>
 						<p class="text-gray-300">
@@ -173,20 +167,19 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<div class="flex fade-in-section">
 					<div class="flex flex-col items-center mr-6">
-						<div
-							class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 						>
 							07
 						</div>
 					</div>
 					<div>
-						<h3 class="text-2xl font-bold text-white mb-2">
+						<h3 class="mb-2 text-2xl font-bold text-white">
 							Beyond Launch
 						</h3>
-						<p class="text-lg text-gray-400 font-medium mb-4">
+						<p class="mb-4 text-lg font-medium text-gray-400">
 							Your Partner in Continuous Growth and Evolution
 						</p>
 						<p class="text-gray-300">
@@ -199,11 +192,11 @@
 				</div>
 			</div>
 		</div>
-	
-		<div class="flex items-center justify-center space-x-6 lg:hidden mt-12">
+
+		<div class="flex items-center justify-center mt-12 space-x-6 lg:hidden">
 			<a
-        href="#contact"
-        class="bg-[#3F5FDD] text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block  w-full md:w-auto rounded-lg">Introduction Call</a>
+				href="#contact"
+				class="bg-[#3F5FDD]  whitespace-nowrap text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block  w-full md:w-auto rounded-lg">Introduction Call</a>
 		</div>
 	</div>
 </section>
