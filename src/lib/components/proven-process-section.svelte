@@ -17,7 +17,7 @@
 				<div class="hidden mt-8 lg:block fade-in-section">
 					<a
 						href="#contact"
-						class="bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
+						class="bg-[#3F5FDD] text-white whitespace-nowrap font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
 					>Introduction Call</a>
 					<!-- <a
 					href="#contact"
