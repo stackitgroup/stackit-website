@@ -70,12 +70,10 @@ export const actions: Actions = {
 			message: data.get('message')?.toString()?.trim() ?? ''
 		}
 
-		// Validación con Zod
 		const validation = contactFormSchema.safeParse(formData)
 
 		if (!validation.success) {
 			const errors = validation.error.issues
-			// Tomar el primer error para mostrar
 			const firstError = errors[0]
 
 			return fail(400, {
