@@ -54,27 +54,10 @@ function sanitizeMessage(message: string): string {
 	return sanitized.trim()
 }
 
-// Schema para validar contactInfo como email o teléfono
-const contactInfoSchema = z.string()
-	.min(1, 'Email or phone number is required.')
-	.refine((value) => {
-		// Validar si es email válido
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-		// Validar si es teléfono válido (números, espacios, guiones, paréntesis, +)
-		const phoneRegex = /^[\d\s\-()+]{8,}$/
-
-		return emailRegex.test(value) || phoneRegex.test(value)
-	}, 'Must be a valid email address or phone number.')
-
 const contactFormSchema = z.object({
-	fullName: z.string()
-		.min(1, 'Full name is required.')
-		.min(3, 'Full name must be at least 8 characters long.'),
-	contactInfo: contactInfoSchema,
-	message: z.string()
-		.min(1, 'Message is required.')
-		.min(3, 'Message must be at least 8 characters long.')
-		.transform(sanitizeMessage)
+	fullName: z.string(),
+	contactInfo: z.string(),
+	message: z.string().transform(sanitizeMessage)
 })
 
 export const actions: Actions = {

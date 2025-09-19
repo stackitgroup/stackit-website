@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import { sharedEmail } from '$lib/stores/email';
-	import type { SubmitFunction } from '@sveltejs/kit';
-	import { onMount } from 'svelte';
-	import { toast } from 'svelte-sonner';
+	import { enhance } from '$app/forms'
+	import { sharedEmail } from '$lib/stores/email'
+	import type { SubmitFunction } from '@sveltejs/kit'
+	import { onMount } from 'svelte'
+	import { toast } from 'svelte-sonner'
 
 	let isSubmitting = $state(false)
 	let message = $state('')
