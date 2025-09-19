@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { enhance } from '$app/forms'
-	import { sharedEmail } from '$lib/stores/email'
-	import type { SubmitFunction } from '@sveltejs/kit'
-	import { onMount } from 'svelte'
-	import { toast } from 'svelte-sonner'
+	import { enhance } from '$app/forms';
+	import { sharedEmail } from '$lib/stores/email';
+	import type { SubmitFunction } from '@sveltejs/kit';
+	import { onMount } from 'svelte';
+	import { toast } from 'svelte-sonner';
 
 	let isSubmitting = $state(false)
 	let message = $state('')
@@ -141,7 +141,7 @@
 				<div class="space-y-6">
 					<div>
 						<h4 class="text-xl font-bold text-white" id="contact">
-							1. Introduction Call
+						Introduction Call
 						</h4>
 						<p class="text-lg text-gray-300 mt-2">
 							We hold a structured, two-way conversation to understand your
