@@ -1,7 +1,6 @@
 <script>
-	import StackitLogoWhiteWhite from '$lib/assets/stackit-logo-white-white.webp'
-	import { sharedEmail } from '$lib/stores/email'
-
+	import StackitLogoWhiteWhite from '$lib/assets/stackit-logo-white-white.webp';
+	import { sharedEmail } from '$lib/stores/email';
 </script>
 
 <footer class="bg-black text-gray-300 min-h-screen flex items-center">
@@ -38,7 +37,7 @@
 						type="email"
 						placeholder="Enter your email"
 						bind:value={$sharedEmail}
-						class="w-full px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#2F5CEC]"
+						class="w-full px-4 py-3 bg-transparent border border-[#99c5fe79] text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#2F5CEC]"
 						required
 					/>
 					<a

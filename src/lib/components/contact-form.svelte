@@ -186,7 +186,7 @@
 								name="fullName"
 								id="full-name"
 								autocomplete="name"
-								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg focus:outline-none focus:ring-2"
 								disabled={isSubmitting}
 								required
 							/>
@@ -200,7 +200,7 @@
 								type="email"
 								name="contactInfo"
 								id="contact-info"
-								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79]  text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg focus:outline-none focus:ring-2"
 								bind:value={$sharedEmail}
 								disabled={isSubmitting}
 								required
@@ -216,7 +216,7 @@
 								id="message"
 								name="message"
 								rows="4"
-								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79] text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg"
+								class="mt-1 block w-full px-4 py-3 bg-transparent border border-[#99c5fe79] text-white rounded-lg shadow-sm focus:ring-[#3F5FDD] focus:border-[#3F5FDD] text-lg focus:outline-none focus:ring-2"
 								disabled={isSubmitting}
 								required
 							></textarea>
