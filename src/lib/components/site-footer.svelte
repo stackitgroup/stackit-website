@@ -2,7 +2,7 @@
   import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.png';
 </script>
 
-<footer class="bg-black text-gray-300 py-20 md:py-24 min-h-dvh">
+<footer class="bg-black text-gray-300 py-20 md:py-28">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-10 gap-y-12 md:gap-x-16">
       <div class="md:col-span-7">
