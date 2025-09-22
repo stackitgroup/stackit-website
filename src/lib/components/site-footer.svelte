@@ -1,20 +1,19 @@
 <script>
-	import StackitLogoWhiteWhite from '$lib/assets/stackit-logo-white-white.webp';
-	import { sharedEmail } from '$lib/stores/email';
+		import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.png';
 </script>
 
-<footer class="bg-black text-gray-300 min-h-screen flex items-center">
-	<div class="container mx-auto px-6 py-24">
-		<div class="grid grid-cols-1 md:grid-cols-10 gap-16">
+<footer class="bg-black text-gray-300 py-20 md:py-24">
+	<div class="container mx-auto px-6">
+		<div class="grid grid-cols-1 md:grid-cols-10 gap-y-12 md:gap-x-16">
 			<div class="md:col-span-7">
-				<span class="inline-block mb-6">
+				<a href="#" class="inline-block mb-6">
 					<img
-						src={StackitLogoWhiteWhite}
+						src={StackitLogoSolidWhite}
 						alt="Stackit Logo"
 						class="h-6 w-auto"
 					/>
-				</span>
-				<div class="text-gray-300 text-base mb-12">
+				</a>
+				<div class="text-gray-300 text-md">
 					<p>
 						Stackit is a software development agency. With a specialty in
 						business systems, SaaS, and critical application design, we're
@@ -27,26 +26,14 @@
 					</p>
 					<p class="mt-4 font-semibold text-gray-300">San Diego, CA</p>
 				</div>
-				<h2 class="text-2xl font-bold text-white mb-4">
-					Insights for your inbox
-				</h2>
-				<form class="flex">
-					<input
-						id="newsletter-email"
-						name="email"
-						type="email"
-						placeholder="Enter your email"
-						bind:value={$sharedEmail}
-						class="w-full px-4 py-3 bg-transparent border border-[#99c5fe79] text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#2F5CEC]"
-						required
-					/>
-					<a
-						aria-label="Subscribe to newsletter"
-						href="#contact"
-						class="bg-[#2F5CEC] text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-[#234baf] transition-colors"
-					>
+			</div>
+
+			<div class="md:col-span-3">
+				<h2 class="text-2xl font-bold text-white mb-6">Get In Touch</h2>
+				<div class="space-y-4 text-lg text-gray-300">
+					<p class="flex items-center">
 						<svg
-							class="w-6 h-6"
+							class="w-5 h-5 mr-3 text-gray-400"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -56,76 +43,89 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M14 5l7 7m0 0l-7 7m7-7H3"
+								d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 							></path>
 						</svg>
-					</a>
-				</form>
+						<a
+							href="mailto:hello@stackitgroup.com"
+							class="hover:text-white transition-colors"
+							>hello@stackitgroup.com</a
+						>
+					</p>
+					<p class="flex items-center">
+						<svg
+							class="w-5 h-5 mr-3 text-gray-400"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+							></path>
+						</svg>
+						<a href="tel:+16199175387" class="hover:cursor-default"
+							>+1 (619) 917-5387</a
+						>
+					</p>
+					<p class="flex items-center">
+						<svg
+							class="w-5 h-5 mr-3 text-gray-400"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+							></path>
+						</svg>
+						<a
+							href="https://www.linkedin.com/company/stackit/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-semibold hover:underline text-gray-400"
+							>LinkedIn</a
+						>
+					</p>
+				</div>
 			</div>
 
-			<div class="md:col-span-3 flex flex-col items-start">
-				<div class="text-left w-full">
-					<h2 class="text-2xl font-bold text-white mb-6">Get In Touch</h2>
-					<div class="space-y-4 text-base text-gray-300">
-						<p class="flex items-center">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5 mr-3 text-gray-500"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-								/>
-							</svg>
-							<a
-								href="mailto:hello@stackitgroup.com"
-								class="hover:text-white transition-colors"
-							>hello@stackitgroup.com</a
-							>
-						</p>
-						<p class="flex items-center">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5 mr-3 text-gray-500"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-								/>
-							</svg>
-							<span class="cursor-default">+1 (619) 917-5387</span>
-						</p>
-						<div class="flex items-center">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5 mr-3 text-gray-500"
-								fill="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-								/>
-							</svg>
-							<a
-								href="https://www.linkedin.com/company/stackit/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="font-semibold text-white hover:underline"
-							>LinkedIn</a
-							>
-						</div>
-					</div>
+			<div class="md:col-span-7">
+				<h2 class="text-2xl font-bold text-white mb-4">Stay in the loop</h2>
+				<div class="max-w-lg">
+					<form class="relative" id="newsletter-form">
+						<input
+							id="newsletter-email"
+							type="email"
+							placeholder="Enter your email"
+							autocomplete="off"
+							class="w-full px-1 py-4 bg-transparent text-white border-0 border-b-2 border-gray-700 focus:outline-none focus:ring-0 focus:border-[#3F5FDD] pr-28 transition-colors rounded-none"
+							required
+						/>
+						<button
+							id="newsletter-button"
+							type="submit"
+							class="absolute inset-y-0 right-0 flex items-center px-6 text-white font-semibold hover:text-gray-300 transition-colors"
+						>
+							<span>Subscribe</span>
+						</button>
+					</form>
+					<p
+						id="newsletter-success"
+						class="text-gray-400 mt-2 text-sm hidden"
+					>
+						Welcome to Stackit!
+					</p>
 				</div>
-				<div class="mt-12 flex flex-col w-auto text-4xl font-semibold text-white">
+			</div>
+
+			<div class="md:col-span-7">
+				<div
+					class="flex flex-col w-auto text-4xl font-semibold text-white text-center md:text-left mx-auto md:mx-0"
+				>
 					<span>Success.</span>
 					<span>Coded.</span>
 				</div>

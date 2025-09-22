@@ -1,5 +1,5 @@
 <script>
-	import StackitLogoWhite from '$lib/assets/stackit-logo-white.webp'
+	import stackitLogoWhite from '$lib/assets/stackit_logo_white.png';
 </script>
 
 <!-- Skip link for accessibility -->
@@ -10,26 +10,23 @@
 	Skip to main content
 </a>
 
-<header
-	id="header"
-	class="sticky top-0 left-0 right-0 z-50 bg-black"
->
-	<div class="container flex items-center justify-between px-6 py-4 mx-auto">
+<header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black">
+	<div
+		class="container flex items-center justify-between px-6 py-4 mx-auto"
+	>
 		<a href="/" class="flex items-center">
 			<img
-				src={StackitLogoWhite}
+				src={stackitLogoWhite}
 				alt="Stackit Logo"
-				class="w-auto h-7 sm:h-9"
-				loading="eager"
+				class="w-auto h-10 sm:h-10"
 			/>
 		</a>
 		<div class="flex items-center space-x-6">
 			<a
 				href="#contact"
-				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-300 rounded-lg"
+				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-300 rounded-lg md:rounded-md"
+				>Introduction Call</a
 			>
-				Introduction Call
-			</a>
 		</div>
 	</div>
 </header>
