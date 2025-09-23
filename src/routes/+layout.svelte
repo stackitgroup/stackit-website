@@ -2,8 +2,7 @@
   import { browser } from '$app/environment';
   import { page } from '$app/state';
   import { PUBLIC_GA_ID } from '$env/static/public';
-  import favicon from '$lib/assets/stackit-favicon.ico';
-  // Assuming the favicon is an .ico file
+  import favicon from '$lib/assets/favicon.ico';
   import SiteFooter from '$lib/components/site-footer.svelte';
   import { tick } from 'svelte';
   import { Toaster } from 'svelte-sonner';
