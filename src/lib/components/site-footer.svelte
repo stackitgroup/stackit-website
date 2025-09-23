@@ -2,7 +2,9 @@
   import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.png';
 </script>
 
-<footer class="bg-black text-gray-300 py-20 md:py-28">
+<footer
+  class="flex items-center bg-black text-gray-300 py-20 md:py-24 border-t border-gray-800"
+>
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-10 gap-y-12 md:gap-x-16">
       <div class="md:col-span-7">
@@ -92,10 +94,13 @@
         </div>
       </div>
 
-      <div class="md:col-span-7">
+      <div class="md:col-span-10">
         <h2 class="text-2xl font-bold text-white mb-4">Stay in the loop</h2>
-        <div class="max-w-lg">
-          <form class="relative" id="newsletter-form">
+        <!-- <div class="max-w-lg"> -->
+        <div
+          class="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-10 md:gap-x-16"
+        >
+          <form class="relative col-span-3 md:col-span-7" id="newsletter-form">
             <input
               id="newsletter-email"
               type="email"
@@ -112,19 +117,20 @@
               <span>Subscribe</span>
             </button>
           </form>
-          <p id="newsletter-success" class="text-gray-400 mt-2 text-sm hidden">
-            Welcome to Stackit!
-          </p>
+          <div class="col-span-3 md:col-span-3">
+            <div
+              class="flex flex-col md:flex-row md:gap-2 w-auto text-4xl font-semibold text-white text-center md:text-left mx-auto md:mx-0"
+            >
+              <span>Success.</span>
+              <span>Coded.</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="md:col-span-7">
-        <div
-          class="flex flex-col w-auto text-4xl font-semibold text-white text-center md:text-left mx-auto md:mx-0"
-        >
-          <span>Success.</span>
-          <span>Coded.</span>
-        </div>
+        <p id="newsletter-success" class="text-gray-400 mt-2 text-sm hidden">
+          Welcome to Stackit!
+        </p>
+        <!-- </div> -->
       </div>
     </div>
   </div>

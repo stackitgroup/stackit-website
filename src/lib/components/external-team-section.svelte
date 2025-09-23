@@ -1,4 +1,3 @@
-
 <section class="py-20 md:py-32 bg-black">
   <div class="container mx-auto px-6">
     <div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
@@ -27,19 +26,16 @@
           Your Success is Our Success
         </h3>
         <p class="text-lg text-gray-300">
-          True partnerships are forged from the shared pursuit of
-          excellence and the drive to create something truly impactful.
-          It's the foundation we're built on.
+          True partnerships are forged from the shared pursuit of excellence and
+          the drive to create something truly impactful. It's the foundation
+          we're built on.
         </p>
       </div>
       <div class="fade-in-section" style="transition-delay: 300ms">
-        <h3 class="text-2xl font-bold text-white mb-3">
-          More Than Just Code
-        </h3>
+        <h3 class="text-2xl font-bold text-white mb-3">More Than Just Code</h3>
         <p class="text-lg text-gray-300">
-          Exceptional software is the result. As one cohesive team, you
-          get more than just code—you get the perfect storm for
-          innovation.
+          Exceptional software is the result. As one cohesive team, you get more
+          than just code—you get the perfect storm for innovation.
         </p>
       </div>
     </div>
@@ -47,9 +43,8 @@
       <a
         href="#contact"
         class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg"
-        >Meet the Team</a
+        >Partner with Stackit</a
       >
     </div>
   </div>
 </section>
-
