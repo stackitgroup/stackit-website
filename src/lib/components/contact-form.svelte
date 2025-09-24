@@ -55,35 +55,21 @@
 	}
 
 	// --- Link Detection Logic using derived state ---
-	function containsLinks(text: string): boolean {
-		if (!text) return false
-		const linkPatterns: RegExp[] = [
-			/(https?:\/\/[^\s]+)/i,
-			/(www\.[^\s]+)/i,
-			/([a-zA-Z0-9-]+\.(com|org|net|edu|gov|io|co))/i,
-			/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i,
-			/(tel:[^\s]+)/i
-		]
-		return linkPatterns.some(pattern => pattern.test(text))
-	}
+	// function containsLinks(text: string): boolean {
+	// 	if (!text) return false
+	// 	const linkPatterns: RegExp[] = [
+	// 		/(https?:\/\/[^\s]+)/i,
+	// 		/(www\.[^\s]+)/i,
+	// 		/([a-zA-Z0-9-]+\.(com|org|net|edu|gov|io|co))/i,
+	// 		/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i,
+	// 		/(tel:[^\s]+)/i
+	// 	]
+	// 	return linkPatterns.some(pattern => pattern.test(text))
+	// }
 
-	let showLinkWarning = $derived(containsLinks(message))
+	// let showLinkWarning = $derived(containsLinks(message))
 
 	onMount(() => {
-		// --- Fade-in section observer ---
-		const sections = document.querySelectorAll('.fade-in-section')
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-visible')
-					}
-				})
-			},
-			{ threshold: 0.1 }
-		)
-		sections.forEach(section => observer.observe(section))
-
 		// --- Setup contact triggers ---
 		const contactTriggers = document.querySelectorAll('a[href="#contact"]')
 		const handleContactClick = (e: Event) => {
@@ -98,7 +84,6 @@
 		// --- Cleanup function ---
 		return () => {
 			document.body.style.overflow = ''
-			sections.forEach(section => observer.unobserve(section))
 			contactTriggers.forEach(trigger => trigger.removeEventListener('click', handleContactClick))
 		}
 	})
@@ -197,14 +182,14 @@
 								<p class="text-red-700 text-sm">{formError}</p>
 							</div>
 						{/if}
-
+						<!--
 						{#if showLinkWarning}
 							<div class="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
 								<p class="text-yellow-700 text-sm">
 									Please note: Links, emails, and contact information in messages may be removed for security purposes.
 								</p>
 							</div>
-						{/if}
+						{/if} -->
 
 						<div class="space-y-6">
 							<div>
