@@ -36,7 +36,17 @@
 		</div>
 	</header>
 
-	<style>
+	<HeroSection />
+	<FindingTeamSection />
+	<ExternalTeamSection />
+	<ProductComplexitySection />
+	<ProvenProcessSection />
+	<PartnerSearchSection />
+</main>
+
+<ContactForm />
+
+<style>
     .sr-only {
       position: absolute;
       width: 1px;
@@ -64,13 +74,3 @@
       z-index: 9999;
     }
   </style>
-
-	<HeroSection />
-	<FindingTeamSection />
-	<ExternalTeamSection />
-	<ProductComplexitySection />
-	<ProvenProcessSection />
-	<PartnerSearchSection />
-</main>
-
-<ContactForm />
