@@ -1,7 +1,7 @@
 <script lang="ts">
-	import aircuityLogo from '$lib/assets/aircuity_logo.png'
-	import i2slLogo from '$lib/assets/i2sl-logo.png'
-	import siemensLogo from '$lib/assets/siemens-logo.png'
+	import aircuityLogo from '$lib/assets/aircuity_logo.webp'
+	import i2slLogo from '$lib/assets/i2sl-logo.webp'
+	import siemensLogo from '$lib/assets/siemens-logo.webp'
 	import { enhance } from '$app/forms'
 	import type { SubmitFunction } from '@sveltejs/kit'
 	import { sharedEmail } from '$lib/stores/email'

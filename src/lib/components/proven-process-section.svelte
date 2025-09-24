@@ -2,8 +2,7 @@
 	<div class="container px-6 mx-auto">
 		<div class="grid items-start gap-12 lg:grid-cols-3">
 			<div class="lg:col-span-1 lg:sticky top-28">
-				<h2
-					class="text-4xl font-bold text-white sm:text-5xl md:text-6xl fade-in-section"
+				<h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl fade-in-section"
 				>
 					Our proven process
 				</h2>
@@ -19,7 +18,7 @@
 					<a
 						href="#contact"
 						class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
-						>Introduction Call</a
+					>Introduction Call</a
 					>
 				</div>
 			</div>
@@ -27,8 +26,7 @@
 				<div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								01
 							</div>
@@ -51,8 +49,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								02
 							</div>
@@ -75,8 +72,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								03
 							</div>
@@ -97,8 +93,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								04
 							</div>
@@ -121,8 +116,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								05
 							</div>
@@ -144,8 +138,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								06
 							</div>
@@ -168,8 +161,7 @@
 					</div>
 					<div class="flex fade-in-section">
 						<div class="flex flex-col items-center mr-6">
-							<div
-								class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#3550B8] text-white flex items-center justify-center font-bold text-xl"
 							>
 								07
 							</div>
@@ -192,13 +184,12 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="flex items-center justify-center mt-12 space-x-6 lg:hidden"
+		<div class="flex items-center justify-center mt-12 space-x-6 lg:hidden"
 		>
 			<a
 				href="#contact"
 				class="whitespace-nowrap bg-[#3F5FDD] whitespace-nowrap text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg"
-				>Introduction Call</a
+			>Introduction Call</a
 			>
 		</div>
 	</div>
