@@ -1,5 +1,32 @@
 <script>
 	import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.webp'
+	import { enhance } from '$app/forms'
+
+	let newsletterForm
+	let isSubmitting = false
+	let showSuccess = false
+	let errorMessage = ''
+
+	const handleNewsletterSubmit = () => {
+		return async ({ result }) => {
+			isSubmitting = false
+
+			if (result.type === 'success') {
+				showSuccess = true
+				errorMessage = ''
+				newsletterForm.reset()
+
+				// Hide success message after 5 seconds
+				setTimeout(() => {
+					showSuccess = false
+				}, 5000)
+			}
+			else if (result.type === 'failure') {
+				errorMessage = result.data?.error || 'An error occurred. Please try again.'
+				showSuccess = false
+			}
+		}
+	}
 </script>
 
 <footer class="flex items-center bg-black text-gray-300 py-20 md:py-24 border-t border-gray-800">
@@ -93,21 +120,31 @@
 				<!-- <div class="max-w-lg"> -->
 				<div class="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-10 md:gap-x-16"
 				>
-					<form class="relative col-span-3 md:col-span-7" id="newsletter-form">
+					<form
+						class="relative col-span-3 md:col-span-7"
+						method="POST"
+						action="?/sendGoogleChatSubscription"
+						bind:this={newsletterForm}
+						use:enhance={handleNewsletterSubmit}
+						on:submit={() => { isSubmitting = true }}
+					>
 						<input
 							id="newsletter-email"
+							name="email"
 							type="email"
 							placeholder="Enter your email"
 							autocomplete="off"
 							class="w-full px-1 py-4 bg-transparent text-white border-0 border-b-2 border-gray-700 focus:outline-none focus:ring-0 focus:border-[#3F5FDD] pr-28 transition-colors rounded-none"
 							required
+							disabled={isSubmitting}
 						/>
 						<button
 							id="newsletter-button"
 							type="submit"
-							class="absolute inset-y-0 right-0 flex items-center px-6 text-white font-semibold hover:text-gray-300 transition-colors"
+							class="absolute inset-y-0 right-0 flex items-center px-6 text-white font-semibold hover:text-gray-300 transition-colors disabled:opacity-50"
+							disabled={isSubmitting}
 						>
-							<span>Subscribe</span>
+							<span>{isSubmitting ? 'Subscribing...' : 'Subscribe'}</span>
 						</button>
 					</form>
 					<div class="col-span-3 md:col-span-3">
@@ -119,9 +156,17 @@
 					</div>
 				</div>
 
-				<p id="newsletter-success" class="text-gray-400 mt-2 text-sm hidden">
-					Welcome to Stackit!
-				</p>
+				{#if showSuccess}
+					<p class="text-green-400 mt-2 text-sm">
+						Welcome to Stackit!
+					</p>
+				{/if}
+
+				{#if errorMessage}
+					<p class="text-red-400 mt-2 text-sm">
+						{errorMessage}
+					</p>
+				{/if}
 				<!-- </div> -->
 			</div>
 		</div>

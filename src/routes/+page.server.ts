@@ -147,5 +147,130 @@ export const actions: Actions = {
 				message
 			})
 		}
+	},
+	sendGoogleChatSubscription: async ({ request, getClientAddress }) => {
+		const data = await request.formData()
+		const email = data.get('email')?.toString()?.trim() ?? ''
+
+		// Validate email
+		if (!email) {
+			return fail(400, {
+				error: 'Email is required',
+				email
+			})
+		}
+
+		// Basic email validation
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		if (!emailRegex.test(email)) {
+			return fail(400, {
+				error: 'Please enter a valid email address',
+				email
+			})
+		}
+
+		try {
+			// Get client IP address
+			const clientIP = getClientAddress()
+			console.log('Client IP:', clientIP)
+
+			// Get location information from IP
+			let locationInfo = 'Location unavailable'
+
+			try {
+				// Check if IP is local/private
+				const isLocalIP = clientIP === '::1'
+					|| clientIP === '127.0.0.1'
+					|| clientIP?.startsWith('192.168.')
+					|| clientIP?.startsWith('10.')
+					|| clientIP?.startsWith('172.')
+
+				if (isLocalIP) {
+					locationInfo = 'Local/Development Environment'
+				}
+				else {
+					const geoResponse = await fetch(`http://ip-api.com/json/${clientIP}?fields=status,message,country,regionName,city,lat,lon,isp,query`)
+					console.log('Geo API Response Status:', geoResponse.status)
+
+					if (geoResponse.ok) {
+						const geoData = await geoResponse.json()
+						console.log('Geo API Data:', JSON.stringify(geoData, null, 2))
+
+						if (geoData.status === 'success') {
+							locationInfo = `${geoData.city || 'Unknown'}, ${geoData.regionName || 'Unknown'}, ${geoData.country || 'Unknown'}`
+							if (geoData.lat && geoData.lon) {
+								locationInfo += `\n*GPS Coordinates:* ${geoData.lat}, ${geoData.lon}`
+							}
+							if (geoData.isp) {
+								locationInfo += `\n*ISP:* ${geoData.isp}`
+							}
+						}
+						else {
+							locationInfo = `Location lookup failed: ${geoData.message || 'Unknown error'}`
+						}
+					}
+					else {
+						locationInfo = `Location API error (HTTP ${geoResponse.status})`
+					}
+				}
+			}
+			catch (geoError) {
+				console.error('Error fetching location:', geoError)
+				locationInfo = 'Location lookup error'
+			}
+
+			// Construct the message for Google Chat
+			const pstDate = dayjs().tz('America/Los_Angeles')
+			const formattedDate = `${pstDate.format('MMMM DD, YYYY')} at ${pstDate.format('h:mm A')} PST`
+
+			const chatMessage = {
+				text: `New newsletter subscription:
+        
+*Email:* ${email}
+*IP Address:* ${clientIP}
+*Location:* ${locationInfo}
+
+*Environment:* ${ENVIRONMENT}
+*Subscribed at:* ${formattedDate}
+`
+			}
+
+			if (!SECRET_GOOGLE_CHAT_WEBHOOK_URL) {
+				console.error('Google Chat webhook URL not configured')
+				return fail(500, {
+					error: 'Server configuration error. Please try again later.',
+					email
+				})
+			}
+
+			const response = await fetch(SECRET_GOOGLE_CHAT_WEBHOOK_URL, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(chatMessage)
+			})
+
+			if (!response.ok) {
+				console.error('Google Chat webhook error:', response.status, response.statusText)
+				return fail(response.status, {
+					error: 'Failed to subscribe. Please try again.',
+					email
+				})
+			}
+
+			// Success
+			return {
+				success: true,
+				message: 'Successfully subscribed to our newsletter!'
+			}
+		}
+		catch (err) {
+			console.error('Error sending subscription:', err)
+			return fail(500, {
+				error: 'Network error. Please try again.',
+				email
+			})
+		}
 	}
 }
