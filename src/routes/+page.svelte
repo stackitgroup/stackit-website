@@ -19,32 +19,3 @@
 </main>
 
 <ContactForm />
-
-<style>
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .focus\:not-sr-only:focus {
-      position: absolute;
-      width: auto;
-      height: auto;
-      padding: 0.5rem 1rem;
-      margin: 0;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
-      border: 0;
-      top: 1rem;
-      left: 1rem;
-      z-index: 9999;
-    }
-  </style>
