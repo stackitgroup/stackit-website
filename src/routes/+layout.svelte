@@ -7,6 +7,7 @@
 	import { tick } from 'svelte'
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
+
 	let { children } = $props()
 
 	// --- UPDATED SEO metadata ---
@@ -14,7 +15,7 @@
 		= 'Stackit | Helping high-growth leaders innovate at speed with the discipline & collaboration of an in-house team'
 	const siteDescription
 		= 'Build extraordinary software with a partner who shares your standards. Stackit provides an external development team with in-house drive and dedication.'
-	const siteUrl = window.location.origin
+	const siteUrl = 'https://www.stackitgroup.com' // Using the final production URL
 	const siteName = 'Stackit'
 	const socialImage = `${siteUrl}/stackit-logo-social-media-b.png`
 	const keywords
