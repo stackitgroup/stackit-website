@@ -157,7 +157,7 @@
 				</div>
 
 				{#if showSuccess}
-					<p class="text-green-400 mt-2 text-sm">
+					<p class="mt-2 text-sm">
 						Welcome to Stackit!
 					</p>
 				{/if}
