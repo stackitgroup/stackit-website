@@ -17,6 +17,7 @@
 				<a
 					href="/#partner-section"
 					class="fixed top-4 right-4 text-gray-500 hover:text-black transition-colors z-50"
+					aria-label="Close and return to partner section"
 				>
 					<svg
 						class="w-8 h-8"

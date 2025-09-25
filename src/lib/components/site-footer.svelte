@@ -1,15 +1,16 @@
-<script>
+<script lang="ts">
 	import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.webp'
 	import { enhance } from '$app/forms'
-	import { browser } from '$app/environment'
+	import type { ActionResult } from '@sveltejs/kit'
 
-	let newsletterForm
-	let isSubmitting = false
-	let showSuccess = false
-	let errorMessage = ''
+	let newsletterForm: HTMLFormElement
+	let isSubmitting = $state(false)
+	let showSuccess = $state(false)
+	let errorMessage = $state('')
 
 	const handleNewsletterSubmit = () => {
-		return async ({ result }) => {
+		isSubmitting = true
+		return async ({ result }: { result: ActionResult }) => {
 			isSubmitting = false
 
 			if (result.type === 'success') {
@@ -37,7 +38,7 @@
 		}
 		catch {
 			return '4.0.x'
-		} 
+		}
 	})
 </script>
 
@@ -45,7 +46,7 @@
 	<div class="container mx-auto px-6">
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-y-12 md:gap-x-16">
 			<div class="md:col-span-7">
-				<a href="#" class="inline-block mb-6">
+				<a href="/" class="inline-block mb-6">
 					<img
 						src={StackitLogoSolidWhite}
 						alt="Stackit Logo"
@@ -138,7 +139,6 @@
 						action="?/sendGoogleChatSubscription"
 						bind:this={newsletterForm}
 						use:enhance={handleNewsletterSubmit}
-						on:submit={() => { isSubmitting = true }}
 					>
 						<div>
 							<input
