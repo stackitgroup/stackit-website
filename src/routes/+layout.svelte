@@ -7,8 +7,6 @@
 	import { tick } from 'svelte'
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
-	import SiteHeader from '$lib/components/site-header.svelte'
-
 	let { children } = $props()
 
 	// --- UPDATED SEO metadata ---
@@ -18,7 +16,7 @@
 		= 'Build extraordinary software with a partner who shares your standards. Stackit provides an external development team with in-house drive and dedication.'
 	const siteUrl = 'https://www.stackitgroup.com' // Using the final production URL
 	const siteName = 'Stackit'
-	const socialImage = `${siteUrl}/stackit-social-share-image.png`
+	const socialImage = `${siteUrl}/stackit-logo-social-media-b.png`
 	const keywords
 		= 'SaaS development services, custom software development, software for mid-sized companies, strategic software partner, external development team, custom software, web development, digital solutions, tech consulting'
 
