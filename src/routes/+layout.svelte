@@ -59,6 +59,29 @@
 			document.body.style.overflow = ''
 		}
 	})
+
+	// Handle hash navigation and scroll to target section
+	$effect(() => {
+		if (!browser) return
+		void page.url
+
+		;(async () => {
+			await tick()
+			const hash = page.url.hash
+			if (hash) {
+				const targetElement = document.querySelector(hash)
+				if (targetElement) {
+					// Small delay to ensure the page is fully rendered
+					setTimeout(() => {
+						targetElement.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						})
+					}, 100)
+				}
+			}
+		})()
+	})
 </script>
 
 <svelte:head>

@@ -9,7 +9,7 @@
 		background: linear-gradient(to bottom, #000000, #0a1a3e60, #000000);
 	"
 >
-	<div class="container px-6 mx-auto text-center">
+	<div class="container px-6 mx-auto text-center" id="partner-div">
 		<div class="max-w-4xl mx-auto fade-in-section">
 			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8">
 				The partner you've been searching for...
