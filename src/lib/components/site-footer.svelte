@@ -190,7 +190,7 @@
 			{#await getVersion()}
 				<p>Loading...</p>
 			{:then value}
-				<span class="text-xs text-gray-500">v-{value}</span>
+				<span class="text-xs text-gray-500">v{value}</span>
 			{:catch error}
 				<span class="text-xs text-gray-500">{error}</span>
 			{/await}
