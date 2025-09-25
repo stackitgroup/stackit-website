@@ -128,16 +128,30 @@
 						use:enhance={handleNewsletterSubmit}
 						on:submit={() => { isSubmitting = true }}
 					>
-						<input
-							id="newsletter-email"
-							name="email"
-							type="email"
-							placeholder="Enter your email"
-							autocomplete="off"
-							class="w-full px-1 py-4 bg-transparent text-white border-0 border-b-2 border-gray-700 focus:outline-none focus:ring-0 focus:border-[#3F5FDD] pr-28 transition-colors rounded-none"
-							required
-							disabled={isSubmitting}
-						/>
+						<div>
+							<input
+								id="newsletter-email"
+								name="email"
+								type="email"
+								placeholder="Enter your email"
+								autocomplete="off"
+								class="w-full px-1 py-4 bg-transparent text-white border-0 border-b-2 border-gray-700 focus:outline-none focus:ring-0 focus:border-[#3F5FDD] pr-28 transition-colors rounded-none"
+								required
+								disabled={isSubmitting}
+							/>
+
+							{#if showSuccess}
+								<p class="text-gray-400 mt-2 text-sm">
+									Welcome to Stackit!
+								</p>
+							{/if}
+
+							{#if errorMessage}
+								<p class="text-red-400 mt-2 text-sm">
+									{errorMessage}
+								</p>
+							{/if}
+						</div>
 						<button
 							id="newsletter-button"
 							type="submit"
@@ -147,6 +161,7 @@
 							<span>{isSubmitting ? 'Subscribing...' : 'Subscribe'}</span>
 						</button>
 					</form>
+
 					<div class="col-span-3 md:col-span-3">
 						<div class="flex flex-col md:flex-row md:gap-2 w-auto text-4xl font-semibold text-white text-center md:text-left mx-auto md:mx-0"
 						>
@@ -156,17 +171,6 @@
 					</div>
 				</div>
 
-				{#if showSuccess}
-					<p class="text-gray-400 mt-2 text-sm">
-						Welcome to Stackit!
-					</p>
-				{/if}
-
-				{#if errorMessage}
-					<p class="text-red-400 mt-2 text-sm">
-						{errorMessage}
-					</p>
-				{/if}
 				<!-- </div> -->
 			</div>
 		</div>
