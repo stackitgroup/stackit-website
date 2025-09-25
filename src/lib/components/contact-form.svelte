@@ -203,7 +203,6 @@
 									id="full-name"
 									autocomplete="name"
 									bind:value={fullName}
-									required
 									class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"
 								/>
 							</div>
@@ -217,7 +216,6 @@
 									name="contactInfo"
 									id="contact-info"
 									bind:value={contactInfo}
-									required
 									class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"
 								/>
 							</div>
@@ -231,7 +229,6 @@
 									name="message"
 									rows="4"
 									bind:value={message}
-									required
 									class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"
 								></textarea>
 							</div>
