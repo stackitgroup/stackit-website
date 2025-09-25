@@ -175,7 +175,7 @@
 			</div>
 		</div>
 		<span class="text-center w-full block mt-12">
-			v-4.0.1-uat
+			v-4.0.1
 		</span>
 	</div>
 </footer>
