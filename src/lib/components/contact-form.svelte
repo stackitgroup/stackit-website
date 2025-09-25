@@ -49,7 +49,7 @@
 
 </script>
 
-<div class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {uiStore.isContactPanelOpen ? 'translate-x-0' : 'translate-x-full hidden'}">
+<div class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {uiStore.isContactPanelOpen ? 'translate-x-0' : 'translate-x-full'}">
 	<div class="relative h-full flex flex-col">
 		<div class="absolute top-0 right-0 pt-6 pr-6">
 			<button
