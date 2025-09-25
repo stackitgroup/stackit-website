@@ -174,5 +174,8 @@
 				<!-- </div> -->
 			</div>
 		</div>
+		<span class="text-center w-full block mt-12">
+			v-4.0.1-uat
+		</span>
 	</div>
 </footer>
