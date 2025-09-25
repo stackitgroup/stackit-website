@@ -170,7 +170,7 @@
 		})}
 	</script>
 </svelte:head>
-<SiteHeader />
+
 {@render children?.()}
 <SiteFooter />
 <Toaster />

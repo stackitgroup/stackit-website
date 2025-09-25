@@ -7,9 +7,11 @@
 	import PartnerSearchSection from '$lib/components/partner-search-section.svelte'
 	import ProductComplexitySection from '$lib/components/product-complexity-section.svelte'
 	import ProvenProcessSection from '$lib/components/proven-process-section.svelte'
+	import SiteHeader from '$lib/components/site-header.svelte'
 </script>
 
 <main id="main-content" aria-label="Main content" class="relative">
+	<SiteHeader />
 	<HeroSection />
 	<FindingTeamSection />
 	<ExternalTeamSection />
