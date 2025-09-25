@@ -1,6 +1,7 @@
 <script>
 	import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.webp'
 	import { enhance } from '$app/forms'
+	import { browser } from '$app/environment'
 
 	let newsletterForm
 	let isSubmitting = false
@@ -27,6 +28,17 @@
 			}
 		}
 	}
+
+	const getVersion = $derived(async () => {
+		try {
+			const response = await fetch('/api/health')
+			const data = await response.json()
+			return data.version
+		}
+		catch {
+			return '4.0.x'
+		}
+	})
 </script>
 
 <footer class="flex items-center bg-black text-gray-300 py-20 md:py-24 border-t border-gray-800">
@@ -175,7 +187,13 @@
 			</div>
 		</div>
 		<span class="text-center w-full block mt-12">
-			v-4.0.1
+			{#await getVersion()}
+				<p>Loading...</p>
+			{:then value}
+				<span class="text-xs text-gray-500">v-{value}</span>
+			{:catch error}
+				<span class="text-xs text-gray-500">{error}</span>
+			{/await}
 		</span>
 	</div>
 </footer>
