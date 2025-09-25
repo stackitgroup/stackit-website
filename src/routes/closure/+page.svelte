@@ -1,6 +1,6 @@
 <script lang="ts">
 	import stackitLogoSolidBlack from '$lib/assets/stackit-logo-black-solid.webp'
-	import ContactForm from '$lib/components/contact-form.svelte'
+	import { openContactPanel } from '$lib/stores/ui.store.svelte'
 </script>
 
 <main>
@@ -14,12 +14,6 @@
 				/>
 			</a>
 			<div class="flex items-center space-x-6">
-				<!-- <a
-          href="#contact"
-          class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-300 rounded-lg md:rounded-md"
-          >Introduction Call</a
-        > -->
-				<!-- Top right close button -->
 				<a
 					href="/#partner-section"
 					class="fixed top-4 right-4 text-gray-500 hover:text-black transition-colors z-50"
@@ -91,11 +85,10 @@
 						</p>
 						<div class="mt-20 flex flex-col sm:flex-row-reverse items-center justify-between gap-6"
 						>
-							<a
-								href="#contact"
+							<button
+								onclick={openContactPanel}
 								class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg text-center"
-							>Introduction Call</a
-							>
+							>Introduction Call</button>
 							<a
 								href="/#partner-section"
 								class="text-lg font-semibold whitespace-nowrap text-gray-600 hover:text-black transition-colors duration-300 group"
@@ -112,4 +105,3 @@
 		</section>
 	</main>
 </main>
-<ContactForm />

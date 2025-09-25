@@ -1,6 +1,5 @@
 <script lang="ts">
 
-	import ContactForm from '$lib/components/contact-form.svelte'
 	import ExternalTeamSection from '$lib/components/external-team-section.svelte'
 	import FindingTeamSection from '$lib/components/finding-team-section.svelte'
 	import HeroSection from '$lib/components/hero-section.svelte'
@@ -19,5 +18,3 @@
 	<ProvenProcessSection />
 	<PartnerSearchSection />
 </main>
-
-<ContactForm />

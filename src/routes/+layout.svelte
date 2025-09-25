@@ -7,6 +7,7 @@
 	import { tick } from 'svelte'
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
+	import ContactForm from '$lib/components/contact-form.svelte'
 
 	let { children } = $props()
 
@@ -173,3 +174,4 @@
 {@render children?.()}
 <SiteFooter />
 <Toaster />
+<ContactForm />

@@ -1,29 +1,22 @@
 <script lang="ts">
+	import { enhance } from '$app/forms'
 	import aircuityLogo from '$lib/assets/aircuity_logo.webp'
 	import i2slLogo from '$lib/assets/i2sl-logo.webp'
 	import siemensLogo from '$lib/assets/siemens-logo.webp'
-	import { enhance } from '$app/forms'
-	import type { SubmitFunction } from '@sveltejs/kit'
 	import { sharedEmail } from '$lib/stores/email'
-	import { onMount } from 'svelte'
+	import { uiStore } from '$lib/stores/ui.store.svelte'
+	import type { SubmitFunction } from '@sveltejs/kit'
 
-	// --- Svelte 5 State Management ---
-	let isContactPanelOpen = $state(false)
 	let isSubmitting = $state(false)
 	let showThankYou = $state(false)
 	let formError = $state('')
 
-	// Form data
 	let fullName = $state('')
 	let contactInfo = $state('')
-	let message = $state('')	// --- Functions ---
-	function openContactPanel() {
-		isContactPanelOpen = true
-		document.body.style.overflow = 'hidden'
-	}
+	let message = $state('')
 
 	function closeContactPanel() {
-		isContactPanelOpen = false
+		uiStore.isContactPanelOpen = false
 		document.body.style.overflow = ''
 		// Reset form state
 		setTimeout(() => {
@@ -54,48 +47,14 @@
 		}
 	}
 
-	// --- Link Detection Logic using derived state ---
-	// function containsLinks(text: string): boolean {
-	// 	if (!text) return false
-	// 	const linkPatterns: RegExp[] = [
-	// 		/(https?:\/\/[^\s]+)/i,
-	// 		/(www\.[^\s]+)/i,
-	// 		/([a-zA-Z0-9-]+\.(com|org|net|edu|gov|io|co))/i,
-	// 		/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i,
-	// 		/(tel:[^\s]+)/i
-	// 	]
-	// 	return linkPatterns.some(pattern => pattern.test(text))
-	// }
-
-	// let showLinkWarning = $derived(containsLinks(message))
-
-	onMount(() => {
-		// --- Setup contact triggers ---
-		const contactTriggers = document.querySelectorAll('a[href="#contact"]')
-		const handleContactClick = (e: Event) => {
-			e.preventDefault()
-			openContactPanel()
-		}
-
-		contactTriggers.forEach((trigger) => {
-			trigger.addEventListener('click', handleContactClick)
-		})
-
-		// --- Cleanup function ---
-		return () => {
-			document.body.style.overflow = ''
-			contactTriggers.forEach(trigger => trigger.removeEventListener('click', handleContactClick))
-		}
-	})
 </script>
 
-<div class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {isContactPanelOpen ? 'translate-x-0' : 'translate-x-full hidden'}"
->
+<div class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {uiStore.isContactPanelOpen ? 'translate-x-0' : 'translate-x-full hidden'}">
 	<div class="relative h-full flex flex-col">
 		<div class="absolute top-0 right-0 pt-6 pr-6">
 			<button
 				aria-label="Close panel"
-				on:click={closeContactPanel}
+				onclick={closeContactPanel}
 				class="text-gray-500 hover:text-gray-800 transition-colors"
 			>
 				<svg
@@ -279,7 +238,8 @@
 		</div>
 	</div>
 </div>
-<div
-	class="fixed inset-0 z-[9998] bg-black transition-opacity duration-500 ease-in-out {isContactPanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
-	on:click={closeContactPanel}
-></div>
+<button
+	aria-label="Close contact panel"
+	class="fixed inset-0 z-50 bg-black transition-opacity duration-500 ease-in-out {uiStore.isContactPanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
+	onclick={closeContactPanel}
+></button>

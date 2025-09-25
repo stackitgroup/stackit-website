@@ -2,6 +2,7 @@
 	import aircuityLogo from '$lib/assets/aircuity_logo.webp'
 	import i2slLogo from '$lib/assets/i2sl-logo.webp'
 	import siemensLogo from '$lib/assets/siemens-logo.webp'
+	import { openContactPanel } from '$lib/stores/ui.store.svelte'
 </script>
 
 <section class="pt-20 md:py-32 bg-black min-h-dvh flex items-center">
@@ -86,21 +87,20 @@
 				</h2>
 				<div class="text-left fade-in-section mt-16 md:inline-block hidden"
 				>
-					<a
-						href="#contact"
+					<button
+						onclick={openContactPanel}
 						class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 w-full md:w-auto rounded-lg"
-					>Let's Talk</a
-					>
+					>Let's Talk</button>
 				</div>
 			</div>
 		</div>
 		<div class="mt-12 md:mt-20 fade-in-section">
 			<div class="md:hidden text-center">
-				<a
-					href="#contact"
+				<button
+					onclick={openContactPanel}
 					class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 text-xl inline-block rounded-lg w-full md:w-auto"
-				>Let's Talk</a
-				>
+				>Let's Talk
+				</button>
 			</div>
 			<div class="hidden md:flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-20"
 			>
