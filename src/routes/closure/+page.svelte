@@ -98,7 +98,7 @@
 							>
 							<a
 								href="/#partner-section"
-								class="text-lg font-semibold text-gray-600 hover:text-black transition-colors duration-300 group"
+								class="text-lg font-semibold whitespace-nowrap text-gray-600 hover:text-black transition-colors duration-300 group"
 							>
 								<span class="inline-block transition-transform duration-300 group-hover:-translate-x-2"
 								>&larr;</span
