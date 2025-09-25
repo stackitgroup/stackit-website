@@ -15,7 +15,7 @@
 		= 'Stackit | Helping high-growth leaders innovate at speed with the discipline & collaboration of an in-house team'
 	const siteDescription
 		= 'Build extraordinary software with a partner who shares your standards. Stackit provides an external development team with in-house drive and dedication.'
-	const siteUrl = 'https://www.stackitgroup.com' // Using the final production URL
+	const siteUrl = 'https://stackit-uat.netlify.app' // Using the final production URL
 	const siteName = 'Stackit'
 	const socialImage = `${siteUrl}/stackit-logo-social-media-b.png`
 	const keywords
