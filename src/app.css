@@ -33,13 +33,12 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right,
-      #5878e8,
-      #3f5fdd);
+  background: linear-gradient(to right, #3f5fdd, #99c4fe);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .fade-in-section {
   opacity: 0;
