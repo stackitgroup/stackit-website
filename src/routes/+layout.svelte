@@ -32,6 +32,31 @@
 		}
 	})
 
+	// Handle scrolling to hash anchors after navigation
+	$effect(() => {
+		if (!browser) return
+
+		// Wait for DOM to be ready and check for hash
+		const handleHashScroll = async () => {
+			await tick()
+			const hash = page.url.hash
+			if (hash) {
+				const targetElement = document.querySelector(hash)
+				if (targetElement) {
+					// Add a small delay to ensure the page is fully rendered
+					setTimeout(() => {
+						targetElement.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						})
+					}, 100)
+				}
+			}
+		}
+
+		handleHashScroll()
+	})
+
 	$effect(() => {
 		if (!browser) return
 		void page.url.pathname
@@ -58,29 +83,6 @@
 			if (observer) observer.disconnect()
 			document.body.style.overflow = ''
 		}
-	})
-
-	// Handle hash navigation and scroll to target section
-	$effect(() => {
-		if (!browser) return
-		void page.url
-
-		;(async () => {
-			await tick()
-			const hash = page.url.hash
-			if (hash) {
-				const targetElement = document.querySelector(hash)
-				if (targetElement) {
-					// Small delay to ensure the page is fully rendered
-					setTimeout(() => {
-						targetElement.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start'
-						})
-					}, 100)
-				}
-			}
-		})()
 	})
 </script>
 
