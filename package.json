@@ -49,7 +49,7 @@
 		"test:unit": "vitest"
 	},
 	"type": "module",
-	"version": "4.0.2",
+	"version": "4.0.4",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.9",
 		"dayjs": "^1.11.18",
