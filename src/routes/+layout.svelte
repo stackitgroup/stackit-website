@@ -8,6 +8,7 @@
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
 	import ContactForm from '$lib/components/contact-form.svelte'
+	import InHouseDrivePanel from '$lib/components/in-house-drive-panel.svelte'
 	import JsonLd from '$lib/components/json-ld.svelte'
 	import { generateOrganization, generateWebsite } from '$lib/json-ld'
 	import { STACKIT_ORGANIZATION, STACKIT_WEBSITE } from '$lib/config/json-ld-config'
@@ -54,7 +55,7 @@
 					// Add a small delay to ensure the page is fully rendered
 					setTimeout(() => {
 						targetElement.scrollIntoView({
-							behavior: 'smooth',
+							behavior: 'instant',
 							block: 'start'
 						})
 					}, 100)
@@ -183,3 +184,4 @@
 {/if}
 <Toaster />
 <ContactForm />
+<InHouseDrivePanel />
