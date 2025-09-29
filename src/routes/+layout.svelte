@@ -71,6 +71,8 @@
 </script>
 
 <svelte:head>
+	<meta charset="utf-8" />
+	
 	{#if PUBLIC_GA_ID}
 		<script
 			async
