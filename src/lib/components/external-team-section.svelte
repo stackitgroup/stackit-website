@@ -1,3 +1,7 @@
+<script>
+	import { openContactPanel } from '$lib/stores/ui.store.svelte'
+
+</script>
 <section class="py-20 md:py-32 bg-black">
 	<div class="container mx-auto px-6">
 		<div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
@@ -38,11 +42,11 @@
 			</div>
 		</div>
 		<div class="mt-16 text-center fade-in-section">
-			<a
-				href="#contact"
+			<button
+				onclick={openContactPanel}
 				class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg"
-			>Partner with Stackit</a
-			>
+			>Partner with Stackit
+			</button>
 		</div>
 	</div>
 </section>

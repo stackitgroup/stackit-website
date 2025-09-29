@@ -1,5 +1,6 @@
 <script>
 	import stackitLogoWhite from '$lib/assets/stackit-logo-white-tone.webp'
+	import { openContactPanel } from '$lib/stores/ui.store.svelte'
 </script>
 
 <!-- Skip link for accessibility -->
@@ -20,10 +21,10 @@
 			/>
 		</a>
 		<div class="flex items-center space-x-6">
-			<a
-				href="#contact"
+			<button
+				onclick={openContactPanel}
 				class="bg-[#3F5FDD] hover:bg-[#3550B8] text-white font-semibold px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-300 rounded-lg md:rounded-md"
-			>Introduction Call</a>
+			>Introduction Call</button>
 		</div>
 	</div>
 </header>

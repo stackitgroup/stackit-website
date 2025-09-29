@@ -7,8 +7,16 @@
 	import { tick } from 'svelte'
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
+	import ContactForm from '$lib/components/contact-form.svelte'
+	import JsonLd from '$lib/components/json-ld.svelte'
+	import { generateOrganization, generateWebsite } from '$lib/json-ld'
+	import { STACKIT_ORGANIZATION, STACKIT_WEBSITE } from '$lib/config/json-ld-config'
 
-	let { children } = $props()
+	interface LayoutData {
+		version: string
+	}
+
+	let { children, data }: { children: any; data: LayoutData } = $props()
 
 	// --- UPDATED SEO metadata ---
 	const siteTitle
@@ -18,6 +26,7 @@
 	const siteUrl = 'https://stackit-uat.netlify.app' // Using the final production URL
 	const siteName = 'Stackit'
 	const socialImage = `${siteUrl}/stackit-logo-social-media-b.png`
+	const absoluteSocialImage = socialImage.startsWith('http') ? socialImage : `${siteUrl}${socialImage}`
 	const keywords
 		= 'SaaS development services, custom software development, software for mid-sized companies, strategic software partner, external development team, custom software, web development, digital solutions, tech consulting'
 
@@ -29,6 +38,31 @@
 				})
 			}
 		}
+	})
+
+	// Handle scrolling to hash anchors after navigation
+	$effect(() => {
+		if (!browser) return
+
+		// Wait for DOM to be ready and check for hash
+		const handleHashScroll = async () => {
+			await tick()
+			const hash = page.url.hash
+			if (hash) {
+				const targetElement = document.querySelector(hash)
+				if (targetElement) {
+					// Add a small delay to ensure the page is fully rendered
+					setTimeout(() => {
+						targetElement.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						})
+					}, 100)
+				}
+			}
+		}
+
+		handleHashScroll()
 	})
 
 	$effect(() => {
@@ -80,15 +114,19 @@
 	<meta name="keywords" content={keywords} />
 	<meta name="author" content="Stackit Group" />
 	<meta name="robots" content="index, follow" />
+	<meta name="version" content={data.version} />
 	<link rel="canonical" href={`${siteUrl}${page.url.pathname}`} />
 
+	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta property="og:title" content={siteTitle} />
 	<meta property="og:description" content={siteDescription} />
 	<meta property="og:site_name" content={siteName} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content={socialImage} />
+	<meta property="og:image" content={absoluteSocialImage} />
+	<meta property="og:image:secure_url" content={absoluteSocialImage} />
+	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
@@ -96,12 +134,13 @@
 		content="Stackit - Your External Dev Team with In-House Drive"
 	/>
 
+	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@stackitgroup" />
 	<meta name="twitter:url" content={`${siteUrl}${page.url.pathname}`} />
 	<meta name="twitter:title" content={siteTitle} />
 	<meta name="twitter:description" content={siteDescription} />
-	<meta name="twitter:image" content={socialImage} />
+	<meta name="twitter:image" content={absoluteSocialImage} />
 	<meta
 		name="twitter:image:alt"
 		content="Stackit - Your External Dev Team with In-House Drive"
@@ -122,54 +161,25 @@
 	/>
 
 	<meta name="format-detection" content="telephone=no" />
+	
+	<!-- Theme color for mobile browsers -->
 	<meta name="theme-color" content="#3F5FDD" />
-
-	<script type="application/ld+json">
-		{JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Organization',
-		name: siteName,
-		url: 'https://www.stackitgroup.com',
-		logo: 'https://www.stackitgroup.com/stackit_logo_solid_white.webp',
-		description: 'Stackit is a software development agency that builds extraordinary software with an external development team that shares your standards.',
-		contactPoint: {
-		'@type': 'ContactPoint',
-		telephone: '+1-619-917-5387',
-		contactType: 'Sales',
-		email: 'hello@stackitgroup.com'
-		},
-		sameAs: ['https://www.linkedin.com/company/stackit/'],
-		brand: {
-		'@type': 'Brand',
-		name: siteName,
-		description: 'External Dev Team with In-House Drive'
-		},
-		services: [
-		{
-		'@type': 'Service',
-		name: 'SaaS Development Services',
-		description: 'Tailored SaaS solutions from concept to launch and beyond.'
-		},
-		{
-		'@type': 'Service',
-		name: 'Custom Software Development',
-		description: 'Building unique software applications to meet specific business needs.'
-		},
-		{
-		'@type': 'Service',
-		name: 'Web Development',
-		description: 'Creating robust and scalable web applications.'
-		},
-		{
-		'@type': 'Service',
-		name: 'Strategic Software Partnership',
-		description: 'Providing long-term development and strategic guidance as your in-house partner.'
-		}
-		]
-		})}
-	</script>
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#3F5FDD" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a" />
+	
+	<!-- Apple-specific meta tags -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta name="apple-mobile-web-app-title" content="Stackit" />
 </svelte:head>
 
+<!-- JSON-LD Structured Data -->
+<JsonLd data={generateOrganization(STACKIT_ORGANIZATION)} />
+<JsonLd data={generateWebsite(STACKIT_WEBSITE)} />
+
 {@render children?.()}
-<SiteFooter />
+{#if page.url.pathname !== '/closure'}
+	<SiteFooter />
+{/if}
 <Toaster />
+<ContactForm />

@@ -1,4 +1,6 @@
 <script>
+	import { openContactPanel } from '$lib/stores/ui.store.svelte'
+
 	const processSteps = [
 		{
 			number: '01',
@@ -62,10 +64,10 @@
 					This is how we build extraordinary software, together.
 				</p>
 				<div class="hidden mt-8 lg:block fade-in-section">
-					<a
-						href="#contact"
+					<button
+						onclick={openContactPanel}
 						class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-22 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block rounded-lg"
-					>Introduction Call</a>
+					>Introduction Call</button>
 				</div>
 			</div>
 			<div class="lg:col-span-2">
@@ -98,11 +100,11 @@
 		</div>
 		<div class="flex items-center justify-center mt-12 space-x-6 lg:hidden"
 		>
-			<a
-				href="#contact"
+			<button
+				onclick={openContactPanel}
 				class="bg-[#3F5FDD] text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg"
-			>Introduction Call</a
-			>
+			>Introduction Call
+			</button>
 		</div>
 	</div>
 </section>

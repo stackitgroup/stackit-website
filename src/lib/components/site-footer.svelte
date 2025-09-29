@@ -1,15 +1,16 @@
-<script>
+<script lang="ts">
 	import StackitLogoSolidWhite from '$lib/assets/stackit_logo_solid_white.webp'
 	import { enhance } from '$app/forms'
-	import { browser } from '$app/environment'
+	import type { ActionResult } from '@sveltejs/kit'
 
-	let newsletterForm
-	let isSubmitting = false
-	let showSuccess = false
-	let errorMessage = ''
+	let newsletterForm: HTMLFormElement
+	let isSubmitting = $state(false)
+	let showSuccess = $state(false)
+	let errorMessage = $state('')
 
 	const handleNewsletterSubmit = () => {
-		return async ({ result }) => {
+		isSubmitting = true
+		return async ({ result }: { result: ActionResult }) => {
 			isSubmitting = false
 
 			if (result.type === 'success') {
@@ -28,24 +29,13 @@
 			}
 		}
 	}
-
-	const getVersion = $derived(async () => {
-		try {
-			const response = await fetch('/api/health')
-			const data = await response.json()
-			return data.version
-		}
-		catch {
-			return '4.0.x'
-		} 
-	})
 </script>
 
 <footer class="flex items-center bg-black text-gray-300 py-20 md:py-24 border-t border-gray-800">
 	<div class="container mx-auto px-6">
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-y-12 md:gap-x-16">
 			<div class="md:col-span-7">
-				<a href="#" class="inline-block mb-6">
+				<a href="/" class="inline-block mb-6">
 					<img
 						src={StackitLogoSolidWhite}
 						alt="Stackit Logo"
@@ -138,7 +128,6 @@
 						action="?/sendGoogleChatSubscription"
 						bind:this={newsletterForm}
 						use:enhance={handleNewsletterSubmit}
-						on:submit={() => { isSubmitting = true }}
 					>
 						<div>
 							<input
@@ -186,14 +175,5 @@
 				<!-- </div> -->
 			</div>
 		</div>
-		<span class="text-center w-full block mt-12">
-			{#await getVersion()}
-				<p>Loading...</p>
-			{:then value}
-				<span class="text-xs text-gray-500">v-{value}</span>
-			{:catch error}
-				<span class="text-xs text-gray-500">{error}</span>
-			{/await}
-		</span>
 	</div>
 </footer>
