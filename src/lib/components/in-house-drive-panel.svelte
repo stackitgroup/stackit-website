@@ -53,9 +53,9 @@
 			<section class="pt-20 pb-20 md:pt-12 md:pb-32 bg-gray-50 relative">
 				<div class="container mx-auto px-6">
 					<div class="max-w-4xl mx-auto text-gray-700 space-y-8">
-						<h1 class="flex border-gray-500 border-b-2 pb-10 text-4xl md:text-5xl font-bold text-black leading-tight mb-12 fade-in-section">
+						<h2 class="flex border-gray-500 border-b-2 pb-10 text-4xl md:text-5xl font-bold text-black leading-tight mb-12 fade-in-section">
 							Our In-House Drive
-						</h1>
+						</h2>
 						<p class="text-3xl font-light fade-in-section">
 							At Stackit, we know you're the kind of leader committed to
 							transforming a great idea into an extraordinary software product. To
