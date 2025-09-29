@@ -8,6 +8,7 @@
 	import { Toaster } from 'svelte-sonner'
 	import '../app.css'
 	import ContactForm from '$lib/components/contact-form.svelte'
+	import InHouseDrivePanel from '$lib/components/in-house-drive-panel.svelte'
 	import JsonLd from '$lib/components/json-ld.svelte'
 	import { generateOrganization, generateWebsite } from '$lib/json-ld'
 	import { STACKIT_ORGANIZATION, STACKIT_WEBSITE } from '$lib/config/json-ld-config'
@@ -23,7 +24,7 @@
 		= 'Stackit | Helping high-growth leaders innovate at speed with the discipline & collaboration of an in-house team'
 	const siteDescription
 		= 'Build extraordinary software with a partner who shares your standards. Stackit provides an external development team with in-house drive and dedication.'
-	const siteUrl = page.url.origin // Using the final production URL
+	const siteUrl = page.url.origin
 	const siteName = 'Stackit'
 	const socialImage = `${siteUrl}/stackit-logo-social-media-b.png`
 	const absoluteSocialImage = socialImage.startsWith('http') ? socialImage : `${siteUrl}${socialImage}`
@@ -38,31 +39,6 @@
 				})
 			}
 		}
-	})
-
-	// Handle scrolling to hash anchors after navigation
-	$effect(() => {
-		if (!browser) return
-
-		// Wait for DOM to be ready and check for hash
-		const handleHashScroll = async () => {
-			await tick()
-			const hash = page.url.hash
-			if (hash) {
-				const targetElement = document.querySelector(hash)
-				if (targetElement) {
-					// Add a small delay to ensure the page is fully rendered
-					setTimeout(() => {
-						targetElement.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start'
-						})
-					}, 100)
-				}
-			}
-		}
-
-		handleHashScroll()
 	})
 
 	$effect(() => {
@@ -95,6 +71,8 @@
 </script>
 
 <svelte:head>
+	<meta charset="utf-8" />
+	
 	{#if PUBLIC_GA_ID}
 		<script
 			async
@@ -183,3 +161,4 @@
 {/if}
 <Toaster />
 <ContactForm />
+<InHouseDrivePanel />

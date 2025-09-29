@@ -1,5 +1,5 @@
 <script>
-	import { openContactPanel } from '$lib/stores/ui.store.svelte'
+	import { openContactPanel, openInHouseDrivePanel } from '$lib/stores/ui.store.svelte'
 
 </script>
 <section
@@ -25,10 +25,10 @@
 					onclick={openContactPanel}
 					class="whitespace-nowrap bg-[#3F5FDD] text-white text-center font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg"
 				>Get Started</button>
-				<a
-					href="/closure"
+				<button
+					onclick={openInHouseDrivePanel}
 					class="whitespace-nowrap bg-transparent border-2 border-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 hover:bg-[#3F5FDD] transition-colors duration-300 sm:text-xl inline-block w-full md:w-auto rounded-lg"
-				>Read More</a>
+				>Read More</button>
 			</div>
 		</div>
 	</div>
