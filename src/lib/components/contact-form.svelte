@@ -17,7 +17,10 @@
 
 	function closeContactPanel() {
 		uiStore.isContactPanelOpen = false
-		document.body.style.overflow = ''
+		// Only restore body overflow if no other panels are open
+		if (!uiStore.isInHouseDrivePanelOpen) {
+			document.body.style.overflow = ''
+		}
 		// Reset form state
 		setTimeout(() => {
 			showThankYou = false
@@ -47,9 +50,26 @@
 		}
 	}
 
+	// Handle Escape key to close panel
+	$effect(() => {
+		function handleKeydown(event: KeyboardEvent) {
+			if (event.key === 'Escape' && uiStore.isContactPanelOpen) {
+				closeContactPanel()
+			}
+		}
+
+		if (uiStore.isContactPanelOpen) {
+			document.addEventListener('keydown', handleKeydown)
+		}
+
+		return () => {
+			document.removeEventListener('keydown', handleKeydown)
+		}
+	})
+
 </script>
 
-<div class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {uiStore.isContactPanelOpen ? 'translate-x-0' : 'translate-x-full'}">
+<div class="fixed inset-y-0 right-0 z-[10001] w-full max-w-5xl bg-white shadow-xl transform transition-transform duration-500 ease-in-out overflow-y-auto {uiStore.isContactPanelOpen ? 'translate-x-0' : 'translate-x-full'}">
 	<div class="relative h-full flex flex-col">
 		<div class="absolute top-0 right-0 pt-6 pr-6">
 			<button
@@ -238,8 +258,15 @@
 		</div>
 	</div>
 </div>
-<button
+<div
+	role="button"
+	tabindex="0"
 	aria-label="Close contact panel"
-	class="fixed inset-0 z-50 bg-black transition-opacity duration-500 ease-in-out {uiStore.isContactPanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
-	onclick={closeContactPanel}
-></button>
+	class="fixed inset-0 z-[10000] bg-black transition-opacity duration-500 ease-in-out {uiStore.isContactPanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
+	onkeydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault()
+			closeContactPanel()
+		}
+	}}
+></div>
