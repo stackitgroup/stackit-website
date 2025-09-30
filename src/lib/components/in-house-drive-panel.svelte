@@ -4,11 +4,13 @@
 
 	function closeInHouseDrivePanel() {
 		uiStore.isInHouseDrivePanelOpen = false
-		document.body.style.overflow = ''
+		// Only restore body overflow if no other panels are open
+		if (!uiStore.isContactPanelOpen) {
+			document.body.style.overflow = ''
+		}
 	}
 
 	function handleContactCall() {
-		closeInHouseDrivePanel()
 		setTimeout(() => {
 			openContactPanel()
 		}, 100)
@@ -116,9 +118,9 @@
 	</div>
 </div>
 
-<!-- Background overlay -->
+<!-- Background overlay - hidden when contact panel is open -->
 <button
 	aria-label="Close in-house drive panel"
-	class="fixed inset-0 z-[9998] bg-black transition-opacity duration-500 ease-in-out {uiStore.isInHouseDrivePanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
+	class="fixed inset-0 z-[9998] bg-black transition-opacity duration-500 ease-in-out {uiStore.isInHouseDrivePanelOpen && !uiStore.isContactPanelOpen ? 'opacity-75' : 'opacity-0 hidden'}"
 	onclick={closeInHouseDrivePanel}
 ></button>
