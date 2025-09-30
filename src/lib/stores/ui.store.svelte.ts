@@ -9,10 +9,14 @@ export const uiStore = $state({
 
 export function openContactPanel() {
 	uiStore.isContactPanelOpen = !uiStore.isContactPanelOpen
-	document.body.style.overflow = uiStore.isContactPanelOpen ? 'hidden' : ''
+	// Set body overflow based on whether any panel is open
+	const anyPanelOpen = uiStore.isContactPanelOpen || uiStore.isInHouseDrivePanelOpen
+	document.body.style.overflow = anyPanelOpen ? 'hidden' : ''
 }
 
 export function openInHouseDrivePanel() {
 	uiStore.isInHouseDrivePanelOpen = !uiStore.isInHouseDrivePanelOpen
-	document.body.style.overflow = uiStore.isInHouseDrivePanelOpen ? 'hidden' : ''
+	// Set body overflow based on whether any panel is open
+	const anyPanelOpen = uiStore.isContactPanelOpen || uiStore.isInHouseDrivePanelOpen
+	document.body.style.overflow = anyPanelOpen ? 'hidden' : ''
 }
