@@ -1,10 +1,5 @@
 ### 🚀 ClickUp Task
 **Link:** [TASK-URL](TASK-URL)
-
-
-### 📝 Description
-### 🧪 How can this be tested?
-### 📸 Screenshots or GIFs
 ---
 
 ### ✅ Self-Review Checklist

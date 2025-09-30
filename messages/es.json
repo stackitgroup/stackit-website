@@ -1,0 +1,4 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "¡Hola, {name}! ¡Bienvenido a nuestra demo de i18n mejorada!"
+}
