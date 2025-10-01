@@ -25,7 +25,7 @@
 				<img
 					src={stackitLogoSolidBlack}
 					alt="Stackit Logo"
-					class="w-auto h-8 sm:h-8"
+					class="w-auto h-10 sm:h-10"
 				/>
 				<button
 					aria-label="Close panel"
